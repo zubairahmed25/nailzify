@@ -5,6 +5,11 @@
   padding: 50px 20px;
   font-family:'Montserrat',sans-serif !important; 
 }
+.main__fade_
+{
+  width:100%;
+  position:relative;
+}
 .fade-white-right
 {
   display:none !important;
@@ -124,6 +129,7 @@
 <section class="how__section">
   <div class="page-width relative">
     
+    
     <!-- ===== Title & Intro Text ===== -->
     <div class="text-center">
       <h2 class="section-title">
@@ -135,11 +141,12 @@
       {% endif %}
     </div>
     <!-- ===== End Title & Intro Text ===== -->
-
+    <div class="main__fade_">
+      
+    <div class="fade-white-right"></div>
     <!-- ===== Steps / How Blocks ===== -->
     <div class="steps-grid">
       
-    <div class="fade-white-right"></div>
       {% for block in section.blocks %}
         <div class="step-card">
           
@@ -172,6 +179,8 @@
 
         </div>
       {% endfor %}
+    </div>
+    
     </div>
     <!-- ===== End Steps / How Blocks ===== -->
 
