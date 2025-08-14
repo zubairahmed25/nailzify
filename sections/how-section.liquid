@@ -113,15 +113,16 @@
 
           <!-- Block Content -->
           <div class="step-content">
+             <!-- Block Title -->
+            {% if block.settings.block_title != blank %}
+              <h3 class="step-title">{{ block.settings.block_title }}</h3>
+            {% endif %}
             <!-- Show HOW + Block Sub Title -->
             {% if block.settings.block_sub_title != blank %}
               <p class="step-number">{{ block.settings.block_sub_title }}</p>
             {% endif %}
             
-            <!-- Block Title -->
-            {% if block.settings.block_title != blank %}
-              <h3 class="step-title">{{ block.settings.block_title }}</h3>
-            {% endif %}
+           
             
             <!-- Description -->
             {% if block.settings.block_intro_line != blank %}
