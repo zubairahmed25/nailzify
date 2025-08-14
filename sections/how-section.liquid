@@ -4,7 +4,6 @@
 .how__section {
   padding: 50px 20px;
   font-family:'Montserrat',sans-serif !important; 
-  position:relative;
 }
 .fade-white-right
 {
@@ -31,6 +30,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  
+  position:relative;
 }
 
 /* ===== Mobile Scroll Slider ===== */
@@ -113,7 +114,6 @@
 <!-- ================= HOW SECTION START ================= -->
 <section class="how__section">
   <div class="page-width relative">
-    <div class="fade-white-right"></div>
     
     <!-- ===== Title & Intro Text ===== -->
     <div class="text-center">
@@ -129,6 +129,8 @@
 
     <!-- ===== Steps / How Blocks ===== -->
     <div class="steps-grid">
+      
+    <div class="fade-white-right"></div>
       {% for block in section.blocks %}
         <div class="step-card">
           
