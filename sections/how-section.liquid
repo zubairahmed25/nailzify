@@ -171,65 +171,63 @@
 </section>
 <!-- ================= HOW SECTION END ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   const grid = document.querySelector(".steps-grid");
   const fadeLeft = document.querySelector(".fade-white-left");
   const fadeRight = document.querySelector(".fade-white-right");
+
   if (!grid || !fadeLeft || !fadeRight) return;
 
-  // helper to set inline !important
-  const setImp = (el, prop, val) => el.style.setProperty(prop, val, "important");
-
-  // base styles (override theme)
-  [fadeLeft, fadeRight].forEach(f => {
-    setImp(f, "position", "absolute");
-    setImp(f, "top", "0");
-    setImp(f, "width", "40px");
-    setImp(f, "height", "100%");
-    setImp(f, "pointer-events", "none");
-    setImp(f, "display", "none");
-    setImp(f, "z-index", "5");
-  });
-  setImp(fadeLeft, "left", "0");
-  setImp(fadeLeft, "background", "linear-gradient(to left, rgba(255,255,255,0), #FFEFEF)");
-  setImp(fadeRight, "right", "0");
-  setImp(fadeRight, "background", "linear-gradient(to right, rgba(255,255,255,0), #FFEFEF)");
-
-  function refreshFades() {
-    const max = Math.max(0, grid.scrollWidth - grid.clientWidth);
-    if (max <= 0) { // nothing to scroll
-      setImp(fadeLeft, "display", "none");
-      setImp(fadeRight, "display", "none");
-      return;
-    }
-
-    // Left fade: only show if not at far left
-    if (grid.scrollLeft > 0) {
-      setImp(fadeLeft, "display", "block");
-    } else {
-      setImp(fadeLeft, "display", "none");
-      setImp(fadeRight, "display", "none"); // also hide right fade at far left
-      return; // skip right fade logic if we're at far left
-    }
-
-    // Right fade: only show if not at far right
-    if (grid.scrollLeft < max) {
-      setImp(fadeRight, "display", "block");
-    } else {
-      setImp(fadeRight, "display", "none");
-    }
+  // Force style overrides with !important
+  function setImportant(el, prop, value) {
+    el.style.setProperty(prop, value, "important");
   }
 
-  // Initial check
-  refreshFades();
+  // Base styles for both fades
+  [fadeLeft, fadeRight].forEach(fade => {
+    setImportant(fade, "position", "absolute");
+    setImportant(fade, "top", "0");
+    setImportant(fade, "width", "40px");
+    setImportant(fade, "height", "100%");
+    setImportant(fade, "pointer-events", "none");
+    setImportant(fade, "display", "none");
+    setImportant(fade, "z-index", "5");
+  });
 
-  // Update on scroll
-  grid.addEventListener("scroll", refreshFades, { passive: true });
+  // Left fade style
+  setImportant(fadeLeft, "left", "0");
+  setImportant(fadeLeft, "background", "linear-gradient(to left, rgba(255,255,255,0), #FFEFEF)");
 
-  // Update on resize/content change
-  window.addEventListener("resize", refreshFades);
+  // Right fade style
+  setImportant(fadeRight, "right", "0");
+  setImportant(fadeRight, "background", "linear-gradient(to right, rgba(255,255,255,0), #FFEFEF)");
+
+  let lastScrollLeft = 0;
+
+  function updateFades() {
+    const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+
+    const scrollingRight = grid.scrollLeft > lastScrollLeft;
+    const scrollingLeft = grid.scrollLeft < lastScrollLeft;
+
+    if (scrollingLeft && grid.scrollLeft > 0) {
+      setImportant(fadeLeft, "display", "block");
+      setImportant(fadeRight, "display", "none");
+    } 
+    else if (scrollingRight && grid.scrollLeft < maxScrollLeft) {
+      setImportant(fadeRight, "display", "block");
+      setImportant(fadeLeft, "display", "none");
+    }
+
+    lastScrollLeft = grid.scrollLeft;
+  }
+
+  // Default: show right fade
+  setImportant(fadeRight, "display", "block");
+
+  // Listen for scroll events
+  grid.addEventListener("scroll", updateFades);
 });
-
 
 </script>
  
