@@ -890,18 +890,18 @@
           "type": "how_block",
           "settings": {
             "block_image": "shopify://shop_images/Line_Magnetic_Gif_40b9b39c-03cf-4375-8643-f089369139b1.gif",
-            "block_title": "Step 1",
-            "block_sub_title": "LINE",
-            "block_intro_line": "Trace lash line with liner. Let dry for 3 minutes"
+            "block_title": "Step 2",
+            "block_sub_title": "LASH",
+            "block_intro_line": "Apply magnetic lash to dry liner."
           }
         },
         "how_block_tGeNhH": {
           "type": "how_block",
           "settings": {
-            "block_image": "shopify://shop_images/Line_Magnetic_Gif_40b9b39c-03cf-4375-8643-f089369139b1.gif",
-            "block_title": "Step 1",
-            "block_sub_title": "LINE",
-            "block_intro_line": "Trace lash line with liner. Let dry for 3 minutes"
+            "block_image": "shopify://shop_images/BOOM_ANNE_MAGNETIC_GIF.gif",
+            "block_title": "Step 3",
+            "block_sub_title": "GO",
+            "block_intro_line": "Get 24-hours of staying power."
           }
         }
       },
