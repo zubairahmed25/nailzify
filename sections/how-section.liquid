@@ -190,7 +190,43 @@
   </div>
 </section>
 <!-- ================= HOW SECTION END ================= -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".steps-grid");
+  const fadeLeft = document.querySelector(".fade-white-left");
+  const fadeRight = document.querySelector(".fade-white-right");
 
+  let lastScrollLeft = 0;
+
+  function updateFades() {
+    const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+
+    // Scrolling direction
+    const scrollingRight = grid.scrollLeft > lastScrollLeft;
+    const scrollingLeft = grid.scrollLeft < lastScrollLeft;
+
+    // Show left fade if scrolled right-to-left and not at start
+    if (scrollingLeft && grid.scrollLeft > 0) {
+      fadeLeft.style.display = "block";
+      fadeRight.style.display = "none";
+    }
+    // Show right fade if scrolling left-to-right and not at end
+    else if (scrollingRight && grid.scrollLeft < maxScrollLeft) {
+      fadeRight.style.display = "block";
+      fadeLeft.style.display = "none";
+    }
+
+    lastScrollLeft = grid.scrollLeft;
+  }
+
+  // Default: show right fade
+  fadeRight.style.display = "block";
+
+  // Listen for scroll events
+  grid.addEventListener("scroll", updateFades);
+});
+
+</script>
  
 {% schema %}
 {
