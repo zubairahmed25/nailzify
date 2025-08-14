@@ -210,20 +210,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollingRight = grid.scrollLeft > lastScrollLeft;
     const scrollingLeft = grid.scrollLeft < lastScrollLeft;
 
-    // Keep showing current direction's fade during scroll
     if (scrollingLeft) {
+      // Show left fade, hide right fade immediately
       setImportant(fadeLeft, "display", "block");
-    }
-    if (scrollingRight) {
-      setImportant(fadeRight, "display", "block");
+      setImportant(fadeRight, "display", "none");
+
+      // Hide left fade if fully at the left edge
+      if (grid.scrollLeft <= 0) {
+        setImportant(fadeLeft, "display", "none");
+      }
     }
 
-    // Hide opposite fade only when reaching edges
-    if (grid.scrollLeft <= 0) {
+    if (scrollingRight) {
+      // Show right fade, hide left fade immediately
+      setImportant(fadeRight, "display", "block");
       setImportant(fadeLeft, "display", "none");
-    }
-    if (grid.scrollLeft >= maxScrollLeft) {
-      setImportant(fadeRight, "display", "none");
+
+      // Hide right fade if fully at the right edge
+      if (grid.scrollLeft >= maxScrollLeft) {
+        setImportant(fadeRight, "display", "none");
+      }
     }
 
     lastScrollLeft = grid.scrollLeft;
