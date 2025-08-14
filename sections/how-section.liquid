@@ -107,18 +107,20 @@
           <!-- Block Image -->
           {% if block.settings.block_image != blank %}
             <div class="step-image">
-              <img src="{{ block.settings.block_image | img_url:'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
+              <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
             </div>
           {% endif %}
 
           <!-- Block Content -->
           <div class="step-content">
-            <!-- Auto-generated HOW number -->
-            {% comment %} <p class="step-number">HOW {{ forloop.index }}</p> {% endcomment %}
-            
-            <!-- Sub Title -->
+            <!-- Show HOW + Block Sub Title -->
             {% if block.settings.block_sub_title != blank %}
-              <h3 class="step-title">{{ block.settings.block_sub_title }}</h3>
+              <p class="step-number">HOW {{ block.settings.block_sub_title }}</p>
+            {% endif %}
+            
+            <!-- Block Title -->
+            {% if block.settings.block_title != blank %}
+              <h3 class="step-title">{{ block.settings.block_title }}</h3>
             {% endif %}
             
             <!-- Description -->
@@ -137,10 +139,7 @@
 </section>
 <!-- ================= HOW SECTION END ================= -->
 
-
-
-
-
+ 
 {% schema %}
 {
   "name": "How Section", 
