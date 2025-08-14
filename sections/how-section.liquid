@@ -5,7 +5,10 @@
   padding: 50px 20px;
   font-family:'Montserrat',sans-serif !important; 
 }
-
+.fade-white-right
+{
+  display:none !important;
+}
 /* ===== Title Area ===== */
 .how__section .text-center {
   margin-bottom: 30px;
@@ -46,6 +49,15 @@
 .how__section {
   padding: 50px 0; 
 } 
+.fade-white-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+  pointer-events: none; /* allows clicks/swipes through */
+}
 
 
 
