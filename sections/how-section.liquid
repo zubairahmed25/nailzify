@@ -1,0 +1,201 @@
+
+<style>
+/* ===== Section Wrapper ===== */
+.how__section {
+  padding: 50px 0;
+}
+
+/* ===== Title Area ===== */
+.how__section .text-center {
+  margin-bottom: 30px;
+}
+.how__section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.how__section .section-subtitle {
+  color: #777;
+}
+
+/* ===== Desktop Grid Layout ===== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Mobile Scroll Slider ===== */
+@media (max-width: 768px) {
+  .steps-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+  .step-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}
+
+/* ===== Card Styling ===== */
+.step-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;v
+}
+
+/* ===== Image Styling ===== */
+.step-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== Content Area ===== */
+.step-content {
+  padding: 15px;
+}
+
+/* ===== Number Styling ===== */
+.step-number {
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* ===== Title Styling ===== */
+.step-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ===== Description Styling ===== */
+.step-description {
+  color: #555;
+}
+</style>
+
+<!-- ================= HOW SECTION START ================= -->
+<section class="how__section">
+  <div class="page-width relative">
+    
+    <!-- ===== Title & Intro Text ===== -->
+    <div class="text-center">
+      <h2 class="section-title">
+        {{ section.settings.section_title | escape }}
+        <span style="color:#c38a3a;">{{ section.settings.section_title_colored | escape }}</span>
+      </h2>
+      {% if section.settings.section_intro_lines != blank %}
+        <p class="section-subtitle">{{ section.settings.section_intro_lines }}</p>
+      {% endif %}
+    </div>
+    <!-- ===== End Title & Intro Text ===== -->
+
+    <!-- ===== Steps / How Blocks ===== -->
+    <div class="steps-grid">
+      {% for block in section.blocks %}
+        <div class="step-card">
+          
+          <!-- Block Image -->
+          {% if block.settings.block_image != blank %}
+            <div class="step-image">
+              <img src="{{ block.settings.block_image | img_url:'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
+            </div>
+          {% endif %}
+
+          <!-- Block Content -->
+          <div class="step-content">
+            <!-- Auto-generated HOW number -->
+            {% comment %} <p class="step-number">HOW {{ forloop.index }}</p> {% endcomment %}
+            
+            <!-- Sub Title -->
+            {% if block.settings.block_sub_title != blank %}
+              <h3 class="step-title">{{ block.settings.block_sub_title }}</h3>
+            {% endif %}
+            
+            <!-- Description -->
+            {% if block.settings.block_intro_line != blank %}
+              <p class="step-description">{{ block.settings.block_intro_line }}</p>
+            {% endif %}
+          </div>
+          <!-- End Block Content -->
+
+        </div>
+      {% endfor %}
+    </div>
+    <!-- ===== End Steps / How Blocks ===== -->
+
+  </div>
+</section>
+<!-- ================= HOW SECTION END ================= -->
+
+
+
+
+
+{% schema %}
+{
+  "name": "How Section", 
+  "class": "how__section", 
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Title",
+      "id": "section_title",
+      "placeholder": "Main title here"
+    },
+    {
+      "type": "text",
+      "label": "Section Title Colored",
+      "id": "section_title_colored",
+      "placeholder": "Color title here"
+    },
+    {
+      "type": "text",
+      "label": "Section Intro Lines",
+      "id": "section_intro_lines",
+      "placeholder": "Add intro line here"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "how_block",
+      "name": "How Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Block Image",
+          "id": "block_image"
+        },
+        {
+          "type": "text",
+          "label": "Block Title",
+          "id": "block_title",
+          "placeholder": "Title here"
+        },
+        {
+          "type": "text",
+          "label": "Block Sub Title",
+          "id": "block_sub_title",
+          "placeholder": "Sub Title here"
+        },
+        {
+          "type": "text",
+          "label": "Block Intro Line",
+          "id": "block_intro_line",
+          "placeholder": "Block Intro here"
+        }
+      ]
+    }
+  ], 
+  "presets": [
+    {
+      "name": "How Section"
+    }
+  ]
+}
+{% endschema %}
+ 
