@@ -202,14 +202,17 @@ document.addEventListener("DOMContentLoaded", function () {
       setImp(fadeRight, "display", "none");
       return;
     }
-    // show/hide purely by position:
-    // - if not at far left -> show left
-    // - if not at far right -> show right
+
+    // Left fade: only show if not at far left
     if (grid.scrollLeft > 0) {
       setImp(fadeLeft, "display", "block");
     } else {
       setImp(fadeLeft, "display", "none");
+      setImp(fadeRight, "display", "none"); // also hide right fade at far left
+      return; // skip right fade logic if we're at far left
     }
+
+    // Right fade: only show if not at far right
     if (grid.scrollLeft < max) {
       setImp(fadeRight, "display", "block");
     } else {
@@ -217,17 +220,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // default (original request): show right if scrollable
+  // Initial check
   refreshFades();
-  if (getComputedStyle(fadeRight).display === "none") {
-    // if we loaded scrolled somewhere in the middle, both will show after first refresh
-    // nothing else to do
-  }
 
-  // show both during scroll (except at edges)
+  // Update on scroll
   grid.addEventListener("scroll", refreshFades, { passive: true });
 
-  // keep correct on resize/content changes
+  // Update on resize/content change
   window.addEventListener("resize", refreshFades);
 });
 
