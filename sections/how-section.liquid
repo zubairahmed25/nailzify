@@ -207,12 +207,12 @@
 
     // Show left fade if scrolled right-to-left and not at start
     if (scrollingLeft && grid.scrollLeft > 0) {
-      fadeLeft.style.display = "block !important";
+      fadeLeft.style.display = "block";
       fadeRight.style.display = "none";
     }
     // Show right fade if scrolling left-to-right and not at end
     else if (scrollingRight && grid.scrollLeft < maxScrollLeft) {
-      fadeRight.style.display = "block !important";
+      fadeRight.style.display = "block";
       fadeLeft.style.display = "none";
     }
 
@@ -220,7 +220,7 @@
   }
 
   // Default: show right fade
-  fadeRight.style.display = "block !important";
+  fadeRight.style.display = "block";
 
   // Listen for scroll events
   grid.addEventListener("scroll", updateFades);
