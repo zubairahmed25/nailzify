@@ -10,7 +10,7 @@
   width:100%;
   position:relative;
 }
-.fade-white-right
+.fade-white-right,.fade-white-left
 {
   display:none !important;
 }
@@ -28,8 +28,7 @@
   color: #666;
   text-align: left;
   font-size: 20px; 
-}
-
+} 
 /* ===== Desktop Grid Layout ===== */
 .steps-grid {
   display: grid;
@@ -46,8 +45,7 @@
   .step-card {
     flex: 0 0 45%; 
   }
-}
-
+} 
 /* ===== Mobile Scroll Slider ===== */
 @media (max-width: 768px) {
   .steps-grid {
@@ -65,19 +63,27 @@
 .how__section {
   padding: 0 0; 
 } 
+.fade-white-left,
 .fade-white-right {
   position: absolute;
-  z-index:9;
   top: 0;
-  right: -1px;
   width: 40px;
   height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #FFEFEF);
-  pointer-events: none; /* allows clicks/swipes through */
-  display: block !important;
+  pointer-events: none;
+  display: none; /* hidden until shown by JS */
 }
 
+/* Left fade */
+.fade-white-left {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), #FFEFEF);
+}
 
+/* Right fade */
+.fade-white-right {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), #FFEFEF);
+}
 
 }
 
@@ -87,19 +93,16 @@
   border-radius: 16px;
   overflow: hidden;
   border:solid 1px #0000001a;
-}
-
+} 
 /* ===== Image Styling ===== */
 .step-image img {
   width: 100%;
   display: block;
-}
-
+} 
 /* ===== Content Area ===== */
 .step-content {
   padding: 15px;
-}
-
+} 
 /* ===== Number Styling ===== */
 .step-number {
   font-weight: 500;
@@ -107,8 +110,7 @@
   margin-bottom: 11px;
   font-size: 14px;
   text-transform:
-}
-
+} 
 /* ===== Title Styling ===== */
 .step-title {
     font-weight: 500;
@@ -117,8 +119,7 @@
     color: #666;
     font-size: 11px;
     text-transform: uppercase;
-}
-
+} 
 /* ===== Description Styling ===== */
 .step-description {
   color: #555;
@@ -144,6 +145,7 @@
     <!-- ===== End Title & Intro Text ===== -->
     <div class="main__fade_">
       
+    <div class="fade-white-left"></div>
     <div class="fade-white-right"></div>
     <!-- ===== Steps / How Blocks ===== -->
     <div class="steps-grid">
