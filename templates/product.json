@@ -903,12 +903,22 @@
             "block_sub_title": "Go",
             "block_intro_line": "Get 24-hours of staying power."
           }
+        },
+        "how_block_NtiB44": {
+          "type": "how_block",
+          "settings": {
+            "block_image": "shopify://shop_images/BOOM_ANNE_MAGNETIC_GIF.gif",
+            "block_title": "Step 3",
+            "block_sub_title": "Go",
+            "block_intro_line": "Get 24-hours of staying power."
+          }
         }
       },
       "block_order": [
         "how_block_G8mtTF",
         "how_block_i7yYdH",
-        "how_block_tGeNhH"
+        "how_block_tGeNhH",
+        "how_block_NtiB44"
       ],
       "name": "How Section",
       "settings": {
