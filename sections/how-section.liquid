@@ -171,19 +171,19 @@
 </section>
 <!-- ================= HOW SECTION END ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   const grid = document.querySelector(".steps-grid");
   const fadeLeft = document.querySelector(".fade-white-left");
   const fadeRight = document.querySelector(".fade-white-right");
 
   if (!grid || !fadeLeft || !fadeRight) return;
 
-  // Helper for !important
+  // Force style overrides with !important
   function setImportant(el, prop, value) {
     el.style.setProperty(prop, value, "important");
   }
 
-  // Base fade styles
+  // Base styles for both fades
   [fadeLeft, fadeRight].forEach(fade => {
     setImportant(fade, "position", "absolute");
     setImportant(fade, "top", "0");
@@ -210,37 +210,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollingRight = grid.scrollLeft > lastScrollLeft;
     const scrollingLeft = grid.scrollLeft < lastScrollLeft;
 
-    if (scrollingLeft) {
-      // Show left fade, hide right fade immediately
+    if (scrollingLeft && grid.scrollLeft > 0) {
       setImportant(fadeLeft, "display", "block");
       setImportant(fadeRight, "display", "none");
-
-      // Hide left fade if fully at the left edge
-      if (grid.scrollLeft <= 0) {
-        setImportant(fadeLeft, "display", "none");
-      }
-    }
-
-    if (scrollingRight) {
-      // Show right fade, hide left fade immediately
+    } 
+    else if (scrollingRight && grid.scrollLeft < maxScrollLeft) {
       setImportant(fadeRight, "display", "block");
       setImportant(fadeLeft, "display", "none");
-
-      // Hide right fade if fully at the right edge
-      if (grid.scrollLeft >= maxScrollLeft) {
-        setImportant(fadeRight, "display", "none");
-      }
     }
 
     lastScrollLeft = grid.scrollLeft;
   }
 
-  // Default: show right fade on load
+  // Default: show right fade
   setImportant(fadeRight, "display", "block");
 
+  // Listen for scroll events
   grid.addEventListener("scroll", updateFades);
 });
-
 
 </script>
  
