@@ -21,8 +21,7 @@
     .collection__suit ul li a
     {
         width:auto;
-        display:block;
-        color:#ff5198;
+        display:block; 
     }
      .collection__suit ul li a img
     {
@@ -30,6 +29,12 @@
         height:60px;
         border-radius:50%;
         display:flex;
+    }
+    .collection__suit ul li a b
+    {
+        width:auto;
+        display:block;
+        color:#ff5198;
     }
 </style>
 
@@ -47,7 +52,7 @@
           {% if suit_collection.image %}
             <img src="{{ suit_collection.image | img_url: '600x600' }}" alt="{{ suit_collection.title }}">
           {% endif %}
-          <h3>{{ suit_collection.title }}</h3>
+          <b>{{ suit_collection.title }}</b>
         </a>
       </li>
     {% endfor %}
