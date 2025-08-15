@@ -10,7 +10,7 @@
 
 {%- comment -%} Debug output {%- endcomment -%}
 <p>Metafield raw value:</p>
-<pre>{{ collection.metafields.custom.collection_suit | json }}</pre>
+<pre>{{ collection.metafields.custom.collection_suit.value }}</pre>
 
 {% if suit_collections and suit_collections.size > 0 %}
   <ul>
