@@ -1,18 +1,12 @@
 
-<div style="border:solid 1px red;margin-top:50px;">
-
-{% comment %}
-  Replace "custom" with your namespace
-  Replace "collection_suit" with your metafield key
-{% endcomment %}
+<div style="border:solid 1px red;margin-top:50px;"> 
 
 {% assign suit_collections = collection.metafields.custom.collection_suit.value %}
 
-{%- comment -%} Debug output {%- endcomment -%}
 <p>Metafield raw value:</p>
-<pre>{{ collection.metafields.custom.collection_suit.value }}</pre>
+<pre>{{ suit_collections }}</pre>
 
-{% if suit_collections and suit_collections.size > 0 %}
+{% if suit_collections != blank %}
   <ul>
     {% for suit_collection in suit_collections %}
       <li>
@@ -28,6 +22,7 @@
 {% else %}
   <p>No collections selected in metafield.</p>
 {% endif %}
+
 
 
 
