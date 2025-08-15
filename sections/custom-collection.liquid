@@ -2,7 +2,7 @@
 <div style="border:solid 1px red;margin-top:50px;">
 
 {% if collection.metafields.custom.collection_suit %}
-  {% assign suit_collection = collection.metafields.custom.collection_suit %}
+  {% assign suit_collection = collection.metafields.custom.collection_suit | json %}
   
   <a href="{{ suit_collection.url }}">
     <img src="{{ suit_collection.image | img_url: '60x60' }}" alt="{{ suit_collection.title }}">
