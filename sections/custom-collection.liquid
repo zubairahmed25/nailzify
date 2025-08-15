@@ -2,25 +2,31 @@
 <div style="border:solid 1px red;margin-top:50px;">
 
 {% comment %}
-  Replace "custom" with your actual namespace
+  Replace "custom" with your namespace
   Replace "collection_suit" with your metafield key
 {% endcomment %}
 
-{% assign suit_collection = collection.metafields.custom.collection_suit.value %}
+{% assign suit_collections = collection.metafields.custom.collection_suit.value %}
 
-{%- comment -%} Debug: show raw metafield output {%- endcomment -%}
+{%- comment -%} Debug output {%- endcomment -%}
 <p>Metafield raw value:</p>
 <pre>{{ collection.metafields.custom.collection_suit | json }}</pre>
 
-{% if suit_collection %}
-  <a href="{{ suit_collection.url }}">
-    {% if suit_collection.image %}
-      <img src="{{ suit_collection.image | img_url: '600x600' }}" alt="{{ suit_collection.title }}">
-    {% endif %}
-    <h3>{{ suit_collection.title }}</h3>
-  </a>
+{% if suit_collections and suit_collections.size > 0 %}
+  <ul>
+    {% for suit_collection in suit_collections %}
+      <li>
+        <a href="{{ suit_collection.url }}">
+          {% if suit_collection.image %}
+            <img src="{{ suit_collection.image | img_url: '600x600' }}" alt="{{ suit_collection.title }}">
+          {% endif %}
+          <h3>{{ suit_collection.title }}</h3>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 {% else %}
-  <p>No collection selected in metafield.</p>
+  <p>No collections selected in metafield.</p>
 {% endif %}
 
 
