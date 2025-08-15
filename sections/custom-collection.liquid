@@ -1,14 +1,28 @@
 
 <div style="border:solid 1px red;margin-top:50px;">
 
-{% if collection.metafields.custom.collection_suit %}
-  {% assign suit_collection = collection.metafields.custom.collection_suit | json %}
-  
+{% comment %}
+  Replace "custom" with your actual namespace
+  Replace "collection_suit" with your metafield key
+{% endcomment %}
+
+{% assign suit_collection = collection.metafields.custom.collection_suit.value %}
+
+{%- comment -%} Debug: show raw metafield output {%- endcomment -%}
+<p>Metafield raw value:</p>
+<pre>{{ collection.metafields.custom.collection_suit | json }}</pre>
+
+{% if suit_collection %}
   <a href="{{ suit_collection.url }}">
-    <img src="{{ suit_collection.image | img_url: '60x60' }}" alt="{{ suit_collection.title }}">
+    {% if suit_collection.image %}
+      <img src="{{ suit_collection.image | img_url: '600x600' }}" alt="{{ suit_collection.title }}">
+    {% endif %}
     <h3>{{ suit_collection.title }}</h3>
   </a>
+{% else %}
+  <p>No collection selected in metafield.</p>
 {% endif %}
+
 
 
 </div>
