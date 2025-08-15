@@ -9,24 +9,6 @@
  */
 {
   "sections": {
-    "custom_liquid_kg6inT": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "liquid": "{% if collection.metafields.custom.collection_suit %}\n  {% assign suit_collection = collection.metafields.custom.collection_suit.value %}\n  \n  <a href=\"{{ suit_collection.url }}\">\n    <img src=\"{{ suit_collection.image | img_url: '60x60' }}\" alt=\"{{ suit_collection.title }}\">\n    <h3>{{ suit_collection.title }}</h3>\n  </a>\n{% endif %}",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "narrow": false,
-        "rounded": false
-      }
-    },
     "custom_collection_6tdNCp": {
       "type": "custom-collection",
       "name": "Collection Suit",
@@ -496,7 +478,6 @@
     }
   },
   "order": [
-    "custom_liquid_kg6inT",
     "custom_collection_6tdNCp",
     "logo_list_JYMJVh",
     "main-collection-banner",
