@@ -47,6 +47,7 @@
         "logo_M4HtfE",
         "logo_LfDdRE"
       ],
+      "disabled": true,
       "name": "Logo list",
       "settings": {
         "layout": "default",
