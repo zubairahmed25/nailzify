@@ -27,11 +27,12 @@
     }
      .collection__suit ul li a span
     {
-        width:80px;
-        height:120px;
+        width:80px; 
         border-radius:50%;
         display:flex;
-        margin:0 auto;
+        background-size:cover; 
+        background-position:center; 
+        display:block; 
     }
     .collection__suit ul li a b
     {
@@ -51,7 +52,7 @@
     {% for suit_collection in suit_collections %}
       <li>
        <a href="{{ suit_collection.url }}">
-        <span style="display:block; background-image:url({{ suit_collection.image | img_url: 'master' }}); background-size:cover; background-position:center; text-decoration:none; color:inherit;">
+        <span style="background-image:url({{ suit_collection.image | img_url: 'master' }});">
         </span>
         <b>{{ suit_collection.title }}</b> 
       </a>
