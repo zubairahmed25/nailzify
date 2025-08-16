@@ -48,7 +48,7 @@
 
 <div class="collection__suit">  
 {% assign suit_collections = collection.metafields.custom.collection_suit.value %} 
-{{ collection.title }}
+<h3>{{ collection.title }}</h3>
 {% if suit_collections != blank %}
   <ul>
     {% for suit_collection in suit_collections %}
