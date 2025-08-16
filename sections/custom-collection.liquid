@@ -52,26 +52,23 @@
 
 
 <div class="collection__suit">  
-{% assign suit_collections = collection.metafields.custom.collection_suit.value %} 
-<h3>{{ collection.title }}</h3>
-{% if suit_collections != blank %}
-  <ul>
-    {% for suit_collection in suit_collections %}
-      <li>
-       <a href="{{ suit_collection.url }}">
-        <span style="background-image:url({{ suit_collection.image | img_url: 'master' }});">
-        </span>
-        <b>{{ suit_collection.title }}</b> 
-      </a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-
-
-
+  {% assign suit_collections = collection.metafields.custom.collection_suit.value %} 
+  <h3>{{ collection.title }}</h3>
+  {% if suit_collections != blank %}
+    <ul>
+      {% for suit_collection in suit_collections %}
+        <li>
+        <a href="{{ suit_collection.url }}">
+          <span style="background-image:url({{ suit_collection.image | img_url: 'master' }});">
+          </span>
+          <b>{{ suit_collection.title }}</b> 
+        </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %} 
 </div>
+
 {% schema %}
 {
   "name": "Collection Suit", 
