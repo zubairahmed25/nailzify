@@ -53,12 +53,12 @@
   <ul>
     {% for suit_collection in suit_collections %}
       <li>
-        <a href="{{ suit_collection.url }}" style="background: url("{{ suit_collection.image | img_url: 'master' }}") no-repeat center center;">
-          {% comment %} {% if suit_collection.image %}
-            <img src="{{ suit_collection.image | img_url: 'master' }}" alt="{{ suit_collection.title }}">
-          {% endif %} {% endcomment %}
-          <b>{{ suit_collection.title }}</b>
-        </a>
+       <a href="{{ suit_collection.url }}" 
+   style="display:block; background-image:url({{ suit_collection.image | img_url: 'master' }}); background-size:cover; background-position:center; text-decoration:none; color:inherit;">
+
+  <b>{{ suit_collection.title }}</b>
+  
+</a>
       </li>
     {% endfor %}
   </ul>
