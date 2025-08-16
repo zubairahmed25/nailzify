@@ -53,10 +53,10 @@
   <ul>
     {% for suit_collection in suit_collections %}
       <li>
-        <a href="{{ suit_collection.url }}">
-          {% if suit_collection.image %}
+        <a href="{{ suit_collection.url }}" style="background: url("{{ suit_collection.image | img_url: 'master' }}") no-repeat center center;">
+          {% comment %} {% if suit_collection.image %}
             <img src="{{ suit_collection.image | img_url: 'master' }}" alt="{{ suit_collection.title }}">
-          {% endif %}
+          {% endif %} {% endcomment %}
           <b>{{ suit_collection.title }}</b>
         </a>
       </li>
