@@ -14757,7 +14757,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 } */
 
 .slideshow:not(.slideshow--hero) .banner {
-  margin-inline-end: var(--sp-7d5);
+  /* margin-inline-end: var(--sp-7d5); */
   max-width: var(--page-container);
 }
 
