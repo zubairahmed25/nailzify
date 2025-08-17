@@ -19,7 +19,7 @@
             "image_mobile": "shopify://shop_images/DSC01507.jpg",
             "heading": "Premium Press-On Nails",
             "heading_size": "title-sm",
-            "heading_tag": "h1",
+            "heading_tag": "h2",
             "button_label": "Shop Best Sellers",
             "button_link": "",
             "button_style": "primary",
@@ -82,80 +82,6 @@
         "overlay_opacity": 3,
         "padding_top": 8,
         "padding_bottom": 8,
-        "divider": false,
-        "full_width": true,
-        "rounded": false,
-        "enable_parallax": false,
-        "parallax_direction": "vertical"
-      }
-    },
-    "slideshow_custom_6wweLJ": {
-      "type": "slideshow-custom",
-      "blocks": {
-        "image_RVrfLL": {
-          "type": "image",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "title-lg tracking-heading",
-            "heading_tag": "h2",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        },
-        "image_jL4QQN": {
-          "type": "image",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "title-lg tracking-heading",
-            "heading_tag": "h2",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        },
-        "image_qXfBVT": {
-          "type": "image",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "title-lg tracking-heading",
-            "heading_tag": "h2",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "image_RVrfLL",
-        "image_jL4QQN",
-        "image_qXfBVT"
-      ],
-      "name": "Slideshow Custom",
-      "settings": {
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "show_navigation": true,
-        "image_height": "900px",
-        "content_width": "medium",
-        "image_height_mobile": "600px",
-        "accessibility_info": "Slideshow about our brand",
-        "color_text": "#ffffff",
-        "color_background": "#f2b9ce",
-        "gradient_background": "",
-        "color_button_text": "#171717",
-        "color_button_background": "#ffffff",
-        "color_button_gradient": "",
-        "color_overlay": "#5e5c5c",
-        "overlay_opacity": 3,
-        "padding_top": 0,
-        "padding_bottom": 0,
         "divider": false,
         "full_width": true,
         "rounded": false,
@@ -1551,7 +1477,6 @@
   },
   "order": [
     "slideshow",
-    "slideshow_custom_6wweLJ",
     "rich-text-1",
     "collection-list",
     "video-with-text-overlay",
