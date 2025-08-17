@@ -926,6 +926,40 @@
         "section_title_colored": "LINE, LASH, GO!",
         "section_intro_lines": "How to Wear Magnetic Liner"
       }
+    },
+    "175543022999ef749b": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_C43aGX": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_C43aGX"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -940,6 +974,7 @@
     "faq",
     "product-recommendations",
     "recently-viewed",
-    "how_section_qpMgG4"
+    "how_section_qpMgG4",
+    "175543022999ef749b"
   ]
 }
