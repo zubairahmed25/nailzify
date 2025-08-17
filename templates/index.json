@@ -9,87 +9,6 @@
  */
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/rsz_1dsc01514.jpg",
-            "image_mobile": "shopify://shop_images/DSC01507.jpg",
-            "heading": "Premium Press-On Nails",
-            "heading_size": "title-sm",
-            "heading_tag": "h1",
-            "button_label": "Shop Best Sellers",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        },
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DSC01507.jpg",
-            "heading": "UNIQUELY CRAFTED EARPHONES FOR YOUR STYLE",
-            "heading_size": "title-md",
-            "heading_tag": "h2",
-            "button_label": "Shop Earphones",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        },
-        "slide-3": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "description": "",
-            "video_url_mobile": "",
-            "heading": "DUST AND WATERPROOF",
-            "heading_size": "title-md",
-            "heading_tag": "h2",
-            "button_label": "Shop Speakers",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "show_navigation": true,
-        "image_height": "900px",
-        "content_width": "medium",
-        "image_height_mobile": "600px",
-        "accessibility_info": "Slideshow about our brand",
-        "color_text": "#ffffff",
-        "color_background": "#f2b9ce",
-        "gradient_background": "",
-        "color_button_text": "#171717",
-        "color_button_background": "#ffffff",
-        "color_button_gradient": "",
-        "color_overlay": "#5e5c5c",
-        "overlay_opacity": 3,
-        "padding_top": 8,
-        "padding_bottom": 8,
-        "divider": false,
-        "full_width": true,
-        "rounded": false,
-        "enable_parallax": false,
-        "parallax_direction": "vertical"
-      }
-    },
     "slideshow_custom_6wweLJ": {
       "type": "slideshow-custom",
       "blocks": {
@@ -1541,7 +1460,6 @@
     }
   },
   "order": [
-    "slideshow",
     "slideshow_custom_6wweLJ",
     "rich-text-1",
     "collection-list",
