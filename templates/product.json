@@ -934,7 +934,7 @@
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
-            "aggregated": false,
+            "aggregated": true,
             "limit": 20,
             "hide_thumbnails": false,
             "maxwidth": 1080,
@@ -974,7 +974,7 @@
     "faq",
     "product-recommendations",
     "recently-viewed",
-    "how_section_qpMgG4",
-    "175543022999ef749b"
+    "175543022999ef749b",
+    "how_section_qpMgG4"
   ]
 }
