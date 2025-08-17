@@ -14752,9 +14752,9 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
   display: none;
 }
 
-.slideshow:not(.slideshow--hero) :is(.banner, .banner__overlay) {
+/* .slideshow:not(.slideshow--hero) :is(.banner, .banner__overlay) {
   border-radius: var(--rounded-block);
-}
+} */
 
 .slideshow:not(.slideshow--hero) .banner {
   margin-inline-end: var(--sp-7d5);
