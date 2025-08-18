@@ -562,7 +562,7 @@ div.pswp__img--placeholder {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* transform: translateX(-100%) !important; */
+  transform: translateX(0%) !important;
 }
 
 .flickity-enabled.is-draggable {
