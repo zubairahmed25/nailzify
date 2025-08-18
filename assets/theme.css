@@ -563,7 +563,9 @@ div.pswp__img--placeholder {
   height: 100%;
   width: 100%; 
 }
-
+#shopify-section-template--19582348689649__slideshow_custom_6wweLJ .flickity-slider { 
+  transform: translateX(0%) !important;
+}
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   user-select: none
