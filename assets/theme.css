@@ -564,7 +564,7 @@ div.pswp__img--placeholder {
   width: 100%; 
 }
 #shopify-section-template--19582348689649__slideshow_custom_6wweLJ .flickity-slider { 
-  transform: translateX(0%) !important;
+  
 }
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -14764,7 +14764,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 }
 #shopify-section-template--19582348689649__slideshow_custom_6wweLJ .slideshow:not(.slideshow--hero) .banner {
   /* margin-inline-end: var(--sp-7d5); */
-  max-width: min(calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 0), max(var(--page-width), 1280px));
+  max-width: min(calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 0), max(var(--page-width), 100%));
 }
 
 .slideshow .banner__overlay {
