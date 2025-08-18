@@ -135,7 +135,6 @@
           "type": "collection",
           "settings": {
             "collection": "frontpage",
-            "image": "shopify://shop_images/IMG_4228.jpg",
             "title": "All products",
             "description": "Check out all our products",
             "overlay_content": true,
@@ -148,7 +147,6 @@
           "type": "collection",
           "settings": {
             "collection": "frontpage",
-            "image": "shopify://shop_images/DSC00039.heic",
             "title": "Nails",
             "description": "Surround yourself in sound",
             "overlay_content": true,
@@ -1458,6 +1456,50 @@
         "enable_parallax": true,
         "parallax_direction": "vertical"
       }
+    },
+    "1755525392b1b38f3b": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_video_slider_dcUU8B": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "show-by-tag": false,
+            "layout": "spotlight",
+            "shadow": "",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": true,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_dcUU8B"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1478,6 +1520,7 @@
     "scrolling-text-2",
     "blog-posts-collage",
     "image_with_text_CGzxb6",
-    "image_with_text_kzGfUx"
+    "image_with_text_kzGfUx",
+    "1755525392b1b38f3b"
   ]
 }
