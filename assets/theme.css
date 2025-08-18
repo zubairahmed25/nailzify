@@ -561,7 +561,7 @@ div.pswp__img--placeholder {
 .flickity-slider {
   position: absolute;
   height: 100%;
-  width: 100%
+  width: 100%;
   transform: translateX(-100%) !important;
 }
 
