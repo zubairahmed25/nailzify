@@ -136,8 +136,8 @@
     "main-collection": {
       "type": "main-collection",
       "settings": {
-        "products_per_page": 13,
-        "columns": 4,
+        "products_per_page": 20,
+        "columns": 5,
         "columns_mobile": "1",
         "pagination": "infinite",
         "enable_filtering": true,
@@ -146,7 +146,7 @@
         "filter_color_swatches": true,
         "enable_sorting": true,
         "padding_top": 0,
-        "padding_bottom": 56,
+        "padding_bottom": 48,
         "divider": false,
         "full_width": false,
         "rounded": true
