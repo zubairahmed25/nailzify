@@ -14762,6 +14762,10 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
   /* margin-inline-end: var(--sp-7d5); */
   max-width: min(calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 0), max(var(--page-width), 1280px));
 }
+#shopify-section-template--19582348689649__slideshow_custom_6wweLJ .slideshow:not(.slideshow--hero) .banner {
+  /* margin-inline-end: var(--sp-7d5); */
+  max-width: min(calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 0), max(var(--page-width), 100%)) !important;
+}
 
 .slideshow .banner__overlay {
   background: linear-gradient(180deg, rgb(var(--color-overlay)/ var(--overlay-opacity)) 50%, rgb(var(--color-overlay)/ calc(var(--overlay-opacity) * 4)) 100%);
