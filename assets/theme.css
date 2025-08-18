@@ -14759,6 +14759,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 
 .slideshow:not(.slideshow--hero) .banner {
   /* margin-inline-end: var(--sp-7d5); */
+  /* max-width: min(calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 0), max(var(--page-width), 1280px)) !important; */
   max-width: 100% !important;
 }
 
