@@ -565,7 +565,7 @@
         "@media screen and (min-width: 1920px) {.product-bundle-wrapper {padding-inline: calc(var(--grid-gap) * 2); }}"
       ],
       "settings": {
-        "collection": "sample-bundle",
+        "collection": "bundlers",
         "products": [],
         "product_limit": 8,
         "columns": 4,
