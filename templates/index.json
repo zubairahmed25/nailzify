@@ -55,7 +55,7 @@
         "show_navigation": true,
         "image_height": "900px",
         "content_width": "medium",
-        "image_height_mobile": "600px",
+        "image_height_mobile": "100vh",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#ffffff",
         "color_background": "#f2b9ce",
