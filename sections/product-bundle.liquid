@@ -142,19 +142,21 @@
               <div class="heading text-xl shrink-0">{{ 'sections.product_bundle.total' | t }}</div>
               {% comment %} <div class="heading text-xl grow font-bold text-right" data-product-bundle-total-with-currency>{{ 0 | money_with_currency }}</div> {% endcomment %}
                <div class="heading text-xl grow font-bold text-right">
-                  <span data-product-bundle-total-with-currency>{{ cart.total_price | money_with_currency }}</span>
-                  
-                  {% for discount_application in cart.discount_applications %}
-                    {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
-                      <span class="text-sm text-green-600 font-normal"> (Save {{ discount_application.value }}%)</span>
-                    {% endif %}
-                  {% endfor %}
-                  {% for discount_application in cart.discount_applications %}
-                    {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
-                      <p>Bundler Discount: {{ discount_application.value }}%</p>
-                    {% endif %}
-                  {% endfor %}
-                </div>
+                {% assign bundler_discount_percentage = 20 %} {# hardcode your Bundler % here #}
+                
+                <!-- Always show original total -->
+                <span data-product-bundle-total-with-currency>
+                  {{ cart.total_price | money_with_currency }}
+                </span>
+                
+                <!-- Show discounted total -->
+                <br>
+                <span class="text-green-600 text-sm font-normal">
+                  Save {{ bundler_discount_percentage }}% with code <strong>Bundler</strong> →
+                  {{ cart.total_price | times: 100 | minus: cart.total_price | times: bundler_discount_percentage | divided_by: 100 | money_with_currency }}
+                </span>
+              </div>
+
 
             </div>
             <button type="button" class="button button--primary w-full" is="hover-button" data-product-bundle-submit disabled>
