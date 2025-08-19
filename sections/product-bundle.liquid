@@ -138,10 +138,29 @@
             {%- endfor -%}
           </div>
           <div class="product-bundle__footer grid gap-2d5">
-            <div class="hidden lg:flex gap-4">
-              <div class="heading text-xl shrink-0">{{ 'sections.product_bundle.total' | t }}</div>
-              <div class="heading text-xl grow font-bold text-right" data-product-bundle-total-with-currency>{{ 0 | money_with_currency }}</div>
-            </div>
+            {% assign bundler_discount = '' %}
+
+              {% for discount_application in cart.discount_applications %}
+                {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
+                  {% assign bundler_discount = discount_application.value %}
+                {% endif %}
+              {% endfor %}
+
+              <div class="hidden lg:flex gap-4">
+                <div class="heading text-xl shrink-0">{{ 'sections.product_bundle.total' | t }}</div>
+                
+                <div class="heading text-xl grow font-bold text-right" data-product-bundle-total-with-currency id="is__to__disc">
+                  {% if bundler_discount != '' %}
+                    <!-- Calculate discounted total -->
+                    {% assign discounted_total = cart.total_price | times: 100 | minus: cart.total_price | times: bundler_discount | divided_by: 100 %}
+                    <span class="line-through opacity-50">{{ cart.total_price | money_with_currency }}</span>
+                    <span class="text-green-600 font-bold ml-2">{{ discounted_total | money_with_currency }}</span>
+                  {% else %}
+                    {{ cart.total_price | money_with_currency }}
+                  {% endif %}
+                </div>
+              </div>
+
             <button type="button" id="is__to__disc" class="button button--primary w-full" is="hover-button" data-product-bundle-submit disabled>
               <span class="btn-fill" data-fill></span>
               <span class="flex gap-3d5">
