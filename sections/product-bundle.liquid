@@ -140,6 +140,15 @@
           <div class="product-bundle__footer grid gap-2d5">
             <div class="hidden lg:flex gap-4">
               <div class="heading text-xl shrink-0">{{ 'sections.product_bundle.total' | t }}</div>
+              {% if discount.application %}
+                {% if discount.application.code == "Bundler" %}
+                  {% if discount.application.type == "PercentageDiscount" %}
+                    <p>You saved {{ discount.application.amount | money }} ({{ discount.application.amount | divided_by: discount.application.amount | times: 100 }}%)</p>
+                  {% else %}
+                    <p>Discount applied: {{ discount.application.amount | money }}</p>
+                  {% endif %}
+                {% endif %}
+              {% endif %}
               <div class="heading text-xl grow font-bold text-right" data-product-bundle-total-with-currency>{{ 0 | money_with_currency }}</div>
             </div>
             <button type="button" class="button button--primary w-full" is="hover-button" data-product-bundle-submit disabled>
