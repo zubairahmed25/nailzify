@@ -141,17 +141,11 @@
             <div class="hidden lg:flex gap-4">
               <div class="heading text-xl shrink-0">{{ 'sections.product_bundle.total' | t }}</div>
               {% comment %} <div class="heading text-xl grow font-bold text-right" data-product-bundle-total-with-currency>{{ 0 | money_with_currency }}</div> {% endcomment %}
-               <div class="heading text-xl grow font-bold text-right">
-                {% for discount_application in cart.discount_applications %}
-                  {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
-                    <p>{{ discount_application.value }}%</p>
-                  {% endif %}
-                {% endfor %}
-              </div>
+               
 
 
             </div>
-            <button type="button" class="button button--primary w-full" is="hover-button" data-product-bundle-submit disabled>
+            <button type="button" id="is__cart" class="button button--primary w-full" is="hover-button" data-product-bundle-submit disabled>
               <span class="btn-fill" data-fill></span>
               <span class="flex gap-3d5">
                 <span class="btn-price lg:hidden relative" data-product-bundle-total>{{ 0 | money }}</span>
