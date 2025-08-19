@@ -100,7 +100,7 @@
     "product_max_color_swatches": 4,
     "product_color_swatch_type": "variant",
     "product_save_amount": true,
-    "product_save_type": "percent",
+    "product_save_type": "dollar",
     "product_icon_list_metafield": "",
     "product_icon_list": false,
     "product_icon_list_carousel": true,
