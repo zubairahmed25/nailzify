@@ -150,10 +150,10 @@
                     {% endif %}
                   {% endfor %}
                   {% for discount_application in cart.discount_applications %}
-  {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
-    <p>Bundler Discount: {{ discount_application.value }}%</p>
-  {% endif %}
-{% endfor %}
+                    {% if discount_application.code == "Bundler" and discount_application.value_type == "percentage" %}
+                      <p>Bundler Discount: {{ discount_application.value }}%</p>
+                    {% endif %}
+                  {% endfor %}
                 </div>
 
             </div>
