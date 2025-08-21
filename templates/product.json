@@ -16,7 +16,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_10.svg",
-            "height": 60,
+            "height": 72,
             "link": ""
           }
         },
@@ -24,7 +24,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_9.svg",
-            "height": 60,
+            "height": 72,
             "link": ""
           }
         },
@@ -32,7 +32,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_12.svg",
-            "height": 60,
+            "height": 72,
             "link": ""
           }
         },
@@ -40,7 +40,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_11.svg",
-            "height": 60,
+            "height": 72,
             "link": ""
           }
         },
@@ -62,10 +62,10 @@
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
-        "layout": "default",
-        "grid_horizontal": 50,
+        "layout": "marquee",
+        "grid_horizontal": 65,
         "direction": "left",
-        "speed": 5,
+        "speed": 3,
         "heading": "",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
