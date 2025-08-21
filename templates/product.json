@@ -9,6 +9,90 @@
  */
 {
   "sections": {
+    "logo_list_qG4TGf": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_axD6ME": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_10.svg",
+            "height": 52,
+            "link": ""
+          }
+        },
+        "logo_8kTbVK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_9.svg",
+            "height": 52,
+            "link": ""
+          }
+        },
+        "logo_wnD3mp": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_12.svg",
+            "height": 52,
+            "link": ""
+          }
+        },
+        "logo_jLB7zP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_11.svg",
+            "height": 52,
+            "link": ""
+          }
+        },
+        "logo_9RrdFm": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_8.svg",
+            "height": 52,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_axD6ME",
+        "logo_8kTbVK",
+        "logo_wnD3mp",
+        "logo_jLB7zP",
+        "logo_9RrdFm"
+      ],
+      "name": "t:sections.logo-list.name",
+      "settings": {
+        "layout": "default",
+        "grid_horizontal": 50,
+        "direction": "left",
+        "speed": 5,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "main-product": {
       "type": "main-product",
       "blocks": {
@@ -178,9 +262,9 @@
         "enable_video_autoplay": true,
         "enable_video_looping": true,
         "mobile_layout": "partial",
-        "image_ratio_mobile": "adapt_first",
-        "mobile_thumbnail": false,
-        "padding_top": 16,
+        "image_ratio_mobile": "portrait",
+        "mobile_thumbnail": true,
+        "padding_top": 8,
         "padding_bottom": 8,
         "divider": false,
         "full_width": true,
@@ -954,6 +1038,7 @@
     }
   },
   "order": [
+    "logo_list_qG4TGf",
     "main-product",
     "help-drawer",
     "video-hero",
