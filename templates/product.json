@@ -148,12 +148,6 @@
             "opened": true,
             "clickable": false
           }
-        },
-        "liquid_fTcQW9": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0749/4857/5473/files/Screenshot_2025-07-06_at_2.55.10_PM.png?v=1751839048\" alt=\"Screenshot\" style=\"max-width: 100%; height: auto; margin: auto;\">"
-          }
         }
       },
       "block_order": [
@@ -170,8 +164,7 @@
         "text-3",
         "text-4",
         "sticky_buy_button",
-        "product_bundle_ymNDwk",
-        "liquid_fTcQW9"
+        "product_bundle_ymNDwk"
       ],
       "custom_css": [],
       "settings": {
