@@ -604,51 +604,6 @@
         "rounded": false
       }
     },
-    "scrolling-text-1": {
-      "type": "scrolling-text",
-      "blocks": {
-        "text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<em><strong>Play anything</strong></em>",
-            "text_size": 160,
-            "text_font": "body",
-            "highlighted_text": "stencil",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "text-2": {
-          "type": "text",
-          "settings": {
-            "text": "<em><strong>Day-long comfort</strong></em>",
-            "text_size": 160,
-            "text_font": "body",
-            "highlighted_text": "stencil",
-            "highlighted_scribble": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "text-1",
-        "text-2"
-      ],
-      "settings": {
-        "direction": "left",
-        "speed": 20,
-        "grid_horizontal": 70,
-        "enable_twin": false,
-        "enable_parallax": true,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "padding_top": 120,
-        "padding_bottom": 120,
-        "divider": false,
-        "rounded": false
-      }
-    },
     "shop-the-feed": {
       "type": "shop-the-feed",
       "blocks": {
@@ -1500,6 +1455,90 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "logo_list_m8arzH": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_bwcyem": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_1.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_mAGLVL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_3.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_iNGgpx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_4.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_GTw7nf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_5.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_NF8Yye": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_2.svg",
+            "height": 100,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_bwcyem",
+        "logo_mAGLVL",
+        "logo_iNGgpx",
+        "logo_GTw7nf",
+        "logo_NF8Yye"
+      ],
+      "name": "t:sections.logo-list.name",
+      "settings": {
+        "layout": "marquee",
+        "grid_horizontal": 50,
+        "direction": "left",
+        "speed": 5,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1511,7 +1550,6 @@
     "image-comparison",
     "rich-text-2",
     "product-bundle",
-    "scrolling-text-1",
     "shop-the-feed",
     "countdown-timer",
     "shop-the-look",
@@ -1521,6 +1559,7 @@
     "blog-posts-collage",
     "image_with_text_CGzxb6",
     "image_with_text_kzGfUx",
-    "1755525392b1b38f3b"
+    "1755525392b1b38f3b",
+    "logo_list_m8arzH"
   ]
 }
