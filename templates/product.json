@@ -48,7 +48,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_8.svg",
-            "height": 60,
+            "height": 72,
             "link": ""
           }
         }
@@ -263,8 +263,8 @@
         "enable_video_autoplay": true,
         "enable_video_looping": true,
         "mobile_layout": "partial",
-        "image_ratio_mobile": "portrait",
-        "mobile_thumbnail": true,
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
         "padding_top": 8,
         "padding_bottom": 8,
         "divider": false,
