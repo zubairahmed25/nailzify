@@ -16,7 +16,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_10.svg",
-            "height": 52,
+            "height": 60,
             "link": ""
           }
         },
@@ -24,7 +24,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_9.svg",
-            "height": 52,
+            "height": 60,
             "link": ""
           }
         },
@@ -32,7 +32,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_12.svg",
-            "height": 52,
+            "height": 60,
             "link": ""
           }
         },
@@ -40,7 +40,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_11.svg",
-            "height": 52,
+            "height": 60,
             "link": ""
           }
         },
@@ -48,7 +48,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_8.svg",
-            "height": 52,
+            "height": 60,
             "link": ""
           }
         }
