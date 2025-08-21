@@ -26,8 +26,8 @@
         "title": {
           "type": "title",
           "settings": {
-            "title_size": "product-title-sm",
-            "title_size_mobile": "product-title-sm",
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
             "show_price": true,
             "show_rating": true
           }
@@ -350,11 +350,9 @@
             "heading": "Best Sellers",
             "link": "",
             "invert_subheading_heading": false,
-            "image": "shopify://shop_images/IMG_4124.jpg",
             "image_ratio": "portrait",
             "content_position": "md:items-end md:justify-start",
             "text_alignment": "left",
-            "image_mobile": "shopify://shop_images/IMG_4124.jpg",
             "image_ratio_mobile": "portrait",
             "content_position_mobile": "items-end justify-start",
             "text_alignment_mobile": "left",
@@ -874,6 +872,40 @@
         "rounded": false
       }
     },
+    "175543022999ef749b": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_C43aGX": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": true,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_C43aGX"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "how_section_qpMgG4": {
       "type": "how-section",
       "blocks": {
@@ -925,40 +957,6 @@
         "section_title": "AS EASY AS",
         "section_title_colored": "LINE, LASH, GO!",
         "section_intro_lines": "How to Wear Magnetic Liner"
-      }
-    },
-    "175543022999ef749b": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_dynamic_section_C43aGX": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "only_photos": false,
-            "aggregated": true,
-            "limit": 20,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_dynamic_section_C43aGX"
-      ],
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
       }
     }
   },
