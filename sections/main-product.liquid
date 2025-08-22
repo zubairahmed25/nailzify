@@ -225,7 +225,7 @@
                 {%- endif -%}
               {%- endif -%}
          {% when 'marquee_block' %}
-<div class="marquee-wrapper">
+<div class="marquee-wrapper {% if block.settings.pause_on_hover %}pause-enabled{% endif %}">
   <div class="marquee-slider">
     
     {% if block.settings.image != blank %}
