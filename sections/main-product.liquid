@@ -224,8 +224,9 @@
                   </p>
                 {%- endif -%}
               {%- endif -%}
-          {% when 'logo_row' %}
-   {% section 'logo-list' %}
+          {% when 'logo_list' %}
+            {% render 'custom-logo' %}
+  
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
                 {{- product.selected_or_first_available_variant.sku -}}
@@ -1321,7 +1322,28 @@
        {
   "type": "logo_list",
   "name": "Logo List",
-  "settings": []
+  "settings": [
+           {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.global.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "height",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "default": 80,
+          "unit": "px",
+          "label": "t:sections.logo-list.blocks.logo.settings.image_height.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.global.settings.link.label"
+        }
+  ]
        },
 
 
