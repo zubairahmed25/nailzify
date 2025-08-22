@@ -239,7 +239,7 @@
       <div class="mb-6">{{ block.settings.description }}</div>
     {% endif %}
 
-    <div class="logo-bar flex gap-6 items-center justify-center {% if block.settings.marquee %}animate-marquee-{{ block.settings.marquee_direction }} speed-{{ block.settings.marquee_speed }}{% endif %}">
+<div class="logo-bar flex gap-6 items-center {% if block.settings.marquee %}animate-marquee-{{ block.settings.marquee_direction }} speed-{{ block.settings.marquee_speed }}{% else %}justify-center{% endif %}">
       {% for i in (1..5) %}
         {% capture logo_key %}logo_{{ i }}{% endcapture %}
         {% capture link_key %}link_{{ i }}{% endcapture %}
