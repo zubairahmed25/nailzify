@@ -224,52 +224,55 @@
                   </p>
                 {%- endif -%}
               {%- endif -%}
-             {% when 'custom_logo' %}
-  <div class="logo-list-block py-8" style="background: {{ block.settings.background }}; color: {{ block.settings.text_color }}">
-    
-    {% if block.settings.subheading != blank %}
-      <h4 class="text-sm uppercase mb-2">{{ block.settings.subheading }}</h4>
-    {% endif %}
+           {% when 'logo_list' %}
+  <div class="product-block product-block--logo-list section section--padding{% if block.settings.divider %} section--divider{% endif %}{% if block.settings.rounded %} section--rounded relative{% endif %}" {{ block.shopify_attributes }}>
+    <div class="{% if block.settings.layout == 'default' %}page-width {% if block.settings.full_width %}page-width--full {% endif %}{% else %}{% unless block.settings.full_width %}page-width {% endunless %}{% endif %}relative">
+      {%- if block.settings.heading != blank -%}
+        <h2 class="{{ block.settings.heading_size }} {{ block.settings.heading_alignment }}">
+          {{ block.settings.heading }}
+        </h2>
+      {%- endif -%}
 
-    {% if block.settings.heading != blank %}
-      <h2 class="text-2xl font-bold mb-4">{{ block.settings.heading }}</h2>
-    {% endif %}
-
-    {% if block.settings.description != blank %}
-      <div class="mb-6">{{ block.settings.description }}</div>
-    {% endif %}
-
-<div class="logo-bar flex gap-6 items-center {% if block.settings.marquee %}animate-marquee-{{ block.settings.marquee_direction }} speed-{{ block.settings.marquee_speed }}{% else %}justify-center{% endif %}">
-      {% for i in (1..5) %}
-        {% capture logo_key %}logo_{{ i }}{% endcapture %}
-        {% capture link_key %}link_{{ i }}{% endcapture %}
-        {% assign logo = block.settings[logo_key] %}
-        {% assign link = block.settings[link_key] %}
-        
-        {% if logo != blank %}
-          <div class="logo shrink-0 {% if block.settings.rounded %}rounded-full overflow-hidden{% endif %}" style="--image-height:80px;">
-            {% if link != blank %}
-              <a href="{{ link }}">
-                <img src="{{ logo | image_url: height: 80 }}" alt="Logo {{ i }}" loading="lazy" height="80">
-              </a>
-            {% else %}
-              <img src="{{ logo | image_url: height: 80 }}" alt="Logo {{ i }}" loading="lazy" height="80">
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endfor %}
+      {%- if block.blocks.size > 0 -%}
+        <div class="{{ block.settings.heading_alignment }} overflow-hidden">
+          {%- if block.settings.layout == 'marquee' -%}
+            <logo-list class="logo-list logo-list--{{ block.settings.direction }} flex items-center" data-speed="{{ block.settings.speed }}" data-direction="{{ block.settings.direction }}">
+          {%- endif -%}
+            <div class="logo-bar inline-flex flex-wrap items-center justify-center{% if block.settings.layout == 'marquee' %} flex-nowrap{% endif %}">
+              {%- for logo in block.blocks -%}
+                {%- liquid
+                  assign image_height = logo.settings.height
+                  assign image_height_2x = logo.settings.height | times: 2
+                -%}
+                <div class="logo__media media media--transparent relative overflow-hidden shrink-0" style="--image-height: {{ image_height }}px;" {{ logo.shopify_attributes }}>
+                  {%- if logo.settings.image != blank -%}
+                    <img
+                      srcset="{{ logo.settings.image | image_url: height: image_height }} 1x, {{ logo.settings.image | image_url: height: image_height_2x }} 2x"
+                      src="{{ logo.settings.image | image_url: height: image_height }}"
+                      alt="{{ logo.settings.image.alt | escape }}"
+                      loading="lazy"
+                      width="{{ image_height | times: logo.settings.image.aspect_ratio }}"
+                      height="{{ image_height }}"
+                      is="lazy-image"
+                    />
+                  {%- else -%}
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder' -}}
+                  {%- endif -%}
+                  {%- if logo.settings.link != blank -%}
+                    <a href="{{ logo.settings.link }}" class="block absolute top-0 left-0 w-full h-full" aria-hidden="true">&nbsp;</a>
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- if block.settings.layout == 'marquee' -%}
+            </logo-list>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     </div>
-
-    {% if block.settings.button_label != blank and block.settings.button_link != blank %}
-      <div class="mt-6">
-        <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_label }}</a>
-      </div>
-    {% endif %}
-
-    {% if block.settings.divider %}
-      <hr class="mt-6 border-t">
-    {% endif %}
   </div>
+
+
 
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
