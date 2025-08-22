@@ -250,19 +250,6 @@
             "opened": true,
             "clickable": false
           }
-        },
-        "collapsible_tab_LAmTnm": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Description",
-            "content": "<p>add text</p>",
-            "page": "",
-            "liquid": "",
-            "opened": false
-          }
         }
       },
       "block_order": [
@@ -280,8 +267,7 @@
         "text-3",
         "text-4",
         "sticky_buy_button",
-        "product_bundle_ymNDwk",
-        "collapsible_tab_LAmTnm"
+        "product_bundle_ymNDwk"
       ],
       "custom_css": [],
       "settings": {
