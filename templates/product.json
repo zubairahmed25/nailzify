@@ -310,7 +310,7 @@
         "image_ratio_mobile": "adapt_first",
         "mobile_thumbnail": false,
         "padding_top": 8,
-        "padding_bottom": 8,
+        "padding_bottom": 40,
         "divider": false,
         "full_width": true,
         "rounded": true
