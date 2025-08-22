@@ -253,6 +253,7 @@
         },
         "collapsible_tab_LAmTnm": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "style": "with-background",
             "icon": "none",
