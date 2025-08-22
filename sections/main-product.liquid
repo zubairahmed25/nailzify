@@ -224,8 +224,8 @@
                   </p>
                 {%- endif -%}
               {%- endif -%}
-          {% when 'logo_list' %}
-            {% render 'custom-logo' %}
+          {% when 'marquee_block' %}
+            {% render 'marquee-block' %}
   
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
