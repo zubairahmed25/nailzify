@@ -108,6 +108,11 @@
         "marquee_block_VejRMh": {
           "type": "marquee_block",
           "settings": {
+            "pause_on_hover": true,
+            "image_width": 100,
+            "image_height": 72,
+            "image_gap": 20,
+            "scroll_speed": 24,
             "image": "shopify://shop_images/Asset_10.svg",
             "image2": "shopify://shop_images/Asset_9.svg",
             "image3": "shopify://shop_images/Asset_12.svg",
