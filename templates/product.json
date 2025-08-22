@@ -704,8 +704,8 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "heading": "Collapsible row 1",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "heading": "Description",
+            "content": "{{ product.description }}",
             "metafields": ""
           }
         },
@@ -715,9 +715,9 @@
             "icon": "none",
             "iwidth": "custom",
             "icon_width": 24,
-            "heading": "Collapsible row 2",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-            "metafields": ""
+            "heading": "Kit Includes",
+            "content": "",
+            "metafields": "custom.kit_includes"
           }
         },
         "collapsible_tab-3": {
