@@ -3137,8 +3137,9 @@
 .marquee-slider {
   display: flex;
   width: max-content;
-  animation: marquee-left 25s linear infinite; /* speed control */
+  animation: marquee-left var(--speed, 25s) linear infinite; /* dynamic speed */
 }
+
 .marquee-wrapper.pause-enabled:hover .marquee-slider {
   animation-play-state: paused;
 }
@@ -3149,13 +3150,14 @@
 }
 
 .marquee-block img {
-  max-width: 100px; 
+  max-width: var(--img-width, 100px); 
   width: 100%;
-  height: 72px;
+  height: var(--img-height, 72px);
+  object-fit: contain;
 }
 
 .marquee-image {
-  padding: 0 20px;
+  padding: 0 var(--gap, 20px);
 }
 
 @keyframes marquee-left {
