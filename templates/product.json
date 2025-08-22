@@ -237,6 +237,7 @@
         },
         "product_bundle_ymNDwk": {
           "type": "product_bundle",
+          "disabled": true,
           "settings": {
             "icon": "briefcase",
             "iwidth": "custom",
