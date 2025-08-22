@@ -124,6 +124,22 @@
             "text_size": "text-base"
           }
         },
+        "marquee_block_VejRMh": {
+          "type": "marquee_block",
+          "settings": {
+            "hide_on_mobile": true,
+            "pause_on_hover": true,
+            "image_width": 100,
+            "image_height": 72,
+            "image_gap": 20,
+            "scroll_speed": 24,
+            "image": "shopify://shop_images/Asset_10.svg",
+            "image2": "shopify://shop_images/Asset_9.svg",
+            "image3": "shopify://shop_images/Asset_12.svg",
+            "image4": "shopify://shop_images/Asset_11.svg",
+            "image5": "shopify://shop_images/Asset_8.svg"
+          }
+        },
         "inventory": {
           "type": "inventory",
           "disabled": true,
@@ -144,22 +160,6 @@
             "enable_back_in_stock": true,
             "show_back_in_stock_name": true,
             "show_back_in_stock_phone": true
-          }
-        },
-        "marquee_block_VejRMh": {
-          "type": "marquee_block",
-          "settings": {
-            "hide_on_mobile": true,
-            "pause_on_hover": true,
-            "image_width": 100,
-            "image_height": 72,
-            "image_gap": 20,
-            "scroll_speed": 24,
-            "image": "shopify://shop_images/Asset_10.svg",
-            "image2": "shopify://shop_images/Asset_9.svg",
-            "image3": "shopify://shop_images/Asset_12.svg",
-            "image4": "shopify://shop_images/Asset_11.svg",
-            "image5": "shopify://shop_images/Asset_8.svg"
           }
         },
         "pickup_availability": {
@@ -269,9 +269,9 @@
         "title",
         "vendor",
         "description",
+        "marquee_block_VejRMh",
         "inventory",
         "buy_buttons",
-        "marquee_block_VejRMh",
         "pickup_availability",
         "share",
         "complementary",
