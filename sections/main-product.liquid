@@ -224,6 +224,52 @@
                   </p>
                 {%- endif -%}
               {%- endif -%}
+             {% when 'custom_logo' %}
+  <div class="logo-list-block py-8" style="background: {{ block.settings.background }}; color: {{ block.settings.text_color }}">
+    
+    {% if block.settings.subheading != blank %}
+      <h4 class="text-sm uppercase mb-2">{{ block.settings.subheading }}</h4>
+    {% endif %}
+
+    {% if block.settings.heading != blank %}
+      <h2 class="text-2xl font-bold mb-4">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="mb-6">{{ block.settings.description }}</div>
+    {% endif %}
+
+    <div class="logo-bar flex gap-6 items-center justify-center {% if block.settings.marquee %}animate-marquee-{{ block.settings.marquee_direction }} speed-{{ block.settings.marquee_speed }}{% endif %}">
+      {% for i in (1..5) %}
+        {% capture logo_key %}logo_{{ i }}{% endcapture %}
+        {% capture link_key %}link_{{ i }}{% endcapture %}
+        {% assign logo = block.settings[logo_key] %}
+        {% assign link = block.settings[link_key] %}
+        
+        {% if logo != blank %}
+          <div class="logo shrink-0 {% if block.settings.rounded %}rounded-full overflow-hidden{% endif %}" style="--image-height:80px;">
+            {% if link != blank %}
+              <a href="{{ link }}">
+                <img src="{{ logo | image_url: height: 80 }}" alt="Logo {{ i }}" loading="lazy" height="80">
+              </a>
+            {% else %}
+              <img src="{{ logo | image_url: height: 80 }}" alt="Logo {{ i }}" loading="lazy" height="80">
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+      <div class="mt-6">
+        <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_label }}</a>
+      </div>
+    {% endif %}
+
+    {% if block.settings.divider %}
+      <hr class="mt-6 border-t">
+    {% endif %}
+  </div>
 
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
@@ -1317,6 +1363,137 @@
         }
       ]
     },
+           {
+  "type": "custom_logo",
+  "name": "Logo List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Partners"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "marquee",
+      "label": "Enable Marquee",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "marquee_direction",
+      "label": "Marquee Direction",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Marquee Speed",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Logo 1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Logo 2 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Logo 3 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_4",
+      "label": "Logo 4"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Logo 4 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_5",
+      "label": "Logo 5"
+    },
+    {
+      "type": "url",
+      "id": "link_5",
+      "label": "Logo 5 Link"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "Show Divider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Rounded Logos",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ]
+},
     {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
@@ -1557,6 +1734,7 @@
             }
           ]
         },
+
         {
           "type": "image_picker",
           "id": "icon_image",
