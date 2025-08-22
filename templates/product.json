@@ -703,7 +703,7 @@
           "settings": {
             "icon": "none",
             "iwidth": "custom",
-            "icon_width": 24,
+            "icon_width": 12,
             "heading": "Description",
             "content": "{{ product.description }}",
             "metafields": ""
@@ -760,13 +760,13 @@
         "specification"
       ],
       "settings": {
-        "style": "with-border",
-        "open_first_row": true,
+        "style": "with-background",
+        "open_first_row": false,
         "specifications_heading": "Included in the Box",
-        "heading": "Product details",
+        "heading": "",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
+        "heading_tag": "h3",
         "subheading": "",
         "description": "",
         "button_label": "",
@@ -783,8 +783,8 @@
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "padding_top": 12,
+        "padding_bottom": 12,
         "divider": false,
         "full_width": false,
         "rounded": false
