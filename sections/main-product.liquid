@@ -225,7 +225,7 @@
                 {%- endif -%}
               {%- endif -%}
          {% when 'marquee_block' %}
-<div class="marquee-wrapper {% if block.settings.pause_on_hover %}pause-enabled{% endif %}">
+<div class="marquee-wrapper {% if block.settings.pause_on_hover %}pause-enabled{% endif %}  {% if block.settings.hide_on_mobile %} mobile-hidden{% endif %}">
   <div class="marquee-slider" style="--img-width: {{ block.settings.image_width | default: 100 }}px;
             --img-height: {{ block.settings.image_height | default: 72 }}px;
             --gap: {{ block.settings.image_gap | default: 20 }}px;
