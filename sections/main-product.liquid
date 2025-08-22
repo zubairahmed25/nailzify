@@ -225,7 +225,50 @@
                 {%- endif -%}
               {%- endif -%}
           {% when 'marquee_block' %}
-            {% render 'marquee-block' %}
+            <div class="marquee-slider">
+      
+        <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image2 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image3 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image4 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image5 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+     
+    
+    </div>
   
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
