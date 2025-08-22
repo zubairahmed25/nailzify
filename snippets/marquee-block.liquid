@@ -1,0 +1,138 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .marquee-background {
+    background-color: {{ section.settings.background_color }};
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-background .marquee-slider {
+    display: flex;
+    width: max-content; /* Ensure the slider expands to fit its content */
+    animation:
+      {% if section.settings.marquee_direction == "left" %} marquee-left {% else %} marquee-right {% endif %}
+      {{ section.settings.speed }}s linear infinite;
+  }
+
+  {% if section.settings.hover_pause %}
+  .marquee-background .marquee-slider:hover {
+    animation-play-state: paused;
+  }
+  {% endif %}
+
+  .marquee-background .marquee-block {
+    display: inline-flex;
+    align-items: center;
+    /* gap: 26px; */
+    /* padding-left: 64px;
+    padding-right: 64px;
+    border-right: 1px solid #e3e3e3; */
+  }
+
+  .marquee-background .marquee-block img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .marquee-background .marquee-block .marquee-rich-text {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .marquee-image {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .marquee-rich-text p {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  /* Keyframes for Right-to-Left (Default) */
+  @keyframes marquee-left {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Keyframes for Left-to-Right */
+  @keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
+  }
+
+  @media screen and (max-width: 768px) {
+  .marquee-background .marquee-block .marquee-rich-text {
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .marquee-image {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  }
+{%- endstyle -%}
+
+<div class="marquee-background color-{{ section.settings.color_scheme }}">
+  <div class="marquee-width section-{{ section.id }}-padding">
+    <div class="marquee-slider">
+      
+        <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image2 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image3 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image4 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+		
+		 <div class="marquee-block">
+          {% if block.settings.image != blank %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image5 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+     
+    
+    </div>
+  </div>
+</div>
