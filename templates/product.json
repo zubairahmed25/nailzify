@@ -262,6 +262,18 @@
             "liquid": "",
             "opened": false
           }
+        },
+        "collapsible_tab_YLy6mF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Kit Includes",
+            "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
         }
       },
       "block_order": [
@@ -280,7 +292,8 @@
         "text-4",
         "sticky_buy_button",
         "product_bundle_ymNDwk",
-        "collapsible_tab_kfGJYR"
+        "collapsible_tab_kfGJYR",
+        "collapsible_tab_YLy6mF"
       ],
       "custom_css": [],
       "settings": {
@@ -367,6 +380,7 @@
         "collapsible_tab-4",
         "specification"
       ],
+      "disabled": true,
       "settings": {
         "style": "with-background",
         "open_first_row": false,
