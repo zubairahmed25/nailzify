@@ -23,7 +23,7 @@
                 assign image_height_2x = block.settings.height | times: 2
               -%}
               <div class="logo__media media media--transparent relative overflow-hidden shrink-0" style="--image-height: {{ image_height }}px;" {{ block.shopify_attributes }}>
-                {%- if block.settings.image != blank -%}
+                {%- if section.settings.image != blank -%}
                   <img
                     srcset="{{ section.settings.image | image_url: height: image_height }} 1x, {{ block.settings.image | image_url: height: image_height_2x }} 2x"
                     src="{{ section.settings.image | image_url: height: image_height }}"
@@ -36,8 +36,56 @@
                 {%- else -%}
                   {{- 'logo' | placeholder_svg_tag: 'placeholder' -}}
                 {%- endif -%}
+                {%- if section.settings.link2 != blank -%}
+                  <a href="{{ section.settings.link2 }}" class="block absolute top-0 left-0 w-full h-full" aria-hidden="true">&nbsp;</a>
+                {%- endif -%}
+                 {%- if section.settings.image != blank -%}
+                  <img
+                    srcset="{{ section.settings.image2 | image_url: height: image_height }} 1x, {{ block.settings.image | image_url: height: image_height_2x }} 2x"
+                    src="{{ section.settings.image2 | image_url: height: image_height }}"
+                    alt="{{ section.settings.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ image_height | times: section.settings.image.aspect_ratio }}"
+                    height="{{ image_height }}"
+                    is="lazy-image"
+                  />
+                {%- else -%}
+                  {{- 'logo' | placeholder_svg_tag: 'placeholder' -}}
+                {%- endif -%}
                 {%- if section.settings.link != blank -%}
                   <a href="{{ section.settings.link }}" class="block absolute top-0 left-0 w-full h-full" aria-hidden="true">&nbsp;</a>
+                {%- endif -%}
+                 {%- if section.settings.image != blank -%}
+                  <img
+                    srcset="{{ section.settings.image3 | image_url: height: image_height }} 1x, {{ block.settings.image | image_url: height: image_height_2x }} 2x"
+                    src="{{ section.settings.image3 | image_url: height: image_height }}"
+                    alt="{{ section.settings.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ image_height | times: section.settings.image.aspect_ratio }}"
+                    height="{{ image_height }}"
+                    is="lazy-image"
+                  />
+                {%- else -%}
+                  {{- 'logo' | placeholder_svg_tag: 'placeholder' -}}
+                {%- endif -%}
+                {%- if section.settings.link != blank -%}
+                  <a href="{{ section.settings.link3 }}" class="block absolute top-0 left-0 w-full h-full" aria-hidden="true">&nbsp;</a>
+                {%- endif -%}
+                 {%- if section.settings.image != blank -%}
+                  <img
+                    srcset="{{ section.settings.image4 | image_url: height: image_height }} 1x, {{ block.settings.image | image_url: height: image_height_2x }} 2x"
+                    src="{{ section.settings.image4 | image_url: height: image_height }}"
+                    alt="{{ section.settings.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ image_height | times: section.settings.image.aspect_ratio }}"
+                    height="{{ image_height }}"
+                    is="lazy-image"
+                  />
+                {%- else -%}
+                  {{- 'logo' | placeholder_svg_tag: 'placeholder' -}}
+                {%- endif -%}
+                {%- if section.settings.link != blank -%}
+                  <a href="{{ section.settings.link4 }}" class="block absolute top-0 left-0 w-full h-full" aria-hidden="true">&nbsp;</a>
                 {%- endif -%}
               </div>
             {%- endfor -%}
