@@ -225,49 +225,7 @@
                 {%- endif -%}
               {%- endif -%}
           {% when 'logo_row' %}
-  <div class="product-block product-block--logo-row section section--padding{% if block.settings.divider %} section--divider{% endif %}" {{ block.shopify_attributes }}>
-    <div class="page-width">
-      {%- if block.settings.heading != blank -%}
-        <h2 class="{{ block.settings.heading_size }} {{ block.settings.heading_alignment }}">
-          {{ block.settings.heading }}
-        </h2>
-      {%- endif -%}
-
-      <div class="logo-bar flex flex-wrap items-center justify-center gap-6">
-        {% for i in (1..5) %}
-          {% capture logo_key %}logo_{{ i }}{% endcapture %}
-          {% capture link_key %}link_{{ i }}{% endcapture %}
-          {% assign logo = block.settings[logo_key] %}
-          {% assign link = block.settings[link_key] %}
-
-          {% if logo != blank %}
-            <div class="logo shrink-0" style="--image-height: {{ block.settings.image_height }}px;">
-              {% if link != blank %}
-                <a href="{{ link }}">
-                  <img 
-                    src="{{ logo | image_url: height: block.settings.image_height }}" 
-                    alt="Logo {{ i }}" 
-                    loading="lazy" 
-                    height="{{ block.settings.image_height }}" 
-                  >
-                </a>
-              {% else %}
-                <img 
-                  src="{{ logo | image_url: height: block.settings.image_height }}" 
-                  alt="Logo {{ i }}" 
-                  loading="lazy" 
-                  height="{{ block.settings.image_height }}" 
-                >
-              {% endif %}
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-
-
+   {% section 'logo-list' %}
             {%- when 'sku' -%}
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
                 {{- product.selected_or_first_available_variant.sku -}}
