@@ -105,9 +105,15 @@
             "show_rating": true
           }
         },
-        "logo_list_UM4aFf": {
-          "type": "logo_list",
-          "settings": {}
+        "marquee_block_VejRMh": {
+          "type": "marquee_block",
+          "settings": {
+            "image": "shopify://shop_images/Asset_10.svg",
+            "image2": "shopify://shop_images/Asset_9.svg",
+            "image3": "shopify://shop_images/Asset_12.svg",
+            "image4": "shopify://shop_images/Asset_11.svg",
+            "image5": "shopify://shop_images/Asset_4.svg"
+          }
         },
         "vendor": {
           "type": "text",
@@ -241,7 +247,7 @@
       },
       "block_order": [
         "title",
-        "logo_list_UM4aFf",
+        "marquee_block_VejRMh",
         "vendor",
         "description",
         "inventory",
