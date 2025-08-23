@@ -130,6 +130,18 @@
             "opened": false
           }
         },
+        "collapsible_tab_AVgT7M": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Collapsible row",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -280,6 +292,7 @@
         "title",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
+        "collapsible_tab_AVgT7M",
         "vendor",
         "description",
         "marquee_block_VejRMh",
