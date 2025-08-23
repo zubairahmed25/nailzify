@@ -106,6 +106,30 @@
             "show_rating": true
           }
         },
+        "collapsible_tab_kfGJYR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Description",
+            "content": "{{ product.description }}",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
+        "collapsible_tab_YLy6mF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Kit Includes",
+            "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -250,34 +274,12 @@
             "opened": true,
             "clickable": false
           }
-        },
-        "collapsible_tab_kfGJYR": {
-          "type": "collapsible_tab",
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Description",
-            "content": "{{ product.description }}",
-            "page": "",
-            "liquid": "",
-            "opened": false
-          }
-        },
-        "collapsible_tab_YLy6mF": {
-          "type": "collapsible_tab",
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Kit Includes",
-            "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
-            "page": "",
-            "liquid": "",
-            "opened": false
-          }
         }
       },
       "block_order": [
         "title",
+        "collapsible_tab_kfGJYR",
+        "collapsible_tab_YLy6mF",
         "vendor",
         "description",
         "marquee_block_VejRMh",
@@ -291,9 +293,7 @@
         "text-3",
         "text-4",
         "sticky_buy_button",
-        "product_bundle_ymNDwk",
-        "collapsible_tab_kfGJYR",
-        "collapsible_tab_YLy6mF"
+        "product_bundle_ymNDwk"
       ],
       "custom_css": [],
       "settings": {
