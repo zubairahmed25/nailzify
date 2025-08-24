@@ -108,6 +108,7 @@
         },
         "liquid_Vd3XcV": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "[id^=\"rbr-bundle-\"] > div > div[class^=\"zufa_\"]"
           }
