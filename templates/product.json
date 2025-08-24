@@ -109,18 +109,8 @@
         "liquid_Vd3XcV": {
           "type": "liquid",
           "settings": {
-            "liquid": "[id^=\"rbr-bundle-\"] > div > div[class^=\"style_header_\"]"
+            "liquid": "[id^=\"rbr-bundle-\"] > div > div[class^=\"zufa_\"]"
           }
-        },
-        "fbp_fast_bundle_all_bundles_zhLQVx": {
-          "type": "shopify://apps/fbp-fast-bundle/blocks/all_bundles/9e87fbe2-9041-4c23-acf5-322413994cef",
-          "disabled": true,
-          "settings": {}
-        },
-        "fbp_fast_bundle_fbt_position_mPMcWq": {
-          "type": "shopify://apps/fbp-fast-bundle/blocks/fbt_position/9e87fbe2-9041-4c23-acf5-322413994cef",
-          "disabled": true,
-          "settings": {}
         },
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
@@ -307,8 +297,6 @@
       "block_order": [
         "title",
         "liquid_Vd3XcV",
-        "fbp_fast_bundle_all_bundles_zhLQVx",
-        "fbp_fast_bundle_fbt_position_mPMcWq",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "collapsible_tab_AVgT7M",
