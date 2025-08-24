@@ -2,6 +2,8 @@
 {
     background:#5e5c5c06 !important;
 }
+@media only screen and (max-width: 600px)
+{
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
   flex-wrap: nowrap !important; 
 } 
@@ -18,3 +20,6 @@
 {
 flex-direction:column !important;
 } */
+
+
+}
