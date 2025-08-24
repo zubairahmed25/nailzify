@@ -404,6 +404,7 @@
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
+        "hide_on_desktop": false,
         "layout": "marquee",
         "grid_horizontal": 150,
         "direction": "right",

@@ -7,7 +7,7 @@
   }
 </style>
 
-<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+<div class="section {% if section.settings.hide_on_desktop %} desktop-hidden{% endif %} section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="{% if section.settings.layout == 'default' %}page-width {% if section.settings.full_width %}page-width--full {% endif %}{% else %}{% unless section.settings.full_width %}page-width {% endunless %}{% endif %}relative">
     {%- render 'section-heading', section: section -%}
 
@@ -54,6 +54,13 @@
 {
   "name": "t:sections.logo-list.name",
   "settings": [
+    {
+  "type": "checkbox",
+  "id": "hide_on_desktop",
+  "label": "Hide on Desktop",
+  "default": false
+},
+
     {
       "type": "select",
       "id": "layout",
@@ -469,3 +476,10 @@
   }
 }
 {% endschema %}
+<style>
+  @media (min-width: 768px) {
+    .desktop-hidden {
+      display: none !important;
+    }
+  }
+</style>
