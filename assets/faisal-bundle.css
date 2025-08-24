@@ -14,7 +14,7 @@
     width:100% !important;
     height:200px !important;
 }
-.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div > div:last-child
+/* .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div > div:last-child
 {
 flex-direction:column !important;
-}
+} */
