@@ -15,8 +15,8 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC02011_d.webp",
-            "image_mobile": "shopify://shop_images/DSC02011_d.webp",
+            "image": "shopify://shop_images/DSC02011.png",
+            "image_mobile": "shopify://shop_images/DSC02011.webp",
             "heading": "Premium Press-On Nails",
             "heading_size": "title-sm",
             "heading_tag": "h2",
@@ -29,6 +29,7 @@
         },
         "image_jL4QQN": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DSC01520.webp",
             "image_mobile": "shopify://shop_images/DSC01521.webp",
