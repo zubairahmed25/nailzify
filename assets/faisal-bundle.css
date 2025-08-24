@@ -2,3 +2,7 @@
 {
     background:#5e5c5c06 !important;
 }
+.rbr-page-containe div:last-child
+{
+    border:solid 1px red !important;
+}
