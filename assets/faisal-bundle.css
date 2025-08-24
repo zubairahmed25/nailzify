@@ -6,8 +6,7 @@
   flex-wrap: nowrap !important;
   column-gap: 10px !important;
 } 
-.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
-  border: 2px solid red; 
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child { 
   flex-direction:column !important;
 }
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child
