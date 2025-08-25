@@ -381,10 +381,19 @@
             "height": 100,
             "link": ""
           }
+        },
+        "logo_TgGxyk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_10.svg",
+            "height": 80,
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "logo_YwUt9g"
+        "logo_YwUt9g",
+        "logo_TgGxyk"
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
