@@ -1502,6 +1502,7 @@
         "text_9H7nDw",
         "button_KPjcPf"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.name",
       "settings": {
         "image": "shopify://shop_images/IMG_5021.jpg",
@@ -1576,6 +1577,7 @@
         "text_nNddyE",
         "button_73PDhw"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.name",
       "settings": {
         "image": "shopify://shop_images/DSC01507.jpg",
@@ -1781,6 +1783,7 @@
     "collection-list",
     "video-with-text-overlay",
     "logo_list_m8arzH",
+    "collage_grid_DHCxLP",
     "featured-product",
     "image-comparison",
     "rich-text-2",
@@ -1795,7 +1798,6 @@
     "faq_bqXHVL",
     "image_with_text_CGzxb6",
     "image_with_text_kzGfUx",
-    "1755525392b1b38f3b",
-    "collage_grid_DHCxLP"
+    "1755525392b1b38f3b"
   ]
 }
