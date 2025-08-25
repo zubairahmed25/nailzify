@@ -38,5 +38,18 @@ flex-direction:column !important;
 body.template-product #shopify-section-template--19637427241201__main-product .section {
     padding-top: 0px !important;
 }
+.rbr-page-container > div:nth-child(2)::before {
+    content: "";
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+    width: 40px !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+    display: block !important;
+    z-index: 5 !important;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
+}
 
 }
