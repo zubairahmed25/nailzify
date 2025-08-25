@@ -1,7 +1,6 @@
 .rbr-hrDesktop > div > div > div, .rbr-desktop > div > div > div
 {
-  width:100% !important;
-  border:solid 1px red;
+  width:100% !important; 
 }
 
 .rbr-page-container
@@ -60,12 +59,7 @@
 .rbr-page-container > div:nth-child(2)::-webkit-scrollbar-track {
     background: transparent;
 }
-@media screen and (min-width: 1570px) {
-  .rbr-hrDesktop > div > div > div {
-    width: 100% !important;
-    border: solid 1px red;
-  }
-}
+ 
 
 @media only screen and (min-width: 1441px) and (max-width:2800px)
 {
