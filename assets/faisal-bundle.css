@@ -2,7 +2,6 @@
 {
   width:100% !important;
 }
-
 .rbr-page-container
 {
     background:#5e5c5c06 !important;
@@ -11,7 +10,6 @@
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
   flex-wrap: nowrap !important; 
 } 
-
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
 {
     width:100% !important;
@@ -54,15 +52,12 @@
     height: 8px; /* horizontal scrollbar */
     width: 8px;  /* vertical scrollbar */
 }
-
 .rbr-page-container > div:nth-child(2)::-webkit-scrollbar-thumb { 
     border-radius: 8px;
 }
-
 .rbr-page-container > div:nth-child(2)::-webkit-scrollbar-track {
     background: transparent;
 }
-
 
 @media only screen and (min-width: 1441px)
 {
@@ -78,7 +73,6 @@
     background-size: cover;
     background-position: 50% 30%;
 }
-
 
 }
 @media only screen and (min-width: 601px) and (max-width: 1440px)
