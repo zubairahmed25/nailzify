@@ -1,6 +1,7 @@
 .rbr-hrDesktop > div > div > div
 {
   width:100% !important;
+  border:solid 1px red;
 }
 .rbr-page-container
 {
