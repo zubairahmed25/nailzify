@@ -69,7 +69,7 @@
       "settings": {
         "autoplay": true,
         "autoplay_speed": 3,
-        "show_navigation": true,
+        "show_navigation": false,
         "image_height": "100vh",
         "content_width": "small",
         "image_height_mobile": "100vh",
