@@ -1,8 +1,9 @@
-.rbr-hrDesktop > div > div > div
+.rbr-hrDesktop > div > div > div, .rbr-desktop > div > div > div
 {
   width:100% !important;
   border:solid 1px red;
 }
+
 .rbr-page-container
 {
     background:#5e5c5c06 !important;
