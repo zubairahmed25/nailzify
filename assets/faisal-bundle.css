@@ -47,6 +47,26 @@
     z-index: 5 !important;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
 }
+.rbr-page-container > div:nth-child(2) {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #999 transparent; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar {
+    height: 4px; /* horizontal scrollbar */
+    width: 4px;  /* vertical scrollbar */
+}
+
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar-thumb { 
+    border-radius: 4px;
+}
+
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
 @media only screen and (min-width: 1441px)
 {
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child 
