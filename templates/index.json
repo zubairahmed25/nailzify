@@ -665,6 +665,12 @@
           "settings": {
             "text": "Featured product"
           }
+        },
+        "fbp_fast_bundle_bundle_with_ids_z9Gjiy": {
+          "type": "shopify://apps/fbp-fast-bundle/blocks/bundle_with_ids/9e87fbe2-9041-4c23-acf5-322413994cef",
+          "settings": {
+            "bundle_ids": ""
+          }
         }
       },
       "block_order": [
@@ -676,7 +682,8 @@
         "pickup_availability",
         "share",
         "read_more",
-        "spinning_text"
+        "spinning_text",
+        "fbp_fast_bundle_bundle_with_ids_z9Gjiy"
       ],
       "custom_css": [
         "@media screen and (min-width: 1920px) {.featured-product {gap: var(--grid-gap); padding-inline: calc(var(--grid-gap) * 2); }}"
@@ -684,7 +691,7 @@
       "settings": {
         "product": "midnight-blue",
         "enable_sticky_info": true,
-        "media_size": 64,
+        "media_size": 57,
         "gallery_layout": "thumbnail",
         "thumbnail_position": "beside",
         "image_ratio": "square",
