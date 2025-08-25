@@ -1655,7 +1655,7 @@
         "image_XTaqtV": {
           "type": "image",
           "settings": {
-            "column_size": 5,
+            "column_size": 3,
             "row_size": 2,
             "subheading": "",
             "heading": "",
@@ -1683,7 +1683,7 @@
         "image_f8y9Hw": {
           "type": "image",
           "settings": {
-            "column_size": 5,
+            "column_size": 4,
             "row_size": 2,
             "subheading": "",
             "heading": "",
@@ -1711,7 +1711,7 @@
         "image_ifXzfK": {
           "type": "image",
           "settings": {
-            "column_size": 5,
+            "column_size": 3,
             "row_size": 2,
             "subheading": "",
             "heading": "",
@@ -1735,41 +1735,12 @@
             "color_overlay_hover": "",
             "overlay_opacity_hover": 10
           }
-        },
-        "image_RyVjRR": {
-          "type": "image",
-          "settings": {
-            "column_size": 5,
-            "row_size": 2,
-            "subheading": "",
-            "heading": "",
-            "link": "",
-            "invert_subheading_heading": false,
-            "image": "shopify://shop_images/DSC02222_68893dd2-187c-4400-82b0-a43d5572f2da.webp",
-            "content_position": "md:items-end md:justify-start",
-            "text_alignment": "left",
-            "content_position_mobile": "items-end justify-start",
-            "text_alignment_mobile": "left",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "color_text": "#ffffff",
-            "color_highlight": "",
-            "gradient_highlight": "",
-            "color_overlay": "#171717",
-            "overlay_opacity": 22,
-            "color_text_hover": "",
-            "color_highlight_hover": "",
-            "gradient_highlight_hover": "",
-            "color_overlay_hover": "",
-            "overlay_opacity_hover": 10
-          }
         }
       },
       "block_order": [
         "image_XTaqtV",
         "image_f8y9Hw",
-        "image_ifXzfK",
-        "image_RyVjRR"
+        "image_ifXzfK"
       ],
       "name": "t:sections.collage-grid.name",
       "settings": {
