@@ -405,13 +405,22 @@
             "height": 100,
             "link": ""
           }
+        },
+        "logo_G9e7UK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_11.svg",
+            "height": 80,
+            "link": ""
+          }
         }
       },
       "block_order": [
         "logo_YwUt9g",
         "logo_TgGxyk",
         "logo_WwLEwc",
-        "logo_JcDeF6"
+        "logo_JcDeF6",
+        "logo_G9e7UK"
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
