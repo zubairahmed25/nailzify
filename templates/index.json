@@ -374,53 +374,17 @@
     "logo_list_m8arzH": {
       "type": "logo-list",
       "blocks": {
-        "logo_bwcyem": {
+        "logo_YwUt9g": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Asset_1.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_mAGLVL": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_3.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_iNGgpx": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_4.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_GTw7nf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_5.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_NF8Yye": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_2.svg",
+            "image": "shopify://shop_images/Asset_8.svg",
             "height": 100,
             "link": ""
           }
         }
       },
       "block_order": [
-        "logo_bwcyem",
-        "logo_mAGLVL",
-        "logo_iNGgpx",
-        "logo_GTw7nf",
-        "logo_NF8Yye"
+        "logo_YwUt9g"
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
@@ -454,6 +418,131 @@
         "divider": false,
         "full_width": false,
         "rounded": false
+      }
+    },
+    "collage_grid_DHCxLP": {
+      "type": "collage-grid",
+      "blocks": {
+        "image_XTaqtV": {
+          "type": "image",
+          "settings": {
+            "column_size": 3,
+            "row_size": 2,
+            "subheading": "",
+            "heading": "",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "shopify://shop_images/DSC01886.webp",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "",
+            "gradient_highlight": "",
+            "color_overlay": "#171717",
+            "overlay_opacity": 10,
+            "color_text_hover": "",
+            "color_highlight_hover": "",
+            "gradient_highlight_hover": "",
+            "color_overlay_hover": "",
+            "overlay_opacity_hover": 30
+          }
+        },
+        "image_f8y9Hw": {
+          "type": "image",
+          "settings": {
+            "column_size": 4,
+            "row_size": 2,
+            "subheading": "",
+            "heading": "",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "shopify://shop_images/DSC01475-2_92e726ee-11ea-4e25-972d-46c8d8717e82.webp",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "",
+            "gradient_highlight": "",
+            "color_overlay": "#171717",
+            "overlay_opacity": 10,
+            "color_text_hover": "",
+            "color_highlight_hover": "",
+            "gradient_highlight_hover": "",
+            "color_overlay_hover": "",
+            "overlay_opacity_hover": 10
+          }
+        },
+        "image_ifXzfK": {
+          "type": "image",
+          "settings": {
+            "column_size": 3,
+            "row_size": 2,
+            "subheading": "",
+            "heading": "",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "shopify://shop_images/Swirls02.webp",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "",
+            "gradient_highlight": "",
+            "color_overlay": "#171717",
+            "overlay_opacity": 10,
+            "color_text_hover": "",
+            "color_highlight_hover": "",
+            "gradient_highlight_hover": "",
+            "color_overlay_hover": "",
+            "overlay_opacity_hover": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_XTaqtV",
+        "image_f8y9Hw",
+        "image_ifXzfK"
+      ],
+      "name": "t:sections.collage-grid.name",
+      "settings": {
+        "row_height": 300,
+        "row_height_mobile": 150,
+        "heading": "Multimedia collage",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true
       }
     },
     "featured-product": {
@@ -1649,131 +1738,6 @@
         "divider": false,
         "full_width": false,
         "rounded": false
-      }
-    },
-    "collage_grid_DHCxLP": {
-      "type": "collage-grid",
-      "blocks": {
-        "image_XTaqtV": {
-          "type": "image",
-          "settings": {
-            "column_size": 3,
-            "row_size": 2,
-            "subheading": "",
-            "heading": "",
-            "link": "",
-            "invert_subheading_heading": false,
-            "image": "shopify://shop_images/DSC01886.webp",
-            "content_position": "md:items-end md:justify-start",
-            "text_alignment": "left",
-            "content_position_mobile": "items-end justify-start",
-            "text_alignment_mobile": "left",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "color_text": "#ffffff",
-            "color_highlight": "",
-            "gradient_highlight": "",
-            "color_overlay": "#171717",
-            "overlay_opacity": 10,
-            "color_text_hover": "",
-            "color_highlight_hover": "",
-            "gradient_highlight_hover": "",
-            "color_overlay_hover": "",
-            "overlay_opacity_hover": 30
-          }
-        },
-        "image_f8y9Hw": {
-          "type": "image",
-          "settings": {
-            "column_size": 4,
-            "row_size": 2,
-            "subheading": "",
-            "heading": "",
-            "link": "",
-            "invert_subheading_heading": false,
-            "image": "shopify://shop_images/DSC01475-2_92e726ee-11ea-4e25-972d-46c8d8717e82.webp",
-            "content_position": "md:items-end md:justify-start",
-            "text_alignment": "left",
-            "content_position_mobile": "items-end justify-start",
-            "text_alignment_mobile": "left",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "color_text": "#ffffff",
-            "color_highlight": "",
-            "gradient_highlight": "",
-            "color_overlay": "#171717",
-            "overlay_opacity": 10,
-            "color_text_hover": "",
-            "color_highlight_hover": "",
-            "gradient_highlight_hover": "",
-            "color_overlay_hover": "",
-            "overlay_opacity_hover": 10
-          }
-        },
-        "image_ifXzfK": {
-          "type": "image",
-          "settings": {
-            "column_size": 3,
-            "row_size": 2,
-            "subheading": "",
-            "heading": "",
-            "link": "",
-            "invert_subheading_heading": false,
-            "image": "shopify://shop_images/Swirls02.webp",
-            "content_position": "md:items-end md:justify-start",
-            "text_alignment": "left",
-            "content_position_mobile": "items-end justify-start",
-            "text_alignment_mobile": "left",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "color_text": "#ffffff",
-            "color_highlight": "",
-            "gradient_highlight": "",
-            "color_overlay": "#171717",
-            "overlay_opacity": 10,
-            "color_text_hover": "",
-            "color_highlight_hover": "",
-            "gradient_highlight_hover": "",
-            "color_overlay_hover": "",
-            "overlay_opacity_hover": 10
-          }
-        }
-      },
-      "block_order": [
-        "image_XTaqtV",
-        "image_f8y9Hw",
-        "image_ifXzfK"
-      ],
-      "name": "t:sections.collage-grid.name",
-      "settings": {
-        "row_height": 300,
-        "row_height_mobile": 150,
-        "heading": "Multimedia collage",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false,
-        "enable_parallax": true
       }
     }
   },
