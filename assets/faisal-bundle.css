@@ -59,7 +59,7 @@
     background: transparent;
 }
 
-@media only screen and (min-width: 1441px)
+@media only screen and (min-width: 1441px) and (max-width:2800px)
 {
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child 
 {
