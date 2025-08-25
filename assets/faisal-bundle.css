@@ -29,7 +29,8 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
 {
     width:100% !important;
-    height:200px !important;
+    height: 300px !important;
+    background-size: cover;
 }
 /* .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div > div:last-child
 {
