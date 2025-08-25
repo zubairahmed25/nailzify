@@ -75,13 +75,11 @@
 }
 
 }
-@media only screen and (min-width: 601px) and (max-width: 1440px)
-{
+
   .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
     min-width: 250px;
     flex-direction:column !important;
   }
-}
 
 @media only screen and (max-width: 600px)
 { 
