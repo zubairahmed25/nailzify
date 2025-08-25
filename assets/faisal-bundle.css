@@ -15,9 +15,7 @@
     height: 300px !important;
     background-size: cover;
 }
-body.template-product #shopify-section-template--19637427241201__main-product .section {
-    padding-top: 0px !important;
-}
+
 
 
 @media only screen and (max-width: 600px)
@@ -36,6 +34,8 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
 {
 flex-direction:column !important;
 } */
-
+body.template-product #shopify-section-template--19637427241201__main-product .section {
+    padding-top: 0px !important;
+}
 
 }
