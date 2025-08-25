@@ -12,7 +12,7 @@
   flex-wrap: nowrap !important; 
 } 
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
-  width: 40%;
+  width: 80%;
   flex-direction:column !important;
 }
 .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
