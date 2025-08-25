@@ -49,10 +49,19 @@
 }
 @media only screen and (min-width: 1441px)
 {
-.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
-  min-width: 350px;
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child 
+{
+  min-width: 450px;
   flex-direction:column !important;
 }
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
+{
+    width:100% !important;
+    height: 400px !important;
+    background-size: cover;
+}
+
+
 }
 
 @media only screen and (max-width: 600px)
