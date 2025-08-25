@@ -386,6 +386,14 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_10.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_WwLEwc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_9.svg",
             "height": 80,
             "link": ""
           }
@@ -393,7 +401,8 @@
       },
       "block_order": [
         "logo_YwUt9g",
-        "logo_TgGxyk"
+        "logo_TgGxyk",
+        "logo_WwLEwc"
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
