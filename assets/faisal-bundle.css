@@ -42,14 +42,14 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
     content: "";
     position: absolute !important;
     top: 0px !important;
-    right: 0px !important;
+    left: 0px !important;
     width: 40px !important;
     height: 100% !important;
     pointer-events: none !important;
     transition: opacity 0.3s ease-in-out !important;
     display: block !important;
     z-index: 5 !important;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
 }
 
 }
