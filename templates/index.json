@@ -41,26 +41,11 @@
             "button_external": false,
             "button_icon": false
           }
-        },
-        "image_QNmbtb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DSC01475-2.webp",
-            "heading": "Image slide",
-            "heading_size": "title-lg tracking-heading",
-            "heading_tag": "h2",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
         }
       },
       "block_order": [
         "image_RVrfLL",
-        "image_jL4QQN",
-        "image_QNmbtb"
+        "image_jL4QQN"
       ],
       "custom_css": [],
       "name": "Slideshow Custom",
@@ -69,7 +54,7 @@
         "autoplay_speed": 3,
         "show_navigation": true,
         "image_height": "100vh",
-        "content_width": "medium",
+        "content_width": "small",
         "image_height_mobile": "100vh",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#2d2d2d",
@@ -78,8 +63,8 @@
         "color_button_text": "#171717",
         "color_button_background": "#ffffff",
         "color_button_gradient": "",
-        "color_overlay": "#ffffff",
-        "overlay_opacity": 0,
+        "color_overlay": "#171717",
+        "overlay_opacity": 10,
         "padding_top": 0,
         "padding_bottom": 0,
         "divider": false,
