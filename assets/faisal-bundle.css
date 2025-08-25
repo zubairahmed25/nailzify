@@ -47,7 +47,13 @@
     z-index: 5 !important;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
 }
-
+@media only screen and (min-width: 1441px)
+{
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
+  min-width: 350px;
+  flex-direction:column !important;
+}
+}
 
 @media only screen and (max-width: 600px)
 { 
