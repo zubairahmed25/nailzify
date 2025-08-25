@@ -59,14 +59,14 @@
 .rbr-page-container > div:nth-child(2)::-webkit-scrollbar-track {
     background: transparent;
 }
-@media only screen and (max-width: 600px)
+@media only screen and (min-width: 1570px)
 {
 
 
 .rbr-hrDesktop > div > div > div
 {
   width:100% !important;
-  border:solid 1px red;
+  border:solid 1px red !important;
 }
 }
 
