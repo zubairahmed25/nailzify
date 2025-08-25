@@ -68,7 +68,7 @@
         "autoplay": true,
         "autoplay_speed": 3,
         "show_navigation": true,
-        "image_height": "adapt",
+        "image_height": "800px",
         "content_width": "medium",
         "image_height_mobile": "100vh",
         "accessibility_info": "Slideshow about our brand",
