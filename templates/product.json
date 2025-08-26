@@ -12,7 +12,7 @@
     "logo_list_qG4TGf": {
       "type": "logo-list",
       "blocks": {
-        "logo_axD6ME": {
+        "logo_CeVe6r": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Asset_10.svg",
@@ -51,14 +51,23 @@
             "height": 72,
             "link": ""
           }
+        },
+        "logo_axD6ME": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_10.svg",
+            "height": 72,
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "logo_axD6ME",
+        "logo_CeVe6r",
         "logo_8kTbVK",
         "logo_wnD3mp",
         "logo_jLB7zP",
-        "logo_9RrdFm"
+        "logo_9RrdFm",
+        "logo_axD6ME"
       ],
       "name": "t:sections.logo-list.name",
       "settings": {
@@ -104,6 +113,13 @@
             "title_size_mobile": "product-title-md",
             "show_price": true,
             "show_rating": true
+          }
+        },
+        "liquid_Vd3XcV": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "[id^=\"rbr-bundle-\"] > div > div[class^=\"zufa_\"]"
           }
         },
         "collapsible_tab_kfGJYR": {
@@ -173,7 +189,8 @@
             "image2": "shopify://shop_images/Asset_9.svg",
             "image3": "shopify://shop_images/Asset_12.svg",
             "image4": "shopify://shop_images/Asset_11.svg",
-            "image5": "shopify://shop_images/Asset_8.svg"
+            "image5": "shopify://shop_images/Asset_8.svg",
+            "image6": "shopify://shop_images/Asset_1.svg"
           }
         },
         "inventory": {
@@ -290,6 +307,7 @@
       },
       "block_order": [
         "title",
+        "liquid_Vd3XcV",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "collapsible_tab_AVgT7M",

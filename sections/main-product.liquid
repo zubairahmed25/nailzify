@@ -289,6 +289,13 @@
                       </div>
                     </div>
                   {% endif %}
+                   {% if block.settings.image6 != blank %}
+                    <div class="marquee-block">
+                      <div class="marquee-image">
+                        <img src="{{ block.settings.image6 | img_url: 'master' }}">
+                      </div>
+                    </div>
+                  {% endif %}
 
                   <!-- Duplicate images for infinite loop effect -->
                   {% if block.settings.image != blank %}
@@ -1710,6 +1717,11 @@
         {
           "type": "image_picker",
           "id": "image5",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
           "label": "Image"
         }
       ]
