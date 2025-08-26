@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "t:sections.footer-group.name",
@@ -68,6 +77,8 @@
         "description": "",
         "button_label": "",
         "button_link": "",
+        "button_external": false,
+        "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
         "color_text": "",
@@ -102,7 +113,8 @@
           "settings": {
             "heading": "Quick links",
             "menu": "footer",
-            "container_width": 50
+            "container_width": 50,
+            "opened": false
           }
         },
         "link_list-2": {
@@ -110,7 +122,8 @@
           "settings": {
             "heading": "Information",
             "menu": "footer",
-            "container_width": 50
+            "container_width": 50,
+            "opened": false
           }
         },
         "brand_information": {
@@ -125,7 +138,8 @@
             "button_link_3": "",
             "button_label_4": "",
             "button_link_4": "",
-            "container_width": 95
+            "container_width": 95,
+            "opened": false
           }
         }
       },
@@ -141,7 +155,6 @@
         "newsletter_heading": "Stay in the loop with our weekly newsletter",
         "newsletter_heading_size": "md:title-lg",
         "newsletter_text": "",
-        "newsletter_logo": "",
         "newsletter_logo_height": 50,
         "show_social": true,
         "enable_follow_on_shop": false,

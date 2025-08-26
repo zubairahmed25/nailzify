@@ -1,0 +1,107 @@
+.rbr-hrDesktop > div > div > div, .rbr-desktop > div > div > div
+{
+  width:100% !important; 
+}
+
+.rbr-page-container
+{
+    background:#5e5c5c06 !important;
+    position:relative !important;
+}
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  flex-wrap: nowrap !important; 
+} 
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
+{
+    width:100% !important;
+    height: 300px !important;
+    background-size: cover;
+}
+.rbr-page-container > div:nth-child(2)::before {
+    content: "";
+    position: absolute !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 20px !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+    display: block !important;
+    z-index: 5 !important;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
+}
+.rbr-page-container > div:nth-child(2)::after {
+    content: "";
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+    width: 20px !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease-in-out !important;
+    display: block !important;
+    z-index: 5 !important;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 239, 239)) !important;
+}
+.rbr-page-container > div:nth-child(2) {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #999 transparent; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar {
+    height: 8px; /* horizontal scrollbar */
+    width: 8px;  /* vertical scrollbar */
+}
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar-thumb { 
+    border-radius: 8px;
+}
+.rbr-page-container > div:nth-child(2)::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+
+@media only screen and (min-width: 1441px) and (max-width:2800px)
+{
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child 
+{
+  min-width: 440px;
+  flex-direction:column !important;
+}
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
+{
+    width:100% !important;
+    height: 440px !important;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+}
+
+  .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
+    min-width: 250px;
+    flex-direction:column !important;
+  }
+
+@media only screen and (max-width: 600px)
+{ 
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child {
+  min-width: 250px;
+  flex-direction:column !important;
+}
+.rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div:first-child
+{
+    width:100% !important;
+    height: 300px !important;
+    background-size: cover;
+}
+/* .rbr-page-container > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:first-child > div > div:last-child
+{
+flex-direction:column !important;
+} */
+body.template-product #shopify-section-template--19637427241201__main-product .section {
+    padding-top: 0px !important;
+}
+
+
+}
