@@ -115,11 +115,33 @@
             "show_rating": true
           }
         },
+        "product_variations_NLYnAj": {
+          "type": "product_variations",
+          "disabled": true,
+          "settings": {
+            "option_name": "Size",
+            "option_value_metafield": "",
+            "products": [],
+            "enable_color_swatches": false,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
         "liquid_Vd3XcV": {
           "type": "liquid",
           "disabled": true,
           "settings": {
             "liquid": "[id^=\"rbr-bundle-\"] > div > div[class^=\"zufa_\"]"
+          }
+        },
+        "variant_picker_f76Jk6": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
           }
         },
         "collapsible_tab_kfGJYR": {
@@ -148,6 +170,7 @@
         },
         "collapsible_tab_AVgT7M": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "style": "with-background",
             "icon": "none",
@@ -307,7 +330,9 @@
       },
       "block_order": [
         "title",
+        "product_variations_NLYnAj",
         "liquid_Vd3XcV",
+        "variant_picker_f76Jk6",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "collapsible_tab_AVgT7M",
