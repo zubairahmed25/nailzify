@@ -689,7 +689,7 @@
         "@media screen and (min-width: 1920px) {.featured-product {gap: var(--grid-gap); padding-inline: calc(var(--grid-gap) * 2); }}"
       ],
       "settings": {
-        "product": "midnight-blue",
+        "product": "azure",
         "enable_sticky_info": true,
         "media_size": 57,
         "gallery_layout": "thumbnail",
