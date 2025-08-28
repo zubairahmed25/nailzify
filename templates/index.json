@@ -1627,20 +1627,20 @@
             "highlighted_scribble": "circle"
           }
         },
-        "question_cB7qxb": {
-          "type": "question",
-          "settings": {
-            "title": "How do I apply press-on nails?",
-            "text": "<p>Clean and prep your natural nails<br/>Select the correct size for each nail<br/>Apply nail glue or adhesive tabs<br/>Press and hold for 15-20 seconds<br/>File as desired<br/></p>",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
         "question_RkfXQL": {
           "type": "question",
           "settings": {
             "title": "What if a nail pops off?",
             "text": "<ol><li>Clean both the nail and your natural nail with rubbing alcohol</li><li>Apply a small drop of nail glue</li><li>Press back on for 10-15 seconds</li></ol><p><strong>To prevent:</strong> Make sure nails are properly sized, clean your natural nails before application, and avoid water for the first hour.</p><p><em>Pro tip: Keep a small bottle of nail glue handy for quick fixes!</em><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cB7qxb": {
+          "type": "question",
+          "settings": {
+            "title": "What's the estimated shipping time",
+            "text": "<p>Orders placed before 2 PM ship the same day! Once shipped, you'll receive your package within 2-4 business days. You'll get a tracking number as soon as your order ships so you can follow its journey to you!<br/></p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -1661,8 +1661,8 @@
         "question_bHi4qX",
         "question_HHAVk9",
         "question_CBgw43",
-        "question_cB7qxb",
         "question_RkfXQL",
+        "question_cB7qxb",
         "question_pFmEtN"
       ],
       "name": "t:sections.faq.name",
