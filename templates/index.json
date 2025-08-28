@@ -1871,6 +1871,76 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "images_with_text_Nbadjy": {
+      "type": "images-with-text",
+      "blocks": {
+        "heading_NXT4yh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Accesories",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_XMjBjY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_9EMT83": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_NXT4yh",
+        "text_XMjBjY",
+        "button_9EMT83"
+      ],
+      "name": "t:sections.images-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/RoseQuartz05.webp",
+        "image_2": "shopify://shop_images/Rainbow04.webp",
+        "image_ratio": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true
+      }
     }
   },
   "order": [
@@ -1896,6 +1966,7 @@
     "image_with_text_kzGfUx",
     "1755525392b1b38f3b",
     "175621747302c51aaa",
-    "blog_posts_collage_JNc3JJ"
+    "blog_posts_collage_JNc3JJ",
+    "images_with_text_Nbadjy"
   ]
 }
