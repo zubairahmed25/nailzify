@@ -1644,6 +1644,15 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "question_pFmEtN": {
+          "type": "question",
+          "settings": {
+            "title": "Can I track my order?",
+            "text": "<p>Yes! Once your order ships, you'll receive a tracking number via email to monitor your package's progress.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
         }
       },
       "block_order": [
@@ -1653,7 +1662,8 @@
         "question_HHAVk9",
         "question_CBgw43",
         "question_cB7qxb",
-        "question_RkfXQL"
+        "question_RkfXQL",
+        "question_pFmEtN"
       ],
       "name": "t:sections.faq.name",
       "settings": {
