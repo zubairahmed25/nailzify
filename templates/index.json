@@ -1835,6 +1835,42 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "blog_posts_collage_JNc3JJ": {
+      "type": "blog-posts-collage",
+      "name": "t:sections.blog-posts-collage.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "show_view_all": false,
+        "image_ratio": "landscape",
+        "show_tags": true,
+        "show_date": true,
+        "show_comments": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "heading": "Blog posts",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1859,6 +1895,7 @@
     "image_with_text_CGzxb6",
     "image_with_text_kzGfUx",
     "1755525392b1b38f3b",
-    "175621747302c51aaa"
+    "175621747302c51aaa",
+    "blog_posts_collage_JNc3JJ"
   ]
 }
