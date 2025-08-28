@@ -1635,6 +1635,15 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "question_RkfXQL": {
+          "type": "question",
+          "settings": {
+            "title": "What if a nail pops off?",
+            "text": "<ol><li>Clean both the nail and your natural nail with rubbing alcohol</li><li>Apply a small drop of nail glue</li><li>Press back on for 10-15 seconds</li></ol><p><strong>To prevent:</strong> Make sure nails are properly sized, clean your natural nails before application, and avoid water for the first hour.</p><p><em>Pro tip: Keep a small bottle of nail glue handy for quick fixes!</em><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
         }
       },
       "block_order": [
@@ -1643,7 +1652,8 @@
         "question_bHi4qX",
         "question_HHAVk9",
         "question_CBgw43",
-        "question_cB7qxb"
+        "question_cB7qxb",
+        "question_RkfXQL"
       ],
       "name": "t:sections.faq.name",
       "settings": {
