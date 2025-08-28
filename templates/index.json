@@ -1626,6 +1626,15 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "question_cB7qxb": {
+          "type": "question",
+          "settings": {
+            "title": "How do I apply press-on nails?",
+            "text": "<p>Clean and prep your natural nails<br/>Select the correct size for each nail<br/>Apply nail glue or adhesive tabs<br/>Press and hold for 15-20 seconds<br/>File as desired<br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
         }
       },
       "block_order": [
@@ -1633,7 +1642,8 @@
         "question_3iCHKX",
         "question_bHi4qX",
         "question_HHAVk9",
-        "question_CBgw43"
+        "question_CBgw43",
+        "question_cB7qxb"
       ],
       "name": "t:sections.faq.name",
       "settings": {
