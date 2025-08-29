@@ -137,7 +137,7 @@
         {%- endcase -%}
       {%- endfor -%}
     </slideshow-element>
-    <div class="page-width absolute bottom-0 left-0 w-full pointer-events-none">
+    <div class="page-width absolute content-position-{{ block.settings.content_position }} w-full pointer-events-none">
       <div class="slideshow-content">
         <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
@@ -533,6 +533,23 @@
           "default": "title-lg tracking-heading",
           "label": "t:sections.global.settings.heading_size.label"
         },
+        {
+      "type": "select",
+      "id": "content_position",
+      "label": "Heading Position",
+      "default": "bottom-left",
+      "options": [
+        { "value": "top-left", "label": "Top Left" },
+        { "value": "top-center", "label": "Top Center" },
+        { "value": "top-right", "label": "Top Right" },
+        { "value": "middle-left", "label": "Middle Left" },
+        { "value": "middle-center", "label": "Middle Center" },
+        { "value": "middle-right", "label": "Middle Right" },
+        { "value": "bottom-left", "label": "Bottom Left" },
+        { "value": "bottom-center", "label": "Bottom Center" },
+        { "value": "bottom-right", "label": "Bottom Right" }
+      ]
+    },
         {
           "type": "select",
           "id": "heading_tag",
