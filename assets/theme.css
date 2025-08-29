@@ -15991,3 +15991,10 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
   flex-basis: var(--divider-flex-basis);
   min-height: var(--divider-flex-basis);
 }
+
+
+
+body.template-index .header
+{
+  position:absolute;
+}
