@@ -137,7 +137,7 @@
         {%- endcase -%}
       {%- endfor -%}
     </slideshow-element>
-    <div class="page-width absolute content-position-{{ block.settings.content_position }} w-full pointer-events-none">
+    <div class="page-width absolute content-position-{{ block.settings.heading_position }} w-full pointer-events-none">
       <div class="slideshow-content">
         <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
@@ -153,7 +153,8 @@
               {%- if block.settings.button_label != blank -%}
                 {%- render 'button',
                   label: block.settings.button_label,
-                  link: block.settings.button_link,
+                  link: block.settings.button_link,content_position
+                  
                   style: block.settings.button_style,
                   external: block.settings.button_external,
                   show_icon: block.settings.button_icon,
@@ -535,7 +536,7 @@
         },
         {
       "type": "select",
-      "id": "content_position",
+      "id": "heading_position",
       "label": "Heading Position",
       "default": "bottom-left",
       "options": [
