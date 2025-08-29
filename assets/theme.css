@@ -15998,3 +15998,10 @@ body.template-index .header
 {
   position:absolute;
 }
+@media screen and (min-width: 992px)
+{
+  .slideshow-content
+  {
+    padding: calc(clamp(40px, 20vw, 60px) * 2) !important;
+  }
+}
