@@ -138,7 +138,7 @@
       {%- endfor -%}
     </slideshow-element>
     <div class="page-width w-full  absolute top-0 left-0  pointer-events-none">
-      <div class="slideshow-content">
+      <div class="slideshow-content" style="padding: 0 !important;">
         <nav is="slideshow-words" class="slideshow-words  items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
             <div class="slideshow-word md:items-endflex  " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
