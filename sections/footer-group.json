@@ -131,10 +131,10 @@
           "type": "brand_information",
           "settings": {
             "heading": "",
-            "button_label_1": "+21 (0) 987654321",
+            "button_label_1": "",
             "button_link_1": "tel:+21(0)987654321",
-            "button_label_2": "hello@domain.com",
-            "button_link_2": "mailto:hello@domain.com",
+            "button_label_2": "support@nailzify.com",
+            "button_link_2": "mailto:support@nailzify.com",
             "button_label_3": "",
             "button_link_3": "",
             "button_label_4": "",
