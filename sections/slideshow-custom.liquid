@@ -141,7 +141,7 @@
       <div style="width: max-content;" class="slideshow-content">
         <nav style="width: max-content;" is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div style="width: max-content;" class="slideshow-word md:items-end sticky {{ block.settings.heading_position }}" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div style="width: max-content;" class="slideshow-word md:items-end absolute {{ block.settings.heading_position }}" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
                 <div class="banner__box banner__box--{{ section.settings.content_width }}">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
