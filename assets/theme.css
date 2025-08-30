@@ -16014,7 +16014,7 @@ body.template-index .header
 /* Middle positions */
 .middle-left   { justify-content: flex-start; align-items: center; flex-direction:column;gap:15px;}
 .middle-center { justify-content: center;     align-items: center; flex-direction:column;gap:15px;}
-.middle-right  { justify-content: flex-end;   align-items: center; flex-direction:column;gap:15px;}
+.middle-right  { justify-content:-end;   align-items: center; flex-direction:column;gap:15px;}
 
 /* Bottom positions */
 .bottom-left   { justify-content: flex-start; align-items: flex-end; flex-direction:column;gap:15px;}
