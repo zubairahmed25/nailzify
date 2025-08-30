@@ -138,8 +138,8 @@
       {%- endfor -%}
     </slideshow-element>
     <div class="page-width absolute {{ section.settings.heading_position }} w-full pointer-events-none">
-      <div class="slideshow-content">
-        <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
+      <div style="width: max-content;" class="slideshow-content">
+        <nav style="width: max-content;" is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
             <div style="width: max-content;" class="slideshow-word md:items-end" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
