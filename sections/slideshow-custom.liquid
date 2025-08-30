@@ -139,9 +139,9 @@
     </slideshow-element>
     <div class="page-width w-full  absolute top-0 left-0  pointer-events-none">
       <div class="slideshow-content" style="padding: 0 !important;">
-        <nav is="slideshow-words" class="slideshow-words w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
+        <nav is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex column {{ block.settings.heading_position }} " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
                 <div class="banner__box banner__box--{{ section.settings.content_width }} ">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
