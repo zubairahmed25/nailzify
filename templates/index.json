@@ -70,7 +70,7 @@
       "custom_css": [],
       "name": "Slideshow Custom",
       "settings": {
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 3,
         "show_navigation": false,
         "image_height": "100vh",
