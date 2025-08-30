@@ -54,7 +54,7 @@
             "image_mobile": "shopify://shop_images/DSC01534-2.webp",
             "heading": "Salon Quality Nails",
             "heading_color": "#ff5b5b",
-            "heading_position": "bottom-left",
+            "heading_position": "bottom-center",
             "heading_size": "title-sm",
             "heading_tag": "h3",
             "button_label": "",
