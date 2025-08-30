@@ -141,7 +141,7 @@
       <div class="slideshow-content">
         <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex flex-col md:flex-row md:items-end" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word grid md:items-end" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
                 <div class="banner__box banner__box--{{ section.settings.content_width }}">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
