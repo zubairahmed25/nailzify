@@ -141,9 +141,9 @@
       <div class="slideshow-content">
         <nav is="slideshow-words" class="slideshow-words  items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word md:items-end absolute top left flex  " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word md:items-endflex  " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
-                <div class="banner__box banner__box--{{ section.settings.content_width }}">
+                <div class="banner__box banner__box--{{ section.settings.content_width }}  absolute top left ">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
                     <split-words class="split-words js-invisible block" data-animate="fade-up-large" data-animate-delay="250">{{ block.settings.heading }}</split-words>
                   </{{ block.settings.heading_tag }}>
