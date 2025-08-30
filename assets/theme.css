@@ -16012,7 +16012,7 @@ body.template-index .header
 
 /* Middle Positions */
 .middle-left { top: 50%; left: 0; transform: translateY(-50%); }
-.middle-center { flex-direction:column;column-gap:15px;}
+.middle-center { flex-direction:column;column-gap:15px; justify-content:center;align-content:center;}
 .middle-right { top: 50%; right: 0; transform: translateY(-50%); }
 
 /* Bottom Positions */
