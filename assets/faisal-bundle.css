@@ -120,9 +120,6 @@ body.template-index .header
   }
 }
 
-
-
-
 /* Top positions */
 .top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
 .top-center  { justify-content: center;     align-items: flex-start;flex-direction:column;gap:15px; }
@@ -156,8 +153,5 @@ body.template-index .header
 .bottom-right-m  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
 
 
-.slideshow-words
-{
-  padding: 0 0 0 0 !important;
-}
+
 }
