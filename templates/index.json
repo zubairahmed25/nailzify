@@ -755,6 +755,7 @@
         "spinning_text",
         "fbp_fast_bundle_bundle_with_ids_z9Gjiy"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1920px) {.featured-product {gap: var(--grid-gap); padding-inline: calc(var(--grid-gap) * 2); }}"
       ],
@@ -876,6 +877,7 @@
     },
     "product-bundle": {
       "type": "product-bundle",
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1536px) {.product-bundle {flex: 0 0 25%; } .product-bundle__sidebar {width: 100%; }}",
         "@media screen and (min-width: 1920px) {.product-bundle-wrapper {padding-inline: calc(var(--grid-gap) * 2); }}"
