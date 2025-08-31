@@ -646,7 +646,7 @@
       ],
       "name": "t:sections.images-with-text.name",
       "settings": {
-        "image": "shopify://shop_images/crnnuc6vhaxdeysprcdq.webp",
+        "image": "shopify://shop_images/crnnuc6vhaxdeysprcdq.png",
         "image_ratio": "portrait",
         "image_width": "small",
         "layout": "image_first",
