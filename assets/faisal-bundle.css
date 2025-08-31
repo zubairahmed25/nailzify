@@ -123,6 +123,7 @@ body.template-index .header
 .slideshow-word
 {
   flex-direction:column !important; 
+  gap:15px !important;
 }
 .slideshow-word a
 {
