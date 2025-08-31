@@ -155,7 +155,7 @@
           "settings": {
             "menu_title": "Collections",
             "menu_width": "medium",
-            "show_menu_image": true,
+            "show_menu_image": false,
             "button_label": "View All Collections",
             "button_link": "shopify://collections",
             "promo_image_1": "shopify://shop_images/e9pb0fgqkj9jakmbhdrv.webp",
