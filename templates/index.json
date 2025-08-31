@@ -560,12 +560,42 @@
             "color_overlay_hover": "",
             "overlay_opacity_hover": 10
           }
+        },
+        "image_gPYVW7": {
+          "type": "image",
+          "settings": {
+            "column_size": 10,
+            "row_size": 2,
+            "subheading": "",
+            "heading": "Shop Nailzify Accessories",
+            "link": "shopify://collections/nail-accessories",
+            "invert_subheading_heading": false,
+            "image": "shopify://shop_images/Photoroom_20250831_161843.jpg",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "image_mobile": "shopify://shop_images/Photoroom_20250831_161843.jpg",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "",
+            "gradient_highlight": "",
+            "color_overlay": "#171717",
+            "overlay_opacity": 50,
+            "color_text_hover": "",
+            "color_highlight_hover": "",
+            "gradient_highlight_hover": "",
+            "color_overlay_hover": "",
+            "overlay_opacity_hover": 10
+          }
         }
       },
       "block_order": [
         "image_XTaqtV",
         "image_f8y9Hw",
-        "image_ifXzfK"
+        "image_ifXzfK",
+        "image_gPYVW7"
       ],
       "name": "t:sections.collage-grid.name",
       "settings": {
@@ -715,6 +745,7 @@
         "text_XMjBjY",
         "button_9EMT83"
       ],
+      "disabled": true,
       "custom_css": [
         "picture {background: transparent;}"
       ],
@@ -1768,7 +1799,7 @@
         "highlighted_scribble": "circle",
         "color_text": "#ffffff",
         "color_background": "",
-        "gradient_background": "linear-gradient(177deg, rgba(255, 140, 162, 1), rgba(255, 107, 187, 1) 100%)",
+        "gradient_background": "linear-gradient(177deg, rgba(255, 107, 187, 1), rgba(255, 140, 162, 1) 100%)",
         "color_highlight": "",
         "gradient_highlight": "linear-gradient(180deg, rgba(196, 102, 238, 1), rgba(82, 218, 236, 1) 100%)",
         "color_button_text": "",
