@@ -122,8 +122,11 @@ body.template-index .header
 
 .slideshow-word
 {
-  flex-direction:column !important;
-  
+  flex-direction:column !important; 
+}
+.slideshow-word a
+{
+  width:max-content;
 }
 
 
