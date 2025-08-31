@@ -615,7 +615,7 @@
         "text_XMjBjY": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Shop our premium glass nail file, press-on nail remover, or brush-on glue.</p>",
             "text_font": "body",
             "text_size": "subtext-sm",
             "text_max_size": 32,
@@ -646,14 +646,15 @@
       ],
       "name": "t:sections.images-with-text.name",
       "settings": {
-        "image": "shopify://shop_images/RoseQuartz05.webp",
-        "image_ratio": "adapt",
+        "image": "shopify://shop_images/acxzkqzkhzpvwwuxutiz.webp",
+        "image_2": "shopify://shop_images/crnnuc6vhaxdeysprcdq.webp",
+        "image_ratio": "portrait",
         "image_width": "small",
         "layout": "image_first",
         "text_alignment": "left",
         "text_alignment_mobile": "left",
         "color_text": "",
-        "color_background": "",
+        "color_background": "#ffdce9",
         "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
@@ -763,6 +764,7 @@
         "spinning_text",
         "fbp_fast_bundle_bundle_with_ids_z9Gjiy"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1920px) {.featured-product {gap: var(--grid-gap); padding-inline: calc(var(--grid-gap) * 2); }}"
       ],
@@ -884,6 +886,7 @@
     },
     "product-bundle": {
       "type": "product-bundle",
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1536px) {.product-bundle {flex: 0 0 25%; } .product-bundle__sidebar {width: 100%; }}",
         "@media screen and (min-width: 1920px) {.product-bundle-wrapper {padding-inline: calc(var(--grid-gap) * 2); }}"
@@ -1957,7 +1960,7 @@
         "show_comments": false,
         "show_author": false,
         "show_excerpt": false,
-        "heading": "Blog posts",
+        "heading": "Nailzify Blogs",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

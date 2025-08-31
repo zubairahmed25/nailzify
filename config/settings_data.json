@@ -14,7 +14,7 @@
     "logo_mobile": "shopify://shop_images/Nailzify_Final_Logo_Logo_3_1f64dcab-4d77-4eb3-bdff-d85f405c9508.svg",
     "white_logo_mobile": "",
     "logo_width_mobile": 100,
-    "favicon": "",
+    "favicon": "shopify://shop_images/Nailzify_Final_Logo_Icon_1.svg",
     "color_text": "#5e5c5c",
     "color_background": "#ffefef",
     "color_highlight": "#ff5b5b",
@@ -193,6 +193,11 @@
       },
       "10864971697205422121": {
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       }
