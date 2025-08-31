@@ -901,7 +901,7 @@
         "how_block_G8mtTF": {
           "type": "how_block",
           "settings": {
-            "block_image": "shopify://shop_images/img-5540-jwa367yq-sjumxi4u-ljumat2j-igai5gxw-rnt5mhjg-1rbv3ccp_cmt5KadS.gif",
+            "video_cdn": "https://cdn.shopify.com/videos/c/o/v/f767efc08dbf496c8a98f5c9786cfe05.mp4",
             "block_title": "Step 1",
             "block_sub_title": "Prep",
             "block_intro_line": "Trace lash line with liner. Let dry for 3 minutes"
@@ -911,6 +911,7 @@
           "type": "how_block",
           "settings": {
             "block_image": "shopify://shop_images/Line_Magnetic_Gif_40b9b39c-03cf-4375-8643-f089369139b1.gif",
+            "video_cdn": "",
             "block_title": "Step 2",
             "block_sub_title": "Glue",
             "block_intro_line": "Apply magnetic lash to dry liner."
@@ -920,6 +921,7 @@
           "type": "how_block",
           "settings": {
             "block_image": "shopify://shop_images/BOOM_ANNE_MAGNETIC_GIF.gif",
+            "video_cdn": "",
             "block_title": "Step 3",
             "block_sub_title": "Press",
             "block_intro_line": "Get 24-hours of staying power."
@@ -929,6 +931,7 @@
           "type": "how_block",
           "settings": {
             "block_image": "shopify://shop_images/BOOM_ANNE_MAGNETIC_GIF.gif",
+            "video_cdn": "",
             "block_title": "Step 3",
             "block_sub_title": "Slay",
             "block_intro_line": "Get 24-hours of staying power."

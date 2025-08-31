@@ -141,7 +141,7 @@
       <div class="slideshow-content" style="padding: 0 !important;">
         <nav style="padding:60px 0 80px 0;min-height: 100vh;" is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} {{ block.settings.heading_position_mobile }}" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
                 <div class="banner__box banner__box--{{ section.settings.content_width }} ">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
@@ -514,18 +514,35 @@
         {
           "type": "select",
           "id": "heading_position",
-          "label": "Heading Position",
+          "label": "Heading Position Desktop",
           "default": "bottom-left",
           "options": [
             { "value": "top-left", "label": "Left Top" },
             { "value": "top-center", "label": "Left Center" },
             { "value": "top-right", "label": "Left Bottom" },
             { "value": "middle-left", "label": "Middle Top" },
-            { "value": "middle-center", "label": "Middle Center" },
+            { "value": "middle-centerm", "label": "Middle Center" },
             { "value": "middle-right", "label": "Middle Bottom" },
             { "value": "bottom-left", "label": "Right Top" },
             { "value": "bottom-center", "label": "Right Center" },
             { "value": "bottom-right", "label": "Right Bottom" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_position_mobile",
+          "label": "Heading Position Mobile",
+          "default": "middle-center",
+          "options": [
+            { "value": "top-leftm", "label": "Left Top" },
+            { "value": "top-centerm", "label": "Left Center" },
+            { "value": "top-rightm", "label": "Left Bottom" },
+            { "value": "middle-leftm", "label": "Middle Top" },
+            { "value": "middle-center", "label": "Middle Center" },
+            { "value": "middle-rightm", "label": "Middle Bottom" },
+            { "value": "bottom-leftm", "label": "Right Top" },
+            { "value": "bottom-centerm", "label": "Right Center" },
+            { "value": "bottom-rightm", "label": "Right Bottom" }
           ]
         },
         {
