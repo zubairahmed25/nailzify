@@ -120,6 +120,13 @@ body.template-index .header
   }
 }
 
+.slideshow-word
+{
+  flex-direction:column !important;
+  
+}
+
+
 /* Top positions */
 .top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
 .top-center  { justify-content: center;     align-items: flex-start;flex-direction:column;gap:15px; }
