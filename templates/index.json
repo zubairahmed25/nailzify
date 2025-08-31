@@ -1951,7 +1951,7 @@
         "show_comments": false,
         "show_author": false,
         "show_excerpt": false,
-        "heading": "Blog posts",
+        "heading": "Nailzify Blogs",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
