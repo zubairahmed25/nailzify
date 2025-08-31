@@ -599,6 +599,75 @@
         "enable_parallax": true
       }
     },
+    "image_with_text_overlay_abPkBi": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_9PJrwn": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_9trDKg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Accessories",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_fJEYfK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "subheading_9PJrwn",
+        "heading_9trDKg",
+        "button_fJEYfK"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Photoroom_20250831_161843.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Photoroom_20250831_161843.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 31,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
     "images_with_text_Nbadjy": {
       "type": "images-with-text",
       "blocks": {
@@ -646,14 +715,14 @@
       ],
       "name": "t:sections.images-with-text.name",
       "settings": {
-        "image": "shopify://shop_images/crnnuc6vhaxdeysprcdq.png",
-        "image_ratio": "portrait",
+        "image": "shopify://shop_images/Photoroom_20250831_163612.png",
+        "image_ratio": "adapt",
         "image_width": "small",
         "layout": "image_first",
         "text_alignment": "left",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
-        "color_background": "#ffffff",
+        "color_background": "#ffefef",
         "gradient_background": "linear-gradient(181deg, rgba(255, 107, 187, 1), rgba(255, 140, 162, 1) 100%)",
         "color_highlight": "",
         "gradient_highlight": "",
@@ -1991,6 +2060,7 @@
     "video-with-text-overlay",
     "logo_list_m8arzH",
     "collage_grid_DHCxLP",
+    "image_with_text_overlay_abPkBi",
     "images_with_text_Nbadjy",
     "featured-product",
     "image-comparison",
