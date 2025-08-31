@@ -141,7 +141,7 @@
       <div class="slideshow-content" style="padding: 0 !important;">
         <nav style="padding:60px 0 80px 0;min-height: 100vh;" is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex column w-full  " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} {{ block.settings.heading_position_mobile }}" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
                 <div class="banner__box banner__box--{{ section.settings.content_width }} ">
                   <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
