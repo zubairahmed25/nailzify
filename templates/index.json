@@ -673,6 +673,7 @@
       "blocks": {
         "heading_NXT4yh": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Shop Accesories",
             "heading_size": "title-md",
@@ -683,6 +684,7 @@
         },
         "text_XMjBjY": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Shop our premium glass nail file, press-on nail remover, or brush-on glue.</p>",
             "text_font": "body",
@@ -699,7 +701,7 @@
         "button_9EMT83": {
           "type": "button",
           "settings": {
-            "button_label": "Shop All",
+            "button_label": "Shop Accesories",
             "button_link": "shopify://collections",
             "button_style": "primary",
             "button_size": "md",
