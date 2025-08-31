@@ -105,3 +105,32 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
 
 
 }
+
+/* banner over lap */
+body.template-index .header
+{
+  position:absolute;
+}
+/* Banner spacing from desktop to normal devices */
+@media screen and (min-width: 992px)
+{
+  .slideshow-content
+  {
+    padding: calc(clamp(40px, 20vw, 60px) * 2) !important;
+  }
+}
+
+/* Top positions */
+.top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
+.top-center  { justify-content: center;     align-items: flex-start;flex-direction:column;gap:15px; }
+.top-right   { justify-content: flex-end;   align-items: flex-start;flex-direction:column;gap:15px; }
+
+/* Middle positions */
+.middle-left   { justify-content: flex-start; align-items: center; flex-direction:column;gap:15px;}
+.middle-center { justify-content: center;     align-items: center; flex-direction:column;gap:15px;}
+.middle-right  { justify-content:flex-end;   align-items: center; flex-direction:column;gap:15px;}
+
+/* Bottom positions */
+.bottom-left   { justify-content: flex-start; align-items: flex-end; flex-direction:column;gap:15px;}
+.bottom-center { justify-content: center;     align-items: flex-end; flex-direction:column;gap:15px;}
+.bottom-right  { justify-content: flex-end;   align-items: flex-end; flex-direction:column;gap:15px;}
