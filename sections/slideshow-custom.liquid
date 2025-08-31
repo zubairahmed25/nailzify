@@ -137,14 +137,14 @@
         {%- endcase -%}
       {%- endfor -%}
     </slideshow-element>
-    <div class="page-width absolute bottom-0 left-0 w-full pointer-events-none">
-      <div class="slideshow-content">
-        <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
+    <div class="page-width w-full  absolute top-0 left-0  pointer-events-none">
+      <div class="slideshow-content" style="padding: 0 !important;">
+        <nav style="padding:60px 0 80px 0;min-height: 100vh;" is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex flex-col md:flex-row md:items-end justify-between gap-6" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+            <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} " data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
-                <div class="banner__box banner__box--{{ section.settings.content_width }}">
-                  <{{ block.settings.heading_tag }} class="heading leading-none {{ block.settings.heading_size }}">
+                <div class="banner__box banner__box--{{ section.settings.content_width }} ">
+                  <{{ block.settings.heading_tag }} style="color:{{ block.settings.heading_color }} !important;" class="heading leading-none {{ block.settings.heading_size }}">
                     <split-words class="split-words js-invisible block" data-animate="fade-up-large" data-animate-delay="250">{{ block.settings.heading }}</split-words>
                   </{{ block.settings.heading_tag }}>
                 </div>
@@ -153,7 +153,8 @@
               {%- if block.settings.button_label != blank -%}
                 {%- render 'button',
                   label: block.settings.button_label,
-                  link: block.settings.button_link,
+                  link: block.settings.button_link,content_position
+                  
                   style: block.settings.button_style,
                   external: block.settings.button_external,
                   show_icon: block.settings.button_icon,
@@ -295,6 +296,7 @@
       "default": "small",
       "label": "t:sections.global.settings.content_width.label"
     },
+    
     {
       "type": "header",
       "content": "t:sections.global.settings.header__mobile.content"
@@ -505,6 +507,28 @@
           "default": "Image slide"
         },
         {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Lable", 
+        },
+        {
+          "type": "select",
+          "id": "heading_position",
+          "label": "Heading Position",
+          "default": "bottom-left",
+          "options": [
+            { "value": "top-left", "label": "Left Top" },
+            { "value": "top-center", "label": "Left Center" },
+            { "value": "top-right", "label": "Left Bottom" },
+            { "value": "middle-left", "label": "Middle Top" },
+            { "value": "middle-center", "label": "Middle Center" },
+            { "value": "middle-right", "label": "Middle Bottom" },
+            { "value": "bottom-left", "label": "Right Top" },
+            { "value": "bottom-center", "label": "Right Center" },
+            { "value": "bottom-right", "label": "Right Bottom" }
+          ]
+        },
+        {
           "type": "select",
           "id": "heading_size",
           "options": [
@@ -528,6 +552,7 @@
           "default": "title-lg tracking-heading",
           "label": "t:sections.global.settings.heading_size.label"
         },
+        
         {
           "type": "select",
           "id": "heading_tag",
