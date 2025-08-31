@@ -148,6 +148,7 @@ body.template-index .header
 
 @media only screen and (max-width: 480px)
 {
+  /* Mobile positions css */
  /* Top positions */
 .top-left-m    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
 .top-center-m  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
