@@ -135,7 +135,7 @@ body.template-index .header
 .bottom-center { justify-content: center;     align-items: flex-end; flex-direction:column;gap:15px;}
 .bottom-right  { justify-content: flex-end;   align-items: flex-end; flex-direction:column;gap:15px;}
 
-@media screen and (max-width: 480px)
+@media only screen and (max-width: 480px)
 {
  /* Top positions */
 .top-left    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
