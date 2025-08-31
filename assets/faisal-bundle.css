@@ -138,17 +138,17 @@ body.template-index .header
 @media only screen and (max-width: 480px)
 {
  /* Top positions */
-.top-left    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
-.top-center  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
-.top-right   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-left-m    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-center-m  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-right-m   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
 
 /* Middle positions */
-.middle-left   { justify-content: flex-start !important; align-items: center !important; flex-direction:column;gap:15px;}
-.middle-center { justify-content: center !important;     align-items: center !important; flex-direction:column;gap:15px;}
-.middle-right  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
+.middle-left-m   { justify-content: flex-start !important; align-items: center !important; flex-direction:column;gap:15px;}
+.middle-center-m { justify-content: center !important;     align-items: center !important; flex-direction:column;gap:15px;}
+.middle-right-m  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
 
 /* Bottom positions */
-.bottom-left   { justify-content: flex-start !important; align-items: flex-end !important; flex-direction:column;gap:15px;}
-.bottom-center { justify-content: center !important;     align-items: flex-end !important; flex-direction:column;gap:15px;}
-.bottom-right  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-left-m   { justify-content: flex-start !important; align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-center-m { justify-content: center !important;     align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-right-m  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
 }
