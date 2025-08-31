@@ -127,41 +127,45 @@
     <div class="fade-white-left"></div>
     <div class="fade-white-right"></div>
     <!-- ===== Steps / How Blocks ===== -->
-    <div class="steps-grid">
+    <div class="steps-grid"> 
+  {% for block in section.blocks %}
+    <div class="step-card">
       
-      {% for block in section.blocks %}
-        <div class="step-card">
-          
-          <!-- Block Image -->
-          {% if block.settings.block_image != blank %}
-            <div class="step-image">
-              <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
-            </div>
-          {% endif %}
-
-          <!-- Block Content -->
-          <div class="step-content">
-             <!-- Block Title -->
-            {% if block.settings.block_title != blank %}
-              <h3 class="step-title">{{ block.settings.block_title }}</h3>
-            {% endif %}
-            <!-- Show HOW + Block Sub Title -->
-            {% if block.settings.block_sub_title != blank %}
-              <p class="step-number">{{ block.settings.block_sub_title }}</p>
-            {% endif %}
-            
-           
-            
-            <!-- Description -->
-            {% if block.settings.block_intro_line != blank %}
-              <p class="step-description">{{ block.settings.block_intro_line }}</p>
-            {% endif %}
-          </div>
-          <!-- End Block Content -->
-
+      <!-- Block Image -->
+      {% if block.settings.block_image != blank %}
+        <div class="step-image">
+          <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
         </div>
-      {% endfor %}
+      {% endif %}
+
+      <!-- Block Video -->
+      {% if block.settings.video_cdn != blank %}
+        <div class="step-video">
+          <video controls playsinline>
+            <source src="{{ block.settings.video_cdn }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      {% endif %}
+
+      <!-- Block Content -->
+      <div class="step-content">
+        {% if block.settings.block_title != blank %}
+          <h3 class="step-title">{{ block.settings.block_title }}</h3>
+        {% endif %}
+        {% if block.settings.block_sub_title != blank %}
+          <p class="step-number">{{ block.settings.block_sub_title }}</p>
+        {% endif %} 
+        {% if block.settings.block_intro_line != blank %}
+          <p class="step-description">{{ block.settings.block_intro_line }}</p>
+        {% endif %}
+      </div>
+      <!-- End Block Content -->
+
     </div>
+  {% endfor %}
+</div>
+
     
     </div>
     <!-- ===== End Steps / How Blocks ===== -->
