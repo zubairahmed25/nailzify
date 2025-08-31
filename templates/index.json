@@ -713,6 +713,9 @@
         "text_XMjBjY",
         "button_9EMT83"
       ],
+      "custom_css": [
+        "picture {background: transparent;}"
+      ],
       "name": "t:sections.images-with-text.name",
       "settings": {
         "image": "shopify://shop_images/Photoroom_20250831_163612.png",
