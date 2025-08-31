@@ -119,7 +119,7 @@ body.template-index .header
     padding: calc(clamp(40px, 20vw, 60px) * 2) !important;
   }
 }
-
+/* Slider content Css */
 .slideshow-word
 {
   flex-direction:column !important; 
@@ -130,7 +130,7 @@ body.template-index .header
   width:max-content;
 }
 
-
+/* Desktop positions css */
 /* Top positions */
 .top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
 .top-center  { justify-content: center;     align-items: flex-start;flex-direction:column;gap:15px; }
