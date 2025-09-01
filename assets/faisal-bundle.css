@@ -167,3 +167,8 @@ body.template-index .header
 }
 
 }
+
+
+.rbr-addBundleBtn-container.rbr-centralize.rbr-cursor-pointer {
+  color: white;
+}
