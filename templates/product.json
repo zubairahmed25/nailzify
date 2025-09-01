@@ -158,6 +158,7 @@
         },
         "collapsible_tab_Df3qcf": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "style": "with-border",
             "icon": "newspaper",
