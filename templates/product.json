@@ -945,7 +945,7 @@
       "name": "How Section",
       "settings": {
         "section_title": "How to",
-        "section_title_colored": "PREP, GLUE, SLAY!",
+        "section_title_colored": "PREP, GLUE, PRESS & SLAY!",
         "section_intro_lines": ""
       }
     },
@@ -1082,6 +1082,7 @@
         "question-5",
         "contact"
       ],
+      "disabled": true,
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
