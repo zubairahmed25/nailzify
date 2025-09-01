@@ -144,6 +144,18 @@
             "size_chart": ""
           }
         },
+        "collapsible_tab_Df3qcf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-border",
+            "icon": "newspaper",
+            "heading": "Size Guide for Handmade Nails",
+            "content": "",
+            "page": "size-guide-for-handmade-nails",
+            "liquid": "",
+            "opened": false
+          }
+        },
         "liquid_XfN4dW": {
           "type": "liquid",
           "settings": {
@@ -340,6 +352,7 @@
         "product_variations_NLYnAj",
         "liquid_Vd3XcV",
         "variant_picker_f76Jk6",
+        "collapsible_tab_Df3qcf",
         "liquid_XfN4dW",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
