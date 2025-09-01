@@ -152,7 +152,7 @@
 
       <!-- Block Video -->
       {% if block.settings.video_cdn != blank %}
-        <div class="step-video">
+        <div class="step-video" id="overlay-video">
           <video playsinline autoplay loop muted>
             <source src="{{ block.settings.video_cdn }}" type="video/mp4">
             Your browser does not support the video tag.
