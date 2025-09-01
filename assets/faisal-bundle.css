@@ -175,11 +175,11 @@ body.template-index .header
 }
 
 select.variantSelector_container_f0ad7d97 {
-    color: white;
-    background: #ff80aa;
+    color: white !important
+    background: #ff80aa !important
 }
 
 .variantSelector_container_f0ad7d97 {
-  color: white;
-    background: #ff80aa;
+  color: white !important
+    background: #ff80aa !important
 }
