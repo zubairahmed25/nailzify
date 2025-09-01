@@ -317,10 +317,11 @@
             "icon": "briefcase",
             "iwidth": "custom",
             "icon_width": 20,
-            "heading": "Popular upgrades",
+            "heading": "Pairs well will",
             "products": [
-              "azure",
-              "pearl-pink"
+              "glass-nail-file",
+              "nail-remover",
+              "brush-on-nail-glue"
             ],
             "metafield": "",
             "opened": true,
