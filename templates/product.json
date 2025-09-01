@@ -919,8 +919,7 @@
         "how_block_tGeNhH": {
           "type": "how_block",
           "settings": {
-            "block_image": "shopify://shop_images/BOOM_ANNE_MAGNETIC_GIF.gif",
-            "video_cdn": "",
+            "video_cdn": "https://cdn.shopify.com/videos/c/o/v/be745ae071bf4e60ac73b420f7440dda.mp4",
             "block_title": "Step 3",
             "block_sub_title": "Press",
             "block_intro_line": "Get 24-hours of staying power."
