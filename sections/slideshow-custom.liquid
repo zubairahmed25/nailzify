@@ -139,7 +139,7 @@
     </slideshow-element>
     <div class="page-width w-full  absolute top-0 left-0  pointer-events-none">
       <div class="slideshow-content" style="padding: 0 !important;">
-        <nav style="padding:40px 0 200px 0;min-height: 100vh;" is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
+        <nav style="padding:10px 0 100px 0;min-height: 100vh;" is="slideshow-words" class="slideshow-words flex w-full" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
             <div class="slideshow-word flex column w-full {{ block.settings.heading_position }} {{ block.settings.heading_position_mobile }}" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
               {%- if block.settings.heading != blank -%}
