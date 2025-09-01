@@ -115,6 +115,55 @@
             "show_rating": true
           }
         },
+        "collapsible_tab_kfGJYR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Description",
+            "content": "{{ product.description }}",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
+        "collapsible_tab_YLy6mF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Kit Includes",
+            "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
+        "collapsible_tab_Df3qcf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "style": "with-border",
+            "icon": "newspaper",
+            "heading": "Size Guide for Handmade Nails",
+            "content": "",
+            "page": "size-guide-for-handmade-nails",
+            "liquid": "",
+            "opened": false
+          }
+        },
+        "collapsible_tab_AVgT7M": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "style": "with-background",
+            "icon": "none",
+            "heading": "Collapsible row",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": "",
+            "liquid": "",
+            "opened": false
+          }
+        },
         "product_variations_NLYnAj": {
           "type": "product_variations",
           "disabled": true,
@@ -144,59 +193,10 @@
             "size_chart": ""
           }
         },
-        "collapsible_tab_Df3qcf": {
-          "type": "collapsible_tab",
-          "settings": {
-            "style": "with-border",
-            "icon": "newspaper",
-            "heading": "Size Guide for Handmade Nails",
-            "content": "",
-            "page": "size-guide-for-handmade-nails",
-            "liquid": "",
-            "opened": false
-          }
-        },
         "liquid_XfN4dW": {
           "type": "liquid",
           "settings": {
             "liquid": ""
-          }
-        },
-        "collapsible_tab_kfGJYR": {
-          "type": "collapsible_tab",
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Description",
-            "content": "{{ product.description }}",
-            "page": "",
-            "liquid": "",
-            "opened": false
-          }
-        },
-        "collapsible_tab_YLy6mF": {
-          "type": "collapsible_tab",
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Kit Includes",
-            "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
-            "page": "",
-            "liquid": "",
-            "opened": false
-          }
-        },
-        "collapsible_tab_AVgT7M": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "style": "with-background",
-            "icon": "none",
-            "heading": "Collapsible row",
-            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
-            "page": "",
-            "liquid": "",
-            "opened": false
           }
         },
         "vendor": {
@@ -349,14 +349,14 @@
       },
       "block_order": [
         "title",
+        "collapsible_tab_kfGJYR",
+        "collapsible_tab_YLy6mF",
+        "collapsible_tab_Df3qcf",
+        "collapsible_tab_AVgT7M",
         "product_variations_NLYnAj",
         "liquid_Vd3XcV",
         "variant_picker_f76Jk6",
-        "collapsible_tab_Df3qcf",
         "liquid_XfN4dW",
-        "collapsible_tab_kfGJYR",
-        "collapsible_tab_YLy6mF",
-        "collapsible_tab_AVgT7M",
         "vendor",
         "description",
         "marquee_block_VejRMh",
