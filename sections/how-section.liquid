@@ -5,18 +5,8 @@
   padding: 0 20px;
   font-family:'Montserrat',sans-serif !important; 
 }
-#overlay-video {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+#how-to-video-filter {
+  filter: brightness(0.5);
 }
 .main__fade_
 {
@@ -166,7 +156,7 @@
       <!-- Block Video -->
       {% if block.settings.video_cdn != blank %}
         <div class="step-video">
-          <video playsinline autoplay loop muted>
+          <video id="how-to-video-filter" playsinline autoplay loop muted>
             <source src="{{ block.settings.video_cdn }}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
