@@ -480,8 +480,8 @@
         "image_XTaqtV": {
           "type": "image",
           "settings": {
-            "column_size": 3,
-            "row_size": 2,
+            "column_size": 2,
+            "row_size": 1,
             "subheading": "",
             "heading": "Handmade Nails",
             "link": "shopify://collections/handmade-press-ons",
@@ -508,8 +508,8 @@
         "image_f8y9Hw": {
           "type": "image",
           "settings": {
-            "column_size": 3,
-            "row_size": 2,
+            "column_size": 2,
+            "row_size": 1,
             "subheading": "",
             "heading": "Shop By Shapes",
             "link": "shopify://collections",
@@ -536,8 +536,8 @@
         "image_ifXzfK": {
           "type": "image",
           "settings": {
-            "column_size": 3,
-            "row_size": 2,
+            "column_size": 2,
+            "row_size": 1,
             "subheading": "",
             "heading": "Press-On Nails",
             "link": "shopify://collections/press-ons-nails",
@@ -564,8 +564,8 @@
         "image_gPYVW7": {
           "type": "image",
           "settings": {
-            "column_size": 3,
-            "row_size": 2,
+            "column_size": 2,
+            "row_size": 1,
             "subheading": "",
             "heading": "Shop Nailzify Accessories",
             "link": "shopify://collections/nail-accessories",
@@ -599,7 +599,7 @@
       ],
       "name": "t:sections.collage-grid.name",
       "settings": {
-        "row_height": 300,
+        "row_height": 310,
         "row_height_mobile": 150,
         "heading": "Your nail game is about to get better!",
         "heading_size": "title-md",
