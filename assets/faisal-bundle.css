@@ -130,7 +130,7 @@ body.template-index .header
   width:max-content;
 }
 
-@media only screen and (max-width: 480px)
+@media only screen and (min-width: 481px)
 {
   
 /* Desktop positions css */
