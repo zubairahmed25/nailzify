@@ -154,7 +154,7 @@ body.template-index .header
 {
   /* Mobile positions css */
  /* Top positions */
-.top-left-m    {border:solid 1px red; justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-left-m    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
 .top-center-m  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
 .top-right-m   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
 
