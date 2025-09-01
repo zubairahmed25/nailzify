@@ -9,10 +9,11 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Asset_146_2x_9a3ef1ae-3694-4686-85e6-8c78c270137f.png",
+    "logo": "shopify://shop_images/Asset_1_1.svg",
+    "white_logo": "shopify://shop_images/Nailzify_Final_Logo_Logo_3_1f64dcab-4d77-4eb3-bdff-d85f405c9508.svg",
     "logo_width": 80,
-    "logo_mobile": "shopify://shop_images/Asset_146_2x_9a3ef1ae-3694-4686-85e6-8c78c270137f.png",
-    "white_logo_mobile": "shopify://shop_images/Asset_146_2x_9a3ef1ae-3694-4686-85e6-8c78c270137f.png",
+    "logo_mobile": "shopify://shop_images/Asset_1_1.svg",
+    "white_logo_mobile": "shopify://shop_images/Nailzify_Final_Logo_Logo_3_1f64dcab-4d77-4eb3-bdff-d85f405c9508.svg",
     "logo_width_mobile": 80,
     "favicon": "shopify://shop_images/Nailzify_Final_Logo_Icon_1.svg",
     "color_text": "#5e5c5c",
