@@ -144,6 +144,12 @@
             "size_chart": ""
           }
         },
+        "liquid_XfN4dW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
           "settings": {
@@ -334,6 +340,7 @@
         "product_variations_NLYnAj",
         "liquid_Vd3XcV",
         "variant_picker_f76Jk6",
+        "liquid_XfN4dW",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "collapsible_tab_AVgT7M",
