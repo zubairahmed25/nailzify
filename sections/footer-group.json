@@ -185,7 +185,7 @@
         "copyright_text": "",
         "color_text": "#ffffff",
         "color_background": "#171717",
-        "gradient_background": "",
+        "gradient_background": "linear-gradient(180deg, rgba(255, 129, 129, 1) 3%, rgba(255, 140, 162, 1) 100%)",
         "divider": false,
         "full_width": true,
         "rounded": true,
