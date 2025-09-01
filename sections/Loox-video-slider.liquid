@@ -1,0 +1,254 @@
+<loox-video-slider-widget
+	{% if request.design_mode %}
+		data-preview='yes'
+		data-loox-block-id='{{ section.id }}'
+		data-request-path='{{ request.path }}'
+		data-page-type='{{ request.page_type }}'
+		data-origin='{{ request.origin }}'
+		data-template='{{ template }}'
+		data-widget='video-slider-widget'
+	{% endif %}
+
+	{% if section.settings['show-by-tag'] %}
+		show-by-tag
+	{% endif %}
+
+	{% if section.settings.layout %}
+		layout='{{ section.settings.layout }}'
+	{% endif %}
+
+	{% if section.settings.shadow %}
+		shadow='{{ section.settings.shadow }}'
+	{% endif %}
+
+	{% if section.settings['show-rating'] %}
+		show-rating
+	{% endif %}
+
+	{% if section.settings['show-reviewer-name'] %}
+		show-reviewer-name
+	{% endif %}
+
+	{% if section.settings['hide-arrows-mobile'] %}
+		hide-arrows-mobile
+	{% endif %}
+
+	{% if section.settings['auto-play'] %}
+		auto-play
+	{% endif %}
+
+	{% if section.settings['show-border'] %}
+		show-border
+	{% endif %}
+
+	{% if section.settings['border-width'] %}
+		border-width='{{ section.settings.border-width }}'
+	{% endif %}
+
+	{% if section.settings['border-radius'] %}
+		border-radius='{{ section.settings.border-radius }}'
+	{% endif %}
+
+	{% if section.settings['text-color'] %}
+		text-color='{{ section.settings.text-color }}'
+	{% endif %}
+
+	{% if section.settings['rating-icon-color'] %}
+		rating-icon-color='{{ section.settings.rating-icon-color }}'
+	{% endif %}
+
+	{% if section.settings['border-color'] %}
+		border-color='{{ section.settings.border-color }}'
+	{% endif %}
+
+	{% if section.settings['play-button-color'] %}
+		play-button-color='{{ section.settings.play-button-color }}'
+	{% endif %}
+
+	{% if section.settings['shadow-color'] %}
+		shadow-color='{{ section.settings.shadow-color }}'
+	{% endif %}
+
+	{% if section.settings['product-id'] %}
+		product-id='{{ all_products[section.settings.product-id].id }}'
+	{% endif %}
+>
+</loox-video-slider-widget>
+
+{% schema %}
+{
+	"name": "Loox Video Slider Widget",
+	"class": "loox-video-slider-lqd-section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show-by-tag",
+			"label": "Show selected reviews only",
+			"default": false
+		},
+		{
+			"type": "paragraph",
+			"content": "When checked, the slider will show manually selected reviews. If left unchecked, reviews will be  displayed randomly."
+		},
+		{
+			"type": "select",
+			"id": "layout",
+			"label": "Widget alignment",
+			"options": [
+				{
+					"value": "spotlight",
+					"label": "Spotlight"
+				},
+				{
+					"value": "classic",
+					"label": "Classic"
+				},
+				{
+					"value": "wave",
+					"label": "Wave"
+				}
+			],
+			"default": "spotlight"
+		},
+		{
+			"type": "select",
+			"id": "shadow",
+			"label": "Shadow type",
+			"options": [
+				{
+					"value": "",
+					"label": "None"
+				},
+				{
+					"value": "basic",
+					"label": "Basic"
+				},
+				{
+					"value": "offset-dark",
+					"label": "Offset dark"
+				},
+				{
+					"value": "offset-light",
+					"label": "Offset light"
+				},
+				{
+					"value": "spread",
+					"label": "Spread"
+				},
+				{
+					"value": "cartoon",
+					"label": "Cartoon"
+				}
+			],
+			"default": ""
+		},
+		{
+			"type": "header",
+			"content": "ADVANCED"
+		},
+		{
+			"type": "paragraph",
+			"content": "Customize your trust badge website to fit your brand."
+		},
+		{
+			"type": "checkbox",
+			"id": "show-rating",
+			"label": "Show rating",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show-reviewer-name",
+			"label": "Show reviewer name",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "hide-arrows-mobile",
+			"label": "Hide arrows on mobile",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "auto-play",
+			"label": "Auto play (no sound)",
+			"default": true
+		},
+		{
+			"type": "header",
+			"content": "BORDER"
+		},
+		{
+			"type": "checkbox",
+			"id": "show-border",
+			"label": "Show border",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "border-width",
+			"min": 1,
+			"max": 4,
+			"step": 1,
+			"unit": "px",
+			"label": "Border width",
+			"default": 1
+		},
+		{
+			"type": "range",
+			"id": "border-radius",
+			"min": 0,
+			"max": 48,
+			"step": 8,
+			"unit": "px",
+			"label": "Border radius",
+			"default": 16
+		},
+		{
+			"type": "header",
+			"content": "COLORS"
+		},
+		{
+			"id": "text-color",
+			"type": "color",
+			"label": "Text color"
+		},
+		{
+			"id": "rating-icon-color",
+			"type": "color",
+			"label": "Rating icon color"
+		},
+		{
+			"id": "border-color",
+			"type": "color",
+			"label": "Border color"
+		},
+		{
+			"id": "play-button-color",
+			"type": "color",
+			"label": "Play button color"
+		},
+		{
+			"id": "shadow-color",
+			"type": "color",
+			"label": "Shadow color"
+		},
+		{
+			"type": "product",
+			"id": "product-id",
+			"label": "Select product (optional)",
+			"info": "If you prefer to display reviews of a specific product, select it here."
+		},
+		{
+			"type": "paragraph",
+			"content": "Customize the carousel font on your Loox settings [Loox Branding settings](/admin/apps/loox-fashion-reviews/admin/settings/branding)"
+		}
+	],
+	"presets": [
+		{
+				"name": "Loox Video Slider Widget",
+				"category": "Loox"
+		}
+	]
+}
+{% endschema %}
