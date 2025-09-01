@@ -130,6 +130,9 @@ body.template-index .header
   width:max-content;
 }
 
+@media only screen and (max-width: 480px)
+{
+  
 /* Desktop positions css */
 /* Top positions */
 .top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
@@ -146,6 +149,7 @@ body.template-index .header
 .bottom-center { justify-content: center;     align-items: flex-end; flex-direction:column;gap:15px;}
 .bottom-right  { justify-content: flex-end;   align-items: flex-end; flex-direction:column;gap:15px;}
 
+}
 @media only screen and (max-width: 480px)
 {
   /* Mobile positions css */
