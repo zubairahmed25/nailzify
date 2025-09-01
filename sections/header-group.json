@@ -68,7 +68,7 @@
         "show_navigation": true,
         "color_text": "#ffffff",
         "color_background": "#585858",
-        "gradient_background": "",
+        "gradient_background": "linear-gradient(353deg, rgba(255, 91, 91, 1) 7%, rgba(255, 128, 170, 1) 99%)",
         "color_highlight": "#ffddbf",
         "gradient_highlight": "",
         "hide_homepage": false,
