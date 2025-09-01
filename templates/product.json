@@ -211,6 +211,18 @@
             "size_chart": "size-guide-for-handmade-nails"
           }
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": true,
+            "show_back_in_stock_phone": true
+          }
+        },
         "liquid_XfN4dW": {
           "type": "liquid",
           "settings": {
@@ -243,18 +255,6 @@
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
             "color_scheme": "accent-1"
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": true,
-            "show_price": true,
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": true,
-            "show_back_in_stock_name": true,
-            "show_back_in_stock_phone": true
           }
         },
         "pickup_availability": {
@@ -359,11 +359,11 @@
         "product_variations_NLYnAj",
         "liquid_Vd3XcV",
         "variant_picker_f76Jk6",
+        "buy_buttons",
         "liquid_XfN4dW",
         "vendor",
         "description",
         "inventory",
-        "buy_buttons",
         "pickup_availability",
         "share",
         "complementary",
