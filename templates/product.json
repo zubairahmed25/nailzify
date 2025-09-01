@@ -115,6 +115,23 @@
             "show_rating": true
           }
         },
+        "marquee_block_VejRMh": {
+          "type": "marquee_block",
+          "settings": {
+            "hide_on_mobile": true,
+            "pause_on_hover": true,
+            "image_width": 100,
+            "image_height": 72,
+            "image_gap": 35,
+            "scroll_speed": 26,
+            "image": "shopify://shop_images/Asset_10.svg",
+            "image2": "shopify://shop_images/Asset_9.svg",
+            "image3": "shopify://shop_images/Asset_12.svg",
+            "image4": "shopify://shop_images/Asset_11.svg",
+            "image5": "shopify://shop_images/Asset_8.svg",
+            "image6": "shopify://shop_images/Customer_Services.svg"
+          }
+        },
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
           "settings": {
@@ -215,23 +232,6 @@
           "disabled": true,
           "settings": {
             "text_size": "text-base"
-          }
-        },
-        "marquee_block_VejRMh": {
-          "type": "marquee_block",
-          "settings": {
-            "hide_on_mobile": true,
-            "pause_on_hover": true,
-            "image_width": 100,
-            "image_height": 72,
-            "image_gap": 20,
-            "scroll_speed": 24,
-            "image": "shopify://shop_images/Asset_10.svg",
-            "image2": "shopify://shop_images/Asset_9.svg",
-            "image3": "shopify://shop_images/Asset_12.svg",
-            "image4": "shopify://shop_images/Asset_11.svg",
-            "image5": "shopify://shop_images/Asset_8.svg",
-            "image6": "shopify://shop_images/Asset_1.svg"
           }
         },
         "inventory": {
@@ -349,6 +349,7 @@
       },
       "block_order": [
         "title",
+        "marquee_block_VejRMh",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "collapsible_tab_Df3qcf",
@@ -359,7 +360,6 @@
         "liquid_XfN4dW",
         "vendor",
         "description",
-        "marquee_block_VejRMh",
         "inventory",
         "buy_buttons",
         "pickup_availability",
