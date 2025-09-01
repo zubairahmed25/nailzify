@@ -51,10 +51,11 @@
         },
         "image_63D6C6": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DSC01506_d.webp",
             "image_mobile": "shopify://shop_images/DSC01534-2.webp",
-            "heading": "Salon Quality Nails",
+            "heading": "",
             "heading_color": "#ffffff",
             "heading_position": "bottom-center",
             "heading_position_mobile": "middle-center",
