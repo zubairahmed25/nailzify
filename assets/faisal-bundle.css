@@ -159,9 +159,9 @@ body.template-index .header
 .top-right-m   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
 
 /* Middle positions */
-.middle-left   { justify-content: flex-start !important; align-items: center !important; flex-direction:column;gap:15px;}
+.middle-left-m   { justify-content: flex-start !important; align-items: center !important; flex-direction:column;gap:15px;}
 .middle-center { justify-content: center !important;     align-items: center !important; flex-direction:column;gap:15px;}
-.middle-right  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
+.middle-right-m  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
 
 /* Bottom positions */
 .bottom-left-m   { justify-content: flex-start !important; align-items: flex-end !important; flex-direction:column;gap:15px;}
