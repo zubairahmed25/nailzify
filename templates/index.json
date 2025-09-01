@@ -477,6 +477,34 @@
     "collage_grid_DHCxLP": {
       "type": "collage-grid",
       "blocks": {
+        "image_ifXzfK": {
+          "type": "image",
+          "settings": {
+            "column_size": 3,
+            "row_size": 2,
+            "subheading": "",
+            "heading": "Press-On Nails",
+            "link": "shopify://collections/press-ons-nails",
+            "invert_subheading_heading": false,
+            "image": "shopify://shop_images/Swirls02.webp",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "",
+            "gradient_highlight": "",
+            "color_overlay": "#5e5c5c",
+            "overlay_opacity": 100,
+            "color_text_hover": "",
+            "color_highlight_hover": "",
+            "gradient_highlight_hover": "",
+            "color_overlay_hover": "",
+            "overlay_opacity_hover": 10
+          }
+        },
         "image_XTaqtV": {
           "type": "image",
           "settings": {
@@ -534,34 +562,6 @@
             "overlay_opacity_hover": 10
           }
         },
-        "image_ifXzfK": {
-          "type": "image",
-          "settings": {
-            "column_size": 3,
-            "row_size": 2,
-            "subheading": "",
-            "heading": "Press-On Nails",
-            "link": "shopify://collections/press-ons-nails",
-            "invert_subheading_heading": false,
-            "image": "shopify://shop_images/Swirls02.webp",
-            "content_position": "md:items-end md:justify-start",
-            "text_alignment": "left",
-            "content_position_mobile": "items-end justify-start",
-            "text_alignment_mobile": "left",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "color_text": "#ffffff",
-            "color_highlight": "",
-            "gradient_highlight": "",
-            "color_overlay": "#5e5c5c",
-            "overlay_opacity": 100,
-            "color_text_hover": "",
-            "color_highlight_hover": "",
-            "gradient_highlight_hover": "",
-            "color_overlay_hover": "",
-            "overlay_opacity_hover": 10
-          }
-        },
         "image_gPYVW7": {
           "type": "image",
           "settings": {
@@ -593,9 +593,9 @@
         }
       },
       "block_order": [
+        "image_ifXzfK",
         "image_XTaqtV",
         "image_f8y9Hw",
-        "image_ifXzfK",
         "image_gPYVW7"
       ],
       "name": "t:sections.collage-grid.name",
