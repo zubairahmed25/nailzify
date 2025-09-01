@@ -135,7 +135,7 @@
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
           "settings": {
-            "style": "with-background",
+            "style": "with-border",
             "icon": "none",
             "heading": "Description",
             "content": "{{ product.description }}",
@@ -147,7 +147,7 @@
         "collapsible_tab_YLy6mF": {
           "type": "collapsible_tab",
           "settings": {
-            "style": "with-background",
+            "style": "with-border",
             "icon": "none",
             "heading": "Kit Includes",
             "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
