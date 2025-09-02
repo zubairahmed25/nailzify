@@ -5,7 +5,6 @@
     {%- render 'section-variables', section: section -%}
   }
 </style>
-
 {%- liquid
   assign collection = section.settings.collection
   assign products = section.settings.products | default: collection.products
