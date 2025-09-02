@@ -26,7 +26,7 @@
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png">
     {%- endif -%}
- 
+
     <title>
       {{- page_title -}}
       {%- if current_tags -%}
@@ -61,7 +61,6 @@
       fetchpriority="low"
       onload="this.media='all'"
     >
-
    <!-- Modified Header hook for plugins -->
   
    {% comment %}{{ content_for_header }}{% endcomment %}
@@ -92,7 +91,6 @@
       <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- render 'js-variables' -%}
-
     {{ 'faisal-bundle.css' | asset_url | stylesheet_tag }}
 
     <!-- Google Tag Manager -->
@@ -109,9 +107,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-NJLQTBK3');
     </script>
     <!-- End Google Tag Manager -->
-
     <meta name="facebook-domain-verification" content="okjxxrgy9o2g8vvf0s293kfofkbxo2" />
-    
   </head>
 
   <body
