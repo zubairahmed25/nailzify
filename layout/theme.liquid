@@ -61,8 +61,7 @@
       onload="this.media='all'"
     >
 
-   
-    <!-- Modified Header hook for plugins -->
+   <!-- Modified Header hook for plugins -->
   
    {% comment %}{{ content_for_header }}{% endcomment %}
   
@@ -83,10 +82,6 @@
 {% else %}
 {{ modified_content_for_header | replace: 'src=', 'data-src=' | replace: domcontentloadeda, startasyncLoadinga | replace: domcontentloaded, startasyncLoading | replace: rapp, napp | replace: rappload, nappload | replace: rstorefrontload, nstorefrontload | replace: rstorefront, nstorefront }}
 {% endif %}  
-
- 
-
- 
     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
     {%- if settings.enable_tab_attention -%}
