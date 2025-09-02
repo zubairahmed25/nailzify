@@ -1,5 +1,5 @@
 {%- capture direction -%}{% render 'direction' %}{%- endcapture -%}
-<!doctype html>
+<!doctype html> 
 <html
   class="no-js{% if request.design_mode %} shopify-design-mode{% endif %}"
   lang="{{ request.locale.iso_code }}"
@@ -152,7 +152,6 @@
     {%- if request.design_mode == false and settings.preload_links -%}
       <script src="{{ 'instant-page.js' | asset_url }}" type="module" fetchpriority="low" defer="defer"></script>
     {%- endif -%}
-
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -163,12 +162,7 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-      
-<!-- Minification Apps Codes/ -->
-<!-- BEGIN app: shopify://apps/klaviyo-email-marketing-sms/ -->
-<script async type="text/javascript" data-src="https://static.klaviyo.com/onsite/js/XMyrwa/klaviyo.js?company_id=XMyrwa"></script>
-<!-- END app -->
-
+    
 <!-- BEGIN app block: shopify://apps/gorgias-live-chat-helpdesk/ -->
 <script defer="" data-gorgias-loader-chat="" data-src="https://config.gorgias.chat/bundle-loader/shopify/dgjv8c-aa.myshopify.com"></script>
 <script defer="" data-gorgias-loader-convert="" data-src="https://bundle.5gtb.com/loader.js"></script>
