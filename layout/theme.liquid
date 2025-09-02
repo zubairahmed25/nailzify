@@ -1,5 +1,5 @@
 {%- capture direction -%}{% render 'direction' %}{%- endcapture -%}
-<!doctype html> 
+<!doctype html>  
 <html
   class="no-js{% if request.design_mode %} shopify-design-mode{% endif %}"
   lang="{{ request.locale.iso_code }}"
@@ -85,10 +85,11 @@
     {%- if settings.enable_tab_attention -%}
       <script src="{{ 'tab-attention.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
+
     {%- if request.page_type contains 'customers/' -%}
       <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
     {%- endif -%}
+
     {%- render 'js-variables' -%}
     {{ 'faisal-bundle.css' | asset_url | stylesheet_tag }}
 
