@@ -23,9 +23,9 @@
             "heading_position_mobile": "middle-rightm",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Shop Best Sellers",
-            "button_link": "",
-            "button_style": "primary",
+            "button_label": "Shop All",
+            "button_link": "shopify://collections",
+            "button_style": "secondary",
             "button_external": false,
             "button_icon": false
           }
@@ -51,10 +51,11 @@
         },
         "image_63D6C6": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DSC01506_d.webp",
             "image_mobile": "shopify://shop_images/DSC01534-2.webp",
-            "heading": "Salon Quality Nails",
+            "heading": "",
             "heading_color": "#ffffff",
             "heading_position": "bottom-center",
             "heading_position_mobile": "middle-center",
@@ -163,7 +164,7 @@
             "collection": "frontpage",
             "image": "shopify://shop_images/DSC01475-2.webp",
             "title": "All products",
-            "description": "Check out all our products",
+            "description": "Checkout all our products",
             "overlay_content": false,
             "color_text": "#5e5c5c",
             "color_overlay": "#ffffff",
@@ -602,12 +603,12 @@
       "settings": {
         "row_height": 310,
         "row_height_mobile": 150,
-        "heading": "Your nail game is about to get better!",
+        "heading": "Skip the salon, keep the glam!",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Nailzify is #1 premium press-on brand in USA.</p>",
+        "description": "",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -789,6 +790,7 @@
       "blocks": {
         "loox_reviews_loox_video_slider_p3xLUp": {
           "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
             "show-by-tag": true,
             "layout": "spotlight",
@@ -812,6 +814,7 @@
       "block_order": [
         "loox_reviews_loox_video_slider_p3xLUp"
       ],
+      "disabled": true,
       "settings": {
         "color_text": "",
         "color_background": "",

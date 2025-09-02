@@ -120,6 +120,7 @@
         },
         "link_list-2": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Information",
             "menu": "footer",
@@ -178,9 +179,9 @@
       "settings": {
         "enable_language_selector": true,
         "enable_country_selector": true,
-        "show_policy": true,
+        "show_policy": false,
         "show_payment_icons": true,
-        "monochrome_payment_icons": false,
+        "monochrome_payment_icons": true,
         "show_copyright": true,
         "copyright_text": "",
         "color_text": "#ffffff",

@@ -106,11 +106,7 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
 
 }
 
-/* banner over lap */
-body.template-index .header
-{
-  position:absolute;
-}
+
 /* Banner spacing from desktop to normal devices */
 @media screen and (min-width: 992px)
 {
@@ -174,6 +170,26 @@ body.template-index .header
 .bottom-centerm { justify-content: center !important;     align-items: flex-end !important; flex-direction:column;gap:15px;}
 .bottom-rightm  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
 
+/* banner over lap */
+body.template-index .header
+{
+  position:relative;
+}
+
+}
 
 
+.rbr-addBundleBtn-container.rbr-centralize.rbr-cursor-pointer {
+  color: white;
+  background: #ff80aa;
+}
+
+select.variantSelector_container_f0ad7d97 {
+    color: white !important;
+    background: #ff80aa !important;
+}
+
+.variantSelector_container_f0ad7d97 {
+  color: white !important;
+    background: #ff80aa !important;
 }
