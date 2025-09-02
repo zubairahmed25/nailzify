@@ -124,7 +124,6 @@
     data-page-rendering
   >
     <a class="sr-only skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
     {%- liquid
       if settings.enable_page_transition
       endif
@@ -134,7 +133,6 @@
       sections 'header-group'
       sections 'overlay-group'
     -%}
-
     <div class="page-container" id="PageContainer">
       <main class="main-content relative" id="MainContent" role="main">
         {{ content_for_layout }}
@@ -143,14 +141,16 @@
         {%- sections 'footer-group' -%}
       </footer>
     </div>
-    
+
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'general.accessibility.link_messages.new_window' | t }}</li>
     </ul>
+
     {%- if request.design_mode == false and settings.preload_links -%}
       <script src="{{ 'instant-page.js' | asset_url }}" type="module" fetchpriority="low" defer="defer"></script>
     {%- endif -%}
+
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
