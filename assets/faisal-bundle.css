@@ -126,6 +126,9 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
   width:max-content;
 }
 
+@media only screen and (min-width: 481px)
+{
+  
 /* Desktop positions css */
 /* Top positions */
 .top-left    { justify-content: flex-start; align-items: flex-start;flex-direction:column;gap:15px; }
@@ -142,23 +145,30 @@ body.template-product #shopify-section-template--19637427241201__main-product .s
 .bottom-center { justify-content: center;     align-items: flex-end; flex-direction:column;gap:15px;}
 .bottom-right  { justify-content: flex-end;   align-items: flex-end; flex-direction:column;gap:15px;}
 
+}
 @media only screen and (max-width: 480px)
 {
   /* Mobile positions css */
  /* Top positions */
-.top-left-m    { justify-content: flex-start !important; align-items: flex-start !important;flex-direction:column;gap:15px; }
-.top-center-m  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
-.top-right-m   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-leftm    
+{ 
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  flex-direction:column;
+  gap:15px; 
+}
+.top-centerm  { justify-content: center !important;     align-items: flex-start !important;flex-direction:column;gap:15px; }
+.top-rightm   { justify-content: flex-end !important;   align-items: flex-start !important;flex-direction:column;gap:15px; }
 
 /* Middle positions */
 .middle-left-m   { justify-content: flex-start !important; align-items: center !important; flex-direction:column;gap:15px;}
 .middle-center { justify-content: center !important;     align-items: center !important; flex-direction:column;gap:15px;}
-.middle-right-m  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
+.middle-rightm  { justify-content:flex-end !important;   align-items: center !important; flex-direction:column;gap:15px;}
 
 /* Bottom positions */
-.bottom-left-m   { justify-content: flex-start !important; align-items: flex-end !important; flex-direction:column;gap:15px;}
-.bottom-center-m { justify-content: center !important;     align-items: flex-end !important; flex-direction:column;gap:15px;}
-.bottom-right-m  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-leftm   { justify-content: flex-start !important; align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-centerm { justify-content: center !important;     align-items: flex-end !important; flex-direction:column;gap:15px;}
+.bottom-rightm  { justify-content: flex-end !important;   align-items: flex-end !important; flex-direction:column;gap:15px;}
 
 /* banner over lap */
 body.template-index .header
