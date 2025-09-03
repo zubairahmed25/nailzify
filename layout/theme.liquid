@@ -125,10 +125,11 @@
     data-page-rendering
   >
     <a class="sr-only skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    
     {%- liquid
       if settings.enable_page_transition
-      endif
-      
+        render 'loading-bar'
+      endif  
       render 'mouse-cursor'
 
       sections 'header-group'
