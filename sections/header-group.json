@@ -57,6 +57,9 @@
         "announcement-2",
         "announcement_n7bXRT"
       ],
+      "custom_css": [
+        "@media (max-width: 480px) {}"
+      ],
       "settings": {
         "show_social": true,
         "enable_language_selector": true,
@@ -65,7 +68,7 @@
         "announcement_position": "center",
         "autoplay": true,
         "autoplay_speed": 5,
-        "show_navigation": true,
+        "show_navigation": false,
         "color_text": "#ffffff",
         "color_background": "#585858",
         "gradient_background": "linear-gradient(359deg, rgba(255, 91, 91, 0.88), rgba(255, 128, 170, 1) 100%)",
