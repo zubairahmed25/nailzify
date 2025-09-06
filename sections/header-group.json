@@ -247,8 +247,8 @@
         "transparent_color_text": "#5e5c5c",
         "color_text": "#5e5c5c",
         "color_background": "#ffefef",
-        "padding_top": 12,
-        "padding_bottom": 12,
+        "padding_top": 6,
+        "padding_bottom": 6,
         "full_width": true,
         "rounded": true
       }
