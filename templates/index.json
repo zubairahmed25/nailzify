@@ -74,7 +74,9 @@
         "image_jL4QQN",
         "image_63D6C6"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "a.button.button--secondary.button--md.button--blur.button--fixed.pointer-events-auto {margin-top:20em !important;}"
+      ],
       "name": "Slideshow Custom",
       "settings": {
         "autoplay": false,
