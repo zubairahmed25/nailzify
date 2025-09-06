@@ -81,7 +81,7 @@
         "autoplay_speed": 3,
         "show_navigation": false,
         "image_height": "100vh",
-        "content_width": "small",
+        "content_width": "medium",
         "image_height_mobile": "adapt",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#2d2d2d",
