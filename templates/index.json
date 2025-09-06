@@ -19,7 +19,7 @@
             "image_mobile": "shopify://shop_images/DSC01506_2_copy_1.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
-            "heading_position": "bottom-right",
+            "heading_position": "middle-right",
             "heading_position_mobile": "middle-center",
             "heading_size": "title-sm",
             "heading_tag": "h2",
@@ -75,7 +75,7 @@
         "image_63D6C6"
       ],
       "custom_css": [
-        "a.button.button--secondary.button--md.button--blur.button--fixed.pointer-events-auto {margin-top:20em !important;}"
+        "a.button.button--secondary.button--md.button--blur.button--fixed.pointer-events-auto {margin-top: 20em !important;}"
       ],
       "name": "Slideshow Custom",
       "settings": {
