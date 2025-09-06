@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/DSC01965-3.webp",
-            "image_mobile": "shopify://shop_images/DSC01506.webp",
+            "image_mobile": "shopify://shop_images/DSC01506_2_copy.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
             "heading_position": "bottom-right",
@@ -91,7 +91,7 @@
         "color_button_background": "#ffffff",
         "color_button_gradient": "",
         "color_overlay": "#171717",
-        "overlay_opacity": 10,
+        "overlay_opacity": 0,
         "padding_top": 0,
         "padding_bottom": 0,
         "divider": false,
