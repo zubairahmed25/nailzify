@@ -211,6 +211,11 @@
         "type": "shopify://apps/infinite-microsoft-clarity/blocks/star_rating/bfd5105e-f612-460c-8613-d7c5461bd690",
         "disabled": false,
         "settings": {}
+      },
+      "8774941748004189772": {
+        "type": "shopify://apps/reconvert/blocks/cart-drawer/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
