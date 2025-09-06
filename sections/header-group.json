@@ -58,7 +58,7 @@
         "announcement_n7bXRT"
       ],
       "custom_css": [
-        "@media (max-width: 480px) {div {height: 35px !important; }}"
+        "@media (max-width: 480px) {.topbar-section {height: 35px !important; }}"
       ],
       "settings": {
         "show_social": true,
