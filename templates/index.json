@@ -601,6 +601,7 @@
         "image_f8y9Hw",
         "image_gPYVW7"
       ],
+      "disabled": true,
       "name": "t:sections.collage-grid.name",
       "settings": {
         "row_height": 310,
@@ -631,6 +632,41 @@
         "full_width": false,
         "rounded": false,
         "enable_parallax": true
+      }
+    },
+    "featured_collection_FbChXx": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "handmade-press-ons",
+        "products": [],
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Handmade Nails",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "faq_bqXHVL": {
@@ -920,6 +956,7 @@
     "video-with-text-overlay",
     "logo_list_m8arzH",
     "collage_grid_DHCxLP",
+    "featured_collection_FbChXx",
     "faq_bqXHVL",
     "blog_posts_collage_JNc3JJ",
     "1756689037811840a3",
