@@ -15,7 +15,7 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01965-3.webp",
+            "image": "shopify://shop_images/DSC01965-3_1_copy.webp",
             "image_mobile": "shopify://shop_images/DSC01506_2_copy_1.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
@@ -23,7 +23,7 @@
             "heading_position_mobile": "middle-center",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Shop All",
+            "button_label": "",
             "button_link": "shopify://collections",
             "button_style": "secondary",
             "button_external": false,
