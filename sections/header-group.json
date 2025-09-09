@@ -85,7 +85,7 @@
         "mega_menu_tab_R8Pzgh": {
           "type": "mega_menu_tab",
           "settings": {
-            "menu_title": "Shop",
+            "menu_title": "Shop All",
             "button_label": "",
             "button_link": "",
             "heading_1": "Collections",
@@ -169,7 +169,7 @@
         "mega_menu_wTBw6D": {
           "type": "mega_menu",
           "settings": {
-            "menu_title": "Collections",
+            "menu_title": "Shop By Shape",
             "menu_width": "medium",
             "show_menu_image": false,
             "button_label": "View All Collections",
