@@ -73,7 +73,7 @@
         "heading_alignment": "text-center",
         "heading_tag": "h1",
         "padding_top": 20,
-        "padding_bottom": 120,
+        "padding_bottom": 20,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -126,11 +126,30 @@
         "rounded": false,
         "enable_parallax": true
       }
+    },
+    "custom_liquid_zy7D4p": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #ff80aa;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  display: block;\n  margin: 0 auto;\n}\n\n.gorgias-chat-button:hover {\n  background-color: white;\n  transform: translateY(-1px);\ncolor: black;\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Have any questions? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
     }
   },
   "order": [
     "slideshow_rNmUpw",
     "main",
-    "images_with_text_overlay_PL9Knr"
+    "images_with_text_overlay_PL9Knr",
+    "custom_liquid_zy7D4p"
   ]
 }
