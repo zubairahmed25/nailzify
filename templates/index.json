@@ -1017,6 +1017,24 @@
         "narrow": true,
         "rounded": false
       }
+    },
+    "custom_liquid_WUJNdx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #007bff;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}\n\n.gorgias-chat-button:hover {\n  background-color: #0056b3;\n  transform: translateY(-1px);\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Need Help? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1033,6 +1051,7 @@
     "1756689037811840a3",
     "1757225448cbccf3ce",
     "17566891356766e5dd",
-    "faq_bqXHVL"
+    "faq_bqXHVL",
+    "custom_liquid_WUJNdx"
   ]
 }
