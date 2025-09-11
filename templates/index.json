@@ -1022,7 +1022,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
-        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #007bff;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}\n\n.gorgias-chat-button:hover {\n  background-color: #0056b3;\n  transform: translateY(-1px);\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Need Help? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
+        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #ff80aa;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  display: block;\n  margin: 0 auto;\n}\n\n.gorgias-chat-button:hover {\n  background-color: #0056b3;\n  transform: translateY(-1px);\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Still have questions? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
