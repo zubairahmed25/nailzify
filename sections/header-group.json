@@ -249,7 +249,7 @@
         "enable_country_selector": true,
         "transparent_color_text": "#5e5c5c",
         "color_text": "#5e5c5c",
-        "color_background": "#ffefef",
+        "color_background": "#fff5f5",
         "padding_top": 6,
         "padding_bottom": 6,
         "full_width": true,
