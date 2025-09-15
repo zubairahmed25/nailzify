@@ -1045,34 +1045,10 @@
             "block_image": "shopify://shop_images/RoseQuartz04.webp",
             "product": "luna"
           }
-        },
-        "product_kemUfB": {
-          "type": "product",
-          "settings": {
-            "block_image": "shopify://shop_images/RoseQuartz04.webp",
-            "product": "luna"
-          }
-        },
-        "product_wLqhiQ": {
-          "type": "product",
-          "settings": {
-            "block_image": "shopify://shop_images/RoseQuartz04.webp",
-            "product": "luna"
-          }
-        },
-        "product_Nnfi76": {
-          "type": "product",
-          "settings": {
-            "block_image": "shopify://shop_images/RoseQuartz04.webp",
-            "product": "luna"
-          }
         }
       },
       "block_order": [
-        "product_hFwdX9",
-        "product_kemUfB",
-        "product_wLqhiQ",
-        "product_Nnfi76"
+        "product_hFwdX9"
       ],
       "name": "Product Block",
       "settings": {}
