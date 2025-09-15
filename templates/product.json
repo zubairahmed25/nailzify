@@ -106,6 +106,10 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "custom_badge_kiVgWd": {
+          "type": "custom_badge",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -351,6 +355,7 @@
         }
       },
       "block_order": [
+        "custom_badge_kiVgWd",
         "title",
         "marquee_block_VejRMh",
         "collapsible_tab_kfGJYR",
