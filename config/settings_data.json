@@ -110,6 +110,8 @@
     "badge_color": "#f7f7f7",
     "nail_bg": "#a8e8e2",
     "nail_color": "#ff80aa",
+    "nail_type_bg": "#e0a580",
+    "nail_type_color": "#fff5f5",
     "cart_type": "drawer",
     "cart_icon": "cart",
     "enable_search": true,
