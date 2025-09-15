@@ -106,6 +106,7 @@
     "product_icon_list": false,
     "product_icon_list_carousel": true,
     "product_disable_collection_portion": false,
+    "badge_bg": "#f59e0b",
     "badge_color": "#ff5b5b",
     "nail_bg": "#a8e8e2",
     "cart_type": "drawer",
