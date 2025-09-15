@@ -83,7 +83,8 @@
 ]
 }
 {% endschema %}
-$(document).ready(function(){
+<script>
+ $(document).ready(function(){
   $('.product-container').slick({
     infinite: true,
     slidesToShow: 1, 
@@ -115,8 +116,9 @@ $(document).ready(function(){
   });
 });
 
+</script>
 <style>
-.product-container-flex {
+ .product-container-flex {
   display: flex !important;
   justify-content: space-between;
   width: 80%;
