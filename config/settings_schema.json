@@ -1046,35 +1046,47 @@
   {
     "name": "Product Badges",
     "settings": [
+      {
+        "type": "header",
+        "content": "Custom Badge"
+      },
        {
       "type": "color",
       "id": "badge_bg",
-      "label": "Badge Background"
+      "label": "Background Color"
     },
     {
       "type": "color",
       "id": "badge_color",
-      "label": "Badge Text Color"
+      "label": "Text Color"
     },
+    {
+        "type": "header",
+        "content": "Nail Shape"
+      },
     {
       "type": "color",
       "id": "nail_bg",
-      "label": "Nail Shape Background"
+      "label": "Background Color"
     },
     {
       "type": "color",
       "id": "nail_color",
-      "label": "Nail Text Color"
+      "label": "Text Color"
     },
+    {
+        "type": "header",
+        "content": "Nail Type"
+      },
     {
       "type": "color",
       "id": "nail_type_bg",
-      "label": "Nail Type Background"
+      "label": "Background Color"
     },
     {
       "type": "color",
       "id": "nail_type_color",
-      "label": "Nail Type Text Color"
+      "label": "Text Color"
     }
     ]
   },
