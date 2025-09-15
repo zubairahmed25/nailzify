@@ -138,7 +138,7 @@
 <div class="nail-flex">
   {% if product.metafields.custom.nail_shape != blank %}
     <div class="meta-item shape">
-      {{ product.metafields.custom.nail_shape }}
+  <img src="{{ product.metafields.custom.nail_shape | file_url }}" />
     </div>
   {% endif %}
 
