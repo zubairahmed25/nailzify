@@ -15994,3 +15994,28 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 
 
 
+ .cus-metafeild {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.metafeild-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bg-new-color {
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.meta-item {
+    line-height: 1;
+    font-size: 14px;
+}
+
+.nail-flex-bg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
