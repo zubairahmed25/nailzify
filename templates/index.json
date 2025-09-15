@@ -1045,10 +1045,26 @@
             "block_image": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
             "product": "luna"
           }
+        },
+        "product_GQaUrA": {
+          "type": "product",
+          "settings": {
+            "block_image": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
+            "product": "luna"
+          }
+        },
+        "product_TVCqRt": {
+          "type": "product",
+          "settings": {
+            "block_image": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
+            "product": "luna"
+          }
         }
       },
       "block_order": [
-        "product_hFwdX9"
+        "product_hFwdX9",
+        "product_GQaUrA",
+        "product_TVCqRt"
       ],
       "name": "Product Block",
       "settings": {}
