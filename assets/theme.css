@@ -16015,7 +16015,9 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     font-size: 12px;
     font-weight: 600;
 }
-
+.meta-item-2 img {
+    height: 15px;
+}
 .nail-flex-bg {
     display: flex;
     align-items: center;
