@@ -130,11 +130,14 @@
           {%- endunless -%}
         </a>
         <div class="cus-metafeild">
+          <div class="metafeild-flex">
+            <div class="custom-badge-bg">
   {% if product.metafields.custom.custom_badge != blank %}
-    <div class="meta-item badge">
+    <div class="meta-item">
       {{ product.metafields.custom.custom_badge }}
     </div>
   {% endif %}
+</div>
 <div class="nail-flex">
   {% if product.metafields.custom.nail_shape != blank %}
     <div class="meta-item shape">
@@ -148,11 +151,14 @@
     </div>
   {% endif %}
 </div>
+<div class="nail-type-bg">
   {% if product.metafields.custom.nail_type != blank %}
     <div class="meta-item type">
       {{ product.metafields.custom.nail_type }}
     </div>
   {% endif %}
+</div>
+<div>
 </div>
 
         {%- if product.available -%}
