@@ -8,7 +8,22 @@
                         <img src="{{ block.settings.block_image | img_url: 'master' }}" >
                      {% endif %}
                     </div>
-                    <div class="right-col"></div>
+                    <div class="right-col">
+                     {% if block.settings.product != blank %}
+                       {% assign selected_product = all_products[block.settings.product] %}
+    
+                   {% if selected_product %}
+                  <div class="custom-product-card">
+                    <a href="{{ selected_product.url }}">
+                     {{ selected_product.featured_image | image_url: width: 400 | image_tag }}
+                     <h3>{{ selected_product.title }}</h3>
+                      <span>{{ selected_product.price | money }}</span>
+                   </a>
+                  </div>
+                    {% endif %}
+            {% endif %}
+</div>
+
                 </div>
             {% endfor %}
         </div>
@@ -27,7 +42,12 @@
           "type": "image_picker",
           "id": "block_image",
           "label": "Main Image"
-        }
+        },
+        {
+  "type": "product",
+  "id": "product",
+  "label": "Slect Product"
+}
       ]
     }
 ],
