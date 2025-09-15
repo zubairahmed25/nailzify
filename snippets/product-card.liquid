@@ -133,30 +133,30 @@
         <div class="cus-metafeild">
           <div class="metafeild-flex">
 
-        <div class="custom-badge-bg">    
+        <div class="custom-badge-bg" style="background-color:{{ section.settings.badge_bg }}">    
   {% if product.metafields.custom.custom_badge != blank %}
-    <div class="meta-item">
+    <div class="meta-item" style="color:{{ section.settings.badge_color }}">
       {{ product.metafields.custom.custom_badge }}
     </div>
   {% endif %}
 </div>
 
-<div class="nail-flex">
+<div class="nail-flex-bg" style="background-color:{{ section.settings.nail_bg }}">
   {% if product.metafields.custom.nail_shape != blank %}
     <div class="meta-item">
-  <img src="{{ product.metafields.custom.nail_shape | file_url }}" />
+      <img src="{{ product.metafields.custom.nail_shape | file_url }}">
     </div>
   {% endif %}
   {% if product.metafields.custom.nail_text != blank %}
-    <div class="meta-item">
+    <div class="meta-item-color" style="color:{{ section.settings.nail_color }}">
       {{ product.metafields.custom.nail_text }}
     </div>
   {% endif %}
 </div>
 
-<div class="nail-type-bg">
+<div class="nail-type-bg" style="background-color:{{ section.settings.nail_type_bg }}">
   {% if product.metafields.custom.nail_type != blank %}
-    <div class="meta-item">
+    <div class="meta-item-color" style="color:{{ section.settings.nail_type_color }}">
       {{ product.metafields.custom.nail_type }}
     </div>
   {% endif %}
