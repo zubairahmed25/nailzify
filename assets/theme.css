@@ -16007,11 +16007,12 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .bg-new-color {
     padding: 4px 12px;
     border-radius: 4px;
+    max-height: 22px;
 }
 
 .meta-item {
     line-height: 1;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .nail-flex-bg {
