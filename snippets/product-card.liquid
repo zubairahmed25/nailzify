@@ -129,30 +129,40 @@
             -%}
           {%- endunless -%}
         </a>
+
         <div class="cus-metafeild">
+          <div class="metafeild-flex">
+
+        <div class="custom-badge-bg">    
   {% if product.metafields.custom.custom_badge != blank %}
     <div class="meta-item">
       {{ product.metafields.custom.custom_badge }}
     </div>
   {% endif %}
+</div>
+
 <div class="nail-flex">
   {% if product.metafields.custom.nail_shape != blank %}
-    <div class="meta-item shape">
+    <div class="meta-item">
   <img src="{{ product.metafields.custom.nail_shape | file_url }}" />
     </div>
   {% endif %}
-
   {% if product.metafields.custom.nail_text != blank %}
-    <div class="meta-item text">
+    <div class="meta-item">
       {{ product.metafields.custom.nail_text }}
     </div>
   {% endif %}
 </div>
+
+<div class="nail-type-bg">
   {% if product.metafields.custom.nail_type != blank %}
-    <div class="meta-item type">
+    <div class="meta-item">
       {{ product.metafields.custom.nail_type }}
     </div>
   {% endif %}
+</div>
+
+</div>
 </div>
 
         {%- if product.available -%}
