@@ -16005,7 +16005,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     gap: 10px;
 }
 .bg-new-color {
-    padding: 4px 12px;
+    padding: 6px 12px;
     border-radius: 4px;
     max-height: 22px;
 }
@@ -16013,6 +16013,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .meta-item {
     line-height: 1;
     font-size: 12px;
+    font-weight: 600;
 }
 
 .nail-flex-bg {
