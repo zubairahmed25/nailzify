@@ -83,6 +83,40 @@
 ]
 }
 {% endschema %}
+<script>
+ 
+$('.product-container-flex').slick({
+   infinite: true,
+      slidesToShow: 1, 
+      slidesToScroll: 1,
+      speed: 500,
+      autoplaySpeed: 2000,
+      autoplay: true,
+      centerMode: true,
+      centerPadding: "250px",
+      arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+</script>
 <style>
     .product-container-flex
  {
