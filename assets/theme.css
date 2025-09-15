@@ -16023,3 +16023,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     align-items: center;
     gap: 4px;
 }
+.product__info .product__title
+ {
+    margin-top: 14px;
+}
