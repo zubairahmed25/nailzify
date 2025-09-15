@@ -15,7 +15,7 @@
                    {% if selected_product %}
                   <div class="custom-product-card">
                   {%- render 'product-card',
-            product: product,
+            product: selected_product,
             product_id: product.id,
             section_id: section.id,
             lazy_load: false,
