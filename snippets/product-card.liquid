@@ -132,15 +132,15 @@
 
         <div class="cus-metafeild">
           <div class="metafeild-flex">
-
+ {% if product.metafields.custom.custom_badge != blank %}
         <div class="custom-badge-bg" style="background-color:{{ settings.badge_bg }};">    
-  {% if product.metafields.custom.custom_badge != blank %}
     <div class="meta-item" style="color:{{ settings.badge_color }};">
       {{ product.metafields.custom.custom_badge }}
     </div>
-  {% endif %}
 </div>
+  {% endif %}
 
+  
 <div class="nail-flex-bg" style="background-color:{{ section.settings.nail_bg }}">
   {% if product.metafields.custom.nail_shape != blank %}
     <div class="meta-item">
