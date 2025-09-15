@@ -16002,7 +16002,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .metafeild-flex {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 .bg-new-color {
     padding: 6px 12px;
@@ -16019,5 +16019,5 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .nail-flex-bg {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
