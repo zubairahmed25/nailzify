@@ -1035,6 +1035,23 @@
         "narrow": false,
         "rounded": false
       }
+    },
+    "product_block_MPyHg3": {
+      "type": "product-block",
+      "blocks": {
+        "product_hFwdX9": {
+          "type": "product",
+          "settings": {
+            "block_image": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
+            "product": "luna"
+          }
+        }
+      },
+      "block_order": [
+        "product_hFwdX9"
+      ],
+      "name": "Product Block",
+      "settings": {}
     }
   },
   "order": [
@@ -1052,6 +1069,7 @@
     "1757225448cbccf3ce",
     "17566891356766e5dd",
     "faq_bqXHVL",
-    "custom_liquid_WUJNdx"
+    "custom_liquid_WUJNdx",
+    "product_block_MPyHg3"
   ]
 }
