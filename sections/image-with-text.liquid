@@ -7,7 +7,6 @@
       --ratio-percent: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
     {% endif -%}
   }
-
   {%- assign image_mobile = section.settings.image_mobile | default: section.settings.image -%}
   {%- if image_mobile != blank and section.settings.image_height_mobile == 'adapt' %}
     @media screen and (max-width: 767px) {

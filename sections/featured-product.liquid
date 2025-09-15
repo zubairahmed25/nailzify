@@ -10,7 +10,6 @@
       --product-grid: auto / minmax(0, {{ media_ratio }}fr) minmax(0, {{ 2.0 | minus: media_ratio }}fr);
     }
   }
-
   {%- assign first_media = section.settings.product.selected_or_first_available_variant.featured_media | default: section.settings.product.media.first -%}
   @media screen and (max-width: 767px) {
     #shopify-section-{{ section.id }} {

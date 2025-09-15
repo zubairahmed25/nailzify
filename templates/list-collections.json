@@ -1,1 +1,155 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{"display_type":"all","sort":"alphabetical","image_type":"collection","image_ratio":"square","overlay_content":true,"show_products_count":true,"columns":4,"columns_mobile":"1","heading":"Collections","heading_size":"title-xl tracking-heading","heading_alignment":"text-left","heading_tag":"h1","padding_top":72,"padding_bottom":120,"divider":false,"full_width":false,"rounded":false}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_rNmUpw": {
+      "type": "slideshow",
+      "blocks": {
+        "image_iPCJXw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/uhkmafrucnci0ji5eoly.webp",
+            "image_mobile": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_iPCJXw"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "650px",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "accessibility_info": "Slideshow about our brand",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "display_type": "all",
+        "sort": "alphabetical",
+        "image_type": "collection",
+        "image_ratio": "square",
+        "overlay_content": true,
+        "show_products_count": true,
+        "columns": 4,
+        "columns_mobile": "2",
+        "heading": "",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-center",
+        "heading_tag": "h1",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "images_with_text_overlay_PL9Knr": {
+      "type": "images-with-text-overlay",
+      "blocks": {
+        "heading_KQpYme": {
+          "type": "heading",
+          "settings": {
+            "heading": "FREE SHIPPING ON ALL U.S. ORDERS",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KQpYme"
+      ],
+      "disabled": true,
+      "name": "t:sections.images-with-text-overlay.name",
+      "settings": {
+        "transparent_header": false,
+        "image_height": "400px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_1": "shopify://shop_images/iizwezztnqj03lwlpkig.webp",
+        "image_2": "shopify://shop_images/kztrtjenjtt6e17pukys.webp",
+        "image_3": "shopify://shop_images/gxqhkaobrui6rgcljh9c.webp",
+        "image_4": "shopify://shop_images/rjq900piomauy4lu6qgt.webp",
+        "image_height_mobile": "200px",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#5e5c5c",
+        "overlay_opacity": 77,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true
+      }
+    },
+    "custom_liquid_zy7D4p": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #ff80aa;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  display: block;\n  margin: 0 auto;\n}\n\n.gorgias-chat-button:hover {\n  background-color: white;\n  transform: translateY(-1px);\ncolor: black;\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Have any questions? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_rNmUpw",
+    "main",
+    "images_with_text_overlay_PL9Knr",
+    "custom_liquid_zy7D4p"
+  ]
+}

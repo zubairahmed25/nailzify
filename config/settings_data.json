@@ -17,11 +17,11 @@
     "logo_width_mobile": 80,
     "favicon": "shopify://shop_images/Nailzify_Final_Logo_Icon_1.svg",
     "color_text": "#5e5c5c",
-    "color_background": "#ffefef",
+    "color_background": "#fff5f5",
     "color_highlight": "#ff5b5b",
     "color_keyboard_focus": "#0b61cd",
     "color_shadow": "#a8e8e2",
-    "color_image_background": "#ffffff",
+    "color_image_background": "#fff5f5",
     "color_price": "#ff80aa",
     "color_sale_price": "#ff80aa",
     "color_sale_tag": "#5e5c5c",
@@ -31,7 +31,7 @@
     "color_button_background": "#ff80aa",
     "color_button_gradient": "",
     "color_drawer_text": "#171717",
-    "color_drawer_background": "#ffefef",
+    "color_drawer_background": "#fff5f5",
     "color_drawer_button_text": "#ffffff",
     "color_drawer_button_background": "#171717",
     "color_drawer_button_gradient": "",
@@ -192,8 +192,8 @@
         "disabled": true,
         "settings": {}
       },
-      "10864971697205422121": {
-        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
+      "15599951759576395258": {
+        "type": "shopify://apps/mida-replay-heatmaps/blocks/mida_recorder/e4c350c5-eabf-426d-8014-47ef50412bd0",
         "disabled": false,
         "settings": {}
       },
@@ -202,8 +202,18 @@
         "disabled": false,
         "settings": {}
       },
-      "15599951759576395258": {
-        "type": "shopify://apps/mida-replay-heatmaps/blocks/mida_recorder/e4c350c5-eabf-426d-8014-47ef50412bd0",
+      "10864971697205422121": {
+        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
+        "disabled": false,
+        "settings": {}
+      },
+      "5308339952037760544": {
+        "type": "shopify://apps/infinite-microsoft-clarity/blocks/star_rating/bfd5105e-f612-460c-8613-d7c5461bd690",
+        "disabled": false,
+        "settings": {}
+      },
+      "8774941748004189772": {
+        "type": "shopify://apps/reconvert/blocks/cart-drawer/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
         "disabled": false,
         "settings": {}
       }

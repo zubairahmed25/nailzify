@@ -5,7 +5,7 @@
     {%- render 'section-variables', section: section -%}
   }
 </style>
-
+ 
 {%- liquid
   assign enable_footer_info = false
   if section.settings.enable_newsletter or section.settings.show_social or shop.features.follow_on_shop? and section.settings.enable_follow_on_shop
@@ -86,8 +86,7 @@
   {%- if section.settings.enable_parallax -%}
     <parallax-overlay class="footer-overlay hidden md:block z-20 absolute left-0 top-0 w-full pointer-events-none" data-target="height" data-start="100%" data-stop="0%"></parallax-overlay>
   {%- endif -%}
-</div>
-
+</div> 
 {% schema %}
 {
   "name": "t:sections.footer.name",

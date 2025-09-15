@@ -15,15 +15,15 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01965-3.webp",
-            "image_mobile": "shopify://shop_images/DSC02011_1_-2.webp",
-            "heading": "Premium Press-On Nails",
+            "image": "shopify://shop_images/DSC01965-3_1_copy.webp",
+            "image_mobile": "shopify://shop_images/DSC01506_2_copy_1.webp",
+            "heading": "",
             "heading_color": "#f7f7f7",
-            "heading_position": "middle-centerm",
+            "heading_position": "middle-right",
             "heading_position_mobile": "middle-center",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Shop All",
+            "button_label": "",
             "button_link": "shopify://collections",
             "button_style": "secondary",
             "button_external": false,
@@ -74,15 +74,17 @@
         "image_jL4QQN",
         "image_63D6C6"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "a.button.button--secondary.button--md.button--blur.button--fixed.pointer-events-auto {margin-top: 20em !important;}"
+      ],
       "name": "Slideshow Custom",
       "settings": {
         "autoplay": false,
         "autoplay_speed": 3,
         "show_navigation": false,
         "image_height": "100vh",
-        "content_width": "small",
-        "image_height_mobile": "100vh",
+        "content_width": "medium",
+        "image_height_mobile": "adapt",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#2d2d2d",
         "color_background": "#ffefef",
@@ -91,7 +93,7 @@
         "color_button_background": "#ffffff",
         "color_button_gradient": "",
         "color_overlay": "#171717",
-        "overlay_opacity": 20,
+        "overlay_opacity": 0,
         "padding_top": 0,
         "padding_bottom": 0,
         "divider": false,
@@ -575,7 +577,7 @@
             "image": "shopify://shop_images/mumcsqgh34i0tbxxgjxb.webp",
             "content_position": "md:items-end md:justify-start",
             "text_alignment": "left",
-            "image_mobile": "shopify://shop_images/mumcsqgh34i0tbxxgjxb.webp",
+            "image_mobile": "shopify://shop_images/awdnqdvb0qt56ucxfnzo.webp",
             "content_position_mobile": "items-end justify-start",
             "text_alignment_mobile": "left",
             "highlighted_text": "none",
@@ -599,6 +601,7 @@
         "image_f8y9Hw",
         "image_gPYVW7"
       ],
+      "disabled": true,
       "name": "t:sections.collage-grid.name",
       "settings": {
         "row_height": 310,
@@ -629,6 +632,272 @@
         "full_width": false,
         "rounded": false,
         "enable_parallax": true
+      }
+    },
+    "featured_collection_FbChXx": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "handmade-press-ons",
+        "products": [],
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Handmade Nails",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "featured_collection_LcUPaF": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "press-ons-nails",
+        "products": [],
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Best Sellers",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "featured_collection_ttwGzr": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "nail-accessories",
+        "products": [],
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Nail Accessories",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "blog_posts_collage_JNc3JJ": {
+      "type": "blog-posts-collage",
+      "name": "t:sections.blog-posts-collage.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "show_view_all": false,
+        "image_ratio": "landscape",
+        "show_tags": true,
+        "show_date": true,
+        "show_comments": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "heading": "Nailzify Blogs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "1756689037811840a3": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_video_slider_p3xLUp": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "show-by-tag": true,
+            "layout": "spotlight",
+            "shadow": "",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": true,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_p3xLUp"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "1757225448cbccf3ce": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_video_slider_WN8QKk": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "show-by-tag": false,
+            "layout": "spotlight",
+            "shadow": "basic",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": true,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_WN8QKk"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "17566891356766e5dd": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_brCbUq": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": true,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 7,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_brCbUq"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     },
     "faq_bqXHVL": {
@@ -749,120 +1018,21 @@
         "rounded": false
       }
     },
-    "blog_posts_collage_JNc3JJ": {
-      "type": "blog-posts-collage",
-      "name": "t:sections.blog-posts-collage.name",
+    "custom_liquid_WUJNdx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
       "settings": {
-        "blog": "news",
-        "post_limit": 3,
-        "show_view_all": false,
-        "image_ratio": "landscape",
-        "show_tags": true,
-        "show_date": true,
-        "show_comments": false,
-        "show_author": false,
-        "show_excerpt": false,
-        "heading": "Nailzify Blogs",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
+        "liquid": "<style>\n.gorgias-chat-button {\n  background-color: #ff80aa;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: 500;\n  transition: background-color 0.3s ease;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  display: block;\n  margin: 0 auto;\n}\n\n.gorgias-chat-button:hover {\n  background-color: white;\n  transform: translateY(-1px);\ncolor: black;\n}\n</style>\n\n<button type=\"button\" class=\"gorgias-chat-button\" onclick=\"openGorgiasChat()\">\n  💬 Still have questions? Chat Now\n</button>\n\n<script>\nfunction openGorgiasChat() {\n  if (typeof GorgiasChat !== 'undefined' && GorgiasChat.open) {\n    GorgiasChat.open();\n  } else {\n    console.log('Gorgias chat widget not found');\n  }\n}\n</script>",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
         "color_button_text": "",
         "color_button_background": "",
         "color_button_gradient": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
-    "1756689037811840a3": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_video_slider_p3xLUp": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "disabled": true,
-          "settings": {
-            "show-by-tag": true,
-            "layout": "spotlight",
-            "shadow": "",
-            "show-rating": true,
-            "show-reviewer-name": true,
-            "hide-arrows-mobile": true,
-            "auto-play": true,
-            "show-border": false,
-            "border-width": 1,
-            "border-radius": 16,
-            "text-color": "",
-            "rating-icon-color": "",
-            "border-color": "",
-            "play-button-color": "",
-            "shadow-color": "",
-            "product-id": ""
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_video_slider_p3xLUp"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
-    "17566891356766e5dd": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_agg_section_brCbUq": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "only_photos": false,
-            "hide_thumbnails": false,
-            "product_handle": "",
-            "aggregated": true,
-            "data-limit": 10,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_agg_section_brCbUq"
-      ],
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
+        "narrow": false,
         "rounded": false
       }
     }
@@ -874,9 +1044,14 @@
     "video-with-text-overlay",
     "logo_list_m8arzH",
     "collage_grid_DHCxLP",
-    "faq_bqXHVL",
+    "featured_collection_FbChXx",
+    "featured_collection_LcUPaF",
+    "featured_collection_ttwGzr",
     "blog_posts_collage_JNc3JJ",
     "1756689037811840a3",
-    "17566891356766e5dd"
+    "1757225448cbccf3ce",
+    "17566891356766e5dd",
+    "faq_bqXHVL",
+    "custom_liquid_WUJNdx"
   ]
 }

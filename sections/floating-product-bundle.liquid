@@ -8,7 +8,6 @@
 
 {{ 'product-bundle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'product-bundle.js' | asset_url }}" defer="defer"></script>
-
 {%- liquid
   assign collection = section.settings.collection
   assign products = section.settings.products | default: collection.products

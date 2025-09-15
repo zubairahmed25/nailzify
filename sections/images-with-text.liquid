@@ -5,7 +5,6 @@
     {%- render 'section-variables', section: section -%}
   }
 </style>
-
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
     <div class="image-with-text flex gap-8 flex-col{% if section.settings.layout == 'image_first' %} lg:flex-row{% else %} lg:flex-row-reverse{% endif %}">
