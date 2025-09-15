@@ -340,7 +340,40 @@
               <p class="product__sku" id="Sku-{{ section.id }}-{{ product.id }}" {{ block.shopify_attributes }}>
                 {{- product.selected_or_first_available_variant.sku -}}
               </p>
+              {%- when 'custom_badge' -%}
+                <div class="cus-metafeild">
+          <div class="metafeild-flex">
+ {% if product.metafields.custom.custom_badge != blank %}
+        <div class="custom-badge-bg bg-new-color" style="background-color:{{ settings.badge_bg }};">    
+    <p class="meta-item" style="color:{{ settings.badge_color }};">
+      {{ product.metafields.custom.custom_badge }}
+    </p>
+</div>
+  {% endif %}
 
+{% if product.metafields.custom.nail_shape != blank %}
+<div class="nail-flex-bg bg-new-color" style="background-color:{{ settings.nail_bg }};">
+  {% if product.metafields.custom.nail_shape != blank %}
+    <div class="meta-item-2">
+      <img src="{{ product.metafields.custom.nail_shape | file_url }}">
+    </div>
+  {% endif %}
+  {% if product.metafields.custom.nail_text != blank %}
+    <p class="meta-item" style="color:{{ settings.nail_color }};">
+      {{ product.metafields.custom.nail_text }}
+    </p>
+  {% endif %}
+</div>
+{% endif %}
+{% if product.metafields.custom.nail_type != blank %}
+<div class="nail-type-bg bg-new-color" style="background-color:{{ settings.nail_type_bg }};">
+    <p class="meta-item" style="color:{{ settings.nail_type_color }};">
+      {{ product.metafields.custom.nail_type }}
+    </p>
+</div>
+{% endif %}
+</div>
+</div>
             {%- when 'description' -%}
               <div class="product__text rte {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
                 {{- product.description -}}
@@ -1645,6 +1678,11 @@
           "default": true
         }
       ]
+    },
+    {
+      "type": "custom_badge",
+      "name": "Custom Badge",
+      "settings": []
     },
     {
       "type": "marquee_block",
