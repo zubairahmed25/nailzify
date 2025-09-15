@@ -129,9 +129,32 @@
             -%}
           {%- endunless -%}
         </a>
-        <div>
-        custom meta feild
-        </div>
+        <div class="cus-metafeild">
+  {% if product.metafields.custom.custom_badge != blank %}
+    <div class="meta-item badge">
+      {{ product.metafields.custom.custom_badge }}
+    </div>
+  {% endif %}
+<div class="nail-flex">
+  {% if product.metafields.custom.nail_shape != blank %}
+    <div class="meta-item shape">
+      {{ product.metafields.custom.nail_shape }}
+    </div>
+  {% endif %}
+
+  {% if product.metafields.custom.nail_text != blank %}
+    <div class="meta-item text">
+      {{ product.metafields.custom.nail_text }}
+    </div>
+  {% endif %}
+</div>
+  {% if product.metafields.custom.nail_type != blank %}
+    <div class="meta-item type">
+      {{ product.metafields.custom.nail_type }}
+    </div>
+  {% endif %}
+</div>
+
         {%- if product.available -%}
           {%- if show_quick_add -%}
             <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none">
