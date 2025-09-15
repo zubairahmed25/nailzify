@@ -1,7 +1,36 @@
+<div class="cus-product-bg">
+    <div class="page-width">
+        <div class="product-container">
+            {% for block in section.blocks %}
+                <div class="product-container-flex">
+                    <div class="left-col">
+                     {% if block.settings.block_image != blank %}
+                        <img src="{{ block.settings.block_image | img_url: 'master' }}" >
+                     {% endif %}
+                    </div>
+                    <div class="right-col"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% schema %}
 {
   "name": "Product Block",
   "settings": [],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Main Image"
+        }
+      ]
+    }
+],
   "presets": [
     { 
         "name": "Product Block"
