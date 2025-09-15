@@ -15,6 +15,7 @@
         <div class="product-container">
             {% for block in section.blocks %}
                 <div class="product-container-flex">
+                     <div class="product-container-main-flex">
                     <div class="left-col">
                      {% if block.settings.block_image != blank %}
                         <img src="{{ block.settings.block_image | img_url: 'master' }}" >
@@ -48,7 +49,7 @@
                     {% endif %}
             {% endif %}
                  </div>
-
+                </div>
                 </div>
             {% endfor %}
         </div>
