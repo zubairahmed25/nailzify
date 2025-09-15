@@ -140,7 +140,7 @@
 </div>
   {% endif %}
 
-
+{% if product.metafields.custom.nail_shape != blank %}
 <div class="nail-flex-bg" style="background-color:{{ settings.nail_bg }};">
   {% if product.metafields.custom.nail_shape != blank %}
     <div class="meta-item-2">
@@ -153,15 +153,14 @@
     </div>
   {% endif %}
 </div>
-
+{% endif %}
+{% if product.metafields.custom.nail_type != blank %}
 <div class="nail-type-bg" style="background-color:{{ settings.nail_type_bg }};">
-  {% if product.metafields.custom.nail_type != blank %}
     <div class="meta-item-color" style="color:{{ settings.nail_type_color }};">
       {{ product.metafields.custom.nail_type }}
     </div>
-  {% endif %}
 </div>
-
+{% endif %}
 </div>
 </div>
 
