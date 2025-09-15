@@ -1044,6 +1044,41 @@
     ]
   },
   {
+    "name": "Badgs Color",
+    "settings": [
+       {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge Background"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge Text Color"
+    },
+    {
+      "type": "color",
+      "id": "nail_bg",
+      "label": "Nail Shape Background"
+    },
+    {
+      "type": "color",
+      "id": "nail_color",
+      "label": "Nail Text Color"
+    },
+    {
+      "type": "color",
+      "id": "nail_type_bg",
+      "label": "Nail Type Background"
+    },
+    {
+      "type": "color",
+      "id": "nail_type_color",
+      "label": "Nail Type Text Color"
+    }
+    ]
+  },
+  {
     "name": "t:settings_schema.cart.name",
     "settings": [
       {
