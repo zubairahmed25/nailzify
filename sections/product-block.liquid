@@ -59,17 +59,52 @@
             {% endif %}
                  </div>
                  <div class="cus-atc">
-                  <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none"><button type="button" class="button button--primary pointer-events-auto md:opacity-0" is="hover-button" aria-controls="Quickview-template--19766462415089__product_block_MPyHg3-" aria-expanded="false" aria-label="Choose options" tabindex="0">
-                    <span class="btn-fill" data-fill="" style="transform: translateY(var(--motion-translateY)); --motion-translateY: 0%;"></span>
-                    <span class="btn-text"><svg class="icon icon-cart icon-sm md:hidden" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M1 1h.5v0c.226 0 .339 0 .44.007a3 3 0 0 1 2.62 1.976c.034.095.065.204.127.42l.17.597m0 0 1.817 6.358c.475 1.664.713 2.496 1.198 3.114a4 4 0 0 0 1.633 1.231c.727.297 1.592.297 3.322.297h2.285c1.75 0 2.626 0 3.359-.302a4 4 0 0 0 1.64-1.253c.484-.627.715-1.472 1.175-3.161l.06-.221c.563-2.061.844-3.092.605-3.906a3 3 0 0 0-1.308-1.713C19.92 4 18.853 4 16.716 4H4.857ZM12 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path>
-        </svg><span class="hidden md:block">Choose options</span>
+                  <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none">
+              {%- if product.variants.size == 1 -%}
+                {%- capture product_form_id -%}QuickAddProductForm-{{ section_id }}-{{ product_id }}{%- endcapture -%}
+                {%- form 'product', product, is: 'product-form', id: product_form_id -%}
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
+                  {%- liquid
+                    if product.template_suffix != 'pre-order'
+                      assign quick_add_label = 'products.product.add_to_cart' | t
+                    else
+                      assign quick_add_label = 'products.product.pre_order' | t
+                    endif
+                  -%}
+                  <button type="submit" class="button button--primary pointer-events-auto md:opacity-0" is="hover-button" data-variant-id="{{ product.selected_or_first_available_variant.id }}" aria-label="{{ quick_add_label | escape }}">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">
+                      {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
+                      <span class="hidden md:block" data-sold-out="{{ 'products.product.sold_out' | t | escape }}">
+                        {{- quick_add_label -}}
+                      </span>
                     </span>
-                  <span class="btn-loader">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span></button></div>
+                  </button>
+                {%- endform -%}
+              {%- else -%}
+                {%- if show_quick_view -%}
+                  <button type="button" class="button button--primary pointer-events-auto md:opacity-0" is="hover-button" aria-controls="{{ quick_view_id }}" aria-expanded="false" aria-label="{{ 'products.product.choose_options' | t | escape }}">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">
+                      {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
+                      <span class="hidden md:block">
+                        {{- 'products.product.choose_options' | t -}}
+                      </span>
+                    </span>
+                  </button>
+                {%- else -%}
+                  <a href="{{ product_url }}" class="button button--primary pointer-events-auto md:opacity-0" is="hover-link" aria-label="{{ 'products.product.view_product' | t | escape }}">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">
+                      {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
+                      <span class="hidden md:block">
+                        {{- 'products.product.view_product' | t -}}
+                      </span>
+                    </span>
+                  </a>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
                  </div>
                  </div>
                 </div>
