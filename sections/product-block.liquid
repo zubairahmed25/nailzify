@@ -19,10 +19,14 @@
             {% for block in section.blocks %}
                 <div class="product-container-flex">
                     <div class="left-col">
-                     {% if block.settings.block_image != blank %}
-                        <img src="{{ block.settings.block_image | img_url: 'master' }}" >
-                     {% endif %}
-                    </div>
+  <div class="image-wrapper">
+    {% if block.settings.block_image != blank %}
+      <img src="{{ block.settings.block_image | img_url: 'master' }}" >
+      <span class="ping"></span>
+    {% endif %}
+  </div>
+</div>
+
                     <div class="right-col">
                      {% if block.settings.product != blank %}
                        {% assign selected_product = all_products[block.settings.product] %}
@@ -151,6 +155,33 @@
   justify-content: space-between;
       align-items: center;
 }
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper .ping {
+  position: absolute;
+  top: 30%;   /* yahan percentage adjust kar sakte ho for correct position */
+  left: 50%;  /* horizontal center ke liye */
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper .ping::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+}
+
 .left-col {
   width: 55% !important;
   line-height: 0;
