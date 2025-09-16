@@ -15993,4 +15993,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 }
 
 
-
+.js .section:not(.section--next-rounded) :is(.banner__overlay,.banner__map,.banner__media) {
+  height: auto !important;
+}
