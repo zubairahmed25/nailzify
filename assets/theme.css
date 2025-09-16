@@ -16004,7 +16004,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     gap: 8px;
 }
 .bg-new-color {
-    padding: 6px 12px;
+    padding: 6px 20px;
     border-radius: 4px;
     max-height: 22px;
 }
