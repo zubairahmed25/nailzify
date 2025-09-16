@@ -12,6 +12,9 @@
 
 <section class="cus-product-bg">
     <div class="page-width">
+      <div class="cus-product-heading">
+        <h2>{{ section.settings.product_heading }}</h2>
+      </div>
         <div class="product-container">
             {% for block in section.blocks %}
                 <div class="product-container-flex">
@@ -78,6 +81,12 @@
       "label": "Desktop Padding Bottom",
       "default": 36
     },
+    {
+  "type": "inline_richtext",
+  "id": "product_heading",
+  "default": "my <i>inline</i> <b>text</b>",
+  "label": "Product Headig"
+}
   ],
   "blocks": [
     {
