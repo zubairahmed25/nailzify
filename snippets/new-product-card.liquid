@@ -294,7 +294,7 @@
                       assign quick_add_label = 'products.product.pre_order' | t
                     endif
                   -%}
-                  <button type="submit" class="button button--primary pointer-events-auto" is="hover-button" data-variant-id="{{ product.selected_or_first_available_variant.id }}" aria-label="{{ quick_add_label | escape }}">
+                  <button type="submit" class="button button--primary pointer-events-auto cus-width" is="hover-button" data-variant-id="{{ product.selected_or_first_available_variant.id }}" aria-label="{{ quick_add_label | escape }}">
                     <span class="btn-fill" data-fill></span>
                     <span class="btn-text">
                       {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
