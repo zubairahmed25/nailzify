@@ -11,62 +11,71 @@
 
 
 <section class="cus-product-bg">
-    <div class="page-width page-width--narrow relative">
-      <div class="cus-product-heading">
-          {{ section.settings.product_heading }}
-      </div>
-        <div class="product-container">
-            {% for block in section.blocks %}
-                <div class="product-container-flex">
-                    <div class="left-col">
-  <div class="image-wrapper">
-    {% if block.settings.block_image != blank %}
-      <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="">
-      <span class="ping-outer" aria-hidden="true"></span>
-      <span class="ping-dot" aria-hidden="true"></span>
-    {% endif %}
-  </div>
-</div>
-
-
-                    <div class="right-col">
-                      <div class="cus-card">
-                     {% if block.settings.product != blank %}
-                       {% assign selected_product = all_products[block.settings.product] %}
-    
-                   {% if selected_product %}
-                  <div class="custom-product-card">
-                  {%- render 'product-card',
-            product: selected_product,
-            product_id: product.id,
-            section_id: section.id,
-            lazy_load: false,
-            image_ratio: settings.product_image_ratio,
-            image_fill: settings.product_image_fill,
-            show_secondary_image: settings.product_secondary_image,
-            show_vendor: settings.product_vendor,
-            show_rating: settings.product_rating,
-            show_color_swatches: settings.product_color_swatches,
-            show_countdown: settings.product_countdown,
-            show_quick_add: settings.product_quick_add,
-            show_quick_view: settings.product_quick_view,
-            show_save_amount: settings.product_save_amount,
-            save_type: settings.product_save_type,
-            show_icon_list: settings.product_icon_list
-          -%}
-                  </div>
-                    {% endif %}
-            {% endif %}
-                 </div>
-                 <div class="cus-atc">
-                  
-                 </div>
-                 </div>
-                </div>
-            {% endfor %}
-        </div>
+  <div class="page-width page-width--narrow relative">
+    <div class="cus-product-heading">
+      {{ section.settings.product_heading }}
     </div>
-  </section>
+    <div class="product-container">
+      {% for block in section.blocks %}
+        <div class="product-container-flex">
+          <div class="left-col">
+            <div class="image-wrapper">
+              {% if block.settings.block_image != blank %}
+                <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="">
+                <span class="ping-outer" aria-hidden="true"></span>
+                <span class="ping-dot" aria-hidden="true"></span>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="right-col">
+            <div class="cus-card">
+              {% if block.settings.product != blank %}
+                {% assign selected_product = all_products[block.settings.product] %}
+                {% if selected_product %}
+                  <div class="custom-product-card">
+                    {%- render 'product-card',
+                      product: selected_product,
+                      product_id: selected_product.id,
+                      section_id: section.id,
+                      lazy_load: false,
+                      image_ratio: settings.product_image_ratio,
+                      image_fill: settings.product_image_fill,
+                      show_secondary_image: settings.product_secondary_image,
+                      show_vendor: settings.product_vendor,
+                      show_rating: settings.product_rating,
+                      show_color_swatches: settings.product_color_swatches,
+                      show_countdown: settings.product_countdown,
+                      show_quick_add: settings.product_quick_add,
+                      show_quick_view: settings.product_quick_view,
+                      show_save_amount: settings.product_save_amount,
+                      save_type: settings.product_save_type,
+                      show_icon_list: settings.product_icon_list
+                    -%}
+                  </div>
+                {% endif %}
+              {% endif %}
+            </div>
+
+            <div class="cus-atc">
+              {% if selected_product %}
+                {%- render 'buy-buttons',
+                  block: block,
+                  section: section,
+                  product: selected_product,
+                  product_id: selected_product.id,
+                  section_id: section.id,
+                  product_form_id: 'product-' | append: selected_product.id
+                -%}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Product Block",
@@ -92,10 +101,60 @@
       "default": 36
     },
     {
-  "type": "richtext",
-  "id": "product_heading",
-  "label": "Product Headig"
-}
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "default": true,
+      "label": "Show quantity selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "default": false,
+      "label": "Show product price"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_checkout",
+      "default": true,
+      "label": "Show dynamic checkout button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gift_card_recipient",
+      "default": true,
+      "label": "Show gift card recipient form"
+    },
+    {
+      "type": "header",
+      "content": "Back in stock"
+    },
+    {
+      "type": "paragraph",
+      "content": "Back in stock notification settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_back_in_stock",
+      "default": false,
+      "label": "Enable back in stock"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_in_stock_name",
+      "default": false,
+      "label": "Show name field for back in stock"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_in_stock_phone",
+      "default": false,
+      "label": "Show phone field for back in stock"
+    },
+    {
+      "type": "richtext",
+      "id": "product_heading",
+      "label": "Product Heading"
+    }
   ],
   "blocks": [
     {
@@ -108,22 +167,24 @@
           "label": "Main Image"
         },
         {
-  "type": "product",
-  "id": "product",
-  "label": "Slect Product"
-}
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        }
       ]
     }
-],
+  ],
   "presets": [
-    { 
-        "name": "Product Block"
-     }
-]
+    {
+      "name": "Product Block"
+    }
+  ]
 }
 {% endschema %}
+
+
 <script>
- $(document).ready(function(){
+$(document).ready(function(){
   $('.product-container').slick({
     infinite: true,
     slidesToShow: 1, 
@@ -153,18 +214,18 @@
     ]
   });
 });
-
 </script>
+
 <style>
-  .cus-product-bg {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
- .product-container-flex {
+.cus-product-bg {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.product-container-flex {
   display: flex !important;
   justify-content: space-between;
-      align-items: center;
-      padding: 0 5px;
+  align-items: center;
+  padding: 0 5px;
 }
 .image-wrapper {
   position: relative;
@@ -188,7 +249,6 @@
   z-index: 10;
   animation: ping-pulse 3s infinite ease-in-out;
 }
-
 .ping-dot {
   position: absolute;
   top: 10%;      
@@ -202,7 +262,6 @@
   pointer-events: none;
   z-index: 11;         
 }
-
 @keyframes ping-pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -217,12 +276,10 @@
     background: rgba(255,255,255,0.45);
   }
 }
-
 @media (max-width: 768px) {
   .ping-outer { width: 34px; height: 34px; top: 15%; }
   .ping-dot   { width: 12px; height: 12px; top: 15%; }
 }
-
 .left-col {
   width: 55% !important;
   line-height: 0;
@@ -234,45 +291,65 @@
   width: 40% !important;
 }
 .product-container {
-      width: 70rem !important;
+  width: 70rem !important;
   margin: 0 auto;
 }
-
 .product-container .slick-prev {
-    left: -5rem;
+  left: -5rem;
 }
 .product-container .slick-next {
-    right: -4rem;
+  right: -4rem;
 }
 .custom-arrow {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
-.cus-product-heading
- {
-    padding-bottom: 30px;
+.cus-product-heading {
+  padding-bottom: 30px;
 }
-.cus-product-heading p
- {
-    text-align: center;
-    letter-spacing: 0.2em;
-    font-size: 20px;
-    line-height: 35px;
-    text-transform: uppercase;
+.cus-product-heading p {
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
-.product-container-flex {
- flex-wrap: wrap;
- gap: 30px;
+  .product-container-flex {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .left-col {
+    width: 100% !important;
+  }
+  .right-col {
+    width: 100% !important;
+  }
+  .product-container {
+    width: 100% !important;
+  }
 }
-.left-col {
+
+/* Buy button fixes */
+.cus-atc {
+  display: block !important;
+  width: 100%;
+  margin-top: 15px;
+  clear: both;
+  text-align: left;
+}
+.cus-atc .product-form__buttons,
+.cus-atc .shopify-payment-button,
+.cus-atc button,
+.cus-atc .product-form__item--submit {
+  display: block !important;
   width: 100% !important;
+  box-sizing: border-box;
 }
-.right-col {
-  width: 100% !important;
-}
-.product-container {
-      width: 100% !important;
-}
+.cus-atc button,
+.cus-atc .shopify-payment-button__button {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15px;
 }
 </style>
