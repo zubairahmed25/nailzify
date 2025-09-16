@@ -60,42 +60,37 @@
                  </div>
                  <div class="cus-atc">
   {%- if selected_product.available -%}
-    <div class="quick-add flex justify-end md:justify-center absolute w-full z-1 pointer-events-none">
-      {%- if selected_product.variants.size == 1 -%}
-        {%- capture product_form_id -%}QuickAddProductForm-{{ section.id }}-{{ selected_product.id }}{%- endcapture -%}
-        {%- form 'product', selected_product, is: 'product-form', id: product_form_id -%}
-          <input type="hidden" name="id" value="{{ selected_product.selected_or_first_available_variant.id }}" />
-          {%- liquid
-            if selected_product.template_suffix != 'pre-order'
-              assign quick_add_label = 'products.product.add_to_cart' | t
-            else
-              assign quick_add_label = 'products.product.pre_order' | t
-            endif
-          -%}
-          <button type="submit" class="btn btn-primary pointer-events-auto md:opacity-0" data-variant-id="{{ selected_product.selected_or_first_available_variant.id }}" aria-label="{{ quick_add_label | escape }}">
+      <div class="cus-quick-add flex justify-end md:justify-center absolute w-full z-1 cus-pe-none">
+        {%- if selected_product.variants.size == 1 -%}
+          {%- capture product_form_id -%}QuickAddProductForm-{{ section.id }}-{{ selected_product.id }}{%- endcapture -%}
+          {%- form 'product', selected_product, is: 'product-form', id: product_form_id -%}
+            <input type="hidden" name="id" value="{{ selected_product.selected_or_first_available_variant.id }}" />
+            <button type="submit" class="cus-btn cus-btn-primary cus-pe-auto md:opacity-0" is="hover-button" data-variant-id="{{ selected_product.selected_or_first_available_variant.id }}">
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">
+                {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
+                <span class="hidden md:block">
+                  {{ 'products.product.add_to_cart' | t }}
+                </span>
+              </span>
+            </button>
+          {%- endform -%}
+        {%- else -%}
+          <a href="{{ selected_product.url }}" class="cus-btn cus-btn-primary cus-pe-auto md:opacity-0" is="hover-link">
             <span class="btn-fill" data-fill></span>
             <span class="btn-text">
               {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
-              <span class="hidden md:block">{{ quick_add_label }}</span>
+              <span class="hidden md:block">
+                {{ 'products.product.view_product' | t }}
+              </span>
             </span>
-          </button>
-        {%- endform -%}
-      {%- else -%}
-        <a href="{{ selected_product.url }}" class="btn btn-primary pointer-events-auto md:opacity-0" aria-label="{{ 'products.product.choose_options' | t | escape }}">
-          <span class="btn-fill" data-fill></span>
-          <span class="btn-text">
-            {%- render 'icon', icon: 'cart', size: 'sm', class: 'md:hidden' -%}
-            <span class="hidden md:block">
-              {{- 'products.product.choose_options' | t -}}
-            </span>
-          </span>
-        </a>
-      {%- endif -%}
-    </div>
+          </a>
+        {%- endif -%}
+      </div>
   {%- else -%}
-    <div class="quick-add flex justify-center absolute w-full z-1 pointer-events-none">
-      <button type="button" class="btn btn-secondary btn-blur" disabled="disabled">
-        {{- 'products.product.sold_out' | t -}}
+    <div class="cus-quick-add flex justify-center absolute w-full z-1 cus-pe-none">
+      <button type="button" class="cus-btn cus-btn-secondary btn-blur" disabled="disabled">
+        {{ 'products.product.sold_out' | t }}
       </button>
     </div>
   {%- endif -%}
@@ -196,6 +191,31 @@
 
 </script>
 <style>
+  .cus-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cus-btn-primary {
+  background: #000;
+  color: #fff;
+}
+
+.cus-btn-primary:hover {
+  background: #333;
+}
+
+.cus-btn-secondary {
+  background: #ccc;
+  color: #333;
+}
+
+.cus-pe-none { pointer-events: none; }
+.cus-pe-auto { pointer-events: auto; }
+
   .cus-product-bg {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
