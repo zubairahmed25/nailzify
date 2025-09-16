@@ -58,16 +58,7 @@
             </div>
 
             <div class="cus-atc">
-              {% if selected_product %}
-                {%- render 'buy-buttons',
-                  block: block,
-                  section: section,
-                  product: selected_product,
-                  product_id: selected_product.id,
-                  section_id: section.id,
-                  product_form_id: 'product-' | append: selected_product.id
-                -%}
-              {% endif %}
+              
             </div>
           </div>
         </div>
