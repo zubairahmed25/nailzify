@@ -449,6 +449,53 @@
         {%- endif -%}
       </div>
     {%- endif -%}
+      {%- if show_quick_add and mobile_quick_add -%}
+      <div class="new__atc>
+        {%- if product.available -%}
+          {%- if product.variants.size == 1 -%}
+            {%- capture product_form_id -%}MobileQuickAddProductForm-{{ section_id }}-{{ product_id }}{%- endcapture -%}
+            {%- form 'product', product, is: 'product-form', id: product_form_id -%}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
+              <button type="submit" class="button button--primary button--small icon-with-text" is="hover-button" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- liquid
+                    render 'icon', icon: 'plus', size: '2xs'
+                    echo 'products.product.quick_add' | t
+                  -%}
+                </span>
+              </button>
+            {%- endform -%}
+          {%- else -%}
+            {%- if show_quick_view -%}
+              <button type="button" class="button button--primary button--small icon-with-text" is="hover-button" aria-controls="{{ quick_view_id }}" aria-expanded="false">
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- liquid
+                    render 'icon', icon: 'plus', size: '2xs'
+                    echo 'products.product.quick_view' | t
+                  -%}
+                </span>
+              </button>
+            {%- else -%}
+              <a href="{{ product.url }}" class="button button--primary button--small icon-with-text" is="hover-link">
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- liquid
+                    render 'icon', icon: 'plus', size: '2xs'
+                    echo 'products.product.quick_view' | t
+                  -%}
+                </span>
+              </a>
+            {%- endif -%}
+          {%- endif -%}
+        {%- else -%}
+          <span class="button button--primary button--small" disabled="disabled">
+            {{- 'products.product.sold_out' | t -}}
+          </span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
 {%- else -%}
   {%- render 'product-card-placeholder', placeholder: 'product-1', image_ratio: image_ratio, show_vendor: show_vendor -%}
