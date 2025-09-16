@@ -282,7 +282,7 @@
       {% comment %} NEW ATC {% endcomment %}
 {%- if product.available -%}
           {%- if show_quick_add -%}
-            <div class="quick-add flex w-full z-1 new__atc">
+            <div class="new-quick-add flex w-full z-1 new__atc">
             
                 {%- capture product_form_id -%}QuickAddProductForm-{{ section_id }}-{{ product_id }}{%- endcapture -%}
                 {%- form 'product', product, is: 'product-form', id: product_form_id -%}
