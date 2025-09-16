@@ -16014,10 +16014,14 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     line-height: 1;
     font-size: 12px;
     font-weight: 500;
+}
+
+.nail-flex-bg .meta-item {
     line-height: 1;
     vertical-align: middle;
     transform: translateY(0.1em);
 }
+
 .meta-item-2 img {
     height: 15px;
 }
