@@ -1066,6 +1066,7 @@
         "product_GQaUrA",
         "product_TVCqRt"
       ],
+      "disabled": true,
       "name": "Product Block",
       "settings": {}
     }
