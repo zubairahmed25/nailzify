@@ -163,45 +163,39 @@
   position: relative;
   display: inline-block;
 }
-
-/* make sure image fills wrapper */
 .image-wrapper img {
   display: block;
   width: 100%;
   height: auto;
 }
-
-/* Outer animated ring (only this animates) */
 .ping-outer {
   position: absolute;
-  top: 10%;                 /* adjust to position vertically */
+  top: 10%;    
   left: 15%;
   transform: translate(-50%, -50%) scale(1);
-  width: 35px;              /* outer ring size */
+  width: 35px;          
   height: 35px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.45); /* light white */
+  background: rgba(255,255,255,0.45); 
   pointer-events: none;
   z-index: 10;
   animation: ping-pulse 3s infinite ease-in-out;
 }
 
-/* Solid center dot — always bold white and NOT affected by outer animation */
 .ping-dot {
   position: absolute;
-  top: 10%;                 /* same position as outer */
+  top: 10%;      
   left: 15%;
   transform: translate(-50%, -50%);
-  width: 15px;              /* center dot size */
+  width: 15px;    
   height: 15px;
   border-radius: 50%;
-  background: #ffffff;      /* pure white, always solid */
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.06); /* subtle edge if wanted */
+  background: #ffffff;   
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.06); 
   pointer-events: none;
-  z-index: 11;              /* above outer ring */
+  z-index: 11;         
 }
 
-/* Animate ONLY transform & background alpha of outer ring — do NOT animate opacity */
 @keyframes ping-pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -217,10 +211,9 @@
   }
 }
 
-/* responsive tweaks */
 @media (max-width: 768px) {
-  .ping-outer { width: 34px; height: 34px; top: 30%; }
-  .ping-dot   { width: 12px; height: 12px; top: 30%; }
+  .ping-outer { width: 34px; height: 34px; top: 15%; }
+  .ping-dot   { width: 12px; height: 12px; top: 15%; }
 }
 
 .left-col {
