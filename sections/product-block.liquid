@@ -18,7 +18,8 @@
         <div class="product-container">
             {% for block in section.blocks %}
                 <div class="product-container-flex">
-                    <div class="image-overlay-box">
+                    <div class="left-col">
+  <div class="image-overlay-box">
   {% if block.settings.block_image != blank %}
     <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="">
     <span class="ping-outer" aria-hidden="true"></span>
@@ -26,6 +27,7 @@
   {% endif %}
 </div>
 
+</div>
 
 
                     <div class="right-col">
@@ -156,6 +158,11 @@
   justify-content: space-between;
       align-items: center;
 }
+.image-overlay-box {
+  position: relative;  /* sirf overlay ke liye */
+  display: inline-block;
+}
+
 /* wrapper class ka naam change kiya aur relative hata diya */
 .image-overlay-box {
   display: block;
