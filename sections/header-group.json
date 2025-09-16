@@ -43,8 +43,8 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "Now live Aurora Chrome",
-            "link": "shopify://collections/aurora-chrome",
+            "text": "Buy 2, GET 1 free nail set!",
+            "link": "shopify://collections",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",

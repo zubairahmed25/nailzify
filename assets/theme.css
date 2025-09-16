@@ -15993,7 +15993,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 }
 
 
-
  .cus-metafeild {
     position: absolute;
     top: 15px;
@@ -16033,4 +16032,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .product__info .product__title
  {
     margin-top: 14px;
+}
+.js .section:not(.section--next-rounded) :is(.banner__overlay,.banner__map,.banner__media) {
+  height: auto !important;
 }
