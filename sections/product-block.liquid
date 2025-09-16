@@ -35,7 +35,7 @@
                        {% assign selected_product = all_products[block.settings.product] %}
     
                    {% if selected_product %}
-                  <div id="new-{{ section.id }}" class="custom-product-card">
+                  <div id="new-{{ block.id }}" class="custom-product-card">
                   {%- render 'new-product-card',
             product: selected_product,
             product_id: product.id,
