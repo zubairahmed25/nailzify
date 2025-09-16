@@ -30,6 +30,7 @@
 
 
                     <div class="right-col">
+                      <div class="cus-card">
                      {% if block.settings.product != blank %}
                        {% assign selected_product = all_products[block.settings.product] %}
     
@@ -57,7 +58,17 @@
                     {% endif %}
             {% endif %}
                  </div>
-
+                 <div class="cus-atc">
+                  {%- render 'buy-buttons',
+                block: block,
+                section: section,
+                product: product,
+                product_id: product.id,
+                section_id: section.id,
+                product_form_id: product_form_id
+              -%}
+                 </div>
+                 </div>
                 </div>
             {% endfor %}
         </div>
@@ -241,10 +252,6 @@
     right: -4rem;
 }
 .custom-arrow {
-    width: 40px;
-    height: 40px;
-}
-.custom-arrow .slick-prev, .slick-next {
     width: 40px;
     height: 40px;
 }
