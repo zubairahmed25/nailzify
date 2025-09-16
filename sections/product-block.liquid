@@ -36,7 +36,7 @@
     
                    {% if selected_product %}
                   <div class="custom-product-card">
-                  {%- render 'product-card',
+                  {%- render 'new-product-card',
             product: selected_product,
             product_id: product.id,
             section_id: section.id,
@@ -58,9 +58,7 @@
                     {% endif %}
             {% endif %}
                  </div>
-                 <div class="cus-atc">
-                  
-                 </div>
+                
                  </div>
                 </div>
             {% endfor %}
