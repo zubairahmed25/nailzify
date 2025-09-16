@@ -15993,4 +15993,46 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 }
 
 
+ .cus-metafeild {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.metafeild-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.bg-new-color {
+    padding: 6px 12px;
+    border-radius: 4px;
+    max-height: 22px;
+}
 
+.meta-item {
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nail-flex-bg .meta-item {
+    line-height: 1;
+    vertical-align: middle;
+    transform: translateY(0.1em);
+}
+
+.meta-item-2 img {
+    height: 15px;
+}
+.nail-flex-bg {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.product__info .product__title
+ {
+    margin-top: 14px;
+}
+.js .section:not(.section--next-rounded) :is(.banner__overlay,.banner__map,.banner__media) {
+  height: auto !important;
+}

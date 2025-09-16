@@ -15,8 +15,8 @@
         "image_iPCJXw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/uhkmafrucnci0ji5eoly.webp",
-            "image_mobile": "shopify://shop_images/obvwet2qemcqw3ac6icc.webp",
+            "image": "shopify://shop_images/c3ienxw8g2c71dg8ocsr.webp",
+            "image_mobile": "shopify://shop_images/tde8paurfh4rgbiuw1yy.webp",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -36,9 +36,9 @@
         "autoplay": false,
         "autoplay_speed": 5,
         "show_navigation": true,
-        "image_height": "650px",
+        "image_height": "adapt",
         "content_width": "small",
-        "image_height_mobile": "auto",
+        "image_height_mobile": "adapt",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#ffffff",
         "color_background": "#ffffff",

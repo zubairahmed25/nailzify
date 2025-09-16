@@ -1044,6 +1044,53 @@
     ]
   },
   {
+    "name": "Product Badges",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Custom Badge"
+      },
+       {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Text Color"
+    },
+    {
+        "type": "header",
+        "content": "Nail Shape"
+      },
+    {
+      "type": "color",
+      "id": "nail_bg",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "nail_color",
+      "label": "Text Color"
+    },
+    {
+        "type": "header",
+        "content": "Nail Type"
+      },
+    {
+      "type": "color",
+      "id": "nail_type_bg",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "nail_type_color",
+      "label": "Text Color"
+    }
+    ]
+  },
+  {
     "name": "t:settings_schema.cart.name",
     "settings": [
       {

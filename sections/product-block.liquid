@@ -1,0 +1,162 @@
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+<!-- Optional Slick Theme -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+<!-- jQuery (required for Slick) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<div class="cus-product-bg">
+    <div class="page-width">
+        <div class="product-container">
+            {% for block in section.blocks %}
+                <div class="product-container-flex">
+                    <div class="left-col">
+                     {% if block.settings.block_image != blank %}
+                        <img src="{{ block.settings.block_image | img_url: 'master' }}" >
+                     {% endif %}
+                    </div>
+                    <div class="right-col">
+                     {% if block.settings.product != blank %}
+                       {% assign selected_product = all_products[block.settings.product] %}
+    
+                   {% if selected_product %}
+                  <div class="custom-product-card">
+                  {%- render 'product-card',
+            product: selected_product,
+            product_id: product.id,
+            section_id: section.id,
+            lazy_load: false,
+            image_ratio: settings.product_image_ratio,
+            image_fill: settings.product_image_fill,
+            show_secondary_image: settings.product_secondary_image,
+            show_vendor: settings.product_vendor,
+            show_rating: settings.product_rating,
+            show_color_swatches: settings.product_color_swatches,
+            show_countdown: settings.product_countdown,
+            show_quick_add: settings.product_quick_add,
+            show_quick_view: settings.product_quick_view,
+            show_save_amount: settings.product_save_amount,
+            save_type: settings.product_save_type,
+            show_icon_list: settings.product_icon_list
+          -%}
+                  </div>
+                    {% endif %}
+            {% endif %}
+                 </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Product Block",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Main Image"
+        },
+        {
+  "type": "product",
+  "id": "product",
+  "label": "Slect Product"
+}
+      ]
+    }
+],
+  "presets": [
+    { 
+        "name": "Product Block"
+     }
+]
+}
+{% endschema %}
+<script>
+ $(document).ready(function(){
+  $('.product-container').slick({
+    infinite: true,
+    slidesToShow: 1, 
+    slidesToScroll: 1,
+    speed: 500,
+    autoplay: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
+</script>
+<style>
+ .product-container-flex {
+  display: flex !important;
+  justify-content: space-between;
+}
+.left-col {
+  width: 55% !important;
+  line-height: 0;
+}
+.left-col img {
+  width: 100%;
+}
+.right-col {
+  width: 40% !important;
+}
+.product-container {
+      width: 80% !important;
+  margin: 0 auto;
+}
+
+.product-container .slick-prev {
+    left: -5rem;
+}
+.product-container .slick-next {
+    right: -4rem;
+}
+.product-container .slick-prev:before,
+.product-container .slick-next:before {
+  font-size: 45px !important;
+  color: black !important;
+}
+
+@media (max-width: 768px) {
+.product-container-flex {
+ flex-wrap: wrap;
+ gap: 30px;
+}
+.left-col {
+  width: 100% !important;
+}
+.right-col {
+  width: 100% !important;
+}
+.product-container {
+      width: 100% !important;
+}
+}
+</style>
