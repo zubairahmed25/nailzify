@@ -16033,3 +16033,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .cus-width {
   width: 100%;
 }
+.cus-gap {
+  gap:10px;
+}
