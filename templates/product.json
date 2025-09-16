@@ -25,23 +25,6 @@
             "show_rating": true
           }
         },
-        "marquee_block_VejRMh": {
-          "type": "marquee_block",
-          "settings": {
-            "hide_on_mobile": true,
-            "pause_on_hover": true,
-            "image_width": 100,
-            "image_height": 72,
-            "image_gap": 35,
-            "scroll_speed": 26,
-            "image": "shopify://shop_images/Asset_10.svg",
-            "image2": "shopify://shop_images/Asset_9.svg",
-            "image3": "shopify://shop_images/Asset_12.svg",
-            "image4": "shopify://shop_images/Asset_11.svg",
-            "image5": "shopify://shop_images/Asset_8.svg",
-            "image6": "shopify://shop_images/Customer_Services.svg"
-          }
-        },
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
           "settings": {
@@ -104,6 +87,23 @@
             "text_size": "text-sm"
           }
         },
+        "marquee_block_VejRMh": {
+          "type": "marquee_block",
+          "settings": {
+            "hide_on_mobile": true,
+            "pause_on_hover": true,
+            "image_width": 100,
+            "image_height": 72,
+            "image_gap": 35,
+            "scroll_speed": 26,
+            "image": "shopify://shop_images/Asset_10_2f4371c8-effb-4908-b2b1-0a68819ad0a1.svg",
+            "image2": "shopify://shop_images/Asset_9_12f96fcf-641c-4245-b0f3-3a9dd58341d1.svg",
+            "image3": "shopify://shop_images/Asset_12_1b6ff89b-1ba1-4628-adf1-a1b6f63fd726.svg",
+            "image4": "shopify://shop_images/Asset_11_5d28365f-6102-4cc9-bb4c-de8819b40628.svg",
+            "image5": "shopify://shop_images/Asset_8_01787523-9d3b-490e-887f-ce7cccd59abf.svg",
+            "image6": "shopify://shop_images/Customer_Services_f80166fb-c2bb-4593-98fc-fa671ea442ce.svg"
+          }
+        },
         "sticky_buy_button": {
           "type": "sticky_buy_button",
           "settings": {}
@@ -112,13 +112,13 @@
       "block_order": [
         "custom_badge_kiVgWd",
         "title",
-        "marquee_block_VejRMh",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
         "variant_picker_f76Jk6",
         "buy_buttons",
         "liquid_XfN4dW",
         "text-1",
+        "marquee_block_VejRMh",
         "sticky_buy_button"
       ],
       "custom_css": [],
