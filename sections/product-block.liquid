@@ -160,10 +160,11 @@
   display: inline-block;
 }
 
+/* Outer animated circle */
 .image-wrapper .ping {
   position: absolute;
-  top: 10%;   /* Adjust position */
-  left: 15%;
+  top: 30%;   /* Adjust according to placement */
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
@@ -172,7 +173,7 @@
   animation: pulse 2s infinite ease-in-out;
 }
 
-/* Center white dot */
+/* Center solid dot */
 .image-wrapper .ping::after {
   content: "";
   position: absolute;
@@ -181,11 +182,12 @@
   transform: translate(-50%, -50%);
   width: 15px;
   height: 15px;
-  background: #fff;
+  background: #ffffff;  /* Pure white */
   border-radius: 50%;
+  opacity: 1;           /* Always bold */
 }
 
-/* Outer circle animation only */
+/* Animation for outer circle only */
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
