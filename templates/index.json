@@ -15,7 +15,7 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01965-3_1_copy.webp",
+            "image": "shopify://shop_images/sjw1rbw0xgofg1nzolxg.webp",
             "image_mobile": "shopify://shop_images/DSC01506_2_copy_1.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
@@ -82,7 +82,7 @@
         "autoplay": false,
         "autoplay_speed": 3,
         "show_navigation": false,
-        "image_height": "100vh",
+        "image_height": "adapt",
         "content_width": "medium",
         "image_height_mobile": "adapt",
         "accessibility_info": "Slideshow about our brand",
