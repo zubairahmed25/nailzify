@@ -1069,7 +1069,7 @@
       "name": "Product Block",
       "settings": {
         "padding_top": 24,
-        "padding_bottom": 36,
+        "padding_bottom": 52,
         "product_heading": "<p>Get Inspired<br/>#<strong>NAILFIES</strong></p>"
       }
     }
