@@ -15993,6 +15993,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 }
 
 
+
  .cus-metafeild {
     position: absolute;
     top: 15px;
@@ -16012,15 +16013,8 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .meta-item {
     line-height: 1;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
 }
-
-.nail-flex-bg .meta-item {
-    line-height: 1;
-    vertical-align: middle;
-    transform: translateY(0.1em);
-}
-
 .meta-item-2 img {
     height: 15px;
 }
@@ -16033,6 +16027,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
  {
     margin-top: 14px;
 }
-.js .section:not(.section--next-rounded) :is(.banner__overlay,.banner__map,.banner__media) {
-  height: auto !important;
+.new__atc form {
+  width: 100%;
 }
