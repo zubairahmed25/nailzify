@@ -38,7 +38,7 @@
                   <div id="new-{{ block.id }}" class="custom-product-card">
                   {%- render 'new-product-card',
             product: selected_product,
-            product_id: product.id,
+            product_id: selected_product.id,
             section_id: section.id,
             block_id: block.id,
             lazy_load: false,
