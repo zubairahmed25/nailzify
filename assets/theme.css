@@ -16030,3 +16030,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .new__atc form {
   width: 100%;
 }
+.cus-width {
+  width: 100%;
+}
