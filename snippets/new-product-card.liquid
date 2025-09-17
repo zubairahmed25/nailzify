@@ -260,7 +260,7 @@
         <span class="block aspect-{{ image_ratio }}"></span>
       </div>
     {%- endif -%}
-    <div class="product-card__content grow flex flex-col{% if featured_media %} justify-start text-{{ settings.card_text_alignment }}{% else %} justify-center items-center absolute top-0 left-0 w-full h-full{% endif %} cus-gap">
+    <div class="product-card__content grow flex flex-col{% if featured_media %} justify-start text-{{ settings.card_text_alignment }}{% else %} justify-center items-center absolute top-0 left-0 w-full h-full{% endif %} cus-gap padding-bottom">
       {%- if show_vendor -%}
         <div class="product-card__top w-full">
           <span class="sr-only">{{ 'general.accessibility.vendor' | t }}</span>
