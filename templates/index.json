@@ -1043,7 +1043,7 @@
           "type": "product",
           "settings": {
             "block_image": "shopify://shop_images/RoseQuartz04.webp",
-            "product": "luna"
+            "product": "rose-quartz"
           }
         },
         "product_GQaUrA": {
@@ -1066,12 +1066,11 @@
         "product_GQaUrA",
         "product_TVCqRt"
       ],
-      "disabled": true,
       "name": "Product Block",
       "settings": {
         "padding_top": 24,
         "padding_bottom": 52,
-        "product_heading": "<p>Get Inspired<br/>#<strong>NAILFIES</strong></p>"
+        "product_heading": "<p>Get Inspired<br/>#<strong>NAILZIFYLOOK</strong></p>"
       }
     }
   },
