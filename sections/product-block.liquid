@@ -124,7 +124,7 @@
 {% endschema %}
 <script>
  $(document).ready(function(){
-  $('.product-container').slick({
+  $('product-container').slick({
     infinite: true,
     slidesToShow: 1, 
     slidesToScroll: 1,
@@ -161,8 +161,7 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
  .product-container-flex {
-  display: flex !important;
-  justify-content: space-between;
+  display: flex !important
       align-items: center;
       padding: 0 5px;
 }
