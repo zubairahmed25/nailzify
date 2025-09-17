@@ -16036,3 +16036,6 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .cus-gap {
   gap:10px;
 }
+.padding-bottom {
+  padding-bottom: 0;
+}
