@@ -1068,7 +1068,11 @@
       ],
       "disabled": true,
       "name": "Product Block",
-      "settings": {}
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 52,
+        "product_heading": "<p>Get Inspired<br/>#<strong>NAILFIES</strong></p>"
+      }
     }
   },
   "order": [

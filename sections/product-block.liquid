@@ -10,26 +10,38 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
-<div class="cus-product-bg">
-    <div class="page-width">
+<section class="cus-product-bg">
+    <div class="page-width page-width--narrow relative">
+      <div class="cus-product-heading">
+          {{ section.settings.product_heading }}
+      </div>
         <div class="product-container">
             {% for block in section.blocks %}
                 <div class="product-container-flex">
                     <div class="left-col">
-                     {% if block.settings.block_image != blank %}
-                        <img src="{{ block.settings.block_image | img_url: 'master' }}" >
-                     {% endif %}
-                    </div>
+  <div class="cus-image-wrapper">
+    {% if block.settings.block_image != blank %}
+      <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="">
+      {% comment %} <span class="ping-outer" aria-hidden="true"></span>
+      <span class="ping-dot" aria-hidden="true"></span> {% endcomment %}
+    {% endif %}
+  </div>
+</div>
+
+
                     <div class="right-col">
+                      <div class="cus-card">
                      {% if block.settings.product != blank %}
                        {% assign selected_product = all_products[block.settings.product] %}
     
                    {% if selected_product %}
-                  <div class="custom-product-card">
-                  {%- render 'product-card',
+                  <div id="new-{{ block.id }}" class="custom-product-card">
+                  {%- render 'new-product-card',
             product: selected_product,
-            product_id: product.id,
+            product_id: selected_product.id,
             section_id: section.id,
+            block_id: block.id,
+            loop_index: forloop.index,
             lazy_load: false,
             image_ratio: settings.product_image_ratio,
             image_fill: settings.product_image_fill,
@@ -42,22 +54,49 @@
             show_quick_view: settings.product_quick_view,
             show_save_amount: settings.product_save_amount,
             save_type: settings.product_save_type,
-            show_icon_list: settings.product_icon_list
+            show_icon_list: settings.product_icon_list,
           -%}
                   </div>
                     {% endif %}
             {% endif %}
                  </div>
-
+                
+                 </div>
                 </div>
             {% endfor %}
         </div>
     </div>
-</div>
+  </section>
 {% schema %}
 {
   "name": "Product Block",
-  "settings": [],
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop Padding Bottom",
+      "default": 36
+    },
+    {
+  "type": "richtext",
+  "id": "product_heading",
+  "label": "Product Headig"
+}
+  ],
   "blocks": [
     {
       "type": "product",
@@ -92,18 +131,20 @@
     speed: 500,
     autoplay: false,
     arrows: true,
+    prevArrow:
+      "<img class='custom-arrow slick-prev' src='https://cdn.shopify.com/s/files/1/0749/4857/5473/files/Group_10532_1.png?v=1758052196'>",
+    nextArrow:
+      "<img class='custom-arrow slick-next' src='https://cdn.shopify.com/s/files/1/0749/4857/5473/files/Group_10532.png?v=1758052195'>",
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
           slidesToShow: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
           slidesToShow: 1
         }
       }
@@ -113,44 +154,121 @@
 
 </script>
 <style>
+  .cus-product-bg {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
  .product-container-flex {
   display: flex !important;
-  justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
 }
 .left-col {
-  width: 55% !important;
+  flex: 1;
   line-height: 0;
+  padding-right: 6rem;
 }
 .left-col img {
-  width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 .right-col {
-  width: 40% !important;
-}
-.product-container {
-      width: 80% !important;
-  margin: 0 auto;
+  width: 30% !important;
 }
 
 .product-container .slick-prev {
-    left: -5rem;
+    left: -7rem;
 }
 .product-container .slick-next {
-    right: -4rem;
+    right: -7rem;
 }
-.product-container .slick-prev:before,
-.product-container .slick-next:before {
-  font-size: 45px !important;
-  color: black !important;
+.custom-arrow {
+    width: 40px;
+    height: 40px;
+}
+.cus-product-heading
+ {
+    padding-bottom: 30px;
+}
+.cus-product-heading p
+ {
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 20px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+.cus-image-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 100%;
+  width:100%;
 }
 
+.ping-outer {
+  position: absolute;
+  top: 15%;    
+  left: 15%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 35px;          
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45); 
+  pointer-events: none;
+  z-index: 10;
+  animation: ping-pulse 3s infinite ease-in-out;
+}
+
+.ping-dot {
+  position: absolute;
+  top: 15%;      
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 15px;    
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;   
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.06); 
+  pointer-events: none;
+  z-index: 11;         
+}
+
+@keyframes ping-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba(255,255,255,0.45);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.35);
+    background: rgba(255,255,255,0.18);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba(255,255,255,0.45);
+  }
+}
 @media (max-width: 768px) {
+  .product-container .slick-prev {
+    left: -1rem;
+    z-index: 1;
+  }
+  .product-container .slick-next {
+    right: -1rem;
+}
 .product-container-flex {
  flex-wrap: wrap;
  gap: 30px;
+ padding: 0 30px;
 }
+
 .left-col {
   width: 100% !important;
+  padding-right: 0;
 }
 .right-col {
   width: 100% !important;
@@ -158,5 +276,7 @@
 .product-container {
       width: 100% !important;
 }
+.ping-outer { width: 34px; height: 34px; top: 15%; }
+  .ping-dot   { width: 12px; height: 12px; top: 15%; }
 }
 </style>
