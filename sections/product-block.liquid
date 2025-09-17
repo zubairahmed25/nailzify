@@ -22,8 +22,8 @@
   <div class="cus-image-wrapper">
     {% if block.settings.block_image != blank %}
       <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="">
-      <span class="ping-outer" aria-hidden="true"></span>
-      <span class="ping-dot" aria-hidden="true"></span>
+      {% comment %} <span class="ping-outer" aria-hidden="true"></span>
+      <span class="ping-dot" aria-hidden="true"></span> {% endcomment %}
     {% endif %}
   </div>
 </div>
