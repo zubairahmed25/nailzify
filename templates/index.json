@@ -1041,6 +1041,7 @@
       "blocks": {
         "product_hFwdX9": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "block_image": "shopify://shop_images/RoseQuartz04.webp",
             "product": "luna"
@@ -1048,7 +1049,6 @@
         },
         "product_GQaUrA": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "block_image": "shopify://shop_images/Azure_01.webp",
             "product": "azure"
