@@ -106,8 +106,8 @@
     "product_icon_list": false,
     "product_icon_list_carousel": true,
     "product_disable_collection_portion": false,
-    "badge_bg": "#ff5b5b",
-    "badge_color": "#f7f7f7",
+    "badge_bg": "#5e5c5c",
+    "badge_color": "#fff5f5",
     "nail_bg": "#fde1e1",
     "nail_color": "#5e5c5c",
     "nail_type_bg": "#fde1e1",
@@ -204,16 +204,6 @@
       "5308339952037760544": {
         "type": "shopify://apps/infinite-microsoft-clarity/blocks/star_rating/bfd5105e-f612-460c-8613-d7c5461bd690",
         "disabled": false,
-        "settings": {}
-      },
-      "15599951759576395258": {
-        "type": "shopify://apps/mida-replay-heatmaps/blocks/mida_recorder/e4c350c5-eabf-426d-8014-47ef50412bd0",
-        "disabled": true,
-        "settings": {}
-      },
-      "8774941748004189772": {
-        "type": "shopify://apps/reconvert/blocks/cart-drawer/72c64c30-2f7c-4a71-ae4c-efd1d5d1d2e2",
-        "disabled": true,
         "settings": {}
       },
       "1530068250781986104": {
