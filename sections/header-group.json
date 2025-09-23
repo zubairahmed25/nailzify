@@ -41,6 +41,7 @@
         },
         "announcement_n7bXRT": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "Buy 2, GET 1 free nail set!",
