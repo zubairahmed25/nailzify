@@ -16039,3 +16039,7 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .padding-bottom {
   padding-bottom: 0;
 }
+
+.badges.z-2.absolute.grid.gap-3.pointer-events-none {
+  display: none !important;
+}
