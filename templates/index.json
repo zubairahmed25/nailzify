@@ -30,6 +30,24 @@
             "button_icon": false
           }
         },
+        "image_63D6C6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Nailzify_Banner-02.webp",
+            "image_mobile": "shopify://shop_images/Nailzify_Banner-020-01-M_1.webp",
+            "heading": "",
+            "heading_color": "#ffffff",
+            "heading_position": "bottom-center",
+            "heading_position_mobile": "middle-center",
+            "heading_size": "title-sm",
+            "heading_tag": "h3",
+            "button_label": "",
+            "button_link": "shopify://collections/nail-accessories",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
         "image_jL4QQN": {
           "type": "image",
           "disabled": true,
@@ -48,31 +66,12 @@
             "button_external": false,
             "button_icon": false
           }
-        },
-        "image_63D6C6": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/DSC01506_d.webp",
-            "image_mobile": "shopify://shop_images/DSC01534-2.webp",
-            "heading": "",
-            "heading_color": "#ffffff",
-            "heading_position": "bottom-center",
-            "heading_position_mobile": "middle-center",
-            "heading_size": "title-sm",
-            "heading_tag": "h3",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": false
-          }
         }
       },
       "block_order": [
         "image_RVrfLL",
-        "image_jL4QQN",
-        "image_63D6C6"
+        "image_63D6C6",
+        "image_jL4QQN"
       ],
       "custom_css": [
         "a.button.button--secondary.button--md.button--blur.button--fixed.pointer-events-auto {margin-top: 20em !important;}"
