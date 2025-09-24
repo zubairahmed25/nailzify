@@ -78,7 +78,7 @@
       ],
       "name": "Slideshow Custom",
       "settings": {
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 3,
         "show_navigation": false,
         "image_height": "adapt",
