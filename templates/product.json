@@ -16,6 +16,14 @@
           "type": "custom_badge",
           "settings": {}
         },
+        "icon_list_ECBWRA": {
+          "type": "icon_list",
+          "settings": {
+            "heading": "",
+            "enable_carousel": false,
+            "show_below_media": false
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -111,6 +119,7 @@
       },
       "block_order": [
         "custom_badge_kiVgWd",
+        "icon_list_ECBWRA",
         "title",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
