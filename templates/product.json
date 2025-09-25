@@ -14,6 +14,7 @@
       "blocks": {
         "icon_list_ECBWRA": {
           "type": "icon_list",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "enable_carousel": false,

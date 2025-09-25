@@ -102,7 +102,7 @@
     "product_color_swatch_type": "variant",
     "product_save_amount": true,
     "product_save_type": "dollar",
-    "product_icon_list_metafield": "",
+    "product_icon_list_metafield": "custom.product_icons",
     "product_icon_list": true,
     "product_icon_list_max": 3,
     "product_icon_list_carousel": false,
