@@ -12,18 +12,17 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "icon_list_ECBWRA": {
+          "type": "icon_list",
+          "settings": {
+            "heading": "Features",
+            "enable_carousel": false,
+            "show_below_media": false
+          }
+        },
         "custom_badge_kiVgWd": {
           "type": "custom_badge",
           "settings": {}
-        },
-        "icon_list_ECBWRA": {
-          "type": "icon_list",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "enable_carousel": true,
-            "show_below_media": false
-          }
         },
         "title": {
           "type": "title",
@@ -119,8 +118,8 @@
         }
       },
       "block_order": [
-        "custom_badge_kiVgWd",
         "icon_list_ECBWRA",
+        "custom_badge_kiVgWd",
         "title",
         "collapsible_tab_kfGJYR",
         "collapsible_tab_YLy6mF",
