@@ -18,9 +18,10 @@
         },
         "icon_list_ECBWRA": {
           "type": "icon_list",
+          "disabled": true,
           "settings": {
             "heading": "",
-            "enable_carousel": false,
+            "enable_carousel": true,
             "show_below_media": false
           }
         },
