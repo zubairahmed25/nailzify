@@ -16043,3 +16043,9 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
 .badges.z-2.absolute.grid.gap-3.pointer-events-none {
   display: none !important;
 }
+
+@media (max-width: 1024px) {
+  .product__info .pdp-metafeild {
+    margin-top: 1em;
+  }
+}
