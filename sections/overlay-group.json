@@ -21,21 +21,25 @@
         "show_view_cart_button": false,
         "show_checkout_button": true,
         "show_free_shipping_bar": true,
-        "free_shipping_minimum_amount": "1",
+        "free_shipping_minimum_amount": "25",
         "cart_recommendations_enabled": true,
         "cart_recommendations_heading": "You may also like",
         "cart_recommendations_limit": 4,
         "show_cart_recommendations_vendor": false,
         "show_cart_recommendations_price": true,
         "cart_recommendations_products": [
-          "semi-solid-glue",
           "nail-remover",
-          "glass-nail-file",
-          "brush-on-nail-glue"
+          "autumn-spice",
+          "cranberry-kiss",
+          "semi-solid-glue",
+          "mulled-wine",
+          "warm-cocao"
         ],
         "empty_cart_message": "<p>Not sure where to start?<br/>Try these collections:</p>",
         "empty_cart_collections": [
-          "press-ons-nails"
+          "fall-collection",
+          "all-press-on-nails",
+          "nail-accessories"
         ],
         "recent_products_enabled": false,
         "recent_products_heading": "Recently viewed",
