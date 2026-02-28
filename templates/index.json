@@ -637,7 +637,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.name",
       "settings": {
-        "collection": "fall-collection",
+        "collection": "winter-wonderland",
         "products": [],
         "product_limit": 6,
         "columns": 4,
@@ -645,7 +645,7 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Fall Collection 2025",
+        "heading": "Winter Wonderland '26",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
