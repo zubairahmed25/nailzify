@@ -15,8 +15,8 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Nailzify-Fall-Banner-01-Desktop-01.webp",
-            "image_mobile": "shopify://shop_images/Nailzify-Fall-Banner-01-Mobile-02-copy.webp",
+            "image": "shopify://shop_images/Nialzify_Banner-_winter_wondeland_32-9.jpg_1.webp",
+            "image_mobile": "shopify://shop_images/Nialzify_Banner-_winter_wondeland11-15_copy.jpg_3.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
             "heading_position": "middle-right",
@@ -24,7 +24,7 @@
             "heading_size": "title-sm",
             "heading_tag": "h2",
             "button_label": "",
-            "button_link": "shopify://collections",
+            "button_link": "shopify://collections/winter-wonderland",
             "button_style": "secondary",
             "button_external": false,
             "button_icon": false
@@ -870,6 +870,8 @@
         "loox_reviews_loox_agg_section_brCbUq": {
           "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
             "only_photos": false,
             "hide_thumbnails": true,
             "product_handle": "",
