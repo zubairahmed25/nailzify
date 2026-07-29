@@ -14,10 +14,9 @@
       "blocks": {
         "image_RVrfLL": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Nialzify_Banner-_winter_wondeland_32-9.jpg_1.webp",
-            "image_mobile": "shopify://shop_images/Nialzify_Banner-_winter_wondeland11-15_copy.jpg_3.webp",
+            "image": "shopify://shop_images/desktop-3200x900.jpg",
+            "image_mobile": "shopify://shop_images/mobile-800x800_1.jpg",
             "heading": "",
             "heading_color": "#f7f7f7",
             "heading_position": "middle-right",
