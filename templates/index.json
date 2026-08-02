@@ -446,7 +446,7 @@
       "settings": {
         "hide_on_desktop": false,
         "layout": "marquee",
-        "grid_horizontal": 150,
+        "grid_horizontal": 100,
         "direction": "left",
         "speed": 4,
         "heading": "",
