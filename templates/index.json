@@ -637,7 +637,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.name",
       "settings": {
-        "collection": "winter-wonderland",
+        "collection": "summer-vibes",
         "products": [],
         "product_limit": 6,
         "columns": 4,
