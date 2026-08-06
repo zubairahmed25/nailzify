@@ -15,8 +15,8 @@
         "image_RVrfLL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/summer-vibes-desktop-6400x2000-2x.webp",
-            "image_mobile": "shopify://shop_images/summer-vibes-mobile-1600x1600-2x.webp",
+            "image": "shopify://shop_images/summer-vibes-desktop-3200x1000.webp",
+            "image_mobile": "shopify://shop_images/summer-vibes-mobile-800x800.webp",
             "heading": "",
             "heading_color": "#f7f7f7",
             "heading_position": "middle-right",
@@ -382,100 +382,6 @@
         "rounded": true
       }
     },
-    "logo_list_m8arzH": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_YwUt9g": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_8_01787523-9d3b-490e-887f-ce7cccd59abf.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_TgGxyk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_10_2f4371c8-effb-4908-b2b1-0a68819ad0a1.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_WwLEwc": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_9_12f96fcf-641c-4245-b0f3-3a9dd58341d1.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_JcDeF6": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_12_1b6ff89b-1ba1-4628-adf1-a1b6f63fd726.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_G9e7UK": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Asset_11_5d28365f-6102-4cc9-bb4c-de8819b40628.svg",
-            "height": 100,
-            "link": ""
-          }
-        },
-        "logo_3yYYJK": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Customer_Services_f80166fb-c2bb-4593-98fc-fa671ea442ce.svg",
-            "height": 100,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_YwUt9g",
-        "logo_TgGxyk",
-        "logo_WwLEwc",
-        "logo_JcDeF6",
-        "logo_G9e7UK",
-        "logo_3yYYJK"
-      ],
-      "name": "t:sections.logo-list.name",
-      "settings": {
-        "hide_on_desktop": false,
-        "layout": "marquee",
-        "grid_horizontal": 100,
-        "direction": "left",
-        "speed": 4,
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "#fff5f5",
-        "gradient_background": "linear-gradient(0deg, rgba(255, 245, 245, 1) 34%, rgba(255, 245, 245, 1) 100%)",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
     "collage_grid_DHCxLP": {
       "type": "collage-grid",
       "blocks": {
@@ -663,6 +569,100 @@
         "color_button_gradient": "",
         "padding_top": 20,
         "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "logo_list_m8arzH": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_YwUt9g": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_8_01787523-9d3b-490e-887f-ce7cccd59abf.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_TgGxyk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_10_2f4371c8-effb-4908-b2b1-0a68819ad0a1.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_WwLEwc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_9_12f96fcf-641c-4245-b0f3-3a9dd58341d1.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_JcDeF6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_12_1b6ff89b-1ba1-4628-adf1-a1b6f63fd726.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_G9e7UK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Asset_11_5d28365f-6102-4cc9-bb4c-de8819b40628.svg",
+            "height": 100,
+            "link": ""
+          }
+        },
+        "logo_3yYYJK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Customer_Services_f80166fb-c2bb-4593-98fc-fa671ea442ce.svg",
+            "height": 100,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_YwUt9g",
+        "logo_TgGxyk",
+        "logo_WwLEwc",
+        "logo_JcDeF6",
+        "logo_G9e7UK",
+        "logo_3yYYJK"
+      ],
+      "name": "t:sections.logo-list.name",
+      "settings": {
+        "hide_on_desktop": false,
+        "layout": "marquee",
+        "grid_horizontal": 100,
+        "direction": "left",
+        "speed": 4,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#fff5f5",
+        "gradient_background": "linear-gradient(0deg, rgba(255, 245, 245, 1) 34%, rgba(255, 245, 245, 1) 100%)",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
         "divider": false,
         "full_width": false,
         "rounded": false
@@ -1081,9 +1081,9 @@
     "rich-text-1",
     "collection-list",
     "video-with-text-overlay",
-    "logo_list_m8arzH",
     "collage_grid_DHCxLP",
     "featured_collection_FbChXx",
+    "logo_list_m8arzH",
     "featured_collection_LcUPaF",
     "featured_collection_ttwGzr",
     "blog_posts_collage_JNc3JJ",
