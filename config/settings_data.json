@@ -201,6 +201,11 @@
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": true,
         "settings": {}
+      },
+      "2783554875815837874": {
+        "type": "shopify://apps/avada-accessibility/blocks/app-embed/0ab9368b-426b-42b4-93ea-63d9c8e88707",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
