@@ -541,12 +541,15 @@
     },
     "featured_collection_FbChXx": {
       "type": "featured-collection",
+      "custom_css": [
+        ".grid.slider.slider--desktop.slider--tablet {justify-content: space-around;}"
+      ],
       "name": "t:sections.featured-collection.name",
       "settings": {
         "collection": "it-girl-duo",
         "products": [],
         "product_limit": 2,
-        "columns": 2,
+        "columns": 4,
         "carousel_on_desktop": true,
         "show_view_all": false,
         "columns_mobile": "1",
