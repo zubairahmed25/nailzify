@@ -6932,19 +6932,6 @@ ol {
   margin-inline: calc(var(--page-padding) * -1);
 }
 
-.cart-drawer .complementary-products > .horizontal-products {
-  --color-foreground: var(--color-drawer-background);
-  --color-background: var(--color-drawer-text);
-  --color-price: var(--color-foreground);
-  --color-button-background: var(--color-drawer-background);
-  --color-button-border: var(--color-drawer-background);
-  --color-button-text: var(--color-drawer-text);
-  --color-border: var(--color-foreground)/ 0.1;
-  --color-border-light: var(--color-foreground)/ 0.06;
-  color: rgb(var(--color-foreground));
-  background-color: rgb(var(--color-background));
-}
-
 .complementary-products .horizontal-products:empty {
   display: block;
   margin-inline: 0;
