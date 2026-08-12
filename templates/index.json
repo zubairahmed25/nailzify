@@ -1112,6 +1112,24 @@
         "padding_bottom": 52,
         "product_heading": "<p>Get Inspired<br/>#<strong>NAILZIFYLOOK</strong></p>"
       }
+    },
+    "custom_liquid_HCVBY4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "{% liquid\n  assign chrome_princess = all_products['chrome-princess']\n  assign rich_girl_red = all_products['rich-girl-red']\n  assign chrome_princess_variant = chrome_princess.selected_or_first_available_variant\n  assign rich_girl_red_variant = rich_girl_red.selected_or_first_available_variant\n%}\n\n<style>\n  .nailzify-bogo-banner {\n    display: block;\n    width: 100vw;\n    margin-inline: calc(50% - 50vw);\n    cursor: pointer;\n    overflow: hidden;\n  }\n\n  .nailzify-bogo-banner img {\n    display: block;\n    width: 100%;\n    height: auto;\n  }\n\n  .nailzify-bogo-banner[aria-busy='true'] {\n    opacity: 0.75;\n    cursor: wait;\n  }\n</style>\n\n<a\n  class=\"nailzify-bogo-banner\"\n  href=\"#add-it-girl-duo\"\n  aria-label=\"Add Chrome Princess and Rich Girl Red to cart\"\n>\n  <picture>\n    <source\n      media=\"(max-width: 767px)\"\n      srcset=\"https://cdn.shopify.com/s/files/1/0749/4857/5473/files/bogo-mobile-2160x2700.webp?v=1786535361\"\n      width=\"2160\"\n      height=\"2700\"\n    >\n    <img\n      src=\"https://cdn.shopify.com/s/files/1/0749/4857/5473/files/bogo-desktop-3840x1440.webp?v=1786535361\"\n      alt=\"Buy one, get one free: Chrome Princess and Rich Girl Red\"\n      width=\"3840\"\n      height=\"1440\"\n      loading=\"lazy\"\n      decoding=\"async\"\n    >\n  </picture>\n</a>\n\n<span class=\"sr-only\" data-promo-duo-status role=\"status\" aria-live=\"polite\"></span>\n\n<script>\n  (() => {\n    if (window.nailzifyPromoDuoInitialized) return;\n    window.nailzifyPromoDuoInitialized = true;\n\n    const promoHash = '#add-it-girl-duo';\n    const variantIds = [\n      {{ chrome_princess_variant.id | json }},\n      {{ rich_girl_red_variant.id | json }}\n    ];\n    const cartAddUrl = {{ routes.cart_add_url | append: '.js' | json }};\n    const cartUrl = {{ routes.cart_url | append: '.js' | json }};\n    const cartPageUrl = {{ routes.cart_url | json }};\n    const promoStatus = document.querySelector('[data-promo-duo-status]');\n    let addingPromo = false;\n\n    document.addEventListener('click', async (event) => {\n      const link = event.target.closest('a[href]');\n      if (!link) return;\n\n      const linkUrl = new URL(link.href, window.location.href);\n      if (linkUrl.hash !== promoHash) return;\n\n      event.preventDefault();\n      if (addingPromo) return;\n\n      if (variantIds.some((id) => !id)) {\n        window.alert('This promotion is temporarily unavailable. Please try again later.');\n        return;\n      }\n\n      addingPromo = true;\n      if (promoStatus) promoStatus.textContent = 'Adding both promotional products to your cart.';\n      link.setAttribute('aria-busy', 'true');\n      link.style.pointerEvents = 'none';\n\n      try {\n        const sections = [];\n        document.documentElement.dispatchEvent(\n          new CustomEvent('cart:bundled-sections', {\n            bubbles: true,\n            detail: { sections }\n          })\n        );\n\n        const response = await fetch(cartAddUrl, {\n          method: 'POST',\n          headers: {\n            'Content-Type': 'application/json',\n            'Accept': 'application/json',\n            'X-Requested-With': 'XMLHttpRequest'\n          },\n          body: JSON.stringify({\n            items: variantIds.map((id) => ({ id, quantity: 1 })),\n            sections,\n            sections_url: window.location.pathname\n          })\n        });\n\n        const addedProducts = await response.json();\n        if (!response.ok || addedProducts.status) {\n          throw new Error(\n            addedProducts.description ||\n            addedProducts.message ||\n            'The promotional products could not be added.'\n          );\n        }\n\n        const cartResponse = await fetch(cartUrl, {\n          headers: { 'Accept': 'application/json' }\n        });\n        const cart = await cartResponse.json();\n        cart.sections = addedProducts.sections || {};\n\n        const cartDrawer = document.querySelector('cart-drawer');\n        const canUseThemeCart =\n          window.theme?.pubsub?.publish &&\n          window.theme?.pubsub?.PUB_SUB_EVENTS?.cartUpdate &&\n          sections.length > 0;\n\n        if (canUseThemeCart) {\n          window.theme.pubsub.publish(\n            window.theme.pubsub.PUB_SUB_EVENTS.cartUpdate,\n            {\n              source: 'nailzify-promo-duo',\n              productVariantId: variantIds[0],\n              cart\n            }\n          );\n\n          if (cartDrawer) {\n            cartDrawer.show(link);\n          } else {\n            window.location.href = cartPageUrl;\n          }\n        } else if (cartDrawer) {\n          document.dispatchEvent(\n            new CustomEvent('cart:refresh', { detail: { open: true } })\n          );\n        } else {\n          window.location.href = cartPageUrl;\n        }\n\n        document.dispatchEvent(\n          new CustomEvent('ajaxProduct:added', {\n            detail: { product: addedProducts }\n          })\n        );\n\n        if (promoStatus) promoStatus.textContent = 'Chrome Princess and Rich Girl Red were added to your cart.';\n      } catch (error) {\n        console.error('Nailzify promotional banner:', error);\n        if (promoStatus) promoStatus.textContent = 'The promotional products could not be added.';\n        window.alert(error.message || 'The products could not be added. Please try again.');\n      } finally {\n        addingPromo = false;\n        link.removeAttribute('aria-busy');\n        link.style.pointerEvents = '';\n      }\n    });\n  })();\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1131,6 +1149,7 @@
     "17566891356766e5dd",
     "faq_bqXHVL",
     "custom_liquid_WUJNdx",
-    "product_block_MPyHg3"
+    "product_block_MPyHg3",
+    "custom_liquid_HCVBY4"
   ]
 }
