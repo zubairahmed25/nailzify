@@ -151,16 +151,7 @@
               {%- endif -%}
 
               {%- if block.settings.button_label != blank -%}
-                {%- render 'button',
-                  label: block.settings.button_label,
-                  link: block.settings.button_link,content_position
-                  
-                  style: block.settings.button_style,
-                  external: block.settings.button_external,
-                  show_icon: block.settings.button_icon,
-                  classes: 'button--blur button--fixed pointer-events-auto',
-                  shopify_attributes: block.shopify_attributes
-                -%}
+                {%- render 'button', label: block.settings.button_label, link: block.settings.button_link, style: block.settings.button_style, external: block.settings.button_external, show_icon: block.settings.button_icon, classes: 'button--blur button--fixed pointer-events-auto', shopify_attributes: block.shopify_attributes -%}
               {%- endif -%}
             </div>
           {%- endfor -%}
@@ -874,3 +865,21 @@
   }
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'button',\r\n                  label: block.settings.button_label,\r\n
+    \                 link: block.settings.button_link,content_position\r\n                  \r\n
+    \                 style: block.settings.button_style,\r\n                  external:
+    block.settings.button_external,\r\n                  show_icon: block.settings.button_icon,\r\n
+    \                 classes: 'button--blur button--fixed pointer-events-auto',\r\n
+    \                 shopify_attributes: block.shopify_attributes\r\n                -%}"
+  to: "{%- render 'button', label: block.settings.button_label, link: block.settings.button_link,
+    style: block.settings.button_style, external: block.settings.button_external,
+    show_icon: block.settings.button_icon, classes: 'button--blur button--fixed pointer-events-auto',
+    shopify_attributes: block.shopify_attributes -%}"
+  position: 9733..10048
+{% endcomment %}
