@@ -70,7 +70,7 @@
         "min_height": 430,
         "heading_width": 520,
         "heading_size": 72,
-        "heading_size_mobile": 52,
+        "heading_size_mobile": 56,
         "card_height": 350,
         "card_height_mobile": 360,
         "rounded": true,
