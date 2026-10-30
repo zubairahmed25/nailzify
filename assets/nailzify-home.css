@@ -1,0 +1,288 @@
+.template-index #MainContent {
+  --nz-color-canvas: 251 247 242;
+  --nz-color-surface: 255 253 250;
+  --nz-color-ink: 52 42 40;
+  --nz-color-muted: 105 90 86;
+  --nz-color-accent: 166 72 98;
+  --nz-color-accent-strong: 128 45 68;
+  --nz-color-accent-soft: 247 229 234;
+  --nz-color-line: 220 207 201;
+  --nz-container-width: 77.5rem;
+  --nz-section-title-size: clamp(2.15rem, 3.5vw, 2.9rem);
+  --nz-section-title-size-mobile: 2.1rem;
+  --nz-radius-small: var(--sp-2d5);
+  --nz-radius-medium: var(--sp-4);
+  color: rgb(var(--nz-color-ink));
+  background-color: rgb(var(--nz-color-canvas));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index #MainContent > .shopify-section,
+.template-index #MainContent .section {
+  color: rgb(var(--nz-color-ink));
+  background-color: rgb(var(--nz-color-canvas));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index #MainContent .page-width:not(.page-width--full) {
+  width: 100%;
+  max-width: var(--nz-container-width);
+}
+
+.template-index #MainContent :is(.title-wrapper .heading, .nailzify-section-heading__title) {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Instrument Serif", var(--font-heading-family);
+  font-size: var(--nz-section-title-size);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-transform: none;
+}
+
+.template-index #MainContent .title-wrapper .subtext-lg,
+.template-index #MainContent .nailzify-section-heading__eyebrow {
+  color: rgb(var(--nz-color-accent-strong));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.template-index #MainContent .title-wrapper .description,
+.template-index #MainContent .nailzify-section-heading__intro {
+  max-width: 60ch;
+  color: rgb(var(--nz-color-muted));
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.template-index #MainContent .title-wrapper {
+  margin-block-end: var(--sp-8);
+}
+
+.template-index [id$="__slideshow_custom_6wweLJ"] .section {
+  padding: var(--sp-5);
+  padding-block-start: 0;
+}
+
+.template-index [id$="__slideshow_custom_6wweLJ"] .slideshow,
+.template-index [id$="__slideshow_custom_6wweLJ"] .banner {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+}
+
+.template-index .nailzify-bogo-banner {
+  width: calc(100% - var(--sp-10));
+  max-width: var(--nz-container-width);
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+}
+
+.template-index .featured-collection .section,
+.template-index [id$="__featured_collection_3BKPWw"] .section,
+.template-index [id$="__featured_collection_LcUPaF"] .section,
+.template-index [id$="__featured_collection_ttwGzr"] .section {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.template-index .product-card {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index .product-card__media {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+.template-index .product-card__title {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Manrope", var(--font-body-family);
+  font-weight: 600;
+}
+
+.template-index .product-card .price {
+  color: rgb(var(--nz-color-accent));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index .product-card .bg-new-color {
+  border: 1px solid rgb(var(--nz-color-line));
+  border-radius: var(--nz-radius-small);
+  background-color: rgb(var(--nz-color-accent-soft)) !important;
+}
+
+.template-index .product-card .meta-item {
+  color: rgb(var(--nz-color-accent-strong)) !important;
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.template-index #MainContent .indicators .button {
+  min-width: var(--sp-12);
+  min-height: var(--sp-12);
+  border-color: rgb(var(--nz-color-line));
+  color: rgb(var(--nz-color-accent-strong));
+  background-color: rgb(var(--nz-color-surface));
+}
+
+.template-index [id$="__logo_list_m8arzH"] .section {
+  border-block: 1px solid rgb(var(--nz-color-line));
+  background-color: rgb(var(--nz-color-accent-soft));
+}
+
+.template-index [id$="__logo_list_m8arzH"] .logo-list {
+  min-height: var(--sp-20);
+}
+
+.template-index [id$="__blog_posts_collage_JNc3JJ"] .article-card {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index [id$="__blog_posts_collage_JNc3JJ"] .article-card__media {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-accent-soft));
+}
+
+.template-index [id$="__blog_posts_collage_JNc3JJ"] .article-card__title {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Instrument Serif", var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.template-index [id$="__blog_posts_collage_JNc3JJ"] .article-card__top,
+.template-index [id$="__blog_posts_collage_JNc3JJ"] .link {
+  color: rgb(var(--nz-color-muted));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index .nailzify-home-reviews {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.template-index .nailzify-home-reviews .page-width {
+  max-width: var(--nz-container-width);
+}
+
+.template-index .nailzify-home-reviews .nailzify-product-reviews__heading {
+  display: grid;
+  max-width: 42rem;
+  gap: var(--sp-3);
+  margin-block-end: var(--sp-10);
+}
+
+.template-index .nailzify-home-reviews iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+.template-index [id$="__faq_bqXHVL"] .section {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.template-index [id$="__faq_bqXHVL"] .faqs {
+  overflow: hidden;
+  border: 1px solid rgb(var(--nz-color-line));
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+.template-index [id$="__faq_bqXHVL"] .details__summary {
+  min-height: var(--sp-16);
+  padding-inline: var(--sp-6);
+  color: rgb(var(--nz-color-ink));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index [id$="__faq_bqXHVL"] .details__content {
+  padding-inline: var(--sp-6);
+  color: rgb(var(--nz-color-muted));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.template-index .gorgias-chat-button {
+  min-height: var(--sp-12);
+  padding: var(--sp-3) var(--sp-6);
+  border: 1px solid rgb(var(--nz-color-accent));
+  border-radius: var(--nz-radius-small);
+  color: rgb(var(--nz-color-surface));
+  background-color: rgb(var(--nz-color-accent));
+  box-shadow: none;
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: color var(--animation-short), background-color var(--animation-short);
+}
+
+.template-index .gorgias-chat-button:hover {
+  color: rgb(var(--nz-color-accent-strong));
+  background-color: rgb(var(--nz-color-accent-soft));
+  transform: none;
+}
+
+.template-index #MainContent :is(a, button, summary):focus-visible {
+  outline: 2px solid rgb(var(--nz-color-accent));
+  outline-offset: var(--sp-1);
+}
+
+@media screen and (max-width: 1023px) {
+  .template-index #MainContent .page-width:not(.page-width--full) {
+    padding-inline: var(--sp-5);
+  }
+
+  .template-index [id$="__slideshow_custom_6wweLJ"] .section {
+    padding: 0;
+  }
+
+  .template-index [id$="__slideshow_custom_6wweLJ"] .slideshow,
+  .template-index [id$="__slideshow_custom_6wweLJ"] .banner {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .template-index #MainContent :is(.title-wrapper .heading, .nailzify-section-heading__title) {
+    font-size: var(--nz-section-title-size-mobile);
+  }
+
+  .template-index #MainContent .title-wrapper {
+    margin-block-end: var(--sp-6);
+  }
+
+  .template-index .nailzify-bogo-banner {
+    width: calc(100% - var(--sp-10));
+  }
+
+  .template-index .slider--tablet .mobile\:card-grid--1 {
+    --slider-item-width: 82vw;
+  }
+
+  .template-index .nailzify-home-reviews .nailzify-product-reviews__heading {
+    margin-block-end: var(--sp-8);
+  }
+
+  .template-index [id$="__faq_bqXHVL"] .details__summary,
+  .template-index [id$="__faq_bqXHVL"] .details__content {
+    padding-inline: var(--sp-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .template-index #MainContent *,
+  .template-index #MainContent *::before,
+  .template-index #MainContent *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

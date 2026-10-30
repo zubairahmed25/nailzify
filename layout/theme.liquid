@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-    {%- if request.page_type == 'product' -%}
+    {%- if request.page_type == 'product' or request.page_type == 'index' -%}
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     {%- endif -%}
     {% # theme-check-enable RemoteAsset %}
@@ -63,6 +63,9 @@
       fetchpriority="low"
       onload="this.media='all'"
     >
+    {%- if request.page_type == 'index' -%}
+      {{ 'nailzify-home.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
    <!-- Modified Header hook for plugins -->
   
    {% comment %}{{ content_for_header }}{% endcomment %}

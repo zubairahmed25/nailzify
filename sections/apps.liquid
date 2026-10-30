@@ -8,9 +8,9 @@
 
 
 
-<div class="section section--padding{% if section.settings.nailzify_product_reviews %} nailzify-product-reviews{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+<div class="section section--padding{% if section.settings.nailzify_product_reviews or section.settings.nailzify_home_reviews %} nailzify-reviews{% endif %}{% if section.settings.nailzify_product_reviews %} nailzify-product-reviews{% endif %}{% if section.settings.nailzify_home_reviews %} nailzify-home-reviews{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
-    {%- if section.settings.nailzify_product_reviews -%}
+    {%- if section.settings.nailzify_product_reviews or section.settings.nailzify_home_reviews -%}
       <header class="nailzify-section-heading nailzify-product-reviews__heading">
         {%- if section.settings.review_eyebrow != blank -%}
           <p class="nailzify-section-heading__eyebrow">{{ section.settings.review_eyebrow | escape }}</p>
@@ -86,6 +86,12 @@
       "type": "checkbox",
       "id": "nailzify_product_reviews",
       "label": "Use Nailzify product review styling",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "nailzify_home_reviews",
+      "label": "Use Nailzify homepage review styling",
       "default": false
     },
     {
