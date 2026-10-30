@@ -369,6 +369,21 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .nailzify-holiday-header__gallery,
+  .nailzify-holiday-header--many .nailzify-holiday-header__gallery {
+    display: grid;
+    grid-template-columns: repeat(var(--holiday-mobile-card-count), minmax(0, 1fr));
+    overflow: visible;
+    margin-inline: 0;
+    padding: 0;
+  }
+
+  .nailzify-holiday-header__card-wrap:nth-child(n + 3) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 639px) {
   .nailzify-holiday-header {
     padding-block: var(--sp-7) var(--sp-8);

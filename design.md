@@ -14,7 +14,9 @@ The homepage tokens and shared styling live in `assets/nailzify-home.css`. Featu
 
 ## Holiday header
 
-The approved layout uses copy beside three slim product images on desktop. Mobile places the copy above the image row. The script heading is raster artwork because its supplied license permits web artwork but does not permit embedding the font file.
+The approved layout uses copy beside three slim product images on desktop. Mobile places the copy above a two image row. The script heading is raster artwork because its supplied license permits web artwork but does not permit embedding the font file.
+
+The desktop Polka Dot card uses a reversed macro hand composition to balance the Cranberry card on the opposite side.
 
 The supporting holiday line uses Cyrene as raster artwork. Its commercial license does not permit redistribution, so the font file is not published with the theme.
 

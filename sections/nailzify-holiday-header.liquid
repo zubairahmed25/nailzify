@@ -49,7 +49,7 @@
   <div class="nailzify-holiday-header__container page-width">
     <div
       class="nailzify-holiday-header nailzify-holiday-header--content-{{ section.settings.content_position }} nailzify-holiday-header--desktop-{{ section.settings.text_alignment }} nailzify-holiday-header--mobile-{{ section.settings.text_alignment_mobile }}{% if section.settings.rounded %} nailzify-holiday-header--rounded{% endif %}{% if card_count > 3 %} nailzify-holiday-header--many{% endif %}"
-      style="--holiday-card-count: {{ card_count | at_least: 1 }};"
+      style="--holiday-card-count: {{ card_count | at_least: 1 }}; --holiday-mobile-card-count: {{ card_count | at_most: 2 | at_least: 1 }};"
     >
       {%- if section.settings.show_decorative_line -%}
         <span class="nailzify-holiday-header__line nailzify-holiday-header__line--top" aria-hidden="true"></span>
@@ -131,9 +131,9 @@
                   assign fallback_width = 1121
                   assign fallback_height = 1403
                 when 3
-                  assign fallback_asset = 'nailzify-holiday-polka.jpg'
-                  assign fallback_width = 1023
-                  assign fallback_height = 1537
+                  assign fallback_asset = 'nailzify-holiday-polka-macro.webp'
+                  assign fallback_width = 1254
+                  assign fallback_height = 1254
               endcase
 
               if section.index == 1
