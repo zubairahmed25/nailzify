@@ -1,0 +1,35 @@
+{%- doc -%}
+  Renders the product shape and finish as compact product tags.
+
+  @param {object} product - Product with Nailzify shape and finish metafields
+  @param {object} [block] - Optional section block for theme editor attributes
+{%- enddoc -%}
+
+{%- if product.metafields.custom.nail_shape != blank or product.metafields.custom.nail_type != blank -%}
+  <div class="pdp-metafeild nailzify-product__tags"{% if block != blank %} {{ block.shopify_attributes }}{% endif %}>
+    <ul class="metafeild-flex" aria-label="Product attributes">
+      {%- if product.metafields.custom.nail_shape != blank -%}
+        <li class="nail-flex-bg bg-new-color">
+          <span class="meta-item-2" aria-hidden="true">
+            <img
+              src="{{ product.metafields.custom.nail_shape | file_url }}"
+              alt=""
+              width="30"
+              height="15"
+              loading="lazy"
+            >
+          </span>
+          {%- if product.metafields.custom.nail_text != blank -%}
+            <span class="meta-item">{{ product.metafields.custom.nail_text }}</span>
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+
+      {%- if product.metafields.custom.nail_type != blank -%}
+        <li class="nail-type-bg bg-new-color">
+          <span class="meta-item">{{ product.metafields.custom.nail_type }}</span>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+{%- endif -%}

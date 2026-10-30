@@ -32,6 +32,8 @@
   assign media_count = product.media.size
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
   assign icon_list_block = section.blocks | where: 'type', 'icon_list' | first
+  assign title_block = section.blocks | where: 'type', 'title' | first
+  assign custom_badge_block = section.blocks | where: 'type', 'custom_badge' | first
   assign app_blocks = section.blocks | where: 'type', '@app'
   assign loox_rating_block = app_blocks | first
 -%}
@@ -253,45 +255,9 @@
                 {{- product.selected_or_first_available_variant.sku -}}
               </p>
               {%- when 'custom_badge' -%}
-                <div class="pdp-metafeild">
-          <div class="metafeild-flex">
- {% if product.metafields.custom.custom_badge != blank %}
-        <div class="custom-badge-bg bg-new-color" style="background-color:{{ settings.badge_bg }};">    
-    <p class="meta-item" style="color:{{ settings.badge_color }};">
-      {{ product.metafields.custom.custom_badge }}
-    </p>
-</div>
-  {% endif %}
-
-{% if product.metafields.custom.nail_shape != blank %}
-<div class="nail-flex-bg bg-new-color" style="background-color:{{ settings.nail_bg }};">
-  {% if product.metafields.custom.nail_shape != blank %}
-    <div class="meta-item-2">
-      <img
-        src="{{ product.metafields.custom.nail_shape | file_url }}"
-        alt=""
-        width="30"
-        height="15"
-        loading="lazy"
-      >
-    </div>
-  {% endif %}
-  {% if product.metafields.custom.nail_text != blank %}
-    <p class="meta-item" style="color:{{ settings.nail_color }};">
-      {{ product.metafields.custom.nail_text }}
-    </p>
-  {% endif %}
-</div>
-{% endif %}
-{% if product.metafields.custom.nail_type != blank %}
-<div class="nail-type-bg bg-new-color" style="background-color:{{ settings.nail_type_bg }};">
-    <p class="meta-item" style="color:{{ settings.nail_type_color }};">
-      {{ product.metafields.custom.nail_type }}
-    </p>
-</div>
-{% endif %}
-</div>
-</div>
+                {%- if title_block == blank -%}
+                  {%- render 'nailzify-product-tags', product: product, block: block -%}
+                {%- endif -%}
             {%- when 'description' -%}
               <div class="product__text rte {{ block.settings.text_size }}" {{ block.shopify_attributes }}>
                 {{- product.description -}}
@@ -306,9 +272,7 @@
                 class="product__title grid gap-3{% if price_block == blank and block.settings.show_price %} with-price{% endif %}"
                 {{ block.shopify_attributes }}
               >
-                <p class="nailzify-product__eyebrow">
-                  {{- product.type | default: 'Press-On Nails' | escape -}}
-                </p>
+                {%- render 'nailzify-product-tags', product: product, block: custom_badge_block -%}
                 <h1 class="heading leading-none {{ block.settings.title_size }} mobile:{{ block.settings.title_size_mobile }} col-span-full">
                   <split-words class="split-words js-invisible block" data-animate="fade-up">
                     {{- product.title -}}
