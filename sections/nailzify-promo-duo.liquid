@@ -22,11 +22,9 @@
 <style>
   #shopify-section-{{ section.id }} {
     --promo-section-background: {{ section.settings.color_background.rgb }};
-    --promo-card-background: {{ section.settings.color_card_background.rgb }};
     --promo-text: {{ section.settings.color_text.rgb }};
     --promo-muted: {{ section.settings.color_muted_text.rgb }};
     --promo-accent: {{ section.settings.color_accent.rgb }};
-    --promo-border: {{ section.settings.color_border.rgb }};
     --promo-product-background: {{ section.settings.color_product_background.rgb }};
     --promo-product-text: {{ section.settings.color_product_text.rgb }};
     --promo-button-background: {{ section.settings.color_button_background.rgb }};
@@ -308,12 +306,6 @@
     },
     {
       "type": "color",
-      "id": "color_card_background",
-      "label": "Banner background",
-      "default": "#f5ede4"
-    },
-    {
-      "type": "color",
       "id": "color_text",
       "label": "Main text",
       "default": "#342a28"
@@ -329,12 +321,6 @@
       "id": "color_accent",
       "label": "Accent text and plus sign",
       "default": "#a64862"
-    },
-    {
-      "type": "color",
-      "id": "color_border",
-      "label": "Borders",
-      "default": "#dccfc9"
     },
     {
       "type": "color",

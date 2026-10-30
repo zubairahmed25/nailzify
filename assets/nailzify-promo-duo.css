@@ -10,11 +10,7 @@
   position: relative;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: clamp(var(--sp-8), 4vw, var(--sp-16));
-  overflow: hidden;
   padding: clamp(var(--sp-6), 4vw, var(--sp-12));
-  border: 1px solid rgb(var(--promo-border));
-  border-radius: var(--border-radius);
-  background: rgb(var(--promo-card-background));
 }
 
 .nailzify-promo-duo__content {
@@ -203,7 +199,6 @@
   min-width: 0;
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgb(var(--promo-border));
   border-radius: var(--border-radius-small);
   color: rgb(var(--promo-product-text));
   background: rgb(var(--promo-product-background));
@@ -254,10 +249,9 @@
   place-items: center;
   width: var(--sp-10);
   height: var(--sp-10);
-  border: 1px solid rgb(var(--promo-border));
   border-radius: var(--rounded-full);
   color: rgb(var(--promo-accent));
-  background: rgb(var(--promo-card-background));
+  background: rgb(var(--promo-section-background));
   font-size: var(--text-2xl);
   font-weight: 300;
   line-height: 1;

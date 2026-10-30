@@ -4,6 +4,12 @@
   assign card_count = section.blocks.size
   assign heading_tag = section.settings.heading_tag
   assign heading_text = section.settings.heading | strip
+  assign cyrene_supporting_text = 'Your finishing touch for every celebration.'
+  assign use_cyrene_supporting_artwork = false
+
+  if section.settings.supporting_text == cyrene_supporting_text
+    assign use_cyrene_supporting_artwork = true
+  endif
 
   capture heading_artwork_url
     if section.settings.heading_artwork != blank
@@ -73,7 +79,18 @@
         {%- endif -%}
 
         {%- if section.settings.supporting_text != blank -%}
-          <p class="nailzify-holiday-header__supporting-text">{{ section.settings.supporting_text | escape }}</p>
+          {%- if use_cyrene_supporting_artwork -%}
+            <p class="nailzify-holiday-header__supporting-text nailzify-holiday-header__supporting-text--artwork">
+              <span class="sr-only">{{ section.settings.supporting_text | escape }}</span>
+              <span
+                class="nailzify-holiday-header__supporting-artwork"
+                style="--holiday-supporting-artwork: url('{{ 'nailzify-cyrene-supporting.png' | asset_url }}');"
+                aria-hidden="true"
+              ></span>
+            </p>
+          {%- else -%}
+            <p class="nailzify-holiday-header__supporting-text">{{ section.settings.supporting_text | escape }}</p>
+          {%- endif -%}
         {%- endif -%}
 
         {%- if section.settings.button_label != blank -%}

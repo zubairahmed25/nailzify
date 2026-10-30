@@ -88,6 +88,26 @@
   line-height: 1.45;
 }
 
+.nailzify-holiday-header__supporting-text--artwork {
+  width: min(100%, 26rem);
+  max-width: none;
+}
+
+.nailzify-holiday-header__supporting-artwork {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3028 / 223;
+  background-color: rgb(var(--holiday-supporting-text));
+  -webkit-mask-image: var(--holiday-supporting-artwork);
+  mask-image: var(--holiday-supporting-artwork);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 .nailzify-holiday-header__button {
   display: inline-flex;
   align-items: center;
