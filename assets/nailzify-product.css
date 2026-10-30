@@ -14,8 +14,9 @@
   --nz-gallery-width: 42rem;
   --nz-media-width: 36rem;
   --nz-thumbnail-width: 4.75rem;
-  --nz-mobile-gallery-width: 19.5rem;
-  --nz-mobile-media-width: 17.25rem;
+  --nz-mobile-gallery-width: 100%;
+  --nz-mobile-peek-width: var(--sp-10);
+  --nz-mobile-media-width: calc(100% - var(--nz-mobile-peek-width));
   --nz-mobile-quantity-width: 7rem;
   --nz-title-size: clamp(2.25rem, 3.1vw, 2.9rem);
   --nz-title-size-mobile: 2rem;
@@ -466,7 +467,7 @@
 
   .nailzify-product-redesign .product__media-list::after {
     content: "";
-    flex: 0 0 calc(var(--nz-mobile-gallery-width) - var(--nz-mobile-media-width));
+    flex: 0 0 var(--nz-mobile-peek-width);
   }
 
   .nailzify-product-redesign .slider .product__media,
