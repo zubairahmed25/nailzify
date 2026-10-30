@@ -133,9 +133,10 @@
   background-color: rgb(var(--nz-color-surface));
 }
 
-.template-index [id$="__logo_list_m8arzH"] .section {
+.template-index #MainContent [id$="__logo_list_m8arzH"] .section {
   border-block: 1px solid rgb(var(--nz-color-line));
   background-color: rgb(var(--nz-color-accent-soft));
+  background-image: none;
 }
 
 .template-index [id$="__logo_list_m8arzH"] .logo-list {
