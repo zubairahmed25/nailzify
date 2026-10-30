@@ -38,7 +38,7 @@
   }
 </style>
 
-<section class="nailzify-promo-duo-section" aria-labelledby="PromoDuoHeading-{{ section.id }}">
+<section class="nailzify-promo-duo-section"{% if section.settings.heading != blank %} aria-labelledby="PromoDuoHeading-{{ section.id }}"{% endif %}>
   <div class="page-width">
     <nailzify-promo-duo
       class="nailzify-promo-duo"

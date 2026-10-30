@@ -120,7 +120,11 @@ if (!customElements.get('nailzify-promo-duo')) {
           );
 
           this.setStatus(this.dataset.successText, 'success');
-          this.cartDrawer?.show(this.button);
+          if (this.cartDrawer) {
+            this.cartDrawer.show(this.button);
+          } else {
+            window.location.href = window.theme?.routes?.cart_url || '/cart';
+          }
         } catch (error) {
           console.error('Nailzify promo duo:', error);
           this.setStatus(error.message || this.dataset.errorText, 'error');
