@@ -1,26 +1,31 @@
-<style> 
+<style>
+  @font-face {
+    font-family: "Gatter Sans";
+    src: url("{{ 'gatter-sans-regular.otf' | asset_url }}") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Gatter Sans";
+    src: url("{{ 'gatter-sans-regular-italic.otf' | asset_url }}") format("opentype");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+
   {%- liquid
     assign header_font = settings.type_header_font
     assign header_font_medium = header_font | font_modify: 'weight', '500'
     assign header_font_bold = header_font | font_modify: 'weight', '700'
 
     assign body_font = settings.type_body_font
-    assign body_font_medium = body_font | font_modify: 'weight', '500'
-    assign body_font_bold = body_font | font_modify: 'weight', '700'
-    assign body_font_italic = body_font | font_modify: 'style', 'italic'
-    assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-
     if header_font.family != body_font.family
       echo header_font | font_face: font_display: 'swap'
       echo header_font_medium | font_face: font_display: 'swap'
       echo header_font_bold | font_face: font_display: 'swap'
     endif
-
-    echo body_font | font_face: font_display: 'swap'
-    echo body_font_medium | font_face: font_display: 'swap'
-    echo body_font_bold | font_face: font_display: 'swap'
-    echo body_font_italic | font_face: font_display: 'swap'
-    echo body_font_bold_italic | font_face: font_display: 'swap'
 
     assign rounded_button = 0.75
     if settings.rounded_button == 'round'
@@ -147,7 +152,7 @@
       --font-heading-text-transform: uppercase;
     {% endif %}
 
-    --font-body-family: {{ body_font.family }}, {{ body_font.fallback_families }};
+    --font-body-family: "Gatter Sans", sans-serif;
     --font-body-style: {{ body_font.style }};
     --font-body-weight: {{ body_font.weight }};
     --font-body-line-height: {{ settings.type_body_line_height }};
@@ -227,11 +232,7 @@
   }
 </style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 
-{%- unless settings.type_body_font.system? -%}
-  {% # theme-check-disable AssetPreload %}
-  <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-  {% # theme-check-enable AssetPreload %}
-{%- endunless -%}
+<link rel="preload" as="font" href="{{ 'gatter-sans-regular.otf' | asset_url }}" type="font/otf" crossorigin>
 {%- unless settings.type_header_font.system? -%}
   {% # theme-check-disable AssetPreload %}
   <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
