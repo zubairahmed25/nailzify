@@ -1,0 +1,372 @@
+.nailzify-holiday-header-section {
+  padding-block: var(--holiday-padding-top) var(--holiday-padding-bottom);
+  color: rgb(var(--holiday-text));
+  background-color: rgb(var(--holiday-section-background));
+}
+
+.nailzify-holiday-header__container {
+  width: min(100%, var(--holiday-container-width));
+  margin-inline: auto;
+  padding-inline: var(--sp-5);
+}
+
+.nailzify-holiday-header {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.82fr) minmax(0, 1.45fr);
+  align-items: center;
+  min-height: var(--holiday-min-height);
+  gap: var(--sp-10);
+  overflow: hidden;
+  padding: var(--sp-10);
+  background:
+    radial-gradient(circle at 14% 12%, rgb(var(--holiday-accent) / 0.05), transparent 34%),
+    radial-gradient(circle at 89% 82%, rgb(var(--holiday-accent) / 0.04), transparent 33%),
+    rgb(var(--holiday-background));
+}
+
+.nailzify-holiday-header--rounded {
+  border-radius: var(--nz-radius-medium, var(--sp-4));
+}
+
+.nailzify-holiday-header--content-right .nailzify-holiday-header__content {
+  order: 2;
+}
+
+.nailzify-holiday-header--content-right .nailzify-holiday-header__gallery {
+  order: 1;
+}
+
+.nailzify-holiday-header__content,
+.nailzify-holiday-header__gallery,
+.nailzify-holiday-header__empty {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.nailzify-holiday-header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nailzify-holiday-header--desktop-center .nailzify-holiday-header__content {
+  align-items: center;
+  text-align: center;
+}
+
+.nailzify-holiday-header__heading-artwork {
+  display: block;
+  width: min(100%, var(--holiday-heading-width));
+  aspect-ratio: 1500 / 620;
+  background-color: rgb(var(--holiday-text));
+  -webkit-mask-image: var(--holiday-heading-artwork);
+  mask-image: var(--holiday-heading-artwork);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.nailzify-holiday-header__heading {
+  max-width: 11ch;
+  margin: 0;
+  color: rgb(var(--holiday-text));
+  font-family: "Barlow Semi Condensed", var(--font-heading-family);
+  font-size: var(--holiday-heading-size);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.nailzify-holiday-header__supporting-text {
+  max-width: 30ch;
+  margin-block: var(--sp-4) 0;
+  color: rgb(var(--holiday-supporting-text));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+}
+
+.nailzify-holiday-header__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(100%, 21rem);
+  min-height: var(--sp-12);
+  margin-block-start: var(--sp-5);
+  padding-inline: var(--sp-8);
+  border: 1px solid rgb(var(--holiday-button-background));
+  border-radius: var(--sp-12);
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--animation-short), background-color var(--animation-short), border-color var(--animation-short);
+}
+
+.nailzify-holiday-header__button--solid {
+  color: rgb(var(--holiday-button-text));
+  background-color: rgb(var(--holiday-button-background));
+}
+
+.nailzify-holiday-header__button--outline {
+  color: rgb(var(--holiday-button-background));
+  background-color: transparent;
+}
+
+.nailzify-holiday-header__button:hover {
+  color: rgb(var(--holiday-button-background));
+  background-color: rgb(var(--holiday-button-text));
+}
+
+.nailzify-holiday-header__button:focus-visible,
+.nailzify-holiday-header__card-link:focus-visible {
+  outline: 2px solid rgb(var(--holiday-accent));
+  outline-offset: var(--sp-1);
+}
+
+.nailzify-holiday-header__gallery {
+  display: grid;
+  grid-template-columns: repeat(var(--holiday-card-count), minmax(0, 1fr));
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.nailzify-holiday-header__card-wrap {
+  min-width: 0;
+}
+
+.nailzify-holiday-header__card-wrap:nth-child(3n + 1) {
+  transform: translateY(var(--sp-2));
+}
+
+.nailzify-holiday-header__card-wrap:nth-child(3n + 2) {
+  transform: translateY(calc(var(--sp-2) * -1));
+}
+
+.nailzify-holiday-header__card-wrap:nth-child(3n) {
+  transform: translateY(var(--sp-3));
+}
+
+.nailzify-holiday-header__card-link {
+  display: block;
+  border-radius: var(--nz-radius-medium, var(--sp-4));
+  color: inherit;
+  text-decoration: none;
+}
+
+.nailzify-holiday-header__card {
+  position: relative;
+  height: var(--holiday-card-height);
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium, var(--sp-4));
+  background-color: rgb(var(--holiday-card-background));
+}
+
+.nailzify-holiday-header__card picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nailzify-holiday-header__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: var(--holiday-image-position);
+}
+
+.nailzify-holiday-header__card--cover .nailzify-holiday-header__image {
+  object-fit: cover;
+}
+
+.nailzify-holiday-header__card--contain .nailzify-holiday-header__image {
+  object-fit: contain;
+}
+
+.nailzify-holiday-header__caption {
+  position: absolute;
+  inset-inline: var(--sp-3);
+  inset-block-end: var(--sp-3);
+  width: max-content;
+  max-width: calc(100% - var(--sp-6));
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--sp-8);
+  color: rgb(var(--holiday-supporting-text));
+  background-color: rgb(var(--holiday-background) / 0.88);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.nailzify-holiday-header__line {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 72%;
+  height: 55%;
+  border: 1px solid rgb(var(--holiday-accent));
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nailzify-holiday-header__line--top {
+  inset-block-start: -47%;
+  inset-inline-end: -5%;
+  transform: rotate(9deg);
+}
+
+.nailzify-holiday-header__line--bottom {
+  inset-block-end: -48%;
+  inset-inline-start: -24%;
+  transform: rotate(-9deg);
+}
+
+.nailzify-holiday-header__sparkle {
+  position: absolute;
+  z-index: 3;
+  inset-block-start: var(--sp-10);
+  inset-inline-start: 31%;
+  width: var(--sp-6);
+  height: var(--sp-6);
+  color: rgb(var(--holiday-accent));
+  pointer-events: none;
+}
+
+.nailzify-holiday-header__empty {
+  display: grid;
+  min-height: var(--holiday-card-height);
+  place-items: center;
+  border: 1px dashed rgb(var(--holiday-accent));
+  border-radius: var(--nz-radius-medium, var(--sp-4));
+  color: rgb(var(--holiday-supporting-text));
+}
+
+@media screen and (max-width: 1023px) {
+  .nailzify-holiday-header__container {
+    padding-inline: 0;
+  }
+
+  .nailzify-holiday-header {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    gap: var(--sp-8);
+    padding: var(--sp-8) var(--sp-5);
+  }
+
+  .nailzify-holiday-header--rounded {
+    border-radius: 0;
+  }
+
+  .nailzify-holiday-header__content,
+  .nailzify-holiday-header--content-right .nailzify-holiday-header__content {
+    order: 1;
+  }
+
+  .nailzify-holiday-header__gallery,
+  .nailzify-holiday-header--content-right .nailzify-holiday-header__gallery {
+    order: 2;
+  }
+
+  .nailzify-holiday-header--mobile-center .nailzify-holiday-header__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .nailzify-holiday-header--mobile-left .nailzify-holiday-header__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nailzify-holiday-header__heading-artwork {
+    width: min(100%, calc(var(--holiday-heading-width) * 0.82));
+  }
+
+  .nailzify-holiday-header__heading {
+    font-size: var(--holiday-heading-size-mobile);
+  }
+
+  .nailzify-holiday-header__supporting-text {
+    font-size: var(--text-base);
+  }
+
+  .nailzify-holiday-header__gallery {
+    gap: var(--sp-2);
+  }
+
+  .nailzify-holiday-header__card {
+    height: var(--holiday-card-height-mobile);
+  }
+
+  .nailzify-holiday-header__sparkle {
+    inset-block-start: var(--sp-6);
+    inset-inline-start: auto;
+    inset-inline-end: var(--sp-8);
+    width: var(--sp-5);
+    height: var(--sp-5);
+  }
+
+  .nailzify-holiday-header__line--top {
+    inset-block-start: -20%;
+    inset-inline-end: -32%;
+  }
+
+  .nailzify-holiday-header__line--bottom {
+    inset-block-end: -29%;
+    inset-inline-start: -38%;
+  }
+
+  .nailzify-holiday-header--many .nailzify-holiday-header__gallery {
+    display: flex;
+    overflow-x: auto;
+    padding: var(--sp-2) var(--sp-5) var(--sp-4);
+    margin-inline: calc(var(--sp-5) * -1);
+    scroll-padding-inline: var(--sp-5);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .nailzify-holiday-header--many .nailzify-holiday-header__gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nailzify-holiday-header--many .nailzify-holiday-header__card-wrap {
+    flex: 0 0 58%;
+    scroll-snap-align: start;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .nailzify-holiday-header {
+    padding-block: var(--sp-7) var(--sp-8);
+  }
+
+  .nailzify-holiday-header__button {
+    width: min(100%, 22rem);
+  }
+
+  .nailzify-holiday-header__card-wrap:nth-child(3n + 1),
+  .nailzify-holiday-header__card-wrap:nth-child(3n + 2),
+  .nailzify-holiday-header__card-wrap:nth-child(3n) {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nailzify-holiday-header__button {
+    transition: none;
+  }
+}

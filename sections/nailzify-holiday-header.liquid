@@ -1,0 +1,546 @@
+{{ 'nailzify-holiday-header.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign card_count = section.blocks.size
+  assign heading_tag = section.settings.heading_tag
+  assign heading_text = section.settings.heading | strip
+
+  capture heading_artwork_url
+    if section.settings.heading_artwork != blank
+      echo section.settings.heading_artwork | image_url: width: 1800
+    else
+      echo 'nailzify-holiday-heading.png' | asset_url
+    endif
+  endcapture
+  assign heading_artwork_url = heading_artwork_url | strip
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --holiday-background: {{ section.settings.color_background.rgb }};
+    --holiday-text: {{ section.settings.color_text.rgb }};
+    --holiday-supporting-text: {{ section.settings.color_supporting_text.rgb }};
+    --holiday-accent: {{ section.settings.color_accent.rgb }};
+    --holiday-button-background: {{ section.settings.color_button_background.rgb }};
+    --holiday-button-text: {{ section.settings.color_button_text.rgb }};
+    --holiday-card-background: {{ section.settings.color_card_background.rgb }};
+    --holiday-section-background: {{ section.settings.color_section_background.rgb }};
+    --holiday-container-width: {{ section.settings.container_width }}px;
+    --holiday-min-height: {{ section.settings.min_height }}px;
+    --holiday-heading-width: {{ section.settings.heading_width }}px;
+    --holiday-heading-size: {{ section.settings.heading_size }}px;
+    --holiday-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
+    --holiday-card-height: {{ section.settings.card_height }}px;
+    --holiday-card-height-mobile: {{ section.settings.card_height_mobile }}px;
+    --holiday-padding-top: {{ section.settings.padding_top }}px;
+    --holiday-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+<section
+  class="nailzify-holiday-header-section"
+  {% if heading_text != blank %}aria-labelledby="HolidayHeading-{{ section.id }}"{% endif %}
+>
+  <div class="nailzify-holiday-header__container">
+    <div
+      class="nailzify-holiday-header nailzify-holiday-header--content-{{ section.settings.content_position }} nailzify-holiday-header--desktop-{{ section.settings.text_alignment }} nailzify-holiday-header--mobile-{{ section.settings.text_alignment_mobile }}{% if section.settings.rounded %} nailzify-holiday-header--rounded{% endif %}{% if card_count > 3 %} nailzify-holiday-header--many{% endif %}"
+      style="--holiday-card-count: {{ card_count | at_least: 1 }};"
+    >
+      {%- if section.settings.show_decorative_line -%}
+        <span class="nailzify-holiday-header__line nailzify-holiday-header__line--top" aria-hidden="true"></span>
+        <span class="nailzify-holiday-header__line nailzify-holiday-header__line--bottom" aria-hidden="true"></span>
+      {%- endif -%}
+
+      {%- if section.settings.show_sparkle -%}
+        <svg class="nailzify-holiday-header__sparkle" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 0c.8 9.9 6.1 15.2 16 16-9.9.8-15.2 6.1-16 16C15.2 22.1 9.9 16.8 0 16 9.9 15.2 15.2 9.9 16 0Z" fill="currentColor"/>
+        </svg>
+      {%- endif -%}
+
+      <div class="nailzify-holiday-header__content">
+        {%- if heading_text != blank -%}
+          {%- if section.settings.use_script_artwork -%}
+            <{{ heading_tag }} class="sr-only" id="HolidayHeading-{{ section.id }}">{{ heading_text | escape }}</{{ heading_tag }}>
+            <span
+              class="nailzify-holiday-header__heading-artwork"
+              style="--holiday-heading-artwork: url('{{ heading_artwork_url }}');"
+              aria-hidden="true"
+            ></span>
+          {%- else -%}
+            <{{ heading_tag }} class="nailzify-holiday-header__heading" id="HolidayHeading-{{ section.id }}">
+              {{- heading_text | escape | newline_to_br -}}
+            </{{ heading_tag }}>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if section.settings.supporting_text != blank -%}
+          <p class="nailzify-holiday-header__supporting-text">{{ section.settings.supporting_text | escape }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          {%- if section.settings.button_link != blank -%}
+            <a
+              class="nailzify-holiday-header__button nailzify-holiday-header__button--{{ section.settings.button_style }}"
+              href="{{ section.settings.button_link }}"
+              {% if section.settings.button_external %}target="_blank" rel="noopener"{% endif %}
+            >
+              {{- section.settings.button_label | escape -}}
+            </a>
+          {%- else -%}
+            <span class="nailzify-holiday-header__button nailzify-holiday-header__button--{{ section.settings.button_style }}" aria-disabled="true">
+              {{- section.settings.button_label | escape -}}
+            </span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {%- if card_count > 0 -%}
+        <div class="nailzify-holiday-header__gallery" role="list" aria-label="{{ section.settings.gallery_label | escape }}">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign card_image = block.settings.image
+              assign mobile_image = block.settings.image_mobile | default: card_image
+              assign card_alt = block.settings.alt_text | default: card_image.alt
+              assign fallback_asset = blank
+              assign fallback_width = 1200
+              assign fallback_height = 1500
+
+              case forloop.index
+                when 1
+                  assign fallback_asset = 'nailzify-holiday-cranberry.webp'
+                  assign fallback_width = 2048
+                  assign fallback_height = 2048
+                when 2
+                  assign fallback_asset = 'nailzify-holiday-chrome.jpg'
+                  assign fallback_width = 1121
+                  assign fallback_height = 1403
+                when 3
+                  assign fallback_asset = 'nailzify-holiday-polka.jpg'
+                  assign fallback_width = 1023
+                  assign fallback_height = 1537
+              endcase
+
+              if section.index == 1
+                assign image_loading = 'eager'
+              else
+                assign image_loading = 'lazy'
+              endif
+            -%}
+
+            <div
+              class="nailzify-holiday-header__card-wrap"
+              role="listitem"
+              style="--holiday-image-position: {{ block.settings.image_position }};"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.link != blank -%}
+                <a class="nailzify-holiday-header__card-link" href="{{ block.settings.link }}" aria-label="{{ block.settings.link_label | default: card_alt | escape }}">
+              {%- endif -%}
+
+              <figure class="nailzify-holiday-header__card nailzify-holiday-header__card--{{ block.settings.image_fit }}">
+                {%- if card_image != blank -%}
+                  <picture>
+                    {%- if block.settings.image_mobile != blank -%}
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="{{ mobile_image | image_url: width: 360 }} 360w, {{ mobile_image | image_url: width: 540 }} 540w, {{ mobile_image | image_url: width: 720 }} 720w"
+                        width="{{ mobile_image.width }}"
+                        height="{{ mobile_image.height }}"
+                      >
+                    {%- endif -%}
+                    {{- card_image
+                      | image_url: width: 1000
+                      | image_tag:
+                        loading: image_loading,
+                        widths: '240,360,480,600,720,900,1000',
+                        sizes: '(max-width: 767px) 30vw, 21vw',
+                        alt: card_alt,
+                        class: 'nailzify-holiday-header__image'
+                    -}}
+                  </picture>
+                {%- elsif fallback_asset != blank -%}
+                  <img
+                    class="nailzify-holiday-header__image"
+                    src="{{ fallback_asset | asset_url }}"
+                    width="{{ fallback_width }}"
+                    height="{{ fallback_height }}"
+                    loading="{{ image_loading }}"
+                    alt="{{ card_alt | escape }}"
+                  >
+                {%- else -%}
+                  {{- 'lifestyle-1' | placeholder_svg_tag: 'nailzify-holiday-header__image placeholder' -}}
+                {%- endif -%}
+
+                {%- if block.settings.caption != blank -%}
+                  <figcaption class="nailzify-holiday-header__caption">{{ block.settings.caption | escape }}</figcaption>
+                {%- endif -%}
+              </figure>
+
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- elsif request.design_mode -%}
+        <div class="nailzify-holiday-header__empty">
+          Add image cards to complete this header.
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nailzify holiday header",
+  "tag": "section",
+  "class": "nailzify-holiday-header-wrapper",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Little\nHoliday magic"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_script_artwork",
+      "label": "Use script heading artwork",
+      "info": "Turn this off to display the editable heading text instead.",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "heading_artwork",
+      "label": "Custom heading artwork",
+      "info": "Optional transparent image. The included holiday artwork is used when this is empty."
+    },
+    {
+      "type": "text",
+      "id": "supporting_text",
+      "label": "Supporting text",
+      "default": "Your finishing touch for every celebration."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "SHOP HOLIDAY NAILS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_external",
+      "label": "Open button in a new tab",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "value": "solid", "label": "Solid" },
+        { "value": "outline", "label": "Outline" }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "text",
+      "id": "gallery_label",
+      "label": "Gallery accessibility label",
+      "default": "Holiday nail designs"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Desktop content position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Desktop text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_mobile",
+      "label": "Mobile text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Maximum content width",
+      "min": 1000,
+      "max": 1600,
+      "step": 20,
+      "unit": "px",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Desktop minimum height",
+      "min": 480,
+      "max": 760,
+      "step": 20,
+      "unit": "px",
+      "default": 580
+    },
+    {
+      "type": "range",
+      "id": "heading_width",
+      "label": "Heading artwork width",
+      "min": 300,
+      "max": 680,
+      "step": 20,
+      "unit": "px",
+      "default": 520
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Editable heading size",
+      "min": 40,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Mobile editable heading size",
+      "min": 36,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "card_height",
+      "label": "Desktop image height",
+      "min": 360,
+      "max": 620,
+      "step": 20,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "card_height_mobile",
+      "label": "Mobile image height",
+      "min": 260,
+      "max": 480,
+      "step": 20,
+      "unit": "px",
+      "default": 360
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Round the header corners",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_decorative_line",
+      "label": "Show decorative line",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sparkle",
+      "label": "Show sparkle",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_section_background",
+      "label": "Outer section background",
+      "default": "#fbf7f2"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "Header background",
+      "default": "#fffaf7"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Heading color",
+      "default": "#941238"
+    },
+    {
+      "type": "color",
+      "id": "color_supporting_text",
+      "label": "Supporting text color",
+      "default": "#3f3a3a"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Decorative accent",
+      "default": "#b42150"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "Button background",
+      "default": "#a80836"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_card_background",
+      "label": "Image card background",
+      "default": "#f4e8e4"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile image",
+          "info": "Optional. The desktop image is used when this is empty."
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Image description"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image focus",
+          "options": [
+            { "value": "50% 50%", "label": "Center" },
+            { "value": "50% 20%", "label": "Top" },
+            { "value": "50% 80%", "label": "Bottom" },
+            { "value": "25% 50%", "label": "Left" },
+            { "value": "75% 50%", "label": "Right" }
+          ],
+          "default": "50% 50%"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image fit",
+          "options": [
+            { "value": "cover", "label": "Fill card" },
+            { "value": "contain", "label": "Show full image" }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Optional caption"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Optional link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link accessibility label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nailzify holiday header",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
