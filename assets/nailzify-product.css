@@ -462,7 +462,11 @@
 
   .nailzify-product-redesign .product__media-list {
     gap: var(--sp-1);
-    padding-inline-end: calc(var(--nz-mobile-gallery-width) - var(--nz-mobile-media-width));
+  }
+
+  .nailzify-product-redesign .product__media-list::after {
+    content: "";
+    flex: 0 0 calc(var(--nz-mobile-gallery-width) - var(--nz-mobile-media-width));
   }
 
   .nailzify-product-redesign .slider .product__media,
