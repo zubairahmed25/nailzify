@@ -336,9 +336,12 @@
                   endif
                 -%}
 
-                {%- if product.description != blank -%}
+                {%- liquid
+                  assign product_intro = product.description | split: '</p>' | first | strip_html | strip
+                -%}
+                {%- if product_intro != blank -%}
                   <p class="nailzify-product__intro">
-                    {{- product.description | strip_html | truncatewords: 22 -}}
+                    {{- product_intro -}}
                   </p>
                 {%- endif -%}
               </div>
