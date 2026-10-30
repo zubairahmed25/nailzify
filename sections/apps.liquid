@@ -6,20 +6,42 @@
   }
 </style>
 
+{%- liquid
+  assign nailzify_product_reviews = section.settings.nailzify_product_reviews
+  assign nailzify_home_reviews = section.settings.nailzify_home_reviews
+  assign nailzify_review_eyebrow = section.settings.review_eyebrow
+  assign nailzify_review_heading = section.settings.review_heading
+  assign nailzify_review_intro = section.settings.review_intro
 
+  if request.page_type == 'index' and section.id contains '1757225448cbccf3ce'
+    assign nailzify_home_reviews = true
+    assign nailzify_review_eyebrow = 'Community spotlight'
+    assign nailzify_review_heading = 'Nailzify in motion.'
+    assign nailzify_review_intro = 'Real sets, real routines, and the looks our community keeps reaching for.'
+  elsif request.page_type == 'index' and section.id contains '17566891356766e5dd'
+    assign nailzify_home_reviews = true
+    assign nailzify_review_eyebrow = 'Customer love'
+    assign nailzify_review_heading = 'Real nails. Real reviews.'
+    assign nailzify_review_intro = 'Honest feedback from the Nailzify community, from first application to everyday wear.'
+  endif
 
-<div class="section section--padding{% if section.settings.nailzify_product_reviews or section.settings.nailzify_home_reviews %} nailzify-reviews{% endif %}{% if section.settings.nailzify_product_reviews %} nailzify-product-reviews{% endif %}{% if section.settings.nailzify_home_reviews %} nailzify-home-reviews{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  assign nailzify_reviews_style = false
+  if nailzify_product_reviews or nailzify_home_reviews
+    assign nailzify_reviews_style = true
+  endif
+-%}
+<div class="section section--padding{% if nailzify_reviews_style %} nailzify-reviews{% endif %}{% if nailzify_product_reviews %} nailzify-product-reviews{% endif %}{% if nailzify_home_reviews %} nailzify-home-reviews{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
-    {%- if section.settings.nailzify_product_reviews or section.settings.nailzify_home_reviews -%}
+    {%- if nailzify_reviews_style -%}
       <header class="nailzify-section-heading nailzify-product-reviews__heading">
-        {%- if section.settings.review_eyebrow != blank -%}
-          <p class="nailzify-section-heading__eyebrow">{{ section.settings.review_eyebrow | escape }}</p>
+        {%- if nailzify_review_eyebrow != blank -%}
+          <p class="nailzify-section-heading__eyebrow">{{ nailzify_review_eyebrow | escape }}</p>
         {%- endif -%}
-        {%- if section.settings.review_heading != blank -%}
-          <h2 class="nailzify-section-heading__title">{{ section.settings.review_heading | escape }}</h2>
+        {%- if nailzify_review_heading != blank -%}
+          <h2 class="nailzify-section-heading__title">{{ nailzify_review_heading | escape }}</h2>
         {%- endif -%}
-        {%- if section.settings.review_intro != blank -%}
-          <p class="nailzify-section-heading__intro">{{ section.settings.review_intro | escape }}</p>
+        {%- if nailzify_review_intro != blank -%}
+          <p class="nailzify-section-heading__intro">{{ nailzify_review_intro | escape }}</p>
         {%- endif -%}
       </header>
     {%- endif -%}

@@ -141,6 +141,14 @@
   min-height: var(--sp-20);
 }
 
+.template-index [id$="__logo_list_m8arzH"] .logo__media {
+  --image-height: var(--sp-20) !important;
+}
+
+.template-index [id$="__logo_list_m8arzH"] .logo__media:first-child {
+  display: none;
+}
+
 .template-index [id$="__blog_posts_collage_JNc3JJ"] .article-card {
   color: rgb(var(--nz-color-ink));
   font-family: "Manrope", var(--font-body-family);
