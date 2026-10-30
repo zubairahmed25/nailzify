@@ -83,14 +83,6 @@
   border-radius: var(--nz-radius-medium);
 }
 
-.template-index .nailzify-bogo-banner {
-  width: calc(100% - var(--sp-10));
-  max-width: var(--nz-container-width);
-  margin-inline: auto;
-  overflow: hidden;
-  border-radius: var(--nz-radius-medium);
-}
-
 .template-index .featured-collection .section,
 .template-index [id$="__featured_collection_3BKPWw"] .section,
 .template-index [id$="__featured_collection_LcUPaF"] .section,
@@ -275,10 +267,6 @@
 
   .template-index #MainContent .title-wrapper {
     margin-block-end: var(--sp-6);
-  }
-
-  .template-index .nailzify-bogo-banner {
-    width: calc(100% - var(--sp-10));
   }
 
   .template-index .slider--tablet .mobile\:card-grid--1 {

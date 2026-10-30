@@ -1,0 +1,406 @@
+{{ 'nailzify-promo-duo.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'nailzify-promo-duo.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign product_one = section.settings.product_1
+  assign product_two = section.settings.product_2
+  assign variant_one = product_one.selected_or_first_available_variant
+  assign variant_two = product_two.selected_or_first_available_variant
+  assign image_one = section.settings.product_1_image | default: product_one.featured_image
+  assign image_two = section.settings.product_2_image | default: product_two.featured_image
+  assign product_one_title = section.settings.product_1_title | default: product_one.title
+  assign product_two_title = section.settings.product_2_title | default: product_two.title
+
+  assign can_add = true
+  if product_one == blank or product_two == blank or variant_one == blank or variant_two == blank
+    assign can_add = false
+  elsif variant_one.available == false or variant_two.available == false
+    assign can_add = false
+  endif
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --promo-section-background: {{ section.settings.color_background.rgb }};
+    --promo-card-background: {{ section.settings.color_card_background.rgb }};
+    --promo-text: {{ section.settings.color_text.rgb }};
+    --promo-muted: {{ section.settings.color_muted_text.rgb }};
+    --promo-accent: {{ section.settings.color_accent.rgb }};
+    --promo-border: {{ section.settings.color_border.rgb }};
+    --promo-product-background: {{ section.settings.color_product_background.rgb }};
+    --promo-product-text: {{ section.settings.color_product_text.rgb }};
+    --promo-button-background: {{ section.settings.color_button_background.rgb }};
+    --promo-button-text: {{ section.settings.color_button_text.rgb }};
+    --promo-badge-background: {{ section.settings.color_badge_background.rgb }};
+    --promo-badge-text: {{ section.settings.color_badge_text.rgb }};
+    --promo-padding-top: {{ section.settings.padding_top }}px;
+    --promo-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+<section class="nailzify-promo-duo-section" aria-labelledby="PromoDuoHeading-{{ section.id }}">
+  <div class="page-width">
+    <nailzify-promo-duo
+      class="nailzify-promo-duo"
+      data-variant-one="{{ variant_one.id }}"
+      data-variant-two="{{ variant_two.id }}"
+      data-loading-text="{{ section.settings.loading_text | escape }}"
+      data-success-text="{{ section.settings.success_text | escape }}"
+      data-error-text="{{ section.settings.error_text | escape }}"
+    >
+      <div class="nailzify-promo-duo__content">
+        {%- if section.settings.kicker != blank -%}
+          <p class="nailzify-promo-duo__kicker">{{ section.settings.kicker | escape }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2 class="nailzify-promo-duo__heading" id="PromoDuoHeading-{{ section.id }}">
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <div class="nailzify-promo-duo__description rte">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.compare_price_text != blank or section.settings.offer_price_text != blank or section.settings.savings_text != blank -%}
+          <div class="nailzify-promo-duo__offer" aria-label="{{ section.settings.offer_accessibility_text | escape }}">
+            {%- if section.settings.compare_price_text != blank -%}
+              <s>{{ section.settings.compare_price_text | escape }}</s>
+            {%- endif -%}
+            {%- if section.settings.offer_price_text != blank -%}
+              <strong>{{ section.settings.offer_price_text | escape }}</strong>
+            {%- endif -%}
+            {%- if section.settings.savings_text != blank -%}
+              <span>{{ section.settings.savings_text | escape }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <button
+          type="button"
+          class="nailzify-promo-duo__button"
+          data-promo-duo-submit
+          aria-describedby="PromoDuoStatus-{{ section.id }}"
+          {% unless can_add %}disabled{% endunless %}
+        >
+          <span data-promo-duo-button-text>{{ section.settings.button_label | escape }}</span>
+          <span class="nailzify-promo-duo__spinner" aria-hidden="true"></span>
+        </button>
+
+        {%- if section.settings.footnote != blank -%}
+          <p class="nailzify-promo-duo__footnote">{{ section.settings.footnote | escape }}</p>
+        {%- endif -%}
+
+        <p class="nailzify-promo-duo__status" id="PromoDuoStatus-{{ section.id }}" role="status" aria-live="polite" data-promo-duo-status>
+          {%- if product_one == blank or product_two == blank -%}
+            Select two products in the theme editor to activate this offer.
+          {%- elsif can_add == false -%}
+            One of the selected products is currently unavailable.
+          {%- endif -%}
+        </p>
+      </div>
+
+      <div class="nailzify-promo-duo__products">
+        {%- if section.settings.badge_text != blank -%}
+          <span class="nailzify-promo-duo__badge">{{ section.settings.badge_text | escape }}</span>
+        {%- endif -%}
+
+        {%- for index in (1..2) -%}
+          {%- liquid
+            if index == 1
+              assign promo_product = product_one
+              assign promo_image = image_one
+              assign promo_title = product_one_title
+              assign promo_subtitle = section.settings.product_1_subtitle
+            else
+              assign promo_product = product_two
+              assign promo_image = image_two
+              assign promo_title = product_two_title
+              assign promo_subtitle = section.settings.product_2_subtitle
+            endif
+          -%}
+
+          {%- unless forloop.first -%}
+            <span class="nailzify-promo-duo__plus" aria-hidden="true">+</span>
+          {%- endunless -%}
+
+          <figure class="nailzify-promo-duo__product">
+            <div class="nailzify-promo-duo__media">
+              {%- if promo_image != blank -%}
+                {%- assign image_alt = promo_image.alt | default: promo_title | escape -%}
+                {{- promo_image
+                  | image_url: width: 1200
+                  | image_tag:
+                    loading: 'lazy',
+                    sizes: '(max-width: 767px) 42vw, 24vw',
+                    widths: '240,360,480,600,720,900,1200',
+                    alt: image_alt
+                -}}
+              {%- else -%}
+                {{- 'product-' | append: index | placeholder_svg_tag: 'placeholder' -}}
+              {%- endif -%}
+            </div>
+            <figcaption class="nailzify-promo-duo__product-copy">
+              <strong>{{ promo_title | default: 'Choose a product' | escape }}</strong>
+              {%- if promo_subtitle != blank -%}
+                <span>{{ promo_subtitle | escape }}</span>
+              {%- elsif section.settings.show_product_price and promo_product != blank -%}
+                <span>{{ promo_product.price | money }}</span>
+              {%- endif -%}
+            </figcaption>
+          </figure>
+        {%- endfor -%}
+      </div>
+    </nailzify-promo-duo>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Nailzify promo duo",
+  "tag": "section",
+  "class": "nailzify-promo-duo-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "First product"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_1_image",
+      "label": "First product image override"
+    },
+    {
+      "type": "text",
+      "id": "product_1_title",
+      "label": "First product title override"
+    },
+    {
+      "type": "text",
+      "id": "product_1_subtitle",
+      "label": "First product subtitle"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Second product"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_2_image",
+      "label": "Second product image override"
+    },
+    {
+      "type": "text",
+      "id": "product_2_title",
+      "label": "Second product title override"
+    },
+    {
+      "type": "text",
+      "id": "product_2_subtitle",
+      "label": "Second product subtitle"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_price",
+      "label": "Show product prices when subtitles are empty",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Offer copy"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Small heading",
+      "default": "The It Girl Duo"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Buy one. <em>Get one free.</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Two signature sets, one irresistible offer.</p>"
+    },
+    {
+      "type": "text",
+      "id": "compare_price_text",
+      "label": "Crossed out price text",
+      "default": "$25.98"
+    },
+    {
+      "type": "text",
+      "id": "offer_price_text",
+      "label": "Offer price text",
+      "default": "$12.99 total"
+    },
+    {
+      "type": "text",
+      "id": "savings_text",
+      "label": "Savings badge text",
+      "default": "Save 50%"
+    },
+    {
+      "type": "text",
+      "id": "offer_accessibility_text",
+      "label": "Offer price accessibility text",
+      "default": "Regular price $25.98, promotional price $12.99 total, save 50 percent"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Top badge",
+      "default": "2 sets · 1 price"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get the duo for only $12.99"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Small note below button",
+      "default": "Both sets are added together. No code needed."
+    },
+    {
+      "type": "text",
+      "id": "loading_text",
+      "label": "Loading message",
+      "default": "Adding both products to your cart…"
+    },
+    {
+      "type": "text",
+      "id": "success_text",
+      "label": "Success message",
+      "default": "Both products were added to your cart."
+    },
+    {
+      "type": "text",
+      "id": "error_text",
+      "label": "Error message",
+      "default": "The products could not be added. Please try again."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "Section background",
+      "default": "#fbf7f2"
+    },
+    {
+      "type": "color",
+      "id": "color_card_background",
+      "label": "Banner background",
+      "default": "#f5ede4"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Main text",
+      "default": "#342a28"
+    },
+    {
+      "type": "color",
+      "id": "color_muted_text",
+      "label": "Supporting text",
+      "default": "#695a56"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "Accent text and plus sign",
+      "default": "#a64862"
+    },
+    {
+      "type": "color",
+      "id": "color_border",
+      "label": "Borders",
+      "default": "#dccfc9"
+    },
+    {
+      "type": "color",
+      "id": "color_product_background",
+      "label": "Product card background",
+      "default": "#fffdfa"
+    },
+    {
+      "type": "color",
+      "id": "color_product_text",
+      "label": "Product card text",
+      "default": "#342a28"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "Button background",
+      "default": "#8f263f"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_badge_background",
+      "label": "Top badge background",
+      "default": "#342a28"
+    },
+    {
+      "type": "color",
+      "id": "color_badge_text",
+      "label": "Top badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nailzify promo duo"
+    }
+  ]
+}
+{% endschema %}
