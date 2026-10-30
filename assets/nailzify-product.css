@@ -95,6 +95,15 @@
   order: 2;
 }
 
+.nailzify-product__reviews {
+  order: 2;
+  min-height: var(--sp-5);
+}
+
+.nailzify-product__reviews .shopify-app-block {
+  margin: 0;
+}
+
 .nailzify-product-redesign .product__title .product__price {
   order: 3;
   align-self: start;

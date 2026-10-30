@@ -32,6 +32,8 @@
   assign media_count = product.media.size
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
   assign icon_list_block = section.blocks | where: 'type', 'icon_list' | first
+  assign app_blocks = section.blocks | where: 'type', '@app'
+  assign loox_rating_block = app_blocks | first
 -%}
 
 {%- if first_3d_model -%}
@@ -159,7 +161,9 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {%- render block -%}
+              {%- unless block == loox_rating_block -%}
+                {%- render block -%}
+              {%- endunless -%}
 
             {%- when 'breadcrumb' -%}
               {%- render 'product-breadcrumb', product: product, block: block -%}
@@ -311,6 +315,12 @@
                   </split-words>
                 </h1>
 
+                {%- if loox_rating_block != blank -%}
+                  <div class="nailzify-product__reviews">
+                    {%- render loox_rating_block -%}
+                  </div>
+                {%- endif -%}
+
                 {%- if price_block == blank and block.settings.show_price -%}
                   <div id="Price-{{ section.id }}-{{ product.id }}" class="product__price">
                     {%- render 'product-price',
@@ -331,13 +341,14 @@
                 {%- endif -%}
 
                 {%- liquid
-                  if rating_block == blank and block.settings.show_rating
+                  if loox_rating_block == blank and rating_block == blank and block.settings.show_rating
                     render 'product-rating', product: product
                   endif
                 -%}
 
                 {%- liquid
-                  assign product_intro = product.description | split: '</p>' | first | strip_html | strip
+                  assign product_intro_source = product.description | strip_html | strip
+                  assign product_intro = product_intro_source | split: '.' | first | append: '.'
                 -%}
                 {%- if product_intro != blank -%}
                   <p class="nailzify-product__intro">

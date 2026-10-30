@@ -34,6 +34,10 @@
             "show_rating": true
           }
         },
+        "loox_rating_Nailzify": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {}
+        },
         "collapsible_tab_kfGJYR": {
           "type": "collapsible_tab",
           "settings": {
@@ -109,6 +113,7 @@
       "block_order": [
         "icon_list_ECBWRA",
         "title",
+        "loox_rating_Nailzify",
         "custom_badge_kiVgWd",
         "variant_picker_f76Jk6",
         "buy_buttons",
