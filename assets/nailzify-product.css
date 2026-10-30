@@ -14,7 +14,8 @@
   --nz-gallery-width: 42rem;
   --nz-media-width: 36rem;
   --nz-thumbnail-width: 4.75rem;
-  --nz-mobile-media-width: 16.5rem;
+  --nz-mobile-gallery-width: 19.5rem;
+  --nz-mobile-media-width: 17.25rem;
   --nz-mobile-quantity-width: 7rem;
   --nz-title-size: clamp(2.25rem, 3.1vw, 2.9rem);
   --nz-title-size-mobile: 2rem;
@@ -454,12 +455,20 @@
 
   .nailzify-product-redesign .product__media-container {
     width: 100%;
-    max-width: var(--nz-mobile-media-width);
+    max-width: var(--nz-mobile-gallery-width);
+    gap: var(--sp-2);
     margin-inline: auto;
   }
 
+  .nailzify-product-redesign .slider .product__media,
+  .nailzify-product-redesign .product__gallery--partial .slider .product__media {
+    width: var(--nz-mobile-media-width);
+    flex-basis: var(--nz-mobile-media-width);
+    scroll-snap-align: start;
+  }
+
   .nailzify-product-redesign .product__info {
-    padding-block-start: var(--sp-3);
+    padding-block-start: var(--sp-2);
   }
 
   .nailzify-product-redesign .product__info > * + * {
