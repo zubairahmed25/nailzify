@@ -104,6 +104,15 @@
   margin: 0;
 }
 
+.nailzify-product__reviews .loox-rating:empty::before {
+  content: "★★★★★  Read reviews";
+  color: rgb(var(--nz-color-accent));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .nailzify-product-redesign .product__title .product__price {
   order: 3;
   align-self: start;
