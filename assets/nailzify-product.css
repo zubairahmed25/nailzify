@@ -460,6 +460,10 @@
     margin-inline: auto;
   }
 
+  .nailzify-product-redesign .product__media-list {
+    gap: var(--sp-1);
+  }
+
   .nailzify-product-redesign .slider .product__media,
   .nailzify-product-redesign .product__gallery--partial .slider .product__media {
     width: var(--nz-mobile-media-width);
