@@ -316,8 +316,21 @@
                 </h1>
 
                 {%- if loox_rating_block != blank -%}
+                  {%- liquid
+                    assign has_product_rating = false
+                    if product.metafields.reviews.rating.value != blank or product.metafields.loox.avg_rating != blank
+                      assign has_product_rating = true
+                    endif
+                  -%}
                   <div class="nailzify-product__reviews">
-                    {%- render loox_rating_block -%}
+                    {%- if has_product_rating -%}
+                      {%- render loox_rating_block -%}
+                    {%- else -%}
+                      <a class="nailzify-review-fallback" href="#looxReviewsFrame" aria-label="Read customer reviews">
+                        <span class="nailzify-review-fallback__stars" aria-hidden="true">★★★★★</span>
+                        <span>Read reviews</span>
+                      </a>
+                    {%- endif -%}
                   </div>
                 {%- endif -%}
 

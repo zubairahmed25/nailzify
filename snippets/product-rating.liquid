@@ -59,12 +59,8 @@
     </p>
   </div>
 {%- else -%}
-  <a class="nailzify-loox-rating" href="#looxReviewsFrame" aria-label="Read customer reviews">
-    <div
-      class="loox-rating"
-      data-id="{{ product.id }}"
-      data-rating="{{ product.metafields.loox.avg_rating }}"
-      data-raters="{{ product.metafields.loox.num_reviews }}"
-    ></div>
+  <a class="nailzify-review-fallback" href="#looxReviewsFrame" aria-label="Read customer reviews">
+    <span class="nailzify-review-fallback__stars" aria-hidden="true">★★★★★</span>
+    <span>Read reviews</span>
   </a>
 {%- endif -%}
