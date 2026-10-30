@@ -14,10 +14,10 @@
   --nz-gallery-width: 42rem;
   --nz-media-width: 36rem;
   --nz-thumbnail-width: 4.75rem;
-  --nz-mobile-media-width: 18.25rem;
+  --nz-mobile-media-width: 16.5rem;
   --nz-mobile-quantity-width: 7rem;
   --nz-title-size: clamp(2.25rem, 3.1vw, 2.9rem);
-  --nz-title-size-mobile: 2.25rem;
+  --nz-title-size-mobile: 2rem;
   --nz-price-size: clamp(1.7rem, 2.4vw, 2.15rem);
   --nz-radius-small: var(--sp-2d5);
   --nz-radius-medium: var(--sp-4);
@@ -459,7 +459,7 @@
   }
 
   .nailzify-product-redesign .product__info {
-    padding-block-start: var(--sp-4);
+    padding-block-start: var(--sp-3);
   }
 
   .nailzify-product-redesign .product__info > * + * {
@@ -472,6 +472,17 @@
 
   .nailzify-product-redesign .product__title h1 {
     font-size: var(--nz-title-size-mobile);
+  }
+
+  .nailzify-product-redesign .product__intro {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .nailzify-product-redesign .product__thumbnail {
+    width: var(--sp-12);
   }
 
   .nailzify-product-redesign .buy-buttons {
