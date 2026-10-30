@@ -63,6 +63,15 @@
   margin-block-end: var(--sp-8);
 }
 
+.template-index #MainContent :is(
+  [id$="__featured_collection_3BKPWw"],
+  [id$="__featured_collection_LcUPaF"],
+  [id$="__featured_collection_ttwGzr"]
+) .title-wrapper :is(h2, h3).heading {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 .template-index [id$="__slideshow_custom_6wweLJ"] .section {
   padding: var(--sp-5);
   padding-block-start: 0;
