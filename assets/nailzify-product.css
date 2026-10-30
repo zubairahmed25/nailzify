@@ -104,6 +104,15 @@
   margin: 0;
 }
 
+.nailzify-product__reviews a {
+  display: inline-flex;
+}
+
+.nailzify-product__reviews .loox-rating:empty {
+  display: inline-flex !important;
+  min-width: var(--sp-44);
+}
+
 .nailzify-product__reviews .loox-rating:empty::before {
   content: "★★★★★  Read reviews";
   color: rgb(var(--nz-color-accent));
