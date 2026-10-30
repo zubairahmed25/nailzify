@@ -7,6 +7,8 @@
   --nz-color-accent-strong: 128 45 68;
   --nz-color-accent-soft: 247 229 234;
   --nz-color-line: 220 207 201;
+  --nz-color-band-product: 251 247 242;
+  --nz-color-band-duo: 245 237 228;
   --nz-container-width: 77.5rem;
   --nz-section-title-size: clamp(2.15rem, 3.5vw, 2.9rem);
   --nz-section-title-size-mobile: 2.1rem;
@@ -20,8 +22,19 @@
 .template-index #MainContent > .shopify-section,
 .template-index #MainContent .section {
   color: rgb(var(--nz-color-ink));
-  background-color: rgb(var(--nz-color-canvas));
   font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+.template-index #MainContent > .shopify-section:nth-child(odd),
+.template-index #MainContent > .shopify-section:nth-child(odd) > section,
+.template-index #MainContent > .shopify-section:nth-child(odd) .section {
+  background-color: rgb(var(--nz-color-band-product));
+}
+
+.template-index #MainContent > .shopify-section:nth-child(even),
+.template-index #MainContent > .shopify-section:nth-child(even) > section,
+.template-index #MainContent > .shopify-section:nth-child(even) .section {
+  background-color: rgb(var(--nz-color-band-duo));
 }
 
 .template-index #MainContent .page-width:not(.page-width--full) {
@@ -70,13 +83,6 @@
 ) .title-wrapper :is(h2, h3).heading {
   font-weight: 600;
   letter-spacing: 0.01em;
-}
-
-.template-index .featured-collection .section,
-.template-index [id$="__featured_collection_3BKPWw"] .section,
-.template-index [id$="__featured_collection_LcUPaF"] .section,
-.template-index [id$="__featured_collection_ttwGzr"] .section {
-  background-color: rgb(var(--nz-color-canvas));
 }
 
 .template-index .product-card {

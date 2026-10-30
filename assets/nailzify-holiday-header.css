@@ -1,7 +1,15 @@
 .nailzify-holiday-header-section {
   padding-block: var(--holiday-padding-top) var(--holiday-padding-bottom);
   color: rgb(var(--holiday-text));
-  background-color: rgb(var(--holiday-section-background));
+  background:
+    radial-gradient(circle at 14% 12%, rgb(var(--holiday-accent) / 0.05), transparent 34%),
+    radial-gradient(circle at 89% 82%, rgb(var(--holiday-accent) / 0.04), transparent 33%),
+    rgb(var(--holiday-section-background));
+}
+
+.nailzify-holiday-header__container {
+  width: 100%;
+  max-width: 78.75rem;
 }
 
 .nailzify-holiday-header {
@@ -14,10 +22,7 @@
   gap: var(--sp-10);
   overflow: hidden;
   padding: var(--sp-10);
-  background:
-    radial-gradient(circle at 14% 12%, rgb(var(--holiday-accent) / 0.05), transparent 34%),
-    radial-gradient(circle at 89% 82%, rgb(var(--holiday-accent) / 0.04), transparent 33%),
-    rgb(var(--holiday-background));
+  background: transparent;
 }
 
 .nailzify-holiday-header--rounded {
