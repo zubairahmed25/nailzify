@@ -9,7 +9,7 @@
 
 .nailzify-holiday-header__container {
   width: 100%;
-  max-width: 78.75rem;
+  max-width: var(--nz-holiday-content-width, 78.75rem);
 }
 
 .nailzify-holiday-header {

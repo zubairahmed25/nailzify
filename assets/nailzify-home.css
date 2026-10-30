@@ -10,6 +10,7 @@
   --nz-color-band-product: 251 247 242;
   --nz-color-band-duo: 245 237 228;
   --nz-container-width: 77.5rem;
+  --nz-holiday-content-width: 78.75rem;
   --nz-section-title-size: clamp(2.15rem, 3.5vw, 2.9rem);
   --nz-section-title-size-mobile: 2.1rem;
   --nz-radius-small: var(--sp-2d5);
@@ -40,6 +41,10 @@
 .template-index #MainContent .page-width:not(.page-width--full) {
   width: 100%;
   max-width: var(--nz-container-width);
+}
+
+.template-index #MainContent .nailzify-holiday-header__container.page-width {
+  max-width: var(--nz-holiday-content-width);
 }
 
 .template-index #MainContent :is(.title-wrapper .heading, .nailzify-section-heading__title) {
