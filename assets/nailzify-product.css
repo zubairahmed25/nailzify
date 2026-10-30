@@ -1,4 +1,9 @@
-.nailzify-product-redesign {
+:is(
+  .nailzify-product-redesign,
+  .nailzify-how,
+  .nailzify-product-reviews,
+  .nailzify-product-recommendations
+) {
   --nz-color-canvas: 251 247 242;
   --nz-color-surface: 255 253 250;
   --nz-color-ink: 52 42 40;
@@ -21,6 +26,9 @@
   --nz-title-size: clamp(2.25rem, 3.1vw, 2.9rem);
   --nz-title-size-mobile: 2rem;
   --nz-price-size: clamp(1.7rem, 2.4vw, 2.15rem);
+  --nz-section-title-size: clamp(2.15rem, 3.5vw, 2.9rem);
+  --nz-section-title-size-mobile: 2.1rem;
+  --nz-card-title-size: 1.65rem;
   --nz-radius-small: var(--sp-2d5);
   --nz-radius-medium: var(--sp-4);
   --color-background: var(--nz-color-canvas);
@@ -36,6 +44,46 @@
   color: rgb(var(--nz-color-ink));
   background-color: rgb(var(--nz-color-canvas));
   font-family: "Manrope", var(--font-body-family);
+}
+
+.nailzify-section-heading {
+  display: grid;
+  max-width: 42rem;
+  gap: var(--sp-3);
+}
+
+.nailzify-section-heading__eyebrow {
+  color: rgb(var(--nz-color-accent-strong));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.nailzify-section-heading__title {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Instrument Serif", var(--font-heading-family);
+  font-size: var(--nz-section-title-size);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-transform: none;
+}
+
+.nailzify-section-heading__title em {
+  color: rgb(var(--nz-color-accent));
+  font-style: italic;
+}
+
+.nailzify-section-heading__intro {
+  max-width: 60ch;
+  color: rgb(var(--nz-color-muted));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-base);
+  line-height: 1.6;
 }
 
 .nailzify-product-redesign .page-width {
@@ -532,10 +580,202 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nailzify-product-redesign *,
-  .nailzify-product-redesign *::before,
-  .nailzify-product-redesign *::after {
+  :is(.nailzify-product-redesign, .nailzify-how, .nailzify-product-reviews, .nailzify-product-recommendations) *,
+  :is(.nailzify-product-redesign, .nailzify-how, .nailzify-product-reviews, .nailzify-product-recommendations) *::before,
+  :is(.nailzify-product-redesign, .nailzify-how, .nailzify-product-reviews, .nailzify-product-recommendations) *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+.nailzify-how {
+  padding-block: var(--sp-20);
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.nailzify-how__inner,
+.nailzify-product-reviews .page-width,
+.nailzify-product-recommendations .page-width {
+  width: 100%;
+  max-width: var(--nz-container-width);
+}
+
+.nailzify-how__heading {
+  margin-block-end: var(--sp-10);
+}
+
+.nailzify-how__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nailzify-how__card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(var(--nz-color-line));
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+.nailzify-how__card :is(.step-image, .step-video) {
+  overflow: hidden;
+  background-color: rgb(var(--nz-color-accent-soft));
+}
+
+.nailzify-how__card :is(.step-image img, .step-video video) {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nailzify-how .how-to-video-filter {
+  filter: brightness(0.5);
+}
+
+.nailzify-how__content {
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+}
+
+.nailzify-how__step {
+  width: fit-content;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--nz-radius-small);
+  color: rgb(var(--nz-color-accent-strong));
+  background-color: rgb(var(--nz-color-accent-soft));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.nailzify-how__title {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Instrument Serif", var(--font-heading-family);
+  font-size: var(--nz-card-title-size);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.nailzify-how__description {
+  color: rgb(var(--nz-color-muted));
+  font-family: "Manrope", var(--font-body-family);
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+
+.nailzify-product-reviews {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.nailzify-product-reviews__heading {
+  margin-block-end: var(--sp-10);
+}
+
+.nailzify-product-reviews #looxReviewsFrame {
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+.nailzify-product-recommendations .section {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+.nailzify-product-recommendations .title-wrapper {
+  color: rgb(var(--nz-color-ink));
+}
+
+.nailzify-product-recommendations .title-wrapper .heading {
+  font-family: "Instrument Serif", var(--font-heading-family);
+  font-size: var(--nz-section-title-size);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-transform: none;
+}
+
+.nailzify-product-recommendations .product-card__title,
+.nailzify-product-recommendations .product-card__content {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Manrope", var(--font-body-family);
+}
+
+.nailzify-product-recommendations .product-card__media {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+@media screen and (max-width: 1023px) {
+  .nailzify-how {
+    padding-block: var(--sp-16);
+  }
+
+  .nailzify-how__inner,
+  .nailzify-product-reviews .page-width,
+  .nailzify-product-recommendations .page-width {
+    padding-inline: var(--sp-5);
+  }
+
+  .nailzify-how__steps {
+    display: flex;
+    gap: var(--sp-3);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: var(--sp-5);
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: none;
+  }
+
+  .nailzify-how__steps::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nailzify-how__card {
+    flex: 0 0 62%;
+    scroll-snap-align: start;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .nailzify-how {
+    padding-block: var(--sp-12);
+  }
+
+  .nailzify-how__heading,
+  .nailzify-product-reviews__heading {
+    margin-block-end: var(--sp-8);
+  }
+
+  .nailzify-section-heading__title,
+  .nailzify-product-recommendations .title-wrapper .heading {
+    font-size: var(--nz-section-title-size-mobile);
+  }
+
+  .nailzify-how__card {
+    flex-basis: 84%;
+  }
+
+  .nailzify-how__content {
+    padding: var(--sp-4);
+  }
+
+  .nailzify-product-reviews {
+    --section-padding-top: var(--sp-12) !important;
+    --section-padding-bottom: var(--sp-12) !important;
   }
 }

@@ -1,3 +1,7 @@
+{%- if section.settings.nailzify_product_reviews -%}
+  {{ 'nailzify-product.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 <style>
   #shopify-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
@@ -8,8 +12,21 @@
 
 
 
-<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+<div class="section section--padding{% if section.settings.nailzify_product_reviews %} nailzify-product-reviews{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    {%- if section.settings.nailzify_product_reviews -%}
+      <header class="nailzify-section-heading nailzify-product-reviews__heading">
+        {%- if section.settings.review_eyebrow != blank -%}
+          <p class="nailzify-section-heading__eyebrow">{{ section.settings.review_eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.review_heading != blank -%}
+          <h2 class="nailzify-section-heading__title">{{ section.settings.review_heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.review_intro != blank -%}
+          <p class="nailzify-section-heading__intro">{{ section.settings.review_intro | escape }}</p>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
     {%- for block in section.blocks -%}
       {% render block %}
     {%- endfor -%}
@@ -68,6 +85,30 @@
     {
       "type": "header",
       "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "nailzify_product_reviews",
+      "label": "Use Nailzify product review styling",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "review_eyebrow",
+      "label": "Review eyebrow",
+      "default": "Customer love"
+    },
+    {
+      "type": "text",
+      "id": "review_heading",
+      "label": "Review heading",
+      "default": "Real nails. Real reviews."
+    },
+    {
+      "type": "text",
+      "id": "review_intro",
+      "label": "Review introduction",
+      "default": "See how Nailzify fits into real routines, from application to everyday wear."
     },
     {
       "type": "range",

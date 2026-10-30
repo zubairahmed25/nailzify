@@ -1,263 +1,77 @@
+{{ 'nailzify-product.css' | asset_url | stylesheet_tag }}
 
-<style>
-/* ===== Section Wrapper ===== */
-.how__section {
-  padding: 0 20px;
-  font-family:'Montserrat',sans-serif !important; 
-}
-#how-to-video-filter {
-  filter: brightness(0.5);
-}
-.main__fade_
-{
-  width:100%;
-  position:relative;
-}
-.fade-white-right,.fade-white-left
-{
-  display:none !important;
-}
-/* ===== Title Area ===== */
-.how__section .text-center {
-  margin-bottom: 30px;
-}
-.how__section .section-title {
-  font-size: 40px;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom:17px;
-} 
-.how__section .section-subtitle {
-  color: #666;
-  text-align: left;
-  font-size: 20px; 
-} 
-/* ===== Desktop Grid Layout ===== */
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 25px;
-  position: relative;
-  background: transparent !important;
-}
-.steps-grid::-webkit-scrollbar-thumb {
-  background: transparent !important; /* transparent thumb */
-}
-.steps-grid video
-{
-    height: auto; 
-    min-width: 100%;
-}
-@media screen (min-width: 769px) and (max-width: 992px)
-{
-  .step-card {
-    flex: 0 0 45%; 
-  }
-} 
-/* ===== Mobile Scroll Slider ===== */
-@media (max-width: 768px) {
-  .steps-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 15px;
-    padding-bottom: 10px;
-  }
-  .step-card {
-    flex: 0 0 80%;
-    scroll-snap-align: start;
-  }
-.how__section {
-  padding: 0 0; 
-}
-.steps-grid video
-{
-    height: auto; 
-    min-width: 100%;
-}
-
-
-
-
-}
-
-/* ===== Card Styling ===== */
-.step-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  border:solid 1px #0000001a;
-} 
-/* ===== Image Styling ===== */
-.step-image img {
-  width: 100%;
-  display: block;
-} 
-/* ===== Content Area ===== */
-.step-content {
-  padding: 15px;
-} 
-/* ===== Number Styling ===== */
-.step-number {
-  font-weight: 500;
-  color: #000;
-  margin-bottom: 11px;
-  font-size: 14px;
-  text-transform:
-} 
-/* ===== Title Styling ===== */
-.step-title {
-    font-weight: 500;
-    margin-bottom: 13px;
-    margin-top: 5px;
-    color: #666;
-    font-size: 11px;
-    text-transform: uppercase;
-} 
-/* ===== Description Styling ===== */
-.step-description {
-  color: #555;
-  font-size:14px;
-}
-</style>
-
-<!-- ================= HOW SECTION START ================= -->
-<section class="how__section">
-  <div class="page-width relative"> 
-    
-    <!-- ===== Title & Intro Text ===== -->
-    <div class="text-center">
-      <h2 class="section-title">
-        {{ section.settings.section_title | escape }}
-        <span style="color:#FF80AA;">{{ section.settings.section_title_colored | escape }}</span>
+<section
+  class="nailzify-how"
+  aria-labelledby="NailzifyHowTitle-{{ section.id }}"
+>
+  <div class="nailzify-how__inner page-width relative">
+    <header class="nailzify-section-heading nailzify-how__heading">
+      <p class="nailzify-section-heading__eyebrow">
+        {{ section.settings.eyebrow | default: 'Application guide' | escape }}
+      </p>
+      <h2 id="NailzifyHowTitle-{{ section.id }}" class="nailzify-section-heading__title">
+        <span>{{ section.settings.section_title | escape }}</span>
+        <em>{{ section.settings.section_title_colored | escape }}</em>
       </h2>
-      {% if section.settings.section_intro_lines != blank %}
-        <p class="section-subtitle">{{ section.settings.section_intro_lines }}</p>
-      {% endif %}
-    </div>
-    <!-- ===== End Title & Intro Text ===== -->
-    <div class="main__fade_">
-      
-    <div class="fade-white-left"></div>
-    <div class="fade-white-right"></div>
-    <!-- ===== Steps / How Blocks ===== -->
-    <div class="steps-grid"> 
-  {% for block in section.blocks %}
-    <div class="step-card">
-      
-      <!-- Block Image -->
-      {% if block.settings.block_image != blank %}
-        <div class="step-image">
-          <img src="{{ block.settings.block_image | img_url: 'master' }}" alt="{{ block.settings.block_sub_title | escape }}">
-        </div>
-      {% endif %}
+      {%- if section.settings.section_intro_lines != blank -%}
+        <p class="nailzify-section-heading__intro">{{ section.settings.section_intro_lines | escape }}</p>
+      {%- endif -%}
+    </header>
 
-      <!-- Block Video -->
-      {% if block.settings.video_cdn != blank %}
-        <div class="step-video">
-          <video id="how-to-video-filter" playsinline autoplay loop muted>
-            <source src="{{ block.settings.video_cdn }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      {% endif %}
+    <ol class="nailzify-how__steps" role="list">
+      {%- for block in section.blocks -%}
+        <li class="nailzify-how__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.block_image != blank -%}
+            <div class="step-image">
+              {{-
+                block.settings.block_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '360, 540, 720',
+                  sizes: '(min-width: 1024px) 25vw, 82vw',
+                  alt: block.settings.block_sub_title
+              -}}
+            </div>
+          {%- endif -%}
 
-      <!-- Block Content -->
-      <div class="step-content">
-        {% if block.settings.block_title != blank %}
-          <h3 class="step-title">{{ block.settings.block_title }}</h3>
-        {% endif %}
-        {% if block.settings.block_sub_title != blank %}
-          <p class="step-number">{{ block.settings.block_sub_title }}</p>
-        {% endif %} 
-        {% if block.settings.block_intro_line != blank %}
-          <p class="step-description">{{ block.settings.block_intro_line }}</p>
-        {% endif %}
-      </div>
-      <!-- End Block Content -->
+          {%- if block.settings.video_cdn != blank -%}
+            <div class="step-video">
+              <video class="how-to-video-filter" playsinline autoplay loop muted>
+                <source src="{{ block.settings.video_cdn }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          {%- endif -%}
 
-    </div>
-  {% endfor %}
-</div>
-
-    
-    </div>
-    <!-- ===== End Steps / How Blocks ===== -->
-
+          <div class="nailzify-how__content">
+            {%- if block.settings.block_title != blank -%}
+              <p class="nailzify-how__step">{{ block.settings.block_title | escape }}</p>
+            {%- endif -%}
+            {%- if block.settings.block_sub_title != blank -%}
+              <h3 class="nailzify-how__title">{{ block.settings.block_sub_title | escape }}</h3>
+            {%- endif -%}
+            {%- if block.settings.block_intro_line != blank -%}
+              <p class="nailzify-how__description">{{ block.settings.block_intro_line | escape }}</p>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ol>
   </div>
 </section>
-<!-- ================= HOW SECTION END ================= -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const grid = document.querySelector(".steps-grid");
-  const fadeLeft = document.querySelector(".fade-white-left");
-  const fadeRight = document.querySelector(".fade-white-right");
-  if (!grid || !fadeLeft || !fadeRight) return;
 
-  // helper to set inline !important
-  const setImp = (el, prop, val) => el.style.setProperty(prop, val, "important");
-
-  // base styles (override theme)
-  [fadeLeft, fadeRight].forEach(f => {
-    setImp(f, "position", "absolute");
-    setImp(f, "top", "0");
-    setImp(f, "width", "40px");
-    setImp(f, "height", "100%");
-    setImp(f, "pointer-events", "none");
-    setImp(f, "transition", "opacity 0.3s ease-in-out");
-    setImp(f, "display", "none");
-    setImp(f, "z-index", "5");
-  });
-  setImp(fadeLeft, "left", "0");
-  setImp(fadeLeft, "background", "linear-gradient(to left, rgba(255,255,255,0), #FFEFEF)");
-  setImp(fadeRight, "right", "0");
-  setImp(fadeRight, "background", "linear-gradient(to right, rgba(255,255,255,0), #FFEFEF)");
-
-  function refreshFades() {
-    const max = Math.max(0, grid.scrollWidth - grid.clientWidth);
-    if (max <= 0) { // nothing to scroll
-      setImp(fadeLeft, "display", "none");
-      setImp(fadeRight, "display", "none");
-      return;
-    }
-    // show/hide purely by position:
-    // - if not at far left -> show left
-    // - if not at far right -> show right
-    if (grid.scrollLeft > 0) {
-      setImp(fadeLeft, "display", "block");
-    } else {
-      setImp(fadeLeft, "display", "none");
-    }
-    if (grid.scrollLeft < max) {
-      setImp(fadeRight, "display", "block");
-    } else {
-      setImp(fadeRight, "display", "none");
-    }
-  }
-
-  // default (original request): show right if scrollable
-  refreshFades();
-  if (getComputedStyle(fadeRight).display === "none") {
-    // if we loaded scrolled somewhere in the middle, both will show after first refresh
-    // nothing else to do
-  }
-
-  // show both during scroll (except at edges)
-  grid.addEventListener("scroll", refreshFades, { passive: true });
-
-  // keep correct on resize/content changes
-  window.addEventListener("resize", refreshFades);
-});
-
-
-</script>
- 
 {% schema %}
 {
-  "name": "How Section", 
-  "class": "how__section", 
+  "name": "How Section",
+  "class": "nailzify-how-section-wrapper",
   "settings": [
+    {
+      "type": "text",
+      "label": "Eyebrow",
+      "id": "eyebrow",
+      "default": "Application guide"
+    },
     {
       "type": "text",
       "label": "Section Title",
@@ -312,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       ]
     }
-  ], 
+  ],
   "presets": [
     {
       "name": "How Section"
@@ -320,4 +134,3 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 }
 {% endschema %}
- 

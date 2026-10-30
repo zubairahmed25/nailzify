@@ -353,6 +353,7 @@
       ],
       "name": "How Section",
       "settings": {
+        "eyebrow": "Application guide",
         "section_title": "How to",
         "section_title_colored": "PREP, GLUE, PRESS & SLAY!",
         "section_intro_lines": ""
@@ -377,16 +378,20 @@
         "loox_reviews_loox_dynamic_section_C43aGX"
       ],
       "settings": {
-        "color_text": "",
-        "color_background": "",
+        "color_text": "#342a28",
+        "color_background": "#fbf7f2",
         "gradient_background": "",
-        "color_highlight": "",
+        "color_highlight": "#a64862",
         "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
+        "color_button_text": "#ffffff",
+        "color_button_background": "#a64862",
         "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "nailzify_product_reviews": true,
+        "review_eyebrow": "Customer love",
+        "review_heading": "Real nails. Real reviews.",
+        "review_intro": "See how Nailzify fits into real routines, from application to everyday wear.",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "divider": false,
         "full_width": false,
         "rounded": false
