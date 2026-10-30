@@ -258,7 +258,11 @@
                 if product.selected_or_first_available_variant.available == false or quantity_rule_soldout
                   echo 'products.product.sold_out' | t
                 elsif product.template_suffix != 'pre-order'
-                  echo 'products.product.add_to_cart' | t
+                  if block.settings.button_label != blank
+                    echo block.settings.button_label | escape
+                  else
+                    echo 'products.product.add_to_cart' | t
+                  endif
                 else
                   echo 'products.product.pre_order' | t
                 endif

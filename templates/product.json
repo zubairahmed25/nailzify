@@ -39,7 +39,7 @@
           "settings": {
             "style": "with-border",
             "icon": "none",
-            "heading": "Description",
+            "heading": "Product details",
             "content": "{{ product.description }}",
             "page": "",
             "liquid": "",
@@ -51,7 +51,7 @@
           "settings": {
             "style": "with-border",
             "icon": "none",
-            "heading": "Kit Includes",
+            "heading": "Kit contents",
             "content": "<p>{{ product.metafields.custom.kit_includes | metafield_tag }}</p>",
             "page": "",
             "liquid": "",
@@ -71,6 +71,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "button_label": "Add to bag",
             "show_quantity_selector": true,
             "show_price": true,
             "show_dynamic_checkout": false,
@@ -80,37 +81,24 @@
             "show_back_in_stock_phone": true
           }
         },
-        "liquid_XfN4dW": {
-          "type": "liquid",
-          "settings": {
-            "liquid": ""
-          }
-        },
         "text-1": {
           "type": "text",
           "settings": {
-            "icon": "truck",
+            "icon": "none",
             "iwidth": "custom",
             "icon_width": 20,
             "text": "In stock! Ships within 2-4 business days.",
             "text_size": "text-sm"
           }
         },
-        "marquee_block_VejRMh": {
-          "type": "marquee_block",
+        "nailzify_highlights_VejRMh": {
+          "type": "nailzify_highlights",
           "settings": {
-            "hide_on_mobile": true,
-            "pause_on_hover": true,
-            "image_width": 100,
-            "image_height": 72,
-            "image_gap": 35,
-            "scroll_speed": 26,
-            "image": "shopify://shop_images/Asset_10_2f4371c8-effb-4908-b2b1-0a68819ad0a1.svg",
-            "image2": "shopify://shop_images/Asset_9_12f96fcf-641c-4245-b0f3-3a9dd58341d1.svg",
-            "image3": "shopify://shop_images/Asset_12_1b6ff89b-1ba1-4628-adf1-a1b6f63fd726.svg",
-            "image4": "shopify://shop_images/Asset_11_5d28365f-6102-4cc9-bb4c-de8819b40628.svg",
-            "image5": "shopify://shop_images/Asset_8_01787523-9d3b-490e-887f-ce7cccd59abf.svg",
-            "image6": "shopify://shop_images/Customer_Services_f80166fb-c2bb-4593-98fc-fa671ea442ce.svg"
+            "heading": "Why Nailzify",
+            "salon_quality": "Salon Quality",
+            "designed_in_usa": "Designed in USA",
+            "quick_application": "5-Minute Application",
+            "woman_owned": "Woman Owned"
           }
         },
         "sticky_buy_button": {
@@ -120,40 +108,40 @@
       },
       "block_order": [
         "icon_list_ECBWRA",
-        "custom_badge_kiVgWd",
         "title",
-        "collapsible_tab_kfGJYR",
-        "collapsible_tab_YLy6mF",
+        "custom_badge_kiVgWd",
         "variant_picker_f76Jk6",
         "buy_buttons",
-        "liquid_XfN4dW",
         "text-1",
-        "marquee_block_VejRMh",
+        "nailzify_highlights_VejRMh",
+        "collapsible_tab_kfGJYR",
+        "collapsible_tab_YLy6mF",
         "sticky_buy_button"
       ],
       "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": 50,
-        "gallery_layout": "columns",
-        "thumbnail_position": "below",
-        "image_ratio": "adapt_first",
+        "media_size": 53,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "square",
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_autoplay": true,
         "enable_video_looping": true,
-        "mobile_layout": "partial",
-        "image_ratio_mobile": "adapt_first",
-        "mobile_thumbnail": false,
-        "padding_top": 12,
-        "padding_bottom": 32,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "square",
+        "mobile_thumbnail": true,
+        "padding_top": 40,
+        "padding_bottom": 64,
         "divider": false,
-        "full_width": true,
-        "rounded": true
+        "full_width": false,
+        "rounded": false
       }
     },
     "logo_list_qG4TGf": {
       "type": "logo-list",
+      "disabled": true,
       "blocks": {
         "logo_CeVe6r": {
           "type": "logo",
