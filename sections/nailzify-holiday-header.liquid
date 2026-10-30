@@ -25,7 +25,6 @@
     --holiday-button-text: {{ section.settings.color_button_text.rgb }};
     --holiday-card-background: {{ section.settings.color_card_background.rgb }};
     --holiday-section-background: {{ section.settings.color_section_background.rgb }};
-    --holiday-container-width: {{ section.settings.container_width }}px;
     --holiday-min-height: {{ section.settings.min_height }}px;
     --holiday-heading-width: {{ section.settings.heading_width }}px;
     --holiday-heading-size: {{ section.settings.heading_size }}px;
@@ -41,7 +40,7 @@
   class="nailzify-holiday-header-section"
   {% if heading_text != blank %}aria-labelledby="HolidayHeading-{{ section.id }}"{% endif %}
 >
-  <div class="nailzify-holiday-header__container">
+  <div class="nailzify-holiday-header__container page-width">
     <div
       class="nailzify-holiday-header nailzify-holiday-header--content-{{ section.settings.content_position }} nailzify-holiday-header--desktop-{{ section.settings.text_alignment }} nailzify-holiday-header--mobile-{{ section.settings.text_alignment_mobile }}{% if section.settings.rounded %} nailzify-holiday-header--rounded{% endif %}{% if card_count > 3 %} nailzify-holiday-header--many{% endif %}"
       style="--holiday-card-count: {{ card_count | at_least: 1 }};"
@@ -307,23 +306,13 @@
     },
     {
       "type": "range",
-      "id": "container_width",
-      "label": "Maximum content width",
-      "min": 1000,
-      "max": 1600,
-      "step": 20,
-      "unit": "px",
-      "default": 1400
-    },
-    {
-      "type": "range",
       "id": "min_height",
       "label": "Desktop minimum height",
-      "min": 480,
-      "max": 760,
-      "step": 20,
+      "min": 350,
+      "max": 650,
+      "step": 10,
       "unit": "px",
-      "default": 580
+      "default": 430
     },
     {
       "type": "range",
@@ -359,11 +348,11 @@
       "type": "range",
       "id": "card_height",
       "label": "Desktop image height",
-      "min": 360,
-      "max": 620,
-      "step": 20,
+      "min": 280,
+      "max": 500,
+      "step": 10,
       "unit": "px",
-      "default": 500
+      "default": 350
     },
     {
       "type": "range",

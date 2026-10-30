@@ -4,12 +4,6 @@
   background-color: rgb(var(--holiday-section-background));
 }
 
-.nailzify-holiday-header__container {
-  width: min(100%, var(--holiday-container-width));
-  margin-inline: auto;
-  padding-inline: var(--sp-5);
-}
-
 .nailzify-holiday-header {
   position: relative;
   isolation: isolate;
@@ -253,6 +247,12 @@
   border: 1px dashed rgb(var(--holiday-accent));
   border-radius: var(--nz-radius-medium, var(--sp-4));
   color: rgb(var(--holiday-supporting-text));
+}
+
+@media screen and (min-width: 1024px) {
+  .nailzify-holiday-header-section {
+    padding-block-start: calc(var(--holiday-padding-top) + var(--sp-6));
+  }
 }
 
 @media screen and (max-width: 1023px) {
