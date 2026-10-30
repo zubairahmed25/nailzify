@@ -12,24 +12,10 @@
     "slideshow_custom_6wweLJ": {
       "type": "nailzify-holiday-header",
       "blocks": {
-        "image_cranberry": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/rdvbra7ewvmifusqm0we.webp",
-            "image_mobile": "",
-            "alt_text": "Cranberry chrome press on nails",
-            "image_position": "50% 50%",
-            "image_fit": "cover",
-            "caption": "",
-            "link": "shopify://products/cranberry-kiss",
-            "link_label": "Shop Cranberry Kiss nails"
-          }
-        },
         "image_chrome": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPTImageAug11_2026_04_22_33AM.png",
-            "image_mobile": "",
+            "image": "shopify://shop_images/polk.webp",
             "alt_text": "Iridescent lilac chrome press on nails",
             "image_position": "50% 50%",
             "image_fit": "cover",
@@ -38,11 +24,21 @@
             "link_label": "Shop Chrome Princess nails"
           }
         },
+        "image_cranberry": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/rdvbra7ewvmifusqm0we.webp",
+            "alt_text": "Cranberry chrome press on nails",
+            "image_position": "50% 50%",
+            "image_fit": "cover",
+            "caption": "",
+            "link": "shopify://products/cranberry-kiss",
+            "link_label": "Shop Cranberry Kiss nails"
+          }
+        },
         "image_polka": {
           "type": "image",
           "settings": {
-            "image": "",
-            "image_mobile": "",
             "alt_text": "Mauve and cream Polka Dot press on nails",
             "image_position": "50% 65%",
             "image_fit": "cover",
@@ -53,8 +49,8 @@
         }
       },
       "block_order": [
-        "image_cranberry",
         "image_chrome",
+        "image_cranberry",
         "image_polka"
       ],
       "name": "Holiday header",
@@ -62,7 +58,6 @@
         "heading": "A Little\nHoliday magic",
         "heading_tag": "h1",
         "use_script_artwork": true,
-        "heading_artwork": "",
         "supporting_text": "Your finishing touch for every celebration.",
         "button_label": "SHOP HOLIDAY NAILS",
         "button_link": "shopify://collections/all-press-on-nails",
