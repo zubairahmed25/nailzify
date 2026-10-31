@@ -323,7 +323,7 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .nailzify-holiday-header__container {
     padding-inline: 0;
   }
