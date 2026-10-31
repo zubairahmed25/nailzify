@@ -621,7 +621,7 @@
     position: absolute;
     z-index: 5;
     inset-inline-start: 50%;
-    inset-block-end: var(--sp-5);
+    inset-block-end: var(--sp-20);
     display: flex;
     align-items: center;
     justify-content: center;
