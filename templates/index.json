@@ -16,6 +16,9 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ChatGPTImageAug11_2026_04_22_33AM.png",
+            "show_in_mobile_slider": true,
+            "mobile_slider_fallback": "chrome",
+            "mobile_slider_position": "50% 50%",
             "alt_text": "Iridescent lilac chrome press on nails",
             "image_position": "50% 50%",
             "image_position_mobile": "50% 50%",
@@ -30,6 +33,9 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/rdvbra7ewvmifusqm0we.webp",
+            "show_in_mobile_slider": false,
+            "mobile_slider_fallback": "none",
+            "mobile_slider_position": "50% 50%",
             "alt_text": "Cranberry chrome press on nails",
             "image_position": "50% 50%",
             "image_position_mobile": "50% 50%",
@@ -43,6 +49,9 @@
         "image_polka": {
           "type": "image",
           "settings": {
+            "show_in_mobile_slider": true,
+            "mobile_slider_fallback": "polka",
+            "mobile_slider_position": "50% 50%",
             "alt_text": "Mauve and cream Polka Dot press on nails",
             "image_position": "50% 65%",
             "image_position_mobile": "50% 50%",
@@ -75,6 +84,9 @@
         "text_alignment": "left",
         "text_alignment_mobile": "center",
         "mobile_hero_card": "3",
+        "enable_mobile_hand_slider": true,
+        "mobile_slider_autoplay": true,
+        "mobile_slider_delay": 5,
         "mobile_poster_height": 700,
         "min_height": 430,
         "heading_width": 520,
@@ -97,6 +109,7 @@
         "color_mobile_button_background": "#fffaf7",
         "color_mobile_button_text": "#342a28",
         "color_mobile_overlay": "#342a28",
+        "color_mobile_slider_background": "#aa9e9a",
         "mobile_overlay_opacity": 35,
         "padding_top": 0,
         "padding_bottom": 24

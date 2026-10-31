@@ -36,6 +36,8 @@ The supporting holiday line uses Cyrene as raster artwork. Its commercial licens
 
 Holiday copy reveals in a calm sequence when the page loads. The script heading fades in first with a soft blur and slight lift, followed by the finishing line and then the button. Reduced motion preferences remove the animation. Mobile gives the script artwork the visual equivalent of a four pixel type increase.
 
+The mobile holiday poster uses a fixed background and fixed copy layer. Transparent hand artwork changes independently with a soft sideways slide and fade. Polka Dot is the opening design, followed by Chrome Princess. The product label changes with the visible hands, while the headline, supporting line, and main button remain still. Touch swiping and quiet line indicators provide manual control. Motion stops after manual interaction and is removed when reduced motion is preferred.
+
 ## It Girl Duo
 
 The promotion uses a full width color band with no visible borders. Its offer copy and product cards remain aligned to the shared centered homepage content width.
