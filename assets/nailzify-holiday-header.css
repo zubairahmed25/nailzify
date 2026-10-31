@@ -517,8 +517,8 @@
     display: none;
   }
 
-  .nailzify-holiday-header__card-wrap--mobile-hero,
-  .nailzify-holiday-header--many .nailzify-holiday-header__card-wrap--mobile-hero {
+  .nailzify-holiday-header__card-wrap.nailzify-holiday-header__card-wrap--mobile-hero,
+  .nailzify-holiday-header--many .nailzify-holiday-header__card-wrap.nailzify-holiday-header__card-wrap--mobile-hero {
     display: block;
     height: var(--holiday-mobile-poster-height);
     transform: none;
