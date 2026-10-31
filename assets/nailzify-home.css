@@ -254,6 +254,13 @@
 
 }
 
+@media screen and (max-width: 767px) {
+  .template-index #MainContent .nailzify-holiday-header__container.page-width {
+    max-width: none;
+    padding-inline: 0;
+  }
+}
+
 @media screen and (max-width: 639px) {
   .template-index #MainContent :is(.title-wrapper .heading, .nailzify-section-heading__title) {
     font-size: var(--nz-section-title-size-mobile);
