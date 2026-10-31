@@ -517,6 +517,7 @@
     display: none;
   }
 
+  /* Keep the selected poster visible above the legacy card hiding rules. */
   .nailzify-holiday-header__card-wrap.nailzify-holiday-header__card-wrap--mobile-hero,
   .nailzify-holiday-header--many .nailzify-holiday-header__card-wrap.nailzify-holiday-header__card-wrap--mobile-hero {
     display: block;
