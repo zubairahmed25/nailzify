@@ -10,7 +10,19 @@ Nailzify uses warm ivory surfaces, soft pink details, cranberry accents, narrow 
 
 Keep storefront content inside a centered content area on desktop. Use calm proportions and modest text sizes. Use rounded photography with clear product focus. Mobile layouts must preserve the same hierarchy and keep calls to action visible without crowding the product images.
 
-The homepage tokens and shared styling live in `assets/nailzify-home.css`. Feature specific tokens live beside their section styles.
+The shared storefront tokens and component styling live in `assets/nailzify-site.css`. The homepage and product page styles extend that foundation in `assets/nailzify-home.css` and `assets/nailzify-product.css`. Feature specific tokens live beside their section styles.
+
+## Storefront system
+
+All standard storefront pages use the product page palette: warm ivory `#fbf7f2` for the canvas, off white `#fffdfa` for cards and fields, charcoal brown `#342a28` for primary text, muted brown `#695a56` for supporting copy, cranberry `#a64862` for actions, deep cranberry `#802d44` for emphasis, soft pink `#f7e5ea` for quiet highlights, and warm gray `#dccfc9` for lines.
+
+Desktop content stays centered inside a 1240 pixel maximum width. Full bleed imagery and color bands may extend edge to edge, but their text and controls return to the shared content width.
+
+Barlow Semi Condensed is the storefront type family. Display titles use the 200 weight with a tight but readable line height. Product names, navigation, section labels, and primary actions use the 600 weight. Standard page titles stay below 60 pixels on desktop and 38 pixels on mobile.
+
+Buttons use cranberry with white text and a modest corner radius. Inputs use off white surfaces, warm gray outlines, and a cranberry focus state. Product cards, article media, FAQs, contact panels, and other functional surfaces use quiet radii, fine warm gray lines, and no heavy shadows.
+
+The header uses an off white surface with centered content. The announcement bar uses cranberry. The footer uses charcoal brown with off white text. Drawers, cookie controls, the mobile dock, account pages, policy pages, and checkout inherit the same palette.
 
 ## Holiday header
 

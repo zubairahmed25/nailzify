@@ -1,0 +1,280 @@
+/* Shared Nailzify storefront system. Product and homepage styles extend these foundations. */
+
+:root {
+  --nz-color-canvas: 251 247 242;
+  --nz-color-surface: 255 253 250;
+  --nz-color-ink: 52 42 40;
+  --nz-color-muted: 105 90 86;
+  --nz-color-accent: 166 72 98;
+  --nz-color-accent-strong: 128 45 68;
+  --nz-color-accent-soft: 247 229 234;
+  --nz-color-line: 220 207 201;
+  --nz-color-band: 245 237 228;
+  --nz-container-width: 77.5rem;
+  --nz-radius-small: var(--sp-2d5);
+  --nz-radius-medium: var(--sp-4);
+
+  --page-width: var(--nz-container-width);
+  --page-container: min(
+    calc(100vw - var(--scrollbar-width, 0px) - var(--page-padding) * 2),
+    var(--nz-container-width)
+  );
+  --title-md: clamp(2rem, 3.5vw, 2.9rem);
+  --title-lg: clamp(2.15rem, 4vw, 3.35rem);
+  --title-xl: clamp(2.35rem, 4.6vw, 3.75rem);
+  --font-heading-line-height: 1.04;
+  --font-body-line-height: 1.55;
+}
+
+html,
+body,
+.page-container,
+#MainContent {
+  background-color: rgb(var(--nz-color-canvas));
+}
+
+body {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+#MainContent {
+  min-height: 55vh;
+  color: rgb(var(--nz-color-ink));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+.page-width:not(.page-width--full) {
+  width: 100%;
+  max-width: var(--nz-container-width);
+}
+
+.heading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Barlow Semi Condensed", var(--font-heading-family);
+  letter-spacing: 0;
+}
+
+#MainContent .title-wrapper .heading,
+#MainContent .banner__title,
+#MainContent .shopify-policy__title h1 {
+  line-height: 1.04;
+}
+
+#MainContent .title-wrapper .heading,
+#MainContent .shopify-policy__title h1 {
+  font-weight: 200;
+}
+
+#MainContent .title-wrapper .description,
+#MainContent .collection__description {
+  color: rgb(var(--color-foreground) / 0.7);
+}
+
+.button,
+.shopify-challenge__button,
+button.shopify-payment-button__button--unbranded {
+  min-height: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+#MainContent :is(.input, .select, .textarea) {
+  color: rgb(var(--nz-color-ink));
+  border-color: rgb(var(--nz-color-line));
+  background-color: rgb(var(--nz-color-surface));
+}
+
+#MainContent :is(.input, .select, .textarea):focus {
+  border-color: rgb(var(--nz-color-accent));
+  background-color: rgb(var(--nz-color-surface));
+  box-shadow: 0 0 0 3px rgb(var(--nz-color-accent) / 0.12);
+}
+
+#MainContent :is(.input, .select, .textarea)::placeholder {
+  color: rgb(var(--nz-color-muted) / 0.72);
+}
+
+#MainContent .product-card {
+  overflow: hidden;
+  color: rgb(var(--nz-color-ink));
+  border: 1px solid rgb(var(--nz-color-line) / 0.75);
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+  box-shadow: none;
+}
+
+#MainContent .product-card__media {
+  overflow: hidden;
+  background-color: rgb(var(--nz-color-surface));
+}
+
+#MainContent .product-card__title {
+  color: rgb(var(--nz-color-ink));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-weight: 600;
+}
+
+#MainContent .product-card :is(.price, .price__regular, .price__sale) {
+  color: rgb(var(--nz-color-accent));
+}
+
+#MainContent .product-card__top,
+#MainContent .product-card .caption {
+  color: rgb(var(--nz-color-muted));
+}
+
+#MainContent .product-card__rating {
+  color: rgb(var(--nz-color-ink));
+  border: 1px solid rgb(var(--nz-color-line) / 0.7);
+  background-color: rgb(var(--nz-color-surface) / 0.9);
+}
+
+#MainContent .badge:not(.badge--custom) {
+  border-radius: var(--nz-radius-small);
+}
+
+#MainContent .pagination .page.current {
+  color: #fff;
+  background-color: rgb(var(--nz-color-accent-strong));
+}
+
+#MainContent .media-card--standard .media-card__link {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+#MainContent .media-card--standard .media-card__text .heading {
+  color: rgb(var(--nz-color-ink));
+  font-weight: 600;
+}
+
+#MainContent .media-card--standard .media-card__text p,
+#MainContent .media-card--standard .media-card__text .count {
+  color: rgb(var(--nz-color-muted));
+}
+
+.template-blog #MainContent .article-card__media,
+.template-article #MainContent .article-card__media {
+  overflow: hidden;
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-accent-soft));
+}
+
+.template-blog #MainContent .article-card__title,
+.template-article #MainContent .article-card__title {
+  color: rgb(var(--nz-color-ink));
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.template-blog #MainContent .article-card__top,
+.template-article #MainContent .article-card__top {
+  color: rgb(var(--nz-color-muted));
+}
+
+.template-page #MainContent .contact:not(.with-map) .contact__sidebar,
+#MainContent .faqs.with-border .faq,
+#MainContent .comments-section :is(.new-comment, .comment-card) {
+  border: 1px solid rgb(var(--nz-color-line));
+  border-radius: var(--nz-radius-medium);
+  background-color: rgb(var(--nz-color-surface));
+}
+
+.template-page #MainContent .contact:not(.with-map) .contact__sidebar {
+  padding: clamp(var(--sp-6), 3vw, var(--sp-10));
+}
+
+#MainContent .faqs.with-border .faq {
+  box-shadow: none;
+}
+
+#MainContent .accordions,
+#MainContent .accordion + .accordion,
+#MainContent tbody tr,
+#MainContent tfoot tr:first-child {
+  border-color: rgb(var(--nz-color-line));
+}
+
+#MainContent .shopify-policy__container {
+  max-width: 70rem;
+}
+
+#MainContent .shopify-policy__title h1 {
+  font-size: var(--title-lg);
+}
+
+.header-section:not(.header-transparent) header.header,
+.header-section.header-scrolled header.header {
+  border-block-end: 1px solid rgb(var(--nz-color-line) / 0.75);
+  background-color: rgb(var(--nz-color-surface));
+  box-shadow: none;
+}
+
+.header :is(a, button, summary),
+.header__menu {
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+.footer-group .footer__heading,
+.footer-group .footer__newsletter .heading {
+  font-weight: 600;
+}
+
+.footer-group :is(a, button, summary) {
+  text-underline-offset: 0.2em;
+}
+
+.footer-group .shopify-section + .shopify-section,
+.footer-group .section + .section {
+  border-block-start: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.footer-group .newsletter-form .field .input {
+  border: 1px solid rgb(255 255 255 / 0.28);
+  background-color: rgb(255 255 255 / 0.08);
+}
+
+.drawer,
+.modal,
+.mobile-dock {
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+body :is(a, button, summary, input, select, textarea):focus-visible {
+  outline-color: rgb(var(--nz-color-accent-strong));
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --title-md: 2rem;
+    --title-lg: 2.15rem;
+    --title-xl: 2.35rem;
+  }
+
+  #MainContent .title-wrapper-lg {
+    margin-block-end: var(--sp-10);
+  }
+
+  #MainContent .product-card__content {
+    --card-content-padding: var(--sp-4);
+  }
+
+  .template-page #MainContent .contact:not(.with-map) .contact__sidebar {
+    padding: var(--sp-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #MainContent *,
+  #MainContent *::before,
+  #MainContent *::after {
+    scroll-behavior: auto !important;
+  }
+}
