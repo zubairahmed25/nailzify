@@ -40,11 +40,11 @@
 
 .template-index #MainContent .page-width:not(.page-width--full) {
   width: 100%;
-  max-width: var(--nz-container-width);
+  max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
 .template-index #MainContent .nailzify-holiday-header__container.page-width {
-  max-width: var(--nz-holiday-content-width);
+  max-width: calc(var(--nz-holiday-content-width) + var(--page-padding) * 2);
 }
 
 .template-index #MainContent :is(.title-wrapper .heading, .nailzify-section-heading__title) {
@@ -180,7 +180,7 @@
 }
 
 .template-index .nailzify-home-reviews .page-width {
-  max-width: var(--nz-container-width);
+  max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
 .template-index .nailzify-home-reviews .nailzify-product-reviews__heading {
