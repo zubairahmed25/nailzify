@@ -606,7 +606,7 @@
     object-fit: var(--holiday-hand-fit, cover);
     object-position: var(--holiday-hand-position);
     pointer-events: none;
-    transform: scale(var(--holiday-hand-scale, 1));
+    transform: translateY(var(--holiday-hand-offset-y, 0)) scale(var(--holiday-hand-scale, 1));
     transform-origin: center bottom;
     user-select: none;
   }

@@ -209,7 +209,7 @@
                     data-slide-label="{{ mobile_hand_alt | escape }}"
                     aria-hidden="{% if mobile_slide_active %}false{% else %}true{% endif %}"
                     {% unless mobile_slide_active %}tabindex="-1"{% endunless %}
-                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }};"
+                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }}; --holiday-hand-offset-y: {{ block.settings.mobile_slider_offset_y | default: 0 }}px;"
                   >
                     {%- if mobile_hand_image != blank -%}
                       {{- mobile_hand_image
@@ -825,6 +825,17 @@
             { "value": "contain", "label": "Show full image" }
           ],
           "default": "cover"
+        },
+        {
+          "type": "range",
+          "id": "mobile_slider_offset_y",
+          "label": "Mobile hand vertical position",
+          "info": "Use a negative value to move the hand image higher.",
+          "min": -200,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "default": 0
         },
         {
           "type": "range",
