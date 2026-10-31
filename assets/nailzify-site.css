@@ -100,6 +100,10 @@ button.shopify-payment-button__button--unbranded {
   color: rgb(var(--nz-color-muted) / 0.72);
 }
 
+#MainContent :is(.input, .select, .textarea).is-floating::placeholder {
+  color: transparent;
+}
+
 #MainContent .product-card {
   overflow: hidden;
   color: rgb(var(--nz-color-ink));
