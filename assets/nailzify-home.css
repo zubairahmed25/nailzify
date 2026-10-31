@@ -255,9 +255,17 @@
 }
 
 @media screen and (max-width: 767px) {
+  .template-index #MainContent .nailzify-holiday-header-section {
+    padding-block: 0;
+  }
+
   .template-index #MainContent .nailzify-holiday-header__container.page-width {
     max-width: none;
     padding-inline: 0;
+  }
+
+  .template-index #MainContent .nailzify-holiday-header {
+    padding-block: 0;
   }
 }
 
