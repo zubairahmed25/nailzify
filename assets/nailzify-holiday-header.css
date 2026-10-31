@@ -603,9 +603,11 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: var(--holiday-hand-fit, cover);
     object-position: var(--holiday-hand-position);
     pointer-events: none;
+    transform: scale(var(--holiday-hand-scale, 1));
+    transform-origin: center bottom;
     user-select: none;
   }
 

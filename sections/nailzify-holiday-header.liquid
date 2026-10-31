@@ -209,7 +209,7 @@
                     data-slide-label="{{ mobile_hand_alt | escape }}"
                     aria-hidden="{% if mobile_slide_active %}false{% else %}true{% endif %}"
                     {% unless mobile_slide_active %}tabindex="-1"{% endunless %}
-                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }};"
+                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }};"
                   >
                     {%- if mobile_hand_image != blank -%}
                       {{- mobile_hand_image
@@ -810,10 +810,31 @@
             { "value": "50% 50%", "label": "Center" },
             { "value": "50% 40%", "label": "Slightly higher" },
             { "value": "50% 60%", "label": "Slightly lower" },
+            { "value": "50% 100%", "label": "Bottom" },
             { "value": "42% 50%", "label": "Slightly left" },
             { "value": "58% 50%", "label": "Slightly right" }
           ],
           "default": "50% 50%"
+        },
+        {
+          "type": "select",
+          "id": "mobile_slider_fit",
+          "label": "Mobile hand image fit",
+          "options": [
+            { "value": "cover", "label": "Fill poster" },
+            { "value": "contain", "label": "Show full image" }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "range",
+          "id": "mobile_slider_scale",
+          "label": "Mobile hand scale",
+          "min": 70,
+          "max": 120,
+          "step": 5,
+          "unit": "%",
+          "default": 100
         },
         {
           "type": "text",
