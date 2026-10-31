@@ -2,6 +2,12 @@
 
 {%- liquid
   assign card_count = section.blocks.size
+  assign mobile_hero_index = section.settings.mobile_hero_card | plus: 0
+
+  if mobile_hero_index < 1 or mobile_hero_index > card_count
+    assign mobile_hero_index = 1
+  endif
+
   assign heading_tag = section.settings.heading_tag
   assign heading_text = section.settings.heading | strip
   assign cyrene_supporting_text = 'Your finishing touch for every celebration.'
@@ -37,6 +43,12 @@
     --holiday-heading-size-mobile: {{ section.settings.heading_size_mobile }}px;
     --holiday-card-height: {{ section.settings.card_height }}px;
     --holiday-card-height-mobile: {{ section.settings.card_height_mobile }}px;
+    --holiday-mobile-poster-height: {{ section.settings.mobile_poster_height }}px;
+    --holiday-mobile-text: {{ section.settings.color_mobile_text.rgb }};
+    --holiday-mobile-button-background: {{ section.settings.color_mobile_button_background.rgb }};
+    --holiday-mobile-button-text: {{ section.settings.color_mobile_button_text.rgb }};
+    --holiday-mobile-overlay: {{ section.settings.color_mobile_overlay.rgb }};
+    --holiday-mobile-overlay-opacity: {{ section.settings.mobile_overlay_opacity | divided_by: 100.0 }};
     --holiday-padding-top: {{ section.settings.padding_top }}px;
     --holiday-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
@@ -63,6 +75,10 @@
       {%- endif -%}
 
       <div class="nailzify-holiday-header__content">
+        {%- if section.settings.mobile_eyebrow != blank -%}
+          <p class="nailzify-holiday-header__mobile-eyebrow">{{ section.settings.mobile_eyebrow | escape }}</p>
+        {%- endif -%}
+
         {%- if heading_text != blank -%}
           {%- if section.settings.use_script_artwork -%}
             <{{ heading_tag }} class="sr-only" id="HolidayHeading-{{ section.id }}">{{ heading_text | escape }}</{{ heading_tag }}>
@@ -117,7 +133,9 @@
               assign card_image = block.settings.image
               assign mobile_image = block.settings.image_mobile | default: card_image
               assign card_alt = block.settings.alt_text | default: card_image.alt
+              assign mobile_image_position = block.settings.image_position_mobile | default: block.settings.image_position
               assign fallback_asset = blank
+              assign fallback_mobile_asset = blank
               assign fallback_width = 1200
               assign fallback_height = 1500
 
@@ -132,6 +150,7 @@
                   assign fallback_height = 1403
                 when 3
                   assign fallback_asset = 'nailzify-holiday-polka-macro.webp'
+                  assign fallback_mobile_asset = 'nailzify-holiday-polka.jpg'
                   assign fallback_width = 1254
                   assign fallback_height = 1254
               endcase
@@ -144,9 +163,9 @@
             -%}
 
             <div
-              class="nailzify-holiday-header__card-wrap"
+              class="nailzify-holiday-header__card-wrap{% if forloop.index == mobile_hero_index %} nailzify-holiday-header__card-wrap--mobile-hero{% endif %}"
               role="listitem"
-              style="--holiday-image-position: {{ block.settings.image_position }};"
+              style="--holiday-image-position: {{ block.settings.image_position }}; --holiday-image-position-mobile: {{ mobile_image_position }};"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.link != blank -%}
@@ -169,26 +188,35 @@
                       | image_tag:
                         loading: image_loading,
                         widths: '240,360,480,600,720,900,1000',
-                        sizes: '(max-width: 767px) 30vw, 21vw',
+                        sizes: '(max-width: 767px) 100vw, 21vw',
                         alt: card_alt,
                         class: 'nailzify-holiday-header__image'
                     -}}
                   </picture>
                 {%- elsif fallback_asset != blank -%}
-                  <img
-                    class="nailzify-holiday-header__image"
-                    src="{{ fallback_asset | asset_url }}"
-                    width="{{ fallback_width }}"
-                    height="{{ fallback_height }}"
-                    loading="{{ image_loading }}"
-                    alt="{{ card_alt | escape }}"
-                  >
+                  <picture>
+                    {%- if fallback_mobile_asset != blank -%}
+                      <source media="(max-width: 767px)" srcset="{{ fallback_mobile_asset | asset_url }}">
+                    {%- endif -%}
+                    <img
+                      class="nailzify-holiday-header__image"
+                      src="{{ fallback_asset | asset_url }}"
+                      width="{{ fallback_width }}"
+                      height="{{ fallback_height }}"
+                      loading="{{ image_loading }}"
+                      alt="{{ card_alt | escape }}"
+                    >
+                  </picture>
                 {%- else -%}
                   {{- 'lifestyle-1' | placeholder_svg_tag: 'nailzify-holiday-header__image placeholder' -}}
                 {%- endif -%}
 
                 {%- if block.settings.caption != blank -%}
                   <figcaption class="nailzify-holiday-header__caption">{{ block.settings.caption | escape }}</figcaption>
+                {%- endif -%}
+
+                {%- if block.settings.mobile_label != blank -%}
+                  <span class="nailzify-holiday-header__mobile-label">{{ block.settings.mobile_label | escape | newline_to_br }}</span>
                 {%- endif -%}
               </figure>
 
@@ -288,6 +316,12 @@
       "default": "Holiday nail designs"
     },
     {
+      "type": "text",
+      "id": "mobile_eyebrow",
+      "label": "Mobile eyebrow",
+      "default": "THE HOLIDAY EDIT"
+    },
+    {
       "type": "header",
       "content": "Layout"
     },
@@ -320,6 +354,28 @@
         { "value": "center", "label": "Center" }
       ],
       "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_hero_card",
+      "label": "Mobile hero image",
+      "info": "Choose which image card becomes the full mobile campaign image.",
+      "options": [
+        { "value": "1", "label": "First image card" },
+        { "value": "2", "label": "Second image card" },
+        { "value": "3", "label": "Third image card" }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "range",
+      "id": "mobile_poster_height",
+      "label": "Mobile poster height",
+      "min": 560,
+      "max": 760,
+      "step": 10,
+      "unit": "px",
+      "default": 700
     },
     {
       "type": "range",
@@ -452,6 +508,40 @@
       "default": "#f4e8e4"
     },
     {
+      "type": "color",
+      "id": "color_mobile_text",
+      "label": "Mobile text",
+      "default": "#fffaf7"
+    },
+    {
+      "type": "color",
+      "id": "color_mobile_button_background",
+      "label": "Mobile button background",
+      "default": "#fffaf7"
+    },
+    {
+      "type": "color",
+      "id": "color_mobile_button_text",
+      "label": "Mobile button text",
+      "default": "#342a28"
+    },
+    {
+      "type": "color",
+      "id": "color_mobile_overlay",
+      "label": "Mobile image overlay",
+      "default": "#342a28"
+    },
+    {
+      "type": "range",
+      "id": "mobile_overlay_opacity",
+      "label": "Mobile overlay strength",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "%",
+      "default": 35
+    },
+    {
       "type": "header",
       "content": "Spacing"
     },
@@ -512,6 +602,19 @@
         },
         {
           "type": "select",
+          "id": "image_position_mobile",
+          "label": "Mobile image focus",
+          "options": [
+            { "value": "50% 50%", "label": "Center" },
+            { "value": "50% 25%", "label": "Top" },
+            { "value": "50% 75%", "label": "Bottom" },
+            { "value": "25% 50%", "label": "Left" },
+            { "value": "75% 50%", "label": "Right" }
+          ],
+          "default": "50% 50%"
+        },
+        {
+          "type": "select",
           "id": "image_fit",
           "label": "Image fit",
           "options": [
@@ -524,6 +627,12 @@
           "type": "text",
           "id": "caption",
           "label": "Optional caption"
+        },
+        {
+          "type": "textarea",
+          "id": "mobile_label",
+          "label": "Mobile product label",
+          "info": "Shown at the lower left when this card is selected as the mobile hero."
         },
         {
           "type": "url",

@@ -18,8 +18,10 @@
             "image": "shopify://shop_images/polk.webp",
             "alt_text": "Iridescent lilac chrome press on nails",
             "image_position": "50% 50%",
+            "image_position_mobile": "50% 50%",
             "image_fit": "cover",
             "caption": "",
+            "mobile_label": "CHROME PRINCESS\nPRESS-ONS",
             "link": "shopify://products/chrome-princess",
             "link_label": "Shop Chrome Princess nails"
           }
@@ -30,8 +32,10 @@
             "image": "shopify://shop_images/rdvbra7ewvmifusqm0we.webp",
             "alt_text": "Cranberry chrome press on nails",
             "image_position": "50% 50%",
+            "image_position_mobile": "50% 50%",
             "image_fit": "cover",
             "caption": "",
+            "mobile_label": "CRANBERRY KISS\nPRESS-ONS",
             "link": "shopify://products/cranberry-kiss",
             "link_label": "Shop Cranberry Kiss nails"
           }
@@ -41,8 +45,10 @@
           "settings": {
             "alt_text": "Mauve and cream Polka Dot press on nails",
             "image_position": "50% 65%",
+            "image_position_mobile": "50% 50%",
             "image_fit": "cover",
             "caption": "",
+            "mobile_label": "POLKA DOT\nPRESS-ONS",
             "link": "shopify://products/polka-dot",
             "link_label": "Shop Polka Dot nails"
           }
@@ -64,9 +70,12 @@
         "button_external": false,
         "button_style": "solid",
         "gallery_label": "Holiday nail designs",
+        "mobile_eyebrow": "THE HOLIDAY EDIT",
         "content_position": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "center",
+        "mobile_hero_card": "3",
+        "mobile_poster_height": 700,
         "min_height": 430,
         "heading_width": 520,
         "heading_size": 72,
@@ -84,6 +93,11 @@
         "color_button_background": "#a80836",
         "color_button_text": "#ffffff",
         "color_card_background": "#f4e8e4",
+        "color_mobile_text": "#fffaf7",
+        "color_mobile_button_background": "#fffaf7",
+        "color_mobile_button_text": "#342a28",
+        "color_mobile_overlay": "#342a28",
+        "mobile_overlay_opacity": 35,
         "padding_top": 0,
         "padding_bottom": 24
       }
