@@ -46,7 +46,7 @@ body {
 
 .page-width:not(.page-width--full) {
   width: 100%;
-  max-width: var(--nz-container-width);
+  max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
 .heading,
