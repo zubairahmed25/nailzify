@@ -38,6 +38,7 @@
   background-color: rgb(var(--nz-color-band-duo));
 }
 
+/* Keep the content width stable when the theme turns outer gutters into page padding. */
 .template-index #MainContent .page-width:not(.page-width--full) {
   width: 100%;
   max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
