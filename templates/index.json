@@ -15,7 +15,7 @@
         "image_chrome": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/polk.webp",
+            "image": "shopify://shop_images/ChatGPTImageAug11_2026_04_22_33AM.png",
             "alt_text": "Iridescent lilac chrome press on nails",
             "image_position": "50% 50%",
             "image_position_mobile": "50% 50%",
@@ -55,8 +55,8 @@
         }
       },
       "block_order": [
-        "image_chrome",
         "image_cranberry",
+        "image_chrome",
         "image_polka"
       ],
       "name": "Holiday header",
