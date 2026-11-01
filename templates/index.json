@@ -101,7 +101,7 @@
         "mobile_hero_card": "1",
         "enable_mobile_hand_slider": true,
         "mobile_slider_autoplay": true,
-        "mobile_slider_delay": 1,
+        "mobile_slider_delay": 2,
         "mobile_poster_height": 620,
         "min_height": 430,
         "heading_width": 520,
