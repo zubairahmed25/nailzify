@@ -44,6 +44,8 @@ The mobile holiday poster uses a fixed background and fixed copy layer. Transpar
 
 The promotion uses a full width color band with no visible borders. Its offer copy and product cards remain aligned to the shared centered homepage content width.
 
+The standard Buy one. Get one free. heading uses Creattion for Buy and Get, Cyrene for both one words, and bold Barlow Semi Condensed in dark maroon for FREE. The licensed display fonts are rendered as transparent word artwork with accessible heading text. Custom offer headings retain the standard live font.
+
 ## Homepage section rhythm
 
 Homepage sections alternate between the product page warm ivory canvas and the It Girl Duo beige. The holiday header starts with the product canvas, the It Girl Duo keeps its beige, and every visible section after it continues the alternating pattern.

@@ -11,6 +11,13 @@
   assign product_one_title = section.settings.product_1_title | default: product_one.title
   assign product_two_title = section.settings.product_2_title | default: product_two.title
 
+  assign plain_heading = section.settings.heading | strip_html | strip
+  assign normalized_heading = plain_heading | downcase | remove: '.'
+  assign mixed_heading = false
+  if normalized_heading == 'buy one get one free'
+    assign mixed_heading = true
+  endif
+
   assign can_add = true
   if product_one == blank or product_two == blank or variant_one == blank or variant_two == blank
     assign can_add = false
@@ -52,8 +59,21 @@
         {%- endif -%}
 
         {%- if section.settings.heading != blank -%}
-          <h2 class="nailzify-promo-duo__heading" id="PromoDuoHeading-{{ section.id }}">
-            {{ section.settings.heading }}
+          <h2 class="nailzify-promo-duo__heading{% if mixed_heading %} nailzify-promo-duo__heading--mixed{% endif %}" id="PromoDuoHeading-{{ section.id }}">
+            {%- if mixed_heading -%}
+              <span class="sr-only">{{ plain_heading | escape }}</span>
+              <span class="nailzify-promo-duo__type-row" aria-hidden="true">
+                <span class="nailzify-promo-duo__word nailzify-promo-duo__word--buy" style="--duo-word-art: url('{{ 'nailzify-duo-buy.png' | asset_url }}');"></span>
+                <span class="nailzify-promo-duo__word nailzify-promo-duo__word--one" style="--duo-word-art: url('{{ 'nailzify-duo-one.png' | asset_url }}');"></span>
+              </span>
+              <span class="nailzify-promo-duo__type-row" aria-hidden="true">
+                <span class="nailzify-promo-duo__word nailzify-promo-duo__word--get" style="--duo-word-art: url('{{ 'nailzify-duo-get.png' | asset_url }}');"></span>
+                <span class="nailzify-promo-duo__word nailzify-promo-duo__word--one" style="--duo-word-art: url('{{ 'nailzify-duo-one.png' | asset_url }}');"></span>
+                <span class="nailzify-promo-duo__free">FREE</span>
+              </span>
+            {%- else -%}
+              {{ section.settings.heading }}
+            {%- endif -%}
           </h2>
         {%- endif -%}
 
@@ -226,6 +246,7 @@
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
+      "info": "Buy one. Get one free. uses Creattion and Cyrene artwork with a condensed FREE. Other headings use the standard font.",
       "default": "Buy one. <em>Get one free.</em>"
     },
     {

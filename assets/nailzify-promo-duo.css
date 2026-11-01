@@ -50,6 +50,44 @@
   font-weight: 300;
 }
 
+.nailzify-promo-duo__heading.nailzify-promo-duo__heading--mixed {
+  display: grid;
+  gap: 4px;
+  width: max-content;
+  max-width: 100%;
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  line-height: 1;
+}
+
+.nailzify-promo-duo__type-row {
+  display: flex;
+  align-items: flex-end;
+  gap: .16em;
+}
+
+.nailzify-promo-duo__word {
+  display: block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--duo-word-art) center / contain no-repeat;
+  mask: var(--duo-word-art) center / contain no-repeat;
+}
+
+.nailzify-promo-duo__word--buy { width: 2.2em; aspect-ratio: 397 / 247; }
+.nailzify-promo-duo__word--get { width: 2.2em; aspect-ratio: 405 / 242; }
+.nailzify-promo-duo__word--one { width: 1.55em; aspect-ratio: 360 / 128; margin-block-end: .2em; }
+
+.nailzify-promo-duo__free {
+  margin-block-end: .15em;
+  color: rgb(var(--nz-color-accent-strong, 128 45 68));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: .9;
+}
+
 .nailzify-promo-duo__description {
   max-width: 38ch;
   margin-block-start: var(--sp-5);
