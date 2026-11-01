@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ChatGPTImageAug11_2026_04_22_33AM.png",
-            "show_in_mobile_slider": true,
+            "show_in_mobile_slider": false,
             "mobile_slider_fallback": "chrome",
             "mobile_slider_order": 3,
             "mobile_slider_position": "50% 100%",
