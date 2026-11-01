@@ -52,15 +52,18 @@
 
 .nailzify-promo-duo__heading.nailzify-promo-duo__heading--mixed {
   display: grid;
-  gap: 4px;
+  grid-template-columns: max-content 3em;
+  column-gap: .2em;
+  row-gap: 4px;
   width: max-content;
   max-width: 100%;
-  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1;
 }
 
 .nailzify-promo-duo__type-row {
   display: flex;
+  grid-column: 1;
   align-items: flex-end;
   gap: .16em;
 }
@@ -73,19 +76,36 @@
   mask: var(--duo-word-art) center / contain no-repeat;
 }
 
-.nailzify-promo-duo__word--buy { width: 2.2em; aspect-ratio: 397 / 247; }
-.nailzify-promo-duo__word--get { width: 2.2em; aspect-ratio: 405 / 242; }
+.nailzify-promo-duo__word--buy { width: 2.2em; aspect-ratio: 402 / 251; }
+.nailzify-promo-duo__word--get { width: 2.2em; aspect-ratio: 409 / 246; }
 .nailzify-promo-duo__word--one { width: 1.55em; aspect-ratio: 360 / 128; margin-block-end: .2em; }
 
 .nailzify-promo-duo__free {
-  margin-block-end: .15em;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: stretch;
   color: rgb(var(--nz-color-accent-strong, 128 45 68));
   font-family: "Barlow Semi Condensed", var(--font-body-family);
-  font-size: 1em;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -.02em;
-  line-height: .9;
+  line-height: 1;
+}
+
+.nailzify-promo-duo__free-art {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.nailzify-promo-duo__free-art text {
+  font-size: 280px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .nailzify-promo-duo__description {
