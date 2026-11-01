@@ -316,6 +316,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .template-index #MainContent .nailzify-editorial-collection .slider--tablet .card-grid {
+    --slider-item-width: calc((100% - var(--card-grid-gap)) / 1.5);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nz-editorial-card__image { transition: none; }
 }

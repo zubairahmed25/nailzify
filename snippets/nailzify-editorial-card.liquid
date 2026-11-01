@@ -20,9 +20,9 @@
 <div class="card nz-editorial-card flex flex-col relative">
   <a class="nz-editorial-card__photo" href="{{ card_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
     {%- if product.featured_media -%}
-      {{- product.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 768px) 33vw, 46vw', class: 'nz-editorial-card__image' -}}
+      {{- product.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 67vw', class: 'nz-editorial-card__image' -}}
       {%- if show_secondary_image and product.media[1].preview_image != blank -%}
-        {{- product.media[1].preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 768px) 33vw, 46vw', class: 'nz-editorial-card__image nz-editorial-card__image--secondary' -}}
+        {{- product.media[1].preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 67vw', class: 'nz-editorial-card__image nz-editorial-card__image--secondary' -}}
       {%- endif -%}
     {%- else -%}
       {{- 'product-1' | placeholder_svg_tag: 'nz-editorial-card__image' -}}
