@@ -412,7 +412,7 @@
   margin-block-end: var(--sp-4);
 }
 
-.template-index #MainContent .nailzify-compact-faq .heading {
+.template-index #MainContent .nailzify-compact-faq .title-wrapper .heading {
   font-size: var(--nz-faq-title-size);
   font-weight: 600;
   line-height: 1.15;
