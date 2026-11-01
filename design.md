@@ -54,4 +54,4 @@ Homepage featured collections use the approved Soft editorial direction through 
 
 ## Homepage benefits
 
-The Clean inline benefit strip replaces the old pink logo marquee. It uses charcoal text and line icons on product page ivory, five static items inside the shared content width, and quiet dividers. The order is Designed in USA, 5 minute application, Salon quality, Woman owned, and 24/7 support with Real people. Mobile uses two columns, with support centered across the last row. The Nailzify benefits section exposes editable text, icons, colors, icon size, and desktop spacing.
+The Clean inline benefit strip sits directly below the holiday banner, before It Girl Duo. It replaces the old pink logo marquee. It uses charcoal text and line icons on product page ivory, five static items inside the shared content width, and quiet dividers. The order is Designed in USA, 5 minute application, Salon quality, Woman owned, and 24/7 support with Real people. Mobile uses two columns, with support centered across the last row. The Nailzify benefits section exposes editable text, icons, colors, icon size, and desktop spacing.

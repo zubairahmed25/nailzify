@@ -38,6 +38,15 @@
   background-color: rgb(var(--nz-color-band-duo));
 }
 
+/* Preserve these section colors when the benefits strip moves below the banner. */
+.template-index #MainContent > .shopify-section[id$="__nailzify_promo_duo_DxkJGp"] > .nailzify-promo-duo-section {
+  background-color: rgb(var(--promo-section-background));
+}
+
+.template-index #MainContent > .shopify-section[id$="__featured_collection_3BKPWw"] .section {
+  background-color: rgb(var(--nz-color-band-product));
+}
+
 /* Keep the content width stable when the theme turns outer gutters into page padding. */
 .template-index #MainContent .page-width:not(.page-width--full) {
   width: 100%;
