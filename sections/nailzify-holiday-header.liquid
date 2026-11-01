@@ -94,7 +94,7 @@
 </style>
 
 <section
-  class="nailzify-holiday-header-section"
+  class="nailzify-holiday-header-section{% if section.settings.enable_desktop_hand_slider and section.settings.enable_mobile_hand_slider and mobile_slide_count > 0 %} nailzify-holiday-header-section--desktop-poster{% endif %}"
   {% if heading_text != blank %}aria-labelledby="HolidayHeading-{{ section.id }}"{% endif %}
 >
   <div class="nailzify-holiday-header__container page-width">
@@ -169,6 +169,7 @@
         <div
           class="nailzify-holiday-header__mobile-slider"
           data-holiday-hand-slider
+          data-desktop-enabled="{{ section.settings.enable_desktop_hand_slider }}"
           data-autoplay="{{ section.settings.mobile_slider_autoplay }}"
           data-delay="{{ section.settings.mobile_slider_delay | times: 1000 }}"
           role="region"
@@ -211,7 +212,7 @@
                     data-slide-label="{{ mobile_hand_alt | escape }}"
                     aria-hidden="{% if mobile_slide_active %}false{% else %}true{% endif %}"
                     {% unless mobile_slide_active %}tabindex="-1"{% endunless %}
-                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }}; --holiday-hand-offset-y: {{ block.settings.mobile_slider_offset_y | default: 0 }}px;"
+                    style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }}; --holiday-hand-offset-y: {{ block.settings.mobile_slider_offset_y | default: 0 }}px; --holiday-desktop-hand-scale: {{ block.settings.desktop_slider_scale | default: 100 | divided_by: 100.0 }}; --holiday-desktop-hand-offset-y: {{ block.settings.desktop_slider_offset_y | default: 0 }}px;"
                   >
                     {%- if mobile_hand_image != blank -%}
                       {{- mobile_hand_image
@@ -548,6 +549,13 @@
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "enable_desktop_hand_slider",
+      "label": "Use matching desktop hand banner",
+      "info": "Shows the mobile hand rotation beside the copy on the shared poster background.",
+      "default": true
+    },
+    {
       "type": "image_picker",
       "id": "mobile_slider_background_image",
       "label": "Mobile slider background image",
@@ -810,6 +818,26 @@
           "max": 5,
           "step": 1,
           "default": 1
+        },
+        {
+          "type": "range",
+          "id": "desktop_slider_scale",
+          "label": "Desktop hand scale",
+          "min": 70,
+          "max": 180,
+          "step": 5,
+          "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "desktop_slider_offset_y",
+          "label": "Desktop hand vertical position",
+          "min": -100,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "default": 0
         },
         {
           "type": "select",

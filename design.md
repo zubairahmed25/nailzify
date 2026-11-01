@@ -26,9 +26,9 @@ The header uses an off white surface with centered content. The announcement bar
 
 ## Holiday header
 
-The approved layout uses copy beside three slim product images on desktop. Mobile places the copy above a two image row. The script heading is raster artwork because its supplied license permits web artwork but does not permit embedding the font file.
+The desktop holiday banner places ivory copy on the left and transparent hand photography on the right inside a 1260 pixel content area. The 460 pixel band uses the same full width warm studio background as mobile. Both sizes rotate between snowflake and Polka Dot every two seconds. Desktop hand scale and vertical position are editable independently of mobile. The older desktop card gallery is available by disabling the matching desktop hand banner setting. The script heading is raster artwork because its supplied license permits web artwork but does not permit embedding the font file.
 
-The holiday background runs edge to edge on desktop and mobile. Its copy and product imagery stay centered inside a 1260 pixel maximum content area. The band uses the same warm ivory canvas as the product page.
+The holiday studio background runs edge to edge on desktop and mobile. Its desktop copy and product imagery stay centered inside a 1260 pixel maximum content area.
 
 The desktop Polka Dot card uses a reversed macro hand composition to balance the Cranberry card on the opposite side.
 

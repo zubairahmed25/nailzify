@@ -18,6 +18,7 @@ class NailzifyHolidayHandSlider {
     this.mobileMedia = window.matchMedia('(max-width: 767px)');
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     this.autoplayEnabled = element.dataset.autoplay === 'true';
+    this.desktopEnabled = element.dataset.desktopEnabled === 'true';
     this.delay = Number(element.dataset.delay) || 5000;
     this.currentIndex = Math.max(
       0,
@@ -142,7 +143,7 @@ class NailzifyHolidayHandSlider {
     if (
       !this.autoplayEnabled ||
       this.userPaused ||
-      !this.mobileMedia.matches ||
+      (!this.mobileMedia.matches && !this.desktopEnabled) ||
       this.reducedMotion.matches ||
       document.hidden
     ) {
