@@ -43,7 +43,7 @@
             "mobile_slider_link": "shopify://collections/all-press-on-nails",
             "mobile_slider_position": "50% 100%",
             "mobile_slider_fit": "contain",
-            "mobile_slider_offset_y": 0,
+            "mobile_slider_offset_y": 30,
             "mobile_slider_scale": 75,
             "alt_text": "Cranberry chrome press on nails",
             "image_position": "50% 50%",
