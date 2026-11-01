@@ -1,0 +1,69 @@
+{%- comment -%}Homepage collection cards in the approved Soft editorial style.{%- endcomment -%}
+{%- liquid
+  assign card_url = product.url
+  assign card_variant = product.selected_or_first_available_variant
+  assign card_shape = product.metafields.custom.nail_text.value
+  assign card_finish = product.metafields.custom.nail_type.value
+  assign card_badge = product.metafields.custom.custom_badge.value
+  assign card_rating = product.metafields.reviews.rating.value.rating
+  assign card_rating_max = product.metafields.reviews.rating.value.scale_max | default: 5
+  assign card_review_count = product.metafields.reviews.rating_count.value
+  if card_rating == blank
+    assign card_rating = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating
+    assign card_review_count = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews
+    assign card_rating_max = 5
+  endif
+  assign card_rating = card_rating | plus: 0
+  assign card_review_count = card_review_count | plus: 0
+  assign card_rating_fill = card_rating | times: 100.0 | divided_by: card_rating_max | at_least: 0 | at_most: 100
+-%}
+<div class="card nz-editorial-card flex flex-col relative">
+  <a class="nz-editorial-card__photo" href="{{ card_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
+    {%- if product.featured_media -%}
+      {{- product.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 768px) 33vw, 46vw', class: 'nz-editorial-card__image' -}}
+      {%- if show_secondary_image and product.media[1].preview_image != blank -%}
+        {{- product.media[1].preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '180,360,540,720,900', sizes: '(min-width: 1280px) 300px, (min-width: 768px) 33vw, 46vw', class: 'nz-editorial-card__image nz-editorial-card__image--secondary' -}}
+      {%- endif -%}
+    {%- else -%}
+      {{- 'product-1' | placeholder_svg_tag: 'nz-editorial-card__image' -}}
+    {%- endif -%}
+    {%- if card_badge != blank -%}
+      <span class="nz-editorial-card__badge">{{ card_badge | escape }}</span>
+    {%- endif -%}
+  </a>
+  <div class="nz-editorial-card__body">
+    <div class="nz-editorial-card__heading">
+      <h3><a href="{{ card_url }}">{{ product.title | escape }}</a></h3>
+      {%- render 'product-price', product: product, class: 'nz-editorial-card__price' -%}
+    </div>
+    {%- if card_shape != blank or card_finish != blank -%}
+      <p class="nz-editorial-card__meta">{{ card_shape | escape }}{% if card_shape != blank and card_finish != blank %}<span aria-hidden="true"> · </span>{% endif %}{{ card_finish | escape }}</p>
+    {%- endif -%}
+    {%- if show_rating and card_rating > 0 and card_review_count > 0 -%}
+      <a class="nz-editorial-card__reviews" href="{{ card_url }}#looxReviewsFrame" aria-label="{{ 'general.accessibility.star_reviews_info' | t: rating_value: card_rating, rating_max: card_rating_max | escape }}. {{ 'general.accessibility.star_reviews_count' | t: count: card_review_count | escape }}">
+        <span class="nz-editorial-card__stars" style="--nz-rating-fill: {{ card_rating_fill }}%;" aria-hidden="true">★★★★★</span>
+        <span aria-hidden="true">{{ 'general.accessibility.star_reviews_count' | t: count: card_review_count }}</span>
+      </a>
+    {%- endif -%}
+  </div>
+  {%- if show_quick_add -%}
+    <div class="nz-editorial-card__action">
+      {%- if product.available and product.variants.size == 1 and product.selling_plan_groups.size == 0 and product.quantity_price_breaks_configured? != true and card_variant.quantity_rule.min <= 1 and card_variant.quantity_rule.increment == 1 -%}
+        {%- capture editorial_form_id -%}EditorialProductForm-{{ section_id }}-{{ product_id }}{%- endcapture -%}
+        {%- form 'product', product, is: 'product-form', id: editorial_form_id -%}
+          <input type="hidden" name="id" value="{{ card_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button type="submit" class="nz-editorial-card__button" aria-label="{{ 'products.product.add_to_cart' | t | escape }}: {{ product.title | escape }}">
+            <span class="btn-text"><span>{% if product.template_suffix == 'pre-order' %}{{ 'products.product.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}</span></span>
+            <span aria-hidden="true">{%- render 'icon', icon: 'plus', size: '2xs' -%}</span>
+          </button>
+          <p class="product-form__error-message nz-editorial-card__error" role="alert" hidden></p>
+        {%- endform -%}
+      {%- elsif product.available -%}
+        <a class="nz-editorial-card__button" href="{{ card_url }}"><span>{{ 'products.product.choose_options' | t }}</span><span aria-hidden="true">{%- render 'icon', icon: 'plus', size: '2xs' -%}</span></a>
+      {%- else -%}
+        <button class="nz-editorial-card__button" type="button" disabled>{{ 'products.product.sold_out' | t }}</button>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>

@@ -126,6 +126,176 @@
   font-weight: 600;
 }
 
+/* Soft editorial collection cards. Keep the shared catalog card styles separate. */
+.template-index #MainContent .nz-editorial-card {
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: rgb(var(--nz-color-ink));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+.nz-editorial-card__photo {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgb(var(--nz-color-surface));
+}
+
+.nz-editorial-card__image {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 240ms ease;
+}
+
+.nz-editorial-card__image--secondary { opacity: 0; }
+
+@media (hover: hover) and (pointer: fine) {
+  .nz-editorial-card__photo:hover .nz-editorial-card__image--secondary { opacity: 1; }
+}
+
+.nz-editorial-card__badge {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-start: 10px;
+  max-width: calc(100% - 20px);
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgb(var(--nz-color-surface));
+  color: rgb(var(--nz-color-accent-strong));
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .06em;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.nz-editorial-card__body { padding-block: 14px 8px; }
+
+.nz-editorial-card__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5px 10px;
+}
+
+.template-index #MainContent .nz-editorial-card h3 {
+  flex: 1 1 100px;
+  min-width: 0;
+  margin: 0;
+  font: 600 17px/1.3 "Barlow Semi Condensed", var(--font-body-family);
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.nz-editorial-card h3 a { text-decoration: none; }
+.nz-editorial-card h3 a:hover { color: rgb(var(--nz-color-accent-strong)); }
+
+.template-index #MainContent .nz-editorial-card .price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 7px;
+  color: rgb(var(--nz-color-ink));
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.template-index #MainContent .nz-editorial-card .price__sale {
+  color: rgb(var(--nz-color-muted));
+  font-size: 13px;
+}
+
+.nz-editorial-card__meta {
+  margin: 6px 0 0;
+  color: rgb(var(--nz-color-muted));
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.nz-editorial-card__reviews {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-start: 7px;
+  color: rgb(var(--nz-color-muted));
+  font-size: 12px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.nz-editorial-card__stars {
+  color: transparent;
+  background: linear-gradient(to right, rgb(var(--nz-color-accent)) var(--nz-rating-fill), rgb(var(--nz-color-line)) var(--nz-rating-fill));
+  background-clip: text;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nz-editorial-card__action { margin-block-start: auto; }
+
+.nz-editorial-card__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 0;
+  border: 0;
+  border-block-end: 1px solid rgb(var(--nz-color-line));
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--nz-color-ink));
+  font: 500 14px/1.4 "Barlow Semi Condensed", var(--font-body-family);
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nz-editorial-card__button:hover { color: rgb(var(--nz-color-accent-strong)); }
+.nz-editorial-card__button:is(:disabled, [aria-disabled="true"]) { opacity: .5; cursor: default; }
+.nz-editorial-card__button[aria-busy="true"] { opacity: .5; cursor: wait; }
+.nz-editorial-card__error { margin-block-start: 8px; color: rgb(var(--nz-color-accent-strong)); font-size: 13px; line-height: 1.4; }
+
+@media (max-width: 1023px) {
+  .template-index #MainContent .nailzify-editorial-collection .slider--tablet {
+    --page-padding: var(--sp-5);
+  }
+}
+
+@media (max-width: 767px) {
+  .nz-editorial-card__body { padding-block-start: 11px; }
+  .template-index #MainContent .nz-editorial-card h3 { font-size: 16px; }
+  .nz-editorial-card__meta { font-size: 13px; }
+}
+
+@media (max-width: 639px) {
+  .template-index #MainContent .nailzify-editorial-collection .slider--tablet .card-grid {
+    --slider-item-width: calc((100vw - var(--page-padding) * 2 - var(--card-grid-gap)) / 2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nz-editorial-card__image { transition: none; }
+}
+
 .template-index #MainContent .indicators .button {
   min-width: var(--sp-12);
   min-height: var(--sp-12);

@@ -9,7 +9,7 @@
   assign collection = section.settings.collection
   assign products = section.settings.products | default: collection.products
 -%}
-<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+<div class="section section--padding{% if request.page_type == 'index' %} nailzify-editorial-collection{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
     {%- capture view_all -%}
       {%- if section.settings.show_view_all and collection != blank and section.settings.product_limit < collection.all_products_count -%}
@@ -50,6 +50,16 @@
     <slider-element id="Slider-{{ section.id }}" class="grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card"{% if section.settings.carousel_on_desktop or section.settings.swipe_on_mobile %} tabindex="0"{% endif %}>
       <motion-list class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
         {%- for product in products limit: section.settings.product_limit -%}
+          {%- if request.page_type == 'index' -%}
+            {%- render 'nailzify-editorial-card',
+              product: product,
+              product_id: product.id,
+              section_id: section.id,
+              show_secondary_image: settings.product_secondary_image,
+              show_rating: settings.product_rating,
+              show_quick_add: settings.product_quick_add
+            -%}
+          {%- else -%}
           {%- render 'product-card',
             product: product,
             product_id: product.id,
@@ -68,6 +78,7 @@
             save_type: settings.product_save_type,
             show_icon_list: settings.product_icon_list
           -%}
+          {%- endif -%}
         {%- else -%}
           {%- for i in (1..section.settings.product_limit) -%}
             {%- capture placeholder -%}product-{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
