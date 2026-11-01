@@ -3,6 +3,17 @@ class NailzifyHolidayHandSlider {
     this.element = element;
     this.slides = Array.from(element.querySelectorAll('[data-holiday-hand-slide]'));
     this.controls = Array.from(element.querySelectorAll('[data-holiday-hand-control]'));
+    const compareOrder = (a, b) => Number(a.dataset.slideOrder || 1) - Number(b.dataset.slideOrder || 1);
+    this.slides.sort(compareOrder);
+    this.controls.sort(compareOrder);
+    this.slides.forEach((slide, index) => {
+      slide.dataset.slideIndex = String(index);
+      slide.parentElement.appendChild(slide);
+    });
+    this.controls.forEach((control, index) => {
+      control.dataset.holidayHandControl = String(index);
+      control.parentElement.appendChild(control);
+    });
     this.status = element.querySelector('[data-holiday-hand-status]');
     this.mobileMedia = window.matchMedia('(max-width: 767px)');
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

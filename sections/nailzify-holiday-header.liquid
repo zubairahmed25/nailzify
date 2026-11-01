@@ -207,6 +207,7 @@
                     href="{{ block.settings.mobile_slider_link | default: block.settings.link | default: section.settings.button_link }}"
                     data-holiday-hand-slide
                     data-slide-index="{{ mobile_slide_index }}"
+                    data-slide-order="{{ block.settings.mobile_slider_order | default: 1 }}"
                     data-slide-label="{{ mobile_hand_alt | escape }}"
                     aria-hidden="{% if mobile_slide_active %}false{% else %}true{% endif %}"
                     {% unless mobile_slide_active %}tabindex="-1"{% endunless %}
@@ -282,6 +283,7 @@
                     class="nailzify-holiday-header__mobile-slider-dot{% if block.id == mobile_selected_block_id %} is-active{% endif %}"
                     type="button"
                     data-holiday-hand-control="{{ mobile_control_index }}"
+                    data-slide-order="{{ block.settings.mobile_slider_order | default: 1 }}"
                     aria-label="Show {{ block.settings.mobile_slider_alt | default: block.settings.alt_text | default: block.settings.mobile_label | strip_newlines | downcase | escape }}"
                     aria-current="{% if block.id == mobile_selected_block_id %}true{% else %}false{% endif %}"
                   >
@@ -561,7 +563,7 @@
       "type": "range",
       "id": "mobile_slider_delay",
       "label": "Seconds between mobile slides",
-      "min": 4,
+      "min": 1,
       "max": 8,
       "step": 1,
       "unit": "s",
@@ -801,6 +803,15 @@
           "info": "Use a transparent PNG or WebP. Only this image moves while the poster background and copy stay fixed."
         },
         {
+          "type": "range",
+          "id": "mobile_slider_order",
+          "label": "Mobile slide order",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 1
+        },
+        {
           "type": "select",
           "id": "mobile_slider_fallback",
           "label": "Included hand artwork",
@@ -860,7 +871,7 @@
           "info": "Use a negative value to move the hand image higher.",
           "min": -200,
           "max": 200,
-          "step": 10,
+          "step": 5,
           "unit": "px",
           "default": 0
         },
