@@ -5,6 +5,11 @@
   font-family: "Barlow Semi Condensed", var(--font-body-family);
 }
 
+/* This section paints its own background; the theme overlay covers static content. */
+.nailzify-benefits::before {
+  content: none;
+}
+
 .nailzify-benefits__list {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
