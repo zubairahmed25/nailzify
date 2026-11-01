@@ -48,6 +48,8 @@ The promotion uses a full width color band with no visible borders. Its offer co
 
 Homepage sections alternate between the product page warm ivory canvas and the It Girl Duo beige. The holiday header starts with the product canvas, the It Girl Duo keeps its beige, and every visible section after it continues the alternating pattern.
 
+Best Sellers explicitly uses the It Girl Duo beige. Summer Vibes and Nail Accessories keep their existing backgrounds.
+
 ## Homepage collection cards
 
 Homepage featured collections use the approved Soft editorial direction through `snippets/nailzify-editorial-card.liquid`. Cards have an open background, square photos with soft corners, modest product names, compact prices, plain shape and finish text, real review stars when ratings exist, and an understated action with a fine bottom rule. Mobile shows one complete card and half of the next card within the content gutters to signal horizontal swiping. A soft fade smooths the clipped edge, follows scrolling, and clears at the end so the final card remains readable. Tablet shows two complete cards. Products with options, selling plans, or quantity rules open their product page; ordinary single variant products use the existing cart form. Collection pages retain their shared catalog cards.

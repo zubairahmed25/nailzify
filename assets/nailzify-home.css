@@ -47,6 +47,16 @@
   background-color: rgb(var(--nz-color-band-product));
 }
 
+.template-index #MainContent > .shopify-section[id$="__featured_collection_LcUPaF"] {
+  --color-background: var(--nz-color-band-duo);
+  --gradient-background: none;
+}
+
+.template-index #MainContent > .shopify-section[id$="__featured_collection_LcUPaF"],
+.template-index #MainContent > .shopify-section[id$="__featured_collection_LcUPaF"] .section {
+  background-color: rgb(var(--nz-color-band-duo));
+}
+
 /* Keep the content width stable when the theme turns outer gutters into page padding. */
 .template-index #MainContent .page-width:not(.page-width--full) {
   width: 100%;
