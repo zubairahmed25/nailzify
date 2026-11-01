@@ -64,7 +64,7 @@
           "settings": {
             "show_in_mobile_slider": true,
             "mobile_slider_fallback": "polka",
-            "desktop_slider_scale": 150,
+            "desktop_slider_scale": 105,
             "desktop_slider_offset_y": 20,
             "mobile_slider_order": 2,
             "mobile_slider_position": "50% 50%",

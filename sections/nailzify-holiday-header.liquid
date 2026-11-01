@@ -214,6 +214,16 @@
                     {% unless mobile_slide_active %}tabindex="-1"{% endunless %}
                     style="--holiday-hand-position: {{ block.settings.mobile_slider_position }}; --holiday-hand-fit: {{ block.settings.mobile_slider_fit }}; --holiday-hand-scale: {{ block.settings.mobile_slider_scale | divided_by: 100.0 }}; --holiday-hand-offset-y: {{ block.settings.mobile_slider_offset_y | default: 0 }}px; --holiday-desktop-hand-scale: {{ block.settings.desktop_slider_scale | default: 100 | divided_by: 100.0 }}; --holiday-desktop-hand-offset-y: {{ block.settings.desktop_slider_offset_y | default: 0 }}px;"
                   >
+                    <picture class="nailzify-holiday-header__hand-picture">
+                      {%- if block.settings.desktop_slider_image != blank -%}
+                        <source media="(min-width: 768px)" srcset="{{ block.settings.desktop_slider_image | image_url: width: 1600 }}">
+                      {%- elsif mobile_hand_image == blank -%}
+                        {%- if mobile_hand_fallback == 'snowflake' -%}
+                          <source media="(min-width: 768px)" srcset="{{ 'nailzify-holiday-snowflake-desktop-hands.webp' | asset_url }}">
+                        {%- elsif mobile_hand_fallback == 'polka' -%}
+                          <source media="(min-width: 768px)" srcset="{{ 'nailzify-holiday-polka-desktop-hands.webp' | asset_url }}">
+                        {%- endif -%}
+                      {%- endif -%}
                     {%- if mobile_hand_image != blank -%}
                       {{- mobile_hand_image
                         | image_url: width: 1400
@@ -252,6 +262,7 @@
                         alt="{{ mobile_hand_alt | escape }}"
                       >
                     {%- endif -%}
+                    </picture>
 
                     {%- if mobile_hand_label != blank -%}
                       <span class="nailzify-holiday-header__mobile-label">
@@ -828,6 +839,12 @@
           "step": 5,
           "unit": "%",
           "default": 100
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_slider_image",
+          "label": "Transparent desktop hand image",
+          "info": "Optional desktop artwork with completed sleeve edges. Mobile keeps its own image."
         },
         {
           "type": "range",

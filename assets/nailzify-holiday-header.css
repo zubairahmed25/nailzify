@@ -601,6 +601,12 @@
     transform: translate3d(8%, 0, 0);
   }
 
+  .nailzify-holiday-header__hand-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   .nailzify-holiday-header__mobile-hand {
     display: block;
     width: 100%;

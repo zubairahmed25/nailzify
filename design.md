@@ -32,6 +32,8 @@ The holiday studio background runs edge to edge on desktop and mobile. Its deskt
 
 The desktop Polka Dot card uses a reversed macro hand composition to balance the Cranberry card on the opposite side.
 
+The hand slider uses separate desktop picture sources with completed sweater sides. Mobile retains its approved portrait cutouts. Desktop artwork can be replaced through the transparent desktop hand image picker without changing the mobile photo.
+
 The supporting holiday line uses Cyrene as raster artwork. Its commercial license does not permit redistribution, so the font file is not published with the theme.
 
 Holiday copy reveals in a calm sequence when the page loads. The script heading fades in first with a soft blur and slight lift, followed by the finishing line and then the button. Reduced motion preferences remove the animation. Mobile gives the script artwork the visual equivalent of a four pixel type increase.
