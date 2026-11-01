@@ -223,7 +223,7 @@
   text-transform: uppercase;
 }
 
-.nz-editorial-card__body { padding-block: 14px 8px; }
+.nz-editorial-card__body { padding-block: 14px 0; }
 
 .nz-editorial-card__heading {
   display: flex;
@@ -288,7 +288,10 @@
   letter-spacing: 1px;
 }
 
-.nz-editorial-card__action { margin-block-start: auto; }
+.nz-editorial-card__action {
+  margin-block-start: auto;
+  padding-block: 16px;
+}
 
 .nz-editorial-card__button {
   display: flex;
