@@ -1,0 +1,57 @@
+{{ 'nailzify-benefits.css' | asset_url | stylesheet_tag }}
+<section
+  class="section nailzify-benefits"
+  aria-label="{{ section.settings.accessibility_label | escape }}"
+  style="--benefit-ink: {{ section.settings.text_color }}; --benefit-line: {{ section.settings.line_color }}; --benefit-icon-size: {{ section.settings.icon_size }}px; --benefit-padding: {{ section.settings.padding }}px; background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};"
+>
+  <div class="page-width">
+    <ul class="nailzify-benefits__list" role="list">
+      {%- for block in section.blocks -%}
+        <li class="nailzify-benefits__item" {{ block.shopify_attributes }}>
+          <span class="nailzify-benefits__icon" aria-hidden="true">{%- render 'nailzify-benefit-icon', icon: block.settings.icon -%}</span>
+          <div class="nailzify-benefits__copy">
+            <span class="nailzify-benefits__title">{{ block.settings.title | escape }}</span>
+            {%- if block.settings.detail != blank -%}
+              <span class="nailzify-benefits__detail">{{ block.settings.detail | escape }}</span>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Nailzify benefits",
+  "max_blocks": 5,
+  "settings": [
+    {"type": "text", "id": "accessibility_label", "label": "Accessible section label", "default": "The Nailzify difference"},
+    {"type": "color", "id": "text_color", "label": "Text and icons", "default": "#342a28"},
+    {"type": "color", "id": "background_color", "label": "Background", "default": "#fbf7f2"},
+    {"type": "color", "id": "line_color", "label": "Dividers", "default": "#e0d7d0"},
+    {"type": "range", "id": "icon_size", "label": "Icon size", "min": 20, "max": 34, "step": 1, "unit": "px", "default": 26},
+    {"type": "range", "id": "padding", "label": "Desktop vertical spacing", "min": 18, "max": 40, "step": 1, "unit": "px", "default": 28}
+  ],
+  "blocks": [
+    {
+      "type": "benefit", "name": "Benefit",
+      "settings": [
+        {"type": "select", "id": "icon", "label": "Icon", "default": "sparkles", "options": [
+          {"value": "flag", "label": "Flag"}, {"value": "timer", "label": "Timer"},
+          {"value": "sparkles", "label": "Sparkles"}, {"value": "venus", "label": "Woman owned"},
+          {"value": "headset", "label": "Support"}
+        ]},
+        {"type": "text", "id": "title", "label": "Text", "default": "Salon quality"},
+        {"type": "text", "id": "detail", "label": "Supporting text"}
+      ]
+    }
+  ],
+  "presets": [{"name": "Nailzify benefits", "blocks": [
+    {"type": "benefit", "settings": {"icon": "flag", "title": "Designed in USA"}},
+    {"type": "benefit", "settings": {"icon": "timer", "title": "5 minute application"}},
+    {"type": "benefit", "settings": {"icon": "sparkles", "title": "Salon quality"}},
+    {"type": "benefit", "settings": {"icon": "venus", "title": "Woman owned"}},
+    {"type": "benefit", "settings": {"icon": "headset", "title": "24/7 support", "detail": "Real people"}}
+  ]}]
+}
+{% endschema %}

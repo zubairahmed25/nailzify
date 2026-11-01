@@ -51,3 +51,7 @@ Homepage sections alternate between the product page warm ivory canvas and the I
 ## Homepage collection cards
 
 Homepage featured collections use the approved Soft editorial direction through `snippets/nailzify-editorial-card.liquid`. Cards have an open background, square photos with soft corners, modest product names, compact prices, plain shape and finish text, real review stars when ratings exist, and an understated action with a fine bottom rule. Mobile shows two complete cards within the content gutters and supports horizontal swiping. Products with options, selling plans, or quantity rules open their product page; ordinary single variant products use the existing cart form. Collection pages retain their shared catalog cards.
+
+## Homepage benefits
+
+The Clean inline benefit strip replaces the old pink logo marquee. It uses charcoal text and line icons on product page ivory, five static items inside the shared content width, and quiet dividers. The order is Designed in USA, 5 minute application, Salon quality, Woman owned, and 24/7 support with Real people. Mobile uses two columns, with support centered across the last row. The Nailzify benefits section exposes editable text, icons, colors, icon size, and desktop spacing.

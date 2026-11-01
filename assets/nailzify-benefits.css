@@ -1,0 +1,50 @@
+.nailzify-benefits {
+  padding-block: 0;
+  border-block: 1px solid var(--benefit-line);
+  background-image: none;
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+}
+
+.nailzify-benefits__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: var(--benefit-padding) 0;
+  list-style: none;
+  color: var(--benefit-ink);
+}
+
+.nailzify-benefits__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding-inline: 18px;
+}
+
+.nailzify-benefits__item + .nailzify-benefits__item { border-inline-start: 1px solid var(--benefit-line); }
+.nailzify-benefits__icon { display: flex; flex: 0 0 var(--benefit-icon-size); color: var(--benefit-ink); }
+.nailzify-benefits__icon svg { display: block; width: var(--benefit-icon-size); height: var(--benefit-icon-size); }
+.nailzify-benefits__copy { min-width: 0; overflow-wrap: anywhere; }
+.nailzify-benefits__title { display: block; color: var(--benefit-ink); font-size: 15px; font-weight: 500; line-height: 1.3; }
+.nailzify-benefits__detail { display: block; margin-block-start: 3px; color: var(--benefit-ink); font-size: 13px; font-weight: 400; line-height: 1.3; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nailzify-benefits__item { gap: 10px; padding-inline: 10px; }
+  .nailzify-benefits__title { font-size: 14px; }
+  .nailzify-benefits__detail { font-size: 12px; }
+}
+
+@media (max-width: 767px) {
+  .nailzify-benefits__list { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 4px; }
+  .nailzify-benefits__item { justify-content: flex-start; gap: 10px; min-height: 72px; padding: 14px 8px; }
+  .nailzify-benefits__item + .nailzify-benefits__item { border-inline-start: 0; }
+  .nailzify-benefits__item:nth-child(n+3) { border-block-start: 1px solid var(--benefit-line); }
+  .nailzify-benefits__item:last-child:nth-child(odd) { grid-column: 1 / -1; justify-content: center; }
+  .nailzify-benefits__item:last-child:nth-child(odd) .nailzify-benefits__copy { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .nailzify-benefits__item:last-child:nth-child(odd) .nailzify-benefits__detail { margin: 0; }
+  .nailzify-benefits__title { font-size: 14px; }
+  .nailzify-benefits__detail { font-size: 12px; }
+}
