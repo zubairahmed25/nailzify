@@ -127,6 +127,27 @@
 }
 
 /* Soft editorial collection cards. Keep the shared catalog card styles separate. */
+.template-index #MainContent .nailzify-editorial-collection .slider {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1fr);
+  margin-inline: 0;
+  padding-inline: 0;
+  scroll-padding-inline: 0;
+}
+
+.template-index #MainContent .nailzify-editorial-collection .card-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .template-index #MainContent .nailzify-editorial-collection .slider--desktop .card-grid {
+    --slider-item-width: calc((100% - var(--card-grid-gap) * (var(--card-grid-per-row) - 1)) / var(--card-grid-per-row));
+  }
+}
+
 .template-index #MainContent .nz-editorial-card {
   min-width: 0;
   height: 100%;
@@ -274,21 +295,15 @@
 .nz-editorial-card__button[aria-busy="true"] { opacity: .5; cursor: wait; }
 .nz-editorial-card__error { margin-block-start: 8px; color: rgb(var(--nz-color-accent-strong)); font-size: 13px; line-height: 1.4; }
 
-@media (max-width: 1023px) {
-  .template-index #MainContent .nailzify-editorial-collection .slider--tablet {
-    --page-padding: var(--sp-5);
-  }
-}
-
 @media (max-width: 767px) {
   .nz-editorial-card__body { padding-block-start: 11px; }
   .template-index #MainContent .nz-editorial-card h3 { font-size: 16px; }
   .nz-editorial-card__meta { font-size: 13px; }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1023px) {
   .template-index #MainContent .nailzify-editorial-collection .slider--tablet .card-grid {
-    --slider-item-width: calc((100vw - var(--page-padding) * 2 - var(--card-grid-gap)) / 2);
+    --slider-item-width: calc((100% - var(--card-grid-gap)) / 2);
   }
 }
 
