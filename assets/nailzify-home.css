@@ -317,6 +317,11 @@
 }
 
 @media (max-width: 767px) {
+  .template-index #MainContent .nailzify-editorial-collection .slider--tablet {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--nz-fade-left, 0px), #000 calc(100% - var(--nz-fade-right, 32px)), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 var(--nz-fade-left, 0px), #000 calc(100% - var(--nz-fade-right, 32px)), transparent);
+  }
+
   .template-index #MainContent .nailzify-editorial-collection .slider--tablet .card-grid {
     --slider-item-width: calc((100% - var(--card-grid-gap)) / 1.5);
   }
