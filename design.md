@@ -44,7 +44,7 @@ The mobile holiday poster uses a fixed background and fixed copy layer. Transpar
 
 The promotion uses a full width color band with no visible borders. Its offer copy and product cards remain aligned to the shared centered homepage content width.
 
-The standard Buy one. Get one free. heading uses heavier Creattion for Buy and Get, Cyrene for both one words, and bold Barlow Semi Condensed in dark maroon for FREE. FREE sits beside Get one at natural letter proportions, slightly larger than the surrounding text. The licensed display fonts are rendered as transparent word artwork with accessible heading text. Custom offer headings retain the standard live font.
+The standard Buy one. Get one free. heading uses heavier Creattion for Buy and Get, Cyrene for both one words, and bold Barlow Semi Condensed for FREE. FREE uses the approved soft label treatment, with ivory text inside a dark maroon pill, a slight tilt, and vertical centering beside both lines. The licensed display fonts are rendered as transparent word artwork with accessible heading text. Custom offer headings retain the standard live font.
 
 ## Homepage section rhythm
 

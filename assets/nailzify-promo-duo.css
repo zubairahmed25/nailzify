@@ -52,7 +52,9 @@
 
 .nailzify-promo-duo__heading.nailzify-promo-duo__heading--mixed {
   display: grid;
-  gap: 4px;
+  grid-template-columns: max-content max-content;
+  column-gap: .24em;
+  row-gap: 4px;
   width: max-content;
   max-width: 100%;
   font-size: clamp(2.125rem, 3.5vw, 3rem);
@@ -61,6 +63,7 @@
 
 .nailzify-promo-duo__type-row {
   display: flex;
+  grid-column: 1;
   align-items: flex-end;
   gap: .16em;
 }
@@ -78,15 +81,20 @@
 .nailzify-promo-duo__word--one { width: 1.55em; aspect-ratio: 360 / 128; margin-block-end: .2em; }
 
 .nailzify-promo-duo__free {
-  flex-shrink: 0;
-  margin-block-end: .15em;
-  color: rgb(var(--nz-color-accent-strong, 128 45 68));
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  padding: 7px 12px 8px;
+  border-radius: 999px;
+  color: rgb(var(--nz-color-surface, 255 253 250));
+  background-color: rgb(var(--nz-color-accent-strong, 128 45 68));
   font-family: "Barlow Semi Condensed", var(--font-body-family);
-  font-size: 1.15em;
+  font-size: .7em;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: -.02em;
-  line-height: .9;
+  letter-spacing: .04em;
+  line-height: 1;
+  transform: rotate(-4deg);
 }
 
 .nailzify-promo-duo__description {
