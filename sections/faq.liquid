@@ -1,3 +1,10 @@
+{%- liquid
+  assign question_blocks = section.blocks | where: 'type', 'question'
+  assign compact_faq = false
+  if request.page_type == 'index'
+    assign compact_faq = true
+  endif
+-%}
 <style>
   #shopify-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
@@ -5,7 +12,7 @@
     {%- render 'section-variables', section: section -%}
   }
 </style>
-<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}{% if section.settings.style == 'with-background' %} section--plain{% endif %}">
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}{% if section.settings.style == 'with-background' %} section--plain{% endif %}{% if compact_faq %} nailzify-compact-faq{% endif %}"{% if compact_faq %} data-compact-faq{% endif %}>
   <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %} relative">
     {%- if section.settings.style == 'with-border' -%}
       {%- render 'section-heading', section: section -%}
@@ -20,7 +27,7 @@
 
         assign contact = section.blocks | where: "type", "contact" | first
       -%}
-      <div class="faqs {{ section.settings.style }} flex flex-col lg:flex-row relative z-1">
+      <div id="Faqs-{{ section.id }}" class="faqs {{ section.settings.style }} flex flex-col lg:flex-row relative z-1">
         <div class="grow grid gap-8 md:gap-12">
           {%- if section.settings.style == 'with-background' -%}
             {%- if section.settings.heading != blank or section.settings.description != blank or section.settings.button_label != blank -%}
@@ -81,7 +88,7 @@
                   </div>
     
                 {%- when 'question' -%}
-                  <div class="accordion">
+                  <div class="accordion"{% if compact_faq %} data-faq-question{% endif %}>
                     <details class="details" is="accordion-details" {{ block.shopify_attributes }}>
                       <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
                         <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
@@ -97,6 +104,11 @@
               {%- endcase -%}
             {%- endfor -%}
           </div>
+          {%- if compact_faq and question_blocks.size > 4 -%}
+            <button type="button" class="nailzify-compact-faq__toggle" data-faq-toggle data-show-all="Show all {{ question_blocks.size }} questions" data-show-fewer="Show fewer questions" aria-expanded="false" aria-controls="Faqs-{{ section.id }}" hidden>
+              Show all {{ question_blocks.size }} questions
+            </button>
+          {%- endif -%}
         </div>
 
         {%- if contact != blank -%}
@@ -214,7 +226,6 @@
   </div>
 </div>
 
-{%- assign question_blocks = section.blocks | where: 'type', 'question' -%}
 {%- if question_blocks.size > 0 -%}
   <script type="application/ld+json">
     {

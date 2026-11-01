@@ -398,28 +398,94 @@
   background-color: transparent;
 }
 
-.template-index [id$="__faq_bqXHVL"] .section {
+.template-index #MainContent .nailzify-compact-faq {
+  --section-padding-top: var(--sp-8);
+  --section-padding-bottom: var(--sp-8);
+  --color-background: var(--nz-color-canvas);
+  --gradient-background: none;
   background-color: rgb(var(--nz-color-canvas));
 }
 
-.template-index [id$="__faq_bqXHVL"] .faqs {
-  overflow: hidden;
-  border: 1px solid rgb(var(--nz-color-line));
-  border-radius: var(--nz-radius-medium);
-  background-color: rgb(var(--nz-color-surface));
+.template-index #MainContent .nailzify-compact-faq .title-wrapper {
+  margin-block-end: var(--sp-4);
 }
 
-.template-index [id$="__faq_bqXHVL"] .details__summary {
-  min-height: var(--sp-16);
-  padding-inline: var(--sp-6);
+.template-index #MainContent .nailzify-compact-faq .heading {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.template-index #MainContent .nailzify-compact-faq .faqs,
+.template-index #MainContent .nailzify-compact-faq .faq {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.template-index #MainContent .nailzify-compact-faq .faqs > .grow {
+  gap: 0;
+}
+
+.template-index #MainContent .nailzify-compact-faq .faq {
+  border-block-start: 1px solid rgb(var(--nz-color-line));
+}
+
+.template-index #MainContent .nailzify-compact-faq .accordion {
+  border-block-start: 0;
+  border-block-end: 1px solid rgb(var(--nz-color-line));
+}
+
+.template-index #MainContent .nailzify-compact-faq .details__summary {
+  min-height: var(--sp-12);
+  padding: var(--sp-3) 0;
   color: rgb(var(--nz-color-ink));
   font-family: "Barlow Semi Condensed", var(--font-body-family);
 }
 
-.template-index [id$="__faq_bqXHVL"] .details__content {
-  padding-inline: var(--sp-6);
+.template-index #MainContent .nailzify-compact-faq .details__summary > span {
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.template-index #MainContent .nailzify-compact-faq .details__summary > .icon {
+  color: rgb(var(--nz-color-accent-strong));
+}
+
+.template-index #MainContent .nailzify-compact-faq .details__content {
+  max-width: 100%;
+  margin-block-start: 0;
+  padding: 0 var(--sp-6) var(--sp-4) 0;
   color: rgb(var(--nz-color-muted));
   font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.template-index #MainContent .nailzify-compact-faq .details__content::after {
+  content: none;
+}
+
+.template-index #MainContent .nailzify-compact-faq__toggle {
+  justify-self: start;
+  min-height: var(--sp-11);
+  margin-block-start: var(--sp-3);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(var(--nz-color-accent-strong));
+  font-family: "Barlow Semi Condensed", var(--font-body-family);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: var(--sp-1);
+  cursor: pointer;
+}
+
+.template-index #MainContent .nailzify-compact-faq [hidden] {
+  display: none;
 }
 
 .template-index .gorgias-chat-button {
@@ -486,10 +552,6 @@
     margin-block-end: var(--sp-8);
   }
 
-  .template-index [id$="__faq_bqXHVL"] .details__summary,
-  .template-index [id$="__faq_bqXHVL"] .details__content {
-    padding-inline: var(--sp-4);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
