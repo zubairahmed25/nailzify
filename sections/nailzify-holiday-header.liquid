@@ -182,7 +182,8 @@
                 {%- liquid
                   assign mobile_hand_image = block.settings.mobile_slider_image
                   assign mobile_hand_fallback = block.settings.mobile_slider_fallback
-                  assign mobile_hand_alt = block.settings.alt_text | default: mobile_hand_image.alt
+                  assign mobile_hand_alt = block.settings.mobile_slider_alt | default: block.settings.alt_text | default: mobile_hand_image.alt
+                  assign mobile_hand_label = block.settings.mobile_slider_label | default: block.settings.mobile_label
                   assign mobile_slide_active = false
 
                   if block.id == mobile_selected_block_id
@@ -203,7 +204,7 @@
                 {%- if mobile_hand_image != blank or mobile_hand_fallback != 'none' -%}
                   <a
                     class="nailzify-holiday-header__mobile-slide{% if mobile_slide_active %} is-active{% endif %}"
-                    href="{{ block.settings.link | default: section.settings.button_link }}"
+                    href="{{ block.settings.mobile_slider_link | default: block.settings.link | default: section.settings.button_link }}"
                     data-holiday-hand-slide
                     data-slide-index="{{ mobile_slide_index }}"
                     data-slide-label="{{ mobile_hand_alt | escape }}"
@@ -239,11 +240,20 @@
                         loading="{{ mobile_hand_loading }}"
                         alt="{{ mobile_hand_alt | escape }}"
                       >
+                    {%- elsif mobile_hand_fallback == 'snowflake' -%}
+                      <img
+                        class="nailzify-holiday-header__mobile-hand"
+                        src="{{ 'nailzify-holiday-snowflake-hands.webp' | asset_url }}"
+                        width="941"
+                        height="1672"
+                        loading="{{ mobile_hand_loading }}"
+                        alt="{{ mobile_hand_alt | escape }}"
+                      >
                     {%- endif -%}
 
-                    {%- if block.settings.mobile_label != blank -%}
+                    {%- if mobile_hand_label != blank -%}
                       <span class="nailzify-holiday-header__mobile-label">
-                        {{- block.settings.mobile_label | escape | newline_to_br -}}
+                        {{- mobile_hand_label | escape | newline_to_br -}}
                       </span>
                     {%- endif -%}
                   </a>
@@ -272,7 +282,7 @@
                     class="nailzify-holiday-header__mobile-slider-dot{% if block.id == mobile_selected_block_id %} is-active{% endif %}"
                     type="button"
                     data-holiday-hand-control="{{ mobile_control_index }}"
-                    aria-label="Show {{ block.settings.alt_text | default: block.settings.mobile_label | strip_newlines | downcase | escape }}"
+                    aria-label="Show {{ block.settings.mobile_slider_alt | default: block.settings.alt_text | default: block.settings.mobile_label | strip_newlines | downcase | escape }}"
                     aria-current="{% if block.id == mobile_selected_block_id %}true{% else %}false{% endif %}"
                   >
                     <span aria-hidden="true"></span>
@@ -798,9 +808,26 @@
           "options": [
             { "value": "none", "label": "None" },
             { "value": "polka", "label": "Polka Dot" },
-            { "value": "chrome", "label": "Chrome Princess" }
+            { "value": "chrome", "label": "Chrome Princess" },
+            { "value": "snowflake", "label": "Pink snowflake nails" }
           ],
           "default": "none"
+        },
+        {
+          "type": "text",
+          "id": "mobile_slider_alt",
+          "label": "Mobile slider image description",
+          "info": "Optional override when the mobile hands differ from the desktop image."
+        },
+        {
+          "type": "textarea",
+          "id": "mobile_slider_label",
+          "label": "Mobile slider label"
+        },
+        {
+          "type": "url",
+          "id": "mobile_slider_link",
+          "label": "Mobile slider link"
         },
         {
           "type": "select",
