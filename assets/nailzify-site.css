@@ -173,6 +173,14 @@ button.shopify-payment-button__button--unbranded {
   color: rgb(var(--nz-collection-card-text));
 }
 
+.template-list-collections #MainContent .list-collection .media-card__text .count {
+  position: static;
+  display: inline-block;
+  margin-inline-start: 0.3em;
+  vertical-align: super;
+  line-height: 1;
+}
+
 .template-list-collections #MainContent .list-collection .media-card--overlap .media:not(.loading)::after {
   background: linear-gradient(180deg, rgb(var(--nz-color-ink) / 0) 40%, rgb(var(--nz-color-ink) / 0.7) 100%);
 }
