@@ -238,33 +238,33 @@
                       {%- render 'icon', icon: 'arrow-right', size: 'sm', class: 'transform shrink-0' -%}
                     </a>
                   </div>
-                  <motion-list class="product-grid card-grid card-grid--4 mobile:card-grid--1 grid" initialized>
-                    {%- for product in products limit: 4 -%}
+                  <motion-list class="product-grid card-grid card-grid--3 grid" initialized>
+                    {%- for product in products limit: 3 -%}
                       {%- render 'product-card',
                         product: product,
                         product_id: product.id,
                         section_id: section.id,
                         block_id: block.id,
                         lazy_load: false,
-                        image_ratio: settings.product_image_ratio,
+                        image_ratio: 'square',
                         image_fill: settings.product_image_fill,
                         show_secondary_image: settings.product_secondary_image,
                         show_vendor: settings.product_vendor,
                         show_rating: settings.product_rating,
                         show_color_swatches: settings.product_color_swatches,
                         show_countdown: settings.product_countdown,
-                        show_quick_add: settings.product_quick_add,
-                        show_quick_view: settings.product_quick_view,
+                        show_quick_add: false,
+                        show_quick_view: false,
                         show_save_amount: settings.product_save_amount,
                         save_type: settings.product_save_type,
                         show_icon_list: false
                       -%}
                     {%- else -%}
-                      {%- for i in (1..4) -%}
+                      {%- for i in (1..3) -%}
                         {%- capture placeholder -%}product-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
                         {%- render 'product-card-placeholder',
                           placeholder: placeholder
-                          image_ratio: settings.product_image_ratio,
+                          image_ratio: 'square',
                           show_vendor: settings.product_vendor
                         -%}
                       {%- endfor -%}

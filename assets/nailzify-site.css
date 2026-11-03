@@ -267,6 +267,127 @@ button.shopify-payment-button__button--unbranded {
   font-family: "Barlow Semi Condensed", var(--font-body-family);
 }
 
+@media screen and (min-width: 1024px) {
+  html:root {
+    --topbar-height: 36px;
+  }
+
+  .header-section header.header {
+    padding-block: 4px;
+  }
+
+  .header .header__menu > ul .menu__item {
+    height: 36px;
+    padding-inline: 14px;
+  }
+
+  .header .mega-menu__list {
+    padding-block: 20px 28px;
+  }
+
+  .header .mega-menu__list--tabs {
+    --nav-tabs-gap: 28px;
+    --nav-tabs-width: 180px;
+    --nav-promo-width: clamp(160px, 18vw, 240px);
+    display: grid;
+    grid-template-columns: var(--nav-tabs-width) minmax(0, 1fr);
+  }
+
+  .header .mega-menu__item--tabs,
+  .header .mega-menu__item--panels {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .header .mega-menu__item--tabs {
+    gap: 18px;
+  }
+
+  .header .mega-menu__nav--tabs .heading {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .header .mega-menu__panel:not([hidden]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--nav-promo-width);
+    align-items: start;
+    gap: 24px;
+  }
+
+  .header .mega-menu__panel.without-promo:not([hidden]) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .header .mega-menu__panel > .grid {
+    min-width: 0;
+    gap: 16px;
+    align-content: start;
+  }
+
+  .header .mega-menu__panel .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .header .mega-menu__panel .product-grid > .product-card {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .header .mega-menu__panel .product-card__content {
+    --card-content-padding: 12px 4px;
+  }
+
+  .header .mega-menu__panel .product-card__title {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .header .mega-menu__panel .cus-metafeild {
+    inset: 8px 8px auto;
+  }
+
+  .header .mega-menu__panel .metafeild-flex {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .header .mega-menu__panel .bg-new-color {
+    max-height: none;
+    max-width: 100%;
+    padding: 4px 6px;
+  }
+
+  .header .mega-menu__panel .meta-item {
+    font-size: 11px;
+    line-height: 1.1;
+  }
+
+  .header .mega-menu__panel > .media-card {
+    width: 100%;
+    height: 260px;
+    min-width: 0;
+  }
+
+  .header .mega-menu__panel > .media-card .media {
+    height: 100%;
+  }
+
+  .header .mega-menu__panel > .media-card .media > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header .mega-menu__panel > .media-card .heading {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+}
+
 .footer-group .footer__heading,
 .footer-group .footer__newsletter .heading {
   font-weight: 600;
