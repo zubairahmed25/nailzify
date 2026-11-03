@@ -52,6 +52,7 @@ body {
 /* Keep the Recently Viewed carousel inside its content gutters on desktop. */
 @media screen and (min-width: 1024px) {
   #MainContent .recently-section .slider--desktop {
+    position: relative;
     width: 100%;
     min-width: 0;
     max-width: 100%;
