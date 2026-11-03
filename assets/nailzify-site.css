@@ -279,6 +279,11 @@ button.shopify-payment-button__button--unbranded {
   .header .header__menu > ul .menu__item {
     height: 36px;
     padding-inline: 14px;
+    white-space: nowrap;
+  }
+
+  .header .header__menu > ul .menu__item .btn-duplicate {
+    padding-inline: 14px;
   }
 
   .header .mega-menu__list {
