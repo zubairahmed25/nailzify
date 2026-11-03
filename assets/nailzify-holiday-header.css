@@ -7,9 +7,24 @@
     rgb(var(--holiday-section-background));
 }
 
-.nailzify-holiday-header__container {
+#MainContent .nailzify-holiday-header__container.page-width:not(.page-width--full) {
   width: 100%;
-  max-width: var(--nz-holiday-content-width, 78.75rem);
+  max-width: calc(var(--nz-holiday-content-width, 78.75rem) + var(--page-padding) * 2);
+}
+
+@media screen and (max-width: 767px) {
+  #MainContent .nailzify-holiday-header-section {
+    padding-block: 0;
+  }
+
+  #MainContent .nailzify-holiday-header__container.page-width:not(.page-width--full) {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  #MainContent .nailzify-holiday-header {
+    padding-block: 0;
+  }
 }
 
 .nailzify-holiday-header {
