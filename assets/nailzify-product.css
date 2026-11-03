@@ -88,7 +88,7 @@
 
 .nailzify-product-redesign .page-width {
   width: 100%;
-  max-width: var(--nz-container-width);
+  max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
 .nailzify-product-redesign .featured-product {
@@ -597,7 +597,7 @@
 .nailzify-product-reviews .page-width,
 .nailzify-product-recommendations .page-width {
   width: 100%;
-  max-width: var(--nz-container-width);
+  max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
 .nailzify-how__heading {
