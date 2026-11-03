@@ -78,6 +78,9 @@
     {%- render 'js-variables' -%}
     {{ 'faisal-bundle.css' | asset_url | stylesheet_tag }}
     {{ 'nailzify-site.css' | asset_url | stylesheet_tag }}
+    {%- if request.page_type == 'product' -%}
+      {{ 'nailzify-product.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- endif -%}
 
     <!-- Google Tag Manager -->
     <script>

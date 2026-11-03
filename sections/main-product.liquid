@@ -1,4 +1,6 @@
-{{ 'nailzify-product.css' | asset_url | stylesheet_tag }}
+{%- unless request.page_type == 'product' -%}
+  {{ 'nailzify-product.css' | asset_url | stylesheet_tag }}
+{%- endunless -%}
 <script src="{{ 'nailzify-product.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -37,6 +39,10 @@
   assign custom_badge_block = section.blocks | where: 'type', 'custom_badge' | first
   assign app_blocks = section.blocks | where: 'type', '@app'
   assign loox_rating_block = app_blocks | first
+  assign gallery_image_sizes = '(max-width: 639px) calc(100vw - 80px), (max-width: 1023px) calc(100vw - 40px), min(672px, calc(100vw - 600px))'
+  if section.settings.gallery_layout == 'thumbnail' and section.settings.thumbnail_position == 'beside'
+    assign gallery_image_sizes = '(max-width: 639px) calc(100vw - 80px), (max-width: 1023px) calc(100vw - 40px), min(576px, calc(100vw - 640px))'
+  endif
 -%}
 
 {%- if first_3d_model -%}
@@ -139,7 +145,8 @@
             enable_video_autoplay: section.settings.enable_video_autoplay,
             enable_video_looping: section.settings.enable_video_looping,
             first_3d_model: first_3d_model,
-            product_form_id: product_form_id
+            product_form_id: product_form_id,
+            image_sizes: gallery_image_sizes
           -%}
 
           {%- liquid

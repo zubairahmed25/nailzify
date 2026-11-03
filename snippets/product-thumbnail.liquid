@@ -98,7 +98,7 @@
   {%- if gang_exist == true %} data-gang-option="{{ gang_option_name }}" data-gang-connect="{{ gang_connect }}"{% if gang_media_active == false %} hidden{% endif %}{% else %} data-gang-default{% endif -%}
   {%- if image_ratio == 'adapt' or image_ratio_mobile == 'adapt' %} style="--aspect-ratio: {{ media.aspect_ratio }};"{% endif -%}
 >
-  {{- media.preview_image | image_url: width: 416 | image_tag: loading: 'lazy', sizes: '(max-width: 1280px) 90px, 98px', widths: '54,74,104,162,208,324,416', alt: media_alt, is: 'lazy-image' -}}
+  {{- media.preview_image | image_url: width: 416 | image_tag: loading: 'lazy', sizes: 'auto, (max-width: 639px) 48px, (max-width: 1023px) 56px, 76px', widths: '48,56,76,96,112,152,228,304,416', alt: media_alt -}}
 
   {%- unless media.media_type == 'image' -%}
     <span class="play-button absolute flex items-center justify-center rounded-full">

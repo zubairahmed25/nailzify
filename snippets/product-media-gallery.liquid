@@ -14,6 +14,7 @@
   @param {string} [image_zoom] - Zoom type ('none', 'hover', 'click')
   @param {string} [image_ratio] - Image aspect ratio preset
   @param {string} [image_ratio_mobile] - Mobile image ratio
+  @param {string} [image_sizes] - Responsive sizes for the calling page layout
   @param {boolean} [image_fill] - Crop images to fill container
   @param {boolean} [hide_variants] - Hide variant-attached images
   @param {boolean} [enable_video_autoplay] - Auto-play videos
@@ -42,6 +43,9 @@
   assign featured_media = product_variant.featured_media | default: product.featured_media
 -%}
 {%- capture sizes -%}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(580px, 30vw){%- endcapture -%}
+{%- if image_sizes != blank -%}
+  {%- assign sizes = image_sizes -%}
+{%- endif -%}
 
 <media-gallery
   id="ProductGallery-{{ section_id }}-{{ product_id }}"
