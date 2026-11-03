@@ -53,7 +53,7 @@
     }
     .collection__suit ul li a
     {
-        width:100px;
+        width:120px;
         display:block;
         text-align:center; 
     }
@@ -63,10 +63,25 @@
         height:120px; 
         border-radius:50%;
         display:flex;
-        background-size:cover; 
-        background-position:center; 
         display:block; 
         margin:0 auto;
+    }
+    .collection__suit ul li a[aria-current="page"] span
+    {
+        border:2px solid rgb(var(--nz-color-accent));
+    }
+    .collection__suit__image
+    {
+        display:block;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:inherit;
+    }
+    .collection__suit__image--shape
+    {
+        object-fit:contain;
+        padding:var(--sp-2d5);
     }
     .collection__suit ul li a b
     {
@@ -85,14 +100,28 @@
   {% if suit_collections != blank %}
     <ul>
       {% for suit_collection in suit_collections %}
-        {% assign current_title = suit_collection.title %}
-        {% assign parent_title = collection.title %}
+        {% liquid
+          assign shape_asset = blank
+          case suit_collection.handle
+            when 'ballerina-coffin'
+              assign shape_asset = 'nailzify-shape-coffin.webp'
+            when 'short-oval'
+              assign shape_asset = 'nailzify-shape-short-oval.webp'
+            when 'almond'
+              assign shape_asset = 'nailzify-shape-almond.webp'
+            when 'short-square'
+              assign shape_asset = 'nailzify-shape-short-square.webp'
+          endcase
+        %}
 
         <li>
-          <a href="{{ suit_collection.url }}">
-            <span 
-              style="background-image:url({{ suit_collection.image | img_url: 'master' }}); 
-                     {% if current_title == parent_title %}border:2px solid #a64862;{% endif %}">
+          <a href="{{ suit_collection.url }}"{% if suit_collection.id == collection.id %} aria-current="page"{% endif %}>
+            <span>
+              {% if shape_asset != blank %}
+                <img class="collection__suit__image collection__suit__image--shape" src="{{ shape_asset | asset_url }}" alt="" width="512" height="512" loading="eager" decoding="async">
+              {% elsif suit_collection.image != blank %}
+                {{ suit_collection.image | image_url: width: 240 | image_tag: loading: 'lazy', widths: '120,240', sizes: '120px', alt: '', class: 'collection__suit__image' }}
+              {% endif %}
             </span>
             <b>{{ suit_collection.title }}</b> 
           </a>
