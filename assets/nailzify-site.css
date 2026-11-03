@@ -49,6 +49,25 @@ body {
   max-width: calc(var(--nz-container-width) + var(--page-padding) * 2);
 }
 
+/* Keep the Recently Viewed carousel inside its content gutters on desktop. */
+@media screen and (min-width: 1024px) {
+  #MainContent .recently-section .slider--desktop {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
+  }
+
+  #MainContent .recently-section .slider--desktop .card-grid {
+    --slider-item-width: calc((100% - var(--card-grid-gap) * (var(--card-grid-per-row) - 1)) / var(--card-grid-per-row));
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 .heading,
 h1,
 h2,
